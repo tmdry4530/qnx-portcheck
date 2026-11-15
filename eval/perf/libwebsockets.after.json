@@ -1,7 +1,7 @@
 {
   "tool": "qnx-portcheck",
   "version": "0.1.0",
-  "root": "/tmp/qpc-work/libwebsockets",
+  "root": "<work>/libwebsockets",
   "findings": [
     {
       "rule_id": "LNX-LINUX-IFDEF",
