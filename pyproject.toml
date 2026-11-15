@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qnx-portcheck"
+version = "0.1.0"
+description = "Host-side Linux-to-QNX 8.0 portability checker and qnx-ports build-file scaffolder"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.10"
+
+[project.scripts]
+qnx-portcheck = "qnx_portcheck.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
