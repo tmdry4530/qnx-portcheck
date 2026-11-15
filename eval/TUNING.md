@@ -76,7 +76,7 @@ Baseline: `0b9b4a1` RESULTS.md (scanner 0.1.0, source 511aa2e). After: this bran
 | tune | precision in patched files | 0.286 (10/35) | 0.206 (27/131) |
 | holdout (16, contaminated, see above) | source-site recall | 0.051 (10/197) | 0.284 (56/197) |
 | holdout | non-test source recall | 0.057 (9/158) | 0.260 (41/158) |
-| holdout | build-site recall | 0.000 (0/58) | 0.034 (2/58) |
+| holdout | build-site recall | 0.000 (0/58) | 0.035 (2/58) |
 | holdout | precision | 0.017 (10/591) | 0.056 (61/1089) |
 | holdout | precision in patched files | 0.102 (10/98) | 0.218 (61/280) |
 | all (33) | source-site recall | 0.051 (16/312) | 0.237 (74/312) |
