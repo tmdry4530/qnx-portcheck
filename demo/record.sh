@@ -26,6 +26,8 @@ python3 demo/build_assets.py check
 python3 demo/build_assets.py subs --out "$OUT/subs"
 mkdir -p "$OUT/casts" "$OUT/gifs" "$OUT/raw" "$OUT/cards" "$OUT/clips"
 : > "$OUT/manifest.txt"
+eval_status="$(cat "$OUT/subs/eval_status.txt")"
+printf 'eval\t%s\n' "$eval_status" >> "$OUT/manifest.txt"
 
 while IFS=$'\t' read -r scene_id slug kind duration requires <&3; do
     [[ "$scene_id" == id ]] && continue
@@ -36,6 +38,9 @@ while IFS=$'\t' read -r scene_id slug kind duration requires <&3; do
     fi
     card_path="$OUT/cards/$scene_id.txt"
     if [[ "$mode" != recorded ]]; then
+        if [[ "$mode" == card ]]; then
+            python3 demo/build_assets.py card-text --scene "$scene_id" --out "$card_path"
+        else
         python3 - "$scene_id" "$mode" "$card_path" <<'PY'
 import json, sys, textwrap
 from pathlib import Path
@@ -48,6 +53,7 @@ if mode == 'placeholder':
 text = '\n'.join(textwrap.fill(line, width=60) for line in text.split('\n'))
 Path(sys.argv[3]).write_text(text, encoding='utf-8')
 PY
+        fi
         title_file="$OUT/cards/$scene_id-title.txt"
         python3 - "$scene_id" "$title_file" <<'PY'
 import json, sys, textwrap
