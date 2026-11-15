@@ -1,0 +1,36 @@
+# *******************************************************************************
+# Copyright (c) 2025 Contributors to the Eclipse Foundation
+#
+# See the NOTICE file(s) distributed with this work for additional
+# information regarding copyright ownership.
+#
+# This program and the accompanying materials are made available under the
+# terms of the Apache License Version 2.0 which is available at
+# https://www.apache.org/licenses/LICENSE-2.0
+#
+# SPDX-License-Identifier: Apache-2.0
+# *******************************************************************************
+
+
+###############################################################################
+#
+# Example image built based on minimal configuration from QNX
+#
+###############################################################################
+
+[-optional]
+
+[image=0x3600000]                          # Set image size to 56MB (0x3600000 bytes)
+[virtual=aarch64le,raw -compress] boot = { # Configure for aarch64le architecture with raw compressed boot
+    # TODO: replace startup-virt with the actual aarch64 startup binary for the target BSP.
+    # QNX SDP 8.0.0 ships no generic QEMU-virt startup; source one from the appropriate BSP.
+    startup-virt -v                        # Start aarch64 kernel - board-specific startup binary required
+    PATH=/proc/boot                      # Set executable search path to boot directory
+    LD_LIBRARY_PATH=/proc/boot           # Set library search path to boot directory
+    [+keeplinked] procnto-smp-instr      # Keep process manager linked and instrumented for SMP
+}
+
+# The architecture-independent startup script, essential utilities and libraries
+# are shared via //images/qnx_common/build:common_init.build, included right
+# after this boot block through qnx_ifs extra_build_files. The aarch64 QEMU virt
+# image needs no storage block driver (no devb-eide).
