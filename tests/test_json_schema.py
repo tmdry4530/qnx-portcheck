@@ -21,7 +21,8 @@ def test_json_schema(tmp_path: Path) -> None:
         assert finding["line"] >= 1 and finding["col"] >= 1
         assert not finding["file"].startswith("/") and "\\" not in finding["file"]
         url = finding["doc_url"]
-        assert url is None or url.startswith("https://www.qnx.com/developers/docs/8.0/")
+        assert url is None or url.startswith(("https://www.qnx.com/developers/docs/8.0/",
+                                              "https://www.qnx.com/developers/docs/qnxeverywhere/"))
     assert all(rule.suggestion == "manual review" for rule in ALL_RULES if rule.doc_url is None)
     sources = (Path(__file__).parents[1] / "docs/rule-sources.md").read_text()
     assert all(rule.doc_url is None or rule.doc_url in sources for rule in ALL_RULES)

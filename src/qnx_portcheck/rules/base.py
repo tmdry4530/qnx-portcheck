@@ -38,6 +38,8 @@ class Rule:
     suggestion: str
     doc_url: str | None
     detector: Callable[[SourceContext], Iterable[Hit]]
+    skip_in_linux_guard: bool = False
+    feature_token: str | None = None
 
 
 def include_and_calls(

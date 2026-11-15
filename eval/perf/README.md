@@ -13,7 +13,7 @@ Command: `qnx-portcheck scan <libwebsockets> --format json --fail-on never`, tim
 | before | `7bbc52a` (`git archive` to /tmp, `PYTHONPATH`) | 724.17 s |
 | after | `85a5ca9` | 4.19 s |
 
-(The eval run in RESULTS.md recorded 788.2 s for the same scan with 511aa2e, while other scans were not running.)
+(The eval run in RESULTS.md recorded 788.2 s for the same scan with 511aa2e on the same box.)
 
 - `libwebsockets.before.json` and `libwebsockets.after.json` are the two raw outputs.
 - `cmp` reports no difference; both files have SHA-256

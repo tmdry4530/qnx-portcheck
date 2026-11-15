@@ -13,6 +13,14 @@ BASE = Path(__file__).parent / "fixtures"
 def _fixture(rule_id: str, state: str) -> Path:
     """Resolve a rule's positive or negative fixture."""
     slug = rule_id.lower().replace("lnx-", "").replace("-", "_")
+    if rule_id.startswith("PORT-"):
+        slug = rule_id.lower().removeprefix("port-").replace("-", "_")
+        suffix = ".h" if rule_id == "PORT-TIMEVAL" else ".c"  # PORT-TIMEVAL checks headers only
+        return BASE / "c" / f"{slug}_{state}{suffix}"
+    if rule_id.startswith("BLD-"):
+        slug = rule_id.lower().removeprefix("bld-").replace("-", "_")
+        filename = "CMakeLists.txt" if rule_id == "BLD-CMAKE-PLATFORM" else "configure.ac"
+        return BASE / "build" / slug / state / filename
     if rule_id.startswith("LNX-LINK"):
         filename = "CMakeLists.txt" if rule_id == "LNX-LINK-FLAGS" else "Makefile"
         return BASE / "build" / slug / state / filename

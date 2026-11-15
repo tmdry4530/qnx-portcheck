@@ -8,6 +8,8 @@ from qnx_portcheck.lexer import position
 from .base import Hit, Rule, SourceContext, include_and_calls
 
 DOCS_BASE = "https://www.qnx.com/developers/docs/8.0/"
+LINUX_IFDEF_RE = (r'__linux__|__linux\b|__gnu_linux__|defined\s*'
+                  r'(?:\(\s*linux\s*\)|linux\b)|#\s*ifdef\s+linux\b')
 
 
 def _api(
@@ -62,14 +64,12 @@ def _syscall(context: SourceContext) -> Iterable[Hit]:
 
 def _ifdef(context: SourceContext) -> Iterable[Hit]:
     directive = r'^\s*#\s*(?:if|ifdef|ifndef|elif|elifdef|elifndef)\b'
-    linux = (r'__linux__|__linux\b|__gnu_linux__|defined\s*'
-             r'(?:\(\s*linux\s*\)|linux\b)|#\s*ifdef\s+linux\b')
     for line_number, line in enumerate(context.comments.splitlines(), 1):
         if not re.match(directive, line):
             continue
         if re.search(r"__QNX(?:NTO)?__", line):
             continue
-        if re.search(linux, line):
+        if re.search(LINUX_IFDEF_RE, line):
             yield Hit(line_number, 1, "Linux-only preprocessor condition")
 
 

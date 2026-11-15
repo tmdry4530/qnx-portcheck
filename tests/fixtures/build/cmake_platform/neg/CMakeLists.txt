@@ -1,0 +1,5 @@
+if(WIN32)
+endif()
+if(APPLE)
+elseif(QNX)
+endif()

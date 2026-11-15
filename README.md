@@ -150,6 +150,14 @@ page confirmed a replacement, so the suggestion is `manual review` and `doc_url`
 | LNX-LINUX-IFDEF | warning | `#if/#ifdef/#elif` on `__linux__`, `__linux`, `__gnu_linux__`, `linux`, unless the same condition also tests `__QNX__`/`__QNXNTO__` | qcc defines `__QNX__` (800 for 8.0); `__QNXNTO__` deprecated | verified |
 | LNX-LINK-FLAGS | warning | `-lpthread`, `-ldl`, `-lrt`; CMake `target_link_libraries(... pthread dl rt ${CMAKE_DL_LIBS})`; Meson `find_library`/`dependency` | `pthread_create()`, `dlopen()`, `clock_gettime()` are in libc | verified |
 | LNX-LINK-FLAGS-OTHER | warning | `-lsystemd`, `-ludev`, `-lcap`, `-laio`, `-lnuma`, `-lutil` | none found | manual review |
+| PORT-OS-IFDEF | note | `#if/#ifdef/#elif` on BSD/macOS/Solaris/AIX/HP-UX/Haiku/Cygwin macros with no `__QNX__`/`__QNXNTO__` | qcc defines `__QNX__` | verified |
+| PORT-QNXNTO | note | conditional tests `__QNXNTO__` but not `__QNX__` | `__QNXNTO__` deprecated (manifests) | verified |
+| PORT-MINMAX | warning | file includes `<sys/param.h>`, uses `MIN()`/`MAX()`, defines neither; reported at the last `#include` before the first use | none (`<sys/param.h>` is not POSIX) | manual review |
+| PORT-MINMAX-DEFINE | warning | `#define min(`/`#define max(` not under `#ifndef min`/`max` | QNX `<stdlib.h>` defines `min()`/`max()` | verified |
+| PORT-SA-RESTART | warning | `SA_RESTART` used in a file that never tests or defines it | QNX `struct sigaction` has no `SA_RESTART` flag | verified |
+| PORT-TIMEVAL | note | header file uses `struct timeval` but includes neither `<sys/time.h>` nor `<sys/select.h>` | POSIX `<sys/time.h>` (no QNX page) | manual review |
+| BLD-CMAKE-PLATFORM | warning | CMake `if`/`elseif` testing APPLE, LINUX, BSD, CYGWIN, ANDROID, IOS or `CMAKE_(HOST_)SYSTEM_NAME` in a chain that never names QNX | QNX porting guide: CMake conditionals on `CMAKE_SYSTEM_NAME` need extending for QNX | verified |
+| BLD-AUTOCONF-HOST | warning | each OS label of a `case $host…`/`AS_CASE([$host_os]…)` dispatch in configure.ac/project .m4 files that has no `qnx`/`nto` label | QNX configure hooks use `nto*` targets | verified |
 
 ## Evaluation
 

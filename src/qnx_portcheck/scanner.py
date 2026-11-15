@@ -3,9 +3,12 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 import os
+import re
 from pathlib import Path
 from .lexer import lex
 from .rules import ALL_RULES, SourceContext
+from .rules.buildfiles import _without_comments
+from .rules.guards import feature_guarded_lines, linux_only_lines
 
 @dataclass(frozen=True)
 class Finding:
@@ -27,9 +30,16 @@ class ScanResult:
 
 C_SUFFIXES = {".c", ".cc", ".cpp", ".cxx", ".h", ".hh", ".hpp", ".hxx"}
 BUILD_NAMES = {"CMakeLists.txt", "Makefile", "makefile", "GNUmakefile", "meson.build"}
+# Generated or third-party autoconf macro files (aclocal output, libtool, autoconf-archive, gnulib, gettext).
+_AUTOCONF_EXCLUDED = {"aclocal.m4", "libtool.m4", "pkg.m4"}
+_AUTOCONF_EXCLUDED_PREFIXES = ("lt", "ax_", "acx_", "pkg", "lib-", "gl_", "gettext", "iconv", "nls", "po.m4",
+                               "progtest", "intl")
 
 def _is_build(path: Path) -> bool:
-    return path.name in BUILD_NAMES or path.suffix in {".cmake", ".mk"}
+    return (path.name in BUILD_NAMES or path.suffix in {".cmake", ".mk"}
+            or path.name in {"configure.ac", "configure.in"}
+            or (path.suffix == ".m4" and path.name not in _AUTOCONF_EXCLUDED
+                and not path.name.startswith(_AUTOCONF_EXCLUDED_PREFIXES)))
 
 def _discover(path: Path) -> tuple[Path, list[Path]]:
     absolute = path.absolute()
@@ -59,7 +69,13 @@ def scan(path: str | Path) -> ScanResult:
             code, strings, comments = lex(raw)
             kind = "c"
         elif _is_build(file_path):
-            code, strings, comments, kind = raw, [], raw, "build"
+            comments = _without_comments(raw)
+            if file_path.name in {"configure.ac", "configure.in"} or file_path.suffix == ".m4":
+                chars = list(comments)
+                for match in re.finditer(r'(?im)(?<!\S)dnl\b[^\n]*', comments):
+                    for offset in range(match.start(), match.end()): chars[offset] = " "
+                comments = "".join(chars)
+            code, strings, kind = raw, [], "build"
         else:
             continue
         context = SourceContext(relative, raw, comments, code, strings, raw.splitlines())
@@ -67,7 +83,20 @@ def scan(path: str | Path) -> ScanResult:
         for rule in ALL_RULES:
             if rule.kind != kind:
                 continue
-            for hit in rule.detector(context):
+            hits = rule.detector(context)
+            linux_lines = None
+            feature_lines = None
+            for hit in hits:
+                if rule.skip_in_linux_guard:
+                    if linux_lines is None:
+                        linux_lines = linux_only_lines(context.comments)
+                    if hit.line in linux_lines:
+                        continue
+                if rule.feature_token:
+                    if feature_lines is None:
+                        feature_lines = feature_guarded_lines(context.comments, rule.feature_token)
+                    if hit.line in feature_lines:
+                        continue
                 identity = (rule.id, relative, hit.line, hit.col)
                 if identity in seen:
                     continue

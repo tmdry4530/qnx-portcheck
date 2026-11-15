@@ -52,3 +52,38 @@ nor in the io-sock Networking APIs list.
 ## Notes
 - `inotify`, `pipe2()` and `accept4()` ARE documented for QNX 8.0, so those rules are `note` severity (link/setup differences), not errors.
 - The Wayland page documents libepoll/libeventfd/libtimerfd/libsignalfd only as dependencies for Wayland on Screen; the tool says so instead of claiming general availability.
+
+## Rules added on dev1/tune (fetched 2026-11-15 13:58-14:10 KST with `curl`, HTTP 200)
+
+| Rule(s) | URL | Quote (one line) |
+|---|---|---|
+| PORT-OS-IFDEF | https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html | "The qcc utility defines the __QNX__ preprocessor symbol (or manifest constant) to allow you to specify QNX OS-specific code." |
+| PORT-OS-IFDEF | https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_Source_code.html | "For example, qcc defines the __QNX__ and __unix__ symbols." |
+| PORT-QNXNTO | https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/manifests.html | "__QNXNTO__ N/A Deprecated. The target is the QNX Neutrino RTOS." |
+| PORT-MINMAX-DEFINE | https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/m/max.html | "Synopsis: #include <stdlib.h> #define max( a , b ) ... The max() macro is for C programs only." (min.html: same for min()) |
+| PORT-SA-RESTART | https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/s/sigaction_struct.html | "sa_flags Flags that affect the behavior of the signal: SA_NOCLDSTOP ... SA_NOCLDWAIT ... SA_NODEFER ... SA_ONSTACK ... SA_RESETHAND ... SA_SIGINFO" (no SA_RESTART on the page) |
+| BLD-CMAKE-PLATFORM | https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html | "complex projects have complex CMake files with conditional statements checking CMAKE_SYSTEM_NAME, etc. These CMake configuration files need to be extended for QNX." (toolchain example: "set(QNX TRUE) set(CMAKE_SYSTEM_NAME QNX)") |
+| BLD-CMAKE-PLATFORM | https://cmake.org/cmake/help/latest/variable/CMAKE_SYSTEM_NAME.html | value table: "QNX Unix-like operating system by BlackBerry" (supporting, not the doc_url) |
+| BLD-AUTOCONF-HOST | https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html | example build-hooks: "case "${target}" in nto*) basedir=/usr ;;" |
+| BLD-AUTOCONF-HOST | https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_GNU_configure.html | "The addvariant utility knows how to work with code that uses a GNU ./configure script for configuration." |
+
+`www.qnx.com/developers/docs/qnxeverywhere/` is QNX's public porting guide for QNX SDP 8.0 (its setup page uses
+`~/qnx800`); it is QNX documentation, so it is accepted as a doc_url next to `/docs/8.0/`.
+
+### New rules without a QNX page (manual review, doc_url = null)
+
+| Rule | General portability evidence | Why manual review |
+|---|---|---|
+| PORT-MINMAX | POSIX.1-2024 header index https://pubs.opengroup.org/onlinepubs/9799919799/idx/head.html lists no `<sys/param.h>`; MIN/MAX there are a BSD/glibc extension | no QNX page documents what QNX `<sys/param.h>` provides |
+| PORT-TIMEVAL | POSIX https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/sys_time.h.html: "The <sys/time.h> header shall define the fd_set type and the timeval structure, as described in <sys/select.h>." | which QNX headers include `<sys/time.h>` indirectly is not documented (404 for .../t/timeval.html) |
+
+### Scanner behaviour changes on dev1/tune
+
+- Linux-only branches: findings of LNX-EPOLL, -EVENTFD, -TIMERFD, -SIGNALFD, -INOTIFY, -PRCTL, -SYSINFO, -SENDFILE,
+  -SPLICE, -SYSCALL, -ACCEPT4, -PIPE2, -LINUX-HEADER and -PROCFS are dropped inside a branch that requires
+  `__linux__`/`__linux`/`linux`/`__gnu_linux__` (qcc never defines them, per the `__QNX__` page above and the
+  manifests page). The LNX-LINUX-IFDEF finding on the guard itself is kept.
+- Build-probe branches: LNX-EPOLL/-EVENTFD/-TIMERFD/-SIGNALFD/-INOTIFY findings are dropped inside a branch whose
+  positive condition names a macro containing that facility (`HAVE_SYS_EPOLL_H`, `EVENT__HAVE_EPOLL`,
+  `USBI_TIMERFD_AVAILABLE`, `ASIO_HAS_TIMERFD`, ...). Such code is compiled only if the project's configure/CMake
+  probe succeeds; see eval/TUNING.md for the measured reason.

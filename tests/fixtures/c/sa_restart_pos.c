@@ -1,0 +1,1 @@
+int flags = SA_RESTART; /* EXPECT: PORT-SA-RESTART */

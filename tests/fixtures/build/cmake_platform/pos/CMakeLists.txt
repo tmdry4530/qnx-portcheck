@@ -1,0 +1,2 @@
+if(APPLE) # EXPECT: BLD-CMAKE-PLATFORM
+endif()
