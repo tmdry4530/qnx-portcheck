@@ -5,6 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 cd "$REPO_ROOT"
 OUT="${DEMO_OUT:-demo/out}"
+if [[ "$OUT" != /* ]]; then OUT="${REPO_ROOT%/}/$OUT"; fi
 ASCIINEMA_BIN="${ASCIINEMA:-$(command -v asciinema || true)}"
 if [[ -z "$ASCIINEMA_BIN" ]]; then ASCIINEMA_BIN=/workspace/qnxref/venv/bin/asciinema; fi
 AGG_BIN="${AGG:-$(command -v agg || true)}"
@@ -96,7 +97,7 @@ concat_file="$OUT/concat.txt"
 while IFS=$'\t' read -r scene_id slug kind duration requires; do
     [[ "$scene_id" == id ]] && continue
     if [[ -n "${SCENES:-}" && ! " $SCENES " =~  $scene_id  ]]; then continue; fi
-    printf "file '%s'\n" "$REPO_ROOT/$OUT/clips/$scene_id.mp4" >> "$concat_file"
+    printf "file '%s'\n" "$OUT/clips/$scene_id.mp4" >> "$concat_file"
 done < "$OUT/subs/scenes.tsv"
 ffmpeg -nostdin -y -v error -f concat -safe 0 -i "$concat_file" -c:v libx264 -pix_fmt yuv420p -c:a aac -ar 48000 -ac 2 "$OUT/demo-burned.mp4"
 ffmpeg -nostdin -y -v error -i "$OUT/demo-burned.mp4" -i "$OUT/subs/demo.srt" -map 0:v:0 -map 0:a:0 -map 1:0 -c:v copy -c:a copy -c:s mov_text -metadata:s:s:0 language=eng "$OUT/demo.mp4"
