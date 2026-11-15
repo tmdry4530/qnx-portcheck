@@ -1,0 +1,531 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T12:53:59.575451+09:00",
+  "project": {
+    "name": "aws-c-io",
+    "upstream": "https://github.com/awslabs/aws-c-io",
+    "upstream_base_ref": "v0.26.1",
+    "upstream_base_sha": "bfb0819d3906502483611ce832a5ec6b897c8421",
+    "qnx_repo": "https://github.com/qnx-ports/aws-c-io",
+    "qnx_branch": "qnx-v0.26.1",
+    "qnx_head_sha": "fd881c1f7d14c3593065c71d4d4bc5f1a22e0cc1",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "af18fa6",
+  "durations": {
+    "fetch": 0.003477496007690206,
+    "scan": 6.912401801004307
+  },
+  "diff_stats": {
+    "files_changed": 5,
+    "compare_files_expected": 5,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "CMakeLists.txt",
+    "source/linux/epoll_event_loop.c",
+    "source/posix/host_resolver.c",
+    "source/posix/socket.c",
+    "source/s2n/s2n_tls_channel_handler.c"
+  ],
+  "sites": [
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 129,
+      "old_count": 0,
+      "new_start": 130,
+      "new_count": 12,
+      "target_lines": [
+        129,
+        130
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 258,
+      "old_count": 1,
+      "new_start": 270,
+      "new_count": 1,
+      "target_lines": [
+        258
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "source/linux/epoll_event_loop.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 45,
+      "old_count": 0,
+      "new_start": 46,
+      "new_count": 3,
+      "target_lines": [
+        45,
+        46
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "source/linux/epoll_event_loop.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 383,
+      "old_count": 0,
+      "new_start": 387,
+      "new_count": 3,
+      "target_lines": [
+        383,
+        384
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "source/posix/host_resolver.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 41,
+      "old_count": 3,
+      "new_start": 41,
+      "new_count": 2,
+      "target_lines": [
+        41,
+        43
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "source/posix/socket.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 782,
+      "old_count": 0,
+      "new_start": 783,
+      "new_count": 3,
+      "target_lines": [
+        782,
+        783
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "source/posix/socket.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1469,
+      "old_count": 1,
+      "new_start": 1472,
+      "new_count": 1,
+      "target_lines": [
+        1469
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "source/posix/socket.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1509,
+      "old_count": 1,
+      "new_start": 1512,
+      "new_count": 1,
+      "target_lines": [
+        1509
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "source/s2n/s2n_tls_channel_handler.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 108,
+      "old_count": 0,
+      "new_start": 109,
+      "new_count": 1,
+      "target_lines": [
+        108,
+        109
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "source/s2n/s2n_tls_channel_handler.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 135,
+      "old_count": 0,
+      "new_start": 137,
+      "new_count": 5,
+      "target_lines": [
+        135,
+        136
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "source/s2n/s2n_tls_channel_handler.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 144,
+      "old_count": 0,
+      "new_start": 151,
+      "new_count": 1,
+      "target_lines": [
+        144,
+        145
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "source/s2n/s2n_tls_channel_handler.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 176,
+      "old_count": 0,
+      "new_start": 184,
+      "new_count": 5,
+      "target_lines": [
+        176,
+        177
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "source/s2n/s2n_tls_channel_handler.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 243,
+      "old_count": 2,
+      "new_start": 255,
+      "new_count": 2,
+      "target_lines": [
+        243,
+        244
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 2,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "source/linux/epoll_event_loop.c",
+      "line": 16,
+      "col": 1,
+      "message": "Linux epoll header <sys/epoll.h>",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EVENTFD",
+      "severity": "warning",
+      "file": "source/linux/epoll_event_loop.c",
+      "line": 31,
+      "col": 1,
+      "message": "Linux eventfd header <sys/eventfd.h>",
+      "suggestion": "eventfd is not in the QNX 8.0 C Library Reference; libeventfd is listed only in the screen.notify_fd package (Wayland on Screen). Otherwise replace with a pipe()/pipe2() wake-up fd watched by poll().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.screen/topic/manual/cscreen_wayland.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "source/linux/epoll_event_loop.c",
+      "line": 162,
+      "col": 28,
+      "message": "Linux epoll API epoll_create()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EVENTFD",
+      "severity": "warning",
+      "file": "source/linux/epoll_event_loop.c",
+      "line": 175,
+      "col": 14,
+      "message": "Linux eventfd API eventfd()",
+      "suggestion": "eventfd is not in the QNX 8.0 C Library Reference; libeventfd is listed only in the screen.notify_fd package (Wayland on Screen). Otherwise replace with a pipe()/pipe2() wake-up fd watched by poll().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.screen/topic/manual/cscreen_wayland.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "source/linux/epoll_event_loop.c",
+      "line": 462,
+      "col": 9,
+      "message": "Linux epoll API epoll_ctl()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "source/linux/epoll_event_loop.c",
+      "line": 495,
+      "col": 22,
+      "message": "Linux epoll API epoll_ctl()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "source/linux/epoll_event_loop.c",
+      "line": 598,
+      "col": 12,
+      "message": "Linux epoll API epoll_wait()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PIPE2",
+      "severity": "note",
+      "file": "source/posix/pipe.c",
+      "line": 102,
+      "col": 11,
+      "message": "Linux pipe2 API pipe2()",
+      "suggestion": "pipe2() is in QNX 8.0 libc but supports only O_CLOEXEC and O_NONBLOCK flags; check that no other flags (e.g. O_DIRECT) are passed.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pipe2.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "source/posix/socket.c",
+      "line": 53,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "source/posix/socket.c",
+      "line": 54,
+      "col": 1,
+      "message": "Linux kernel header <linux/vm_sockets.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "tests/socket_test.c",
+      "line": 23,
+      "col": 1,
+      "message": "Linux kernel header <linux/vm_sockets.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "tests/vcc/main_loop.c",
+      "line": 87,
+      "col": 27,
+      "message": "Linux epoll API epoll_wait()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EVENTFD",
+      "severity": "warning",
+      "file": "tests/vcc/new_destroy.c",
+      "line": 53,
+      "col": 5,
+      "message": "Linux eventfd API eventfd()",
+      "suggestion": "eventfd is not in the QNX 8.0 C Library Reference; libeventfd is listed only in the screen.notify_fd package (Wayland on Screen). Otherwise replace with a pipe()/pipe2() wake-up fd watched by poll().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.screen/topic/manual/cscreen_wayland.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "tests/vcc/new_destroy.c",
+      "line": 130,
+      "col": 28,
+      "message": "Linux epoll API epoll_create()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EVENTFD",
+      "severity": "warning",
+      "file": "tests/vcc/new_destroy.c",
+      "line": 143,
+      "col": 14,
+      "message": "Linux eventfd API eventfd()",
+      "suggestion": "eventfd is not in the QNX 8.0 C Library Reference; libeventfd is listed only in the screen.notify_fd package (Wayland on Screen). Otherwise replace with a pipe()/pipe2() wake-up fd watched by poll().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.screen/topic/manual/cscreen_wayland.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "tests/vcc/preamble.h",
+      "line": 87,
+      "col": 5,
+      "message": "Linux epoll API epoll_ctl()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "tests/vcc/preamble.h",
+      "line": 93,
+      "col": 5,
+      "message": "Linux epoll API epoll_wait()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "tests/vcc/preamble.h",
+      "line": 101,
+      "col": 5,
+      "message": "Linux epoll API epoll_create()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "tests/vcc/subscribe.c",
+      "line": 69,
+      "col": 9,
+      "message": "Linux epoll API epoll_ctl()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "tests/vcc/unsubscribe.c",
+      "line": 45,
+      "col": 22,
+      "message": "Linux epoll API epoll_ctl()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 13,
+    "sites_by_category": {
+      "source": 11,
+      "build": 2,
+      "other": 0
+    },
+    "sites_source_nontest": 11,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.0,
+    "findings_total": 20,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 20,
+      "build": 0,
+      "other": 0
+    },
+    "findings_in_patched_files": 9,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": 0.0
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  }
+}

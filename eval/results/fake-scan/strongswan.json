@@ -1,7 +1,7 @@
 {
   "label": "FAKE-SCAN",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T12:29:05.185791+09:00",
+  "generated_at": "2026-11-15T12:34:22.778977+09:00",
   "project": {
     "name": "strongswan",
     "upstream": "https://github.com/strongswan/strongswan",
@@ -17,8 +17,8 @@
   "merge_gap": 3,
   "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
   "durations": {
-    "fetch": 0.0036859109823126346,
-    "scan": 1.0779424140055198
+    "fetch": 0.00319386602495797,
+    "scan": 1.040899834013544
   },
   "diff_stats": {
     "files_changed": 13,

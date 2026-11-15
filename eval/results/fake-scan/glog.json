@@ -1,7 +1,7 @@
 {
   "label": "FAKE-SCAN",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T12:29:01.140502+09:00",
+  "generated_at": "2026-11-15T12:34:18.888810+09:00",
   "project": {
     "name": "glog",
     "upstream": "https://github.com/google/glog",
@@ -17,8 +17,8 @@
   "merge_gap": 3,
   "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
   "durations": {
-    "fetch": 0.0028829340008087456,
-    "scan": 0.062044378981227055
+    "fetch": 0.003229412977816537,
+    "scan": 0.07038579400978051
   },
   "diff_stats": {
     "files_changed": 11,

@@ -1,7 +1,7 @@
 {
   "label": "FAKE-SCAN",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T12:29:00.411896+09:00",
+  "generated_at": "2026-11-15T12:34:18.160056+09:00",
   "project": {
     "name": "avahi",
     "upstream": "https://github.com/avahi/avahi",
@@ -17,8 +17,8 @@
   "merge_gap": 3,
   "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
   "durations": {
-    "fetch": 0.003523902007145807,
-    "scan": 0.14478438402875327
+    "fetch": 0.0033183289924636483,
+    "scan": 0.12835322599858046
   },
   "diff_stats": {
     "files_changed": 5,

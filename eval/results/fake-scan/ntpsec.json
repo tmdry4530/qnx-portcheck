@@ -1,7 +1,7 @@
 {
   "label": "FAKE-SCAN",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T12:29:04.188387+09:00",
+  "generated_at": "2026-11-15T12:34:21.876789+09:00",
   "project": {
     "name": "ntpsec",
     "upstream": "https://github.com/ntpsec/ntpsec",
@@ -17,8 +17,8 @@
   "merge_gap": 3,
   "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
   "durations": {
-    "fetch": 0.0029299180023372173,
-    "scan": 0.16073664999566972
+    "fetch": 0.004313886980526149,
+    "scan": 0.15758217999245971
   },
   "diff_stats": {
     "files_changed": 9,

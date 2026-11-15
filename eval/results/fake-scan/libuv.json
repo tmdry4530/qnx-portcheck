@@ -1,7 +1,7 @@
 {
   "label": "FAKE-SCAN",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T12:29:02.439469+09:00",
+  "generated_at": "2026-11-15T12:34:20.154125+09:00",
   "project": {
     "name": "libuv",
     "upstream": "https://github.com/libuv/libuv",
@@ -17,8 +17,8 @@
   "merge_gap": 3,
   "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
   "durations": {
-    "fetch": 0.0035129519819747657,
-    "scan": 0.17421414100681432
+    "fetch": 0.002815484011080116,
+    "scan": 0.16582605498842895
   },
   "diff_stats": {
     "files_changed": 16,

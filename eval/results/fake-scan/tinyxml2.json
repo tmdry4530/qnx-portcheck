@@ -1,7 +1,7 @@
 {
   "label": "FAKE-SCAN",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T12:29:06.284914+09:00",
+  "generated_at": "2026-11-15T12:34:23.839461+09:00",
   "project": {
     "name": "tinyxml2",
     "upstream": "https://github.com/leethomason/tinyxml2",
@@ -17,8 +17,8 @@
   "merge_gap": 3,
   "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
   "durations": {
-    "fetch": 0.0032698400027584285,
-    "scan": 0.06386017298791558
+    "fetch": 0.0031299339898396283,
+    "scan": 0.05732491900562309
   },
   "diff_stats": {
     "files_changed": 2,

@@ -1,7 +1,7 @@
 {
   "label": "FAKE-SCAN",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T12:29:03.199516+09:00",
+  "generated_at": "2026-11-15T12:34:20.880336+09:00",
   "project": {
     "name": "libxml2",
     "upstream": "https://github.com/GNOME/libxml2",
@@ -17,8 +17,8 @@
   "merge_gap": 3,
   "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
   "durations": {
-    "fetch": 0.0033569920051377267,
-    "scan": 0.39007974800188094
+    "fetch": 0.0033269319974351674,
+    "scan": 0.38514714600751176
   },
   "diff_stats": {
     "files_changed": 1,

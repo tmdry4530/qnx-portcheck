@@ -1,7 +1,7 @@
 {
   "label": "FAKE-SCAN",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T12:29:03.798851+09:00",
+  "generated_at": "2026-11-15T12:34:21.472287+09:00",
   "project": {
     "name": "mosquitto",
     "upstream": "https://github.com/eclipse-mosquitto/mosquitto",
@@ -17,8 +17,8 @@
   "merge_gap": 3,
   "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
   "durations": {
-    "fetch": 0.0027241730131208897,
-    "scan": 0.15778423298615962
+    "fetch": 0.002731379005126655,
+    "scan": 0.1436359320068732
   },
   "diff_stats": {
     "files_changed": 19,

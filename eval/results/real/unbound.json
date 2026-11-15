@@ -1,0 +1,752 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T13:11:02.416435+09:00",
+  "project": {
+    "name": "unbound",
+    "upstream": "https://github.com/NLnetLabs/unbound",
+    "upstream_base_ref": "release-1.24.1",
+    "upstream_base_sha": "a33f0638e1dacf2633cf2292078a674576bca852",
+    "qnx_repo": "https://github.com/qnx-ports/unbound",
+    "qnx_branch": "qnx-release-1.24.1",
+    "qnx_head_sha": "5d76fff70001114ecfc01a14840c9dec134375f4",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "af18fa6",
+  "durations": {
+    "fetch": 0.0032630719942972064,
+    "scan": 15.412687275005737
+  },
+  "diff_stats": {
+    "files_changed": 10,
+    "compare_files_expected": 10,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "compat/arc4random.c",
+    "compat/getentropy_linux.c",
+    "services/outside_network.h",
+    "testcode/replay.h",
+    "testcode/unitldns.c",
+    "testcode/unitmsgparse.c",
+    "testcode/unitverify.c",
+    "testcode/unitzonemd.c",
+    "util/data/msgreply.h",
+    "util/timehist.h"
+  ],
+  "sites": [
+    {
+      "file": "compat/arc4random.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 40,
+      "old_count": 0,
+      "new_start": 41,
+      "new_count": 3,
+      "target_lines": [
+        40,
+        41
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "compat/arc4random.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 189,
+      "old_count": 3,
+      "new_start": 193,
+      "new_count": 4,
+      "target_lines": [
+        189,
+        190,
+        191
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "compat/getentropy_linux.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 31,
+      "old_count": 3,
+      "new_start": 32,
+      "new_count": 2,
+      "target_lines": [
+        31,
+        32,
+        33
+      ],
+      "hunks": 2,
+      "matched_findings": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "file": "compat/getentropy_linux.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 44,
+      "old_count": 3,
+      "new_start": 47,
+      "new_count": 2,
+      "target_lines": [
+        44,
+        45,
+        46
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "compat/getentropy_linux.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 62,
+      "old_count": 0,
+      "new_start": 67,
+      "new_count": 1,
+      "target_lines": [
+        62,
+        63
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        3,
+        4
+      ]
+    },
+    {
+      "file": "compat/getentropy_linux.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 68,
+      "old_count": 0,
+      "new_start": 74,
+      "new_count": 1,
+      "target_lines": [
+        68,
+        69
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "compat/getentropy_linux.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 96,
+      "old_count": 4,
+      "new_start": 103,
+      "new_count": 2,
+      "target_lines": [
+        96,
+        97,
+        98,
+        99
+      ],
+      "hunks": 2,
+      "matched_findings": [
+        6
+      ]
+    },
+    {
+      "file": "compat/getentropy_linux.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 180,
+      "old_count": 0,
+      "new_start": 189,
+      "new_count": 1,
+      "target_lines": [
+        180,
+        181
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "compat/getentropy_linux.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 187,
+      "old_count": 0,
+      "new_start": 197,
+      "new_count": 3,
+      "target_lines": [
+        187,
+        188
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "compat/getentropy_linux.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 216,
+      "old_count": 3,
+      "new_start": 229,
+      "new_count": 4,
+      "target_lines": [
+        216,
+        217,
+        218
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "compat/getentropy_linux.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 243,
+      "old_count": 6,
+      "new_start": 260,
+      "new_count": 2,
+      "target_lines": [
+        243,
+        244,
+        247,
+        248
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "compat/getentropy_linux.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 267,
+      "old_count": 0,
+      "new_start": 286,
+      "new_count": 1,
+      "target_lines": [
+        267,
+        268
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        12
+      ]
+    },
+    {
+      "file": "compat/getentropy_linux.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 539,
+      "old_count": 0,
+      "new_start": 559,
+      "new_count": 1,
+      "target_lines": [
+        539,
+        540
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "services/outside_network.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 50,
+      "old_count": 0,
+      "new_start": 51,
+      "new_count": 4,
+      "target_lines": [
+        50,
+        51
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "testcode/replay.h",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 144,
+      "old_count": 0,
+      "new_start": 145,
+      "new_count": 4,
+      "target_lines": [
+        144,
+        145
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "testcode/unitldns.c",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 209,
+      "old_count": 3,
+      "new_start": 210,
+      "new_count": 4,
+      "target_lines": [
+        209,
+        210,
+        211
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "testcode/unitmsgparse.c",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 500,
+      "old_count": 3,
+      "new_start": 501,
+      "new_count": 4,
+      "target_lines": [
+        500,
+        501,
+        502
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "testcode/unitverify.c",
+      "category": "source",
+      "is_test": true,
+      "kind": "mixed",
+      "old_start": 515,
+      "old_count": 3,
+      "new_start": 516,
+      "new_count": 4,
+      "target_lines": [
+        515,
+        516,
+        517
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "testcode/unitzonemd.c",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 52,
+      "old_count": 3,
+      "new_start": 53,
+      "new_count": 4,
+      "target_lines": [
+        52,
+        53,
+        54
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "util/data/msgreply.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 46,
+      "old_count": 0,
+      "new_start": 47,
+      "new_count": 4,
+      "target_lines": [
+        46,
+        47
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "util/timehist.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 44,
+      "old_count": 0,
+      "new_start": 45,
+      "new_count": 4,
+      "target_lines": [
+        44,
+        45
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 0,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "compat/getentropy_linux.c",
+      "line": 32,
+      "col": 1,
+      "message": "Linux syscall header <sys/syscall.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        2
+      ]
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "compat/getentropy_linux.c",
+      "line": 33,
+      "col": 8,
+      "message": "Linux syscall number SYS__sysctl",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        2
+      ]
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "compat/getentropy_linux.c",
+      "line": 34,
+      "col": 1,
+      "message": "Linux kernel header <linux/sysctl.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        2
+      ]
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "compat/getentropy_linux.c",
+      "line": 62,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        4
+      ]
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "compat/getentropy_linux.c",
+      "line": 64,
+      "col": 1,
+      "message": "Linux kernel header <linux/random.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        4
+      ]
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "compat/getentropy_linux.c",
+      "line": 90,
+      "col": 13,
+      "message": "Linux syscall number SYS_getrandom",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "compat/getentropy_linux.c",
+      "line": 94,
+      "col": 8,
+      "message": "Linux syscall number SYS__sysctl",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        6
+      ]
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "compat/getentropy_linux.c",
+      "line": 110,
+      "col": 13,
+      "message": "Linux syscall number SYS_getrandom",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "compat/getentropy_linux.c",
+      "line": 134,
+      "col": 8,
+      "message": "Linux syscall number SYS__sysctl",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "compat/getentropy_linux.c",
+      "line": 193,
+      "col": 13,
+      "message": "Linux syscall number SYS_getrandom",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "compat/getentropy_linux.c",
+      "line": 202,
+      "col": 9,
+      "message": "Linux syscall API syscall()",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "compat/getentropy_linux.c",
+      "line": 202,
+      "col": 17,
+      "message": "Linux syscall number SYS_getrandom",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "compat/getentropy_linux.c",
+      "line": 268,
+      "col": 8,
+      "message": "Linux syscall number SYS__sysctl",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        11
+      ]
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "compat/getentropy_linux.c",
+      "line": 286,
+      "col": 7,
+      "message": "Linux syscall API syscall()",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "compat/getentropy_linux.c",
+      "line": 286,
+      "col": 15,
+      "message": "Linux syscall number SYS__sysctl",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "compat/getentropy_osx.c",
+      "line": 28,
+      "col": 1,
+      "message": "Linux syscall header <sys/syscall.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "compat/getentropy_solaris.c",
+      "line": 25,
+      "col": 1,
+      "message": "Linux syscall header <sys/syscall.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "ipset/ipset.c",
+      "line": 29,
+      "col": 1,
+      "message": "Linux kernel header <linux/netfilter/nfnetlink.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "ipset/ipset.c",
+      "line": 30,
+      "col": 1,
+      "message": "Linux kernel header <linux/netfilter/ipset/ip_set.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "services/listen_dnsport.c",
+      "line": 108,
+      "col": 1,
+      "message": "Linux kernel header <linux/net_tstamp.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "util/config_file.h",
+      "line": 1478,
+      "col": 41,
+      "message": "Linux /proc path \"/proc/sys/net/ipv4/ip_local_port_range\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "util/netevent.c",
+      "line": 83,
+      "col": 1,
+      "message": "Linux kernel header <linux/net_tstamp.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-ACCEPT4",
+      "severity": "note",
+      "file": "util/netevent.c",
+      "line": 2985,
+      "col": 11,
+      "message": "Linux accept4 API accept4()",
+      "suggestion": "accept4() is provided by the QNX 8.0 io-sock stack (FreeBSD semantics; see FreeBSD accept(2)). io-sock applications link against libsocket.so (-l socket); there is no libsocket.a.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.io_sock/topic/socket_api.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "util/storage/lookup3.c",
+      "line": 75,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 21,
+    "sites_by_category": {
+      "source": 21,
+      "build": 0,
+      "other": 0
+    },
+    "sites_source_nontest": 16,
+    "sites_source_test": 5,
+    "sites_hit_source_nontest": 4,
+    "sites_hit_by_category": {
+      "source": 4,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.1905,
+    "recall_source_nontest": 0.25,
+    "recall_build": null,
+    "recall_in_scope": 0.1905,
+    "findings_total": 24,
+    "findings_tp": 7,
+    "findings_by_category": {
+      "source": 24,
+      "build": 0,
+      "other": 0
+    },
+    "findings_in_patched_files": 15,
+    "findings_tp_in_patched_files": 7,
+    "precision": 0.2917,
+    "precision_in_patched_files": 0.4667
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  }
+}

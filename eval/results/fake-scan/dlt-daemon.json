@@ -1,7 +1,7 @@
 {
   "label": "FAKE-SCAN",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T12:29:00.987244+09:00",
+  "generated_at": "2026-11-15T12:34:18.722241+09:00",
   "project": {
     "name": "dlt-daemon",
     "upstream": "https://github.com/COVESA/dlt-daemon",
@@ -17,8 +17,8 @@
   "merge_gap": 3,
   "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
   "durations": {
-    "fetch": 0.004424679995281622,
-    "scan": 0.14240625899401493
+    "fetch": 0.002854049002053216,
+    "scan": 0.15698554800474085
   },
   "diff_stats": {
     "files_changed": 7,

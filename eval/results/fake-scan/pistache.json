@@ -1,7 +1,7 @@
 {
   "label": "FAKE-SCAN",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T12:29:04.426267+09:00",
+  "generated_at": "2026-11-15T12:34:22.109633+09:00",
   "project": {
     "name": "pistache",
     "upstream": "https://github.com/pistacheio/pistache",
@@ -17,8 +17,8 @@
   "merge_gap": 3,
   "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
   "durations": {
-    "fetch": 0.002737493981840089,
-    "scan": 0.12020428897812963
+    "fetch": 0.003184506989782676,
+    "scan": 0.11802539299242198
   },
   "diff_stats": {
     "files_changed": 14,

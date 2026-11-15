@@ -463,7 +463,14 @@ def aggregate(project_results: list[dict]) -> dict:
         "precision",
         "precision_in_patched_files",
     )
-    count_keys = ("sites_total", "sites_source_nontest", "sites_source_test", "findings_total", "findings_tp")
+    count_keys = (
+        "sites_total",
+        "sites_source_nontest",
+        "sites_source_test",
+        "sites_hit_source_nontest",
+        "findings_total",
+        "findings_tp",
+    )
     sums = {k: sum(p.get("metrics", {}).get(k, 0) for p in ok) for k in count_keys}
     categories = {
         c: sum(p.get("metrics", {}).get("sites_by_category", {}).get(c, 0) for p in ok)
@@ -481,10 +488,13 @@ def aggregate(project_results: list[dict]) -> dict:
     micro = {
         "sites_total": sums["sites_total"],
         "sites_source_nontest": sums["sites_source_nontest"],
+        "sites_hit_source_nontest": sums["sites_hit_source_nontest"],
         "sites_by_category": categories,
         "sites_hit_by_category": hits,
         "findings_total": sums["findings_total"],
         "findings_tp": sums["findings_tp"],
+        "findings_in_patched_files": n_patch,
+        "findings_tp_in_patched_files": tp_patch,
         "findings_by_category": finding_cats,
     }
     denoms = {
@@ -508,6 +518,24 @@ def aggregate(project_results: list[dict]) -> dict:
     for key in ratios:
         vals = [p.get("metrics", {}).get(key) for p in ok if p.get("metrics", {}).get(key) is not None]
         macro[key] = {"mean": round(mean(vals), 4) if vals else None, "n": len(vals)}
+    by_rule: dict[str, dict[str, Any]] = {}
+    for project in ok:
+        project_name = project.get("project", {}).get("name", project.get("name", ""))
+        sites = project.get("sites", [])
+        for finding in project.get("findings", []):
+            rule = finding.get("rule_id", "")
+            row = by_rule.setdefault(rule, {"findings": 0, "findings_tp": 0, "_sites": set()})
+            row["findings"] += 1
+            hit_sites = finding.get("matched_sites", [])
+            tp = any(
+                0 <= i < len(sites) and sites[i].get("category") in {"source", "build"} for i in hit_sites
+            )
+            row["findings_tp"] += int(tp)
+            for i in hit_sites:
+                if 0 <= i < len(sites) and sites[i].get("category") in {"source", "build"}:
+                    row["_sites"].add((project_name, i))
+    for row in by_rule.values():
+        row["sites_hit"] = len(row.pop("_sites"))
     return {
         "counts": {
             "ok_projects": len(ok),
@@ -515,6 +543,7 @@ def aggregate(project_results: list[dict]) -> dict:
         },
         "micro": micro,
         "macro": macro,
+        "by_rule": by_rule,
     }
 
 
@@ -646,14 +675,17 @@ def run_scan(scan_cmd_template: str, path: str | Path, timeout: int) -> tuple[di
     start = time.monotonic()
     cp = subprocess.run(cmd, cwd=repo_root, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=timeout)
     elapsed = time.monotonic() - start
+    stderr = _decode_output(cp.stderr).strip()
+    if cp.returncode == 2:
+        raise RuntimeError(f"scanner usage error (exit 2): {stderr[:500]}")
+    if cp.returncode not in (0, 1):
+        raise RuntimeError(f"scanner exited with status {cp.returncode}: {stderr}")
     try:
         obj = json.loads(_decode_output(cp.stdout))
     except json.JSONDecodeError as exc:
         raise RuntimeError(
             f"scanner exited {cp.returncode} without valid JSON: {exc}; {_decode_output(cp.stderr).strip()}"
         ) from exc
-    if cp.returncode not in (0, 1):
-        raise RuntimeError(f"scanner exited with status {cp.returncode}: {_decode_output(cp.stderr).strip()}")
     validate_scan_output(obj)
     return obj, elapsed
 
@@ -691,6 +723,7 @@ def evaluate_project(p: dict, args: argparse.Namespace) -> dict:
         "window": args.window,
         "merge_gap": args.merge_gap,
         "scan_cmd": args.scan_cmd,
+        "scanner_source_commit": getattr(args, "scanner_source_commit", None),
         "durations": {"fetch": 0.0, "scan": 0.0},
         "diff_stats": {
             "files_changed": 0,
@@ -711,10 +744,13 @@ def evaluate_project(p: dict, args: argparse.Namespace) -> dict:
         "metrics": {},
         "status": "error",
     }
+    phase = "other"
     try:
         t = time.monotonic()
+        phase = "fetch"
         repo = fetch_project(p, args.work_dir, args.timeout)
         result["durations"]["fetch"] = time.monotonic() - t
+        phase = "other"
         diff = get_patch_diff(repo, p["upstream_base_sha"], p["qnx_head_sha"])
         Path(args.work_dir).mkdir(parents=True, exist_ok=True)
         Path(args.work_dir, p["name"] + ".qnx.diff").write_bytes(diff)
@@ -731,6 +767,7 @@ def evaluate_project(p: dict, args: argparse.Namespace) -> dict:
         result["out_of_scope"].update(out)
         result["out_of_scope"]["build_sites"] = sum(s.category == "build" for s in sites)
         result["out_of_scope"]["other_sites"] = sum(s.category == "other" for s in sites)
+        phase = "scanner"
         finding_obj, scan_duration = run_scan(args.scan_cmd, repo, args.timeout)
         result["durations"]["scan"] = scan_duration
         findings = finding_obj["findings"]
@@ -748,7 +785,19 @@ def evaluate_project(p: dict, args: argparse.Namespace) -> dict:
         result["scanner"] = {"tool": finding_obj["tool"], "version": finding_obj["version"]}
         result["status"] = "ok"
     except Exception as exc:
-        result["error"] = f"{type(exc).__name__}: {exc}"
+        work_prefix = str(Path(args.work_dir).resolve())
+        message = f"{type(exc).__name__}: {exc}".replace(work_prefix, "eval/work")
+        result["error"] = message[:300]
+        if isinstance(exc, subprocess.TimeoutExpired):
+            result["error_kind"] = "timeout"
+        elif phase == "scanner" and isinstance(exc, RuntimeError) and "usage error (exit 2)" in str(exc):
+            result["error_kind"] = "usage"
+        elif phase == "scanner":
+            result["error_kind"] = "scanner"
+        elif phase == "fetch":
+            result["error_kind"] = "fetch"
+        else:
+            result["error_kind"] = "other"
     return result
 
 
@@ -768,6 +817,13 @@ def render_summary_md(summary: dict) -> str:
     out += [
         "# qnx-portcheck evaluation results",
         "",
+    ]
+    if "FAKE" not in label.upper():
+        out += [
+            "Numbers below come from an actual run of qnx-portcheck on the upstream base commits listed in eval/projects.yaml, compared with the qnx-ports patches (see METHOD.md). The tool was not run on a QNX target.",
+            "",
+        ]
+    out += [
         f"- Label: {label}",
         f"- Date (KST): {cfg.get('date_kst', '—')}",
         f"- Window: ±{cfg.get('window', '—')} lines",
@@ -775,7 +831,11 @@ def render_summary_md(summary: dict) -> str:
         f"- Scan command: `{cfg.get('scan_cmd', '—')}`",
         f"- Scanner: {cfg.get('scanner', '—')}",
         f"- Harness version: {cfg.get('harness_version', HARNESS_VERSION)}",
+        f"- Scanner source commit: {cfg.get('scanner_source_commit', '—') or '—'}",
+        f"- Harness git SHA: {cfg.get('harness_git_sha', '—') or '—'}",
+        f"- Total runtime: {cfg.get('total_runtime_seconds', '—')} s",
         f"- Projects: {cfg.get('projects_count', 0)}",
+        f"- Reused projects: {cfg.get('reused_projects', 0)}",
         "",
         "| project | upstream base | src sites (all/non-test) | build sites | other sites | new files | findings | TP | recall src | recall src non-test | recall build | precision | precision (patched files) | status |",
         "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|",
@@ -806,6 +866,29 @@ def render_summary_md(summary: dict) -> str:
         + " | ".join(_fmt(macro.get(k, {}).get("mean")) for k in macro_ratios)
         + " | — |"
     )
+    out.append(
+        "The term “src sites” means source-file change sites in upstream base coordinates; “(non-test)” excludes test paths."
+    )
+    out += ["", "## Overall (micro)", ""]
+    out.append(
+        f"Overall (micro): source-site recall {_fmt(micro.get('recall_source'))} ({micro.get('sites_hit_by_category', {}).get('source', 0)}/{micro.get('sites_by_category', {}).get('source', 0)}), non-test source-site recall {_fmt(micro.get('recall_source_nontest'))} ({micro.get('sites_hit_source_nontest', 0)}/{micro.get('sites_source_nontest', 0)}), build-site recall {_fmt(micro.get('recall_build'))} ({micro.get('sites_hit_by_category', {}).get('build', 0)}/{micro.get('sites_by_category', {}).get('build', 0)}), precision {_fmt(micro.get('precision'))} ({micro.get('findings_tp', 0)}/{micro.get('findings_total', 0)}), precision in patched files {_fmt(micro.get('precision_in_patched_files'))} ({micro.get('findings_tp_in_patched_files', 0)}/{micro.get('findings_in_patched_files', 0)})."
+    )
+    out += [
+        "",
+        "## Hits by rule",
+        "",
+        "| rule_id | findings | TP findings | sites hit |",
+        "|---|---:|---:|---:|",
+    ]
+    for rule, counts in sorted(agg.get("by_rule", {}).items()):
+        out.append(
+            f"| {rule} | {counts.get('findings', 0)} | {counts.get('findings_tp', 0)} | {counts.get('sites_hit', 0)} |"
+        )
+    out += ["", "## Runtime", "", "| project | fetch seconds | scan seconds |", "|---|---:|---:|"]
+    for p in summary.get("projects", []):
+        d = p.get("durations", {})
+        out.append(f"| {p.get('name', '—')} | {d.get('fetch', 0):.3f} | {d.get('scan', 0):.3f} |")
+    out.append(f"Total runtime: {cfg.get('total_runtime_seconds', 0):.1f} seconds.")
     out += ["", "## Out of scope", ""]
     for p in summary.get("projects", []):
         o = p.get("out_of_scope", {})
@@ -819,10 +902,9 @@ def render_summary_md(summary: dict) -> str:
         out += ["", "## Errors", ""]
         for p in errors:
             name = p.get("name", p.get("project", {}).get("name", "—"))
-            out.append(f"- **{name}**: {str(p.get('error', 'Unknown error'))[:120]}")
-    out.append(
-        "\nThe term “src sites” means source-file change sites in upstream base coordinates; “(non-test)” excludes test paths."
-    )
+            out.append(
+                f"- **{name}** [{p.get('error_kind', 'other')}]: {str(p.get('error', 'Unknown error'))[:300]}"
+            )
     out += ["", "See [METHOD.md](METHOD.md) for methodology.", ""]
     return "\n".join(out)
 
@@ -832,7 +914,7 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--projects", default=str(here / "projects.yaml"))
     ap.add_argument("--only")
-    ap.add_argument("--scan-cmd", default="qnx-portcheck scan {path} --format json")
+    ap.add_argument("--scan-cmd", default="qnx-portcheck scan {path} --format json --fail-on never")
     ap.add_argument("--window", type=int, default=3)
     ap.add_argument("--merge-gap", type=int, default=3)
     ap.add_argument("--work-dir", default=str(here / "work"))
@@ -842,6 +924,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--no-summary", action="store_true")
     ap.add_argument("--include-unverified", action="store_true")
     ap.add_argument("--timeout", type=int, default=600)
+    ap.add_argument("--reuse-results", action="store_true")
     args = ap.parse_args(argv)
     projects = load_projects(args.projects)
     if args.only:
@@ -849,8 +932,39 @@ def main(argv: list[str] | None = None) -> int:
         projects = [p for p in projects if p["name"] in wanted]
     skipped = [p for p in projects if not p.get("verified", False) and not args.include_unverified]
     projects = [p for p in projects if p not in skipped]
+    started_at = _kst_now()
+    run_start = time.monotonic()
+    source_cp = subprocess.run(
+        ["git", "log", "-1", "--format=%h", "--", "src/"],
+        cwd=here.parent,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+    scanner_source_commit = _decode_output(source_cp.stdout).strip() if source_cp.returncode == 0 else None
+    args.scanner_source_commit = scanner_source_commit or None
     results = []
+    reused_projects = 0
+    outdir = Path(args.results_dir) / args.label.lower()
     for p in projects:
+        prior_path = outdir / (p["name"] + ".json")
+        if args.reuse_results and prior_path.exists():
+            try:
+                prior = json.loads(prior_path.read_text(encoding="utf-8"))
+                if (
+                    prior.get("status") == "ok"
+                    and prior.get("project", {}).get("upstream_base_sha") == p["upstream_base_sha"]
+                    and prior.get("project", {}).get("qnx_head_sha") == p["qnx_head_sha"]
+                    and prior.get("window") == args.window
+                    and prior.get("merge_gap") == args.merge_gap
+                    and prior.get("scan_cmd") == args.scan_cmd
+                    and prior.get("scanner_source_commit") == args.scanner_source_commit
+                ):
+                    results.append(prior)
+                    reused_projects += 1
+                    print(f"[{args.label}] {p['name']}: reused", file=sys.stderr, flush=True)
+                    continue
+            except (OSError, json.JSONDecodeError):
+                pass
         print(f"[{args.label}] {p['name']} ...", file=sys.stderr, flush=True)
         r = evaluate_project(p, args)
         results.append(r)
@@ -866,6 +980,8 @@ def main(argv: list[str] | None = None) -> int:
         ),
         "—",
     )
+    total_runtime = round(time.monotonic() - run_start, 1)
+    finished_at = _kst_now()
     harness_sha = (
         subprocess.run(
             ["git", "rev-parse", "--short", "HEAD"],
@@ -885,10 +1001,12 @@ def main(argv: list[str] | None = None) -> int:
             "qnx_head_sha": r["project"].get("qnx_head_sha"),
             "status": r["status"],
             "error": r.get("error"),
+            "error_kind": r.get("error_kind"),
             "metrics": r.get("metrics", {}),
             "out_of_scope": r.get("out_of_scope", {}),
             "diff_stats": r.get("diff_stats", {}),
             "scanner": r.get("scanner", {}),
+            "durations": {k: round(v, 3) for k, v in r.get("durations", {}).items()},
         }
         for r in results
     ]
@@ -902,13 +1020,17 @@ def main(argv: list[str] | None = None) -> int:
             "scanner": scanner,
             "harness_version": HARNESS_VERSION,
             "harness_git_sha": harness_sha,
+            "scanner_source_commit": scanner_source_commit or None,
+            "total_runtime_seconds": total_runtime,
+            "started_at": started_at,
+            "finished_at": finished_at,
             "projects_count": len(projects),
+            "reused_projects": reused_projects,
             "skipped_unverified": len(skipped),
         },
         "aggregate": aggregate(results),
         "projects": compact,
     }
-    outdir = Path(args.results_dir) / args.label.lower()
     outdir.mkdir(parents=True, exist_ok=True)
     for r in results:
         (outdir / (r["project"]["name"] + ".json")).write_text(

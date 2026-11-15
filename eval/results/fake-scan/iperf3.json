@@ -1,7 +1,7 @@
 {
   "label": "FAKE-SCAN",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T12:29:01.995022+09:00",
+  "generated_at": "2026-11-15T12:34:19.744636+09:00",
   "project": {
     "name": "iperf3",
     "upstream": "https://github.com/esnet/iperf",
@@ -17,8 +17,8 @@
   "merge_gap": 3,
   "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
   "durations": {
-    "fetch": 0.0032623829902149737,
-    "scan": 0.07770251799956895
+    "fetch": 0.0032845089735928923,
+    "scan": 0.07194344801246189
   },
   "diff_stats": {
     "files_changed": 3,

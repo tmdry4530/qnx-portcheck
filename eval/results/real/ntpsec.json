@@ -1,0 +1,1215 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T13:09:55.221475+09:00",
+  "project": {
+    "name": "ntpsec",
+    "upstream": "https://github.com/ntpsec/ntpsec",
+    "upstream_base_ref": "master",
+    "upstream_base_sha": "39b19ff71b785452e2c49033dad8e18a0e95a1ae",
+    "qnx_repo": "https://github.com/qnx-ports/ntpsec",
+    "qnx_branch": "master",
+    "qnx_head_sha": "a144accf831d03c5599ea2b45b02f98de89412e2",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "af18fa6",
+  "durations": {
+    "fetch": 0.0041669849888421595,
+    "scan": 5.578901496017352
+  },
+  "diff_stats": {
+    "files_changed": 9,
+    "compare_files_expected": 9,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "include/ntp_syscall.h",
+    "include/ntp_types.h",
+    "libntp/clockwork.c",
+    "libntp/ntp_c.c",
+    "libntp/statestr.c",
+    "ntpd/ntp_control.c",
+    "ntpd/ntp_loopfilter.c",
+    "tests/libntp/statestr.c",
+    "wscript"
+  ],
+  "sites": [
+    {
+      "file": "include/ntp_syscall.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 12,
+      "old_count": 4,
+      "new_start": 13,
+      "new_count": 7,
+      "target_lines": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "hunks": 3,
+      "matched_findings": []
+    },
+    {
+      "file": "include/ntp_types.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 50,
+      "old_count": 3,
+      "new_start": 50,
+      "new_count": 2,
+      "target_lines": [
+        50,
+        51,
+        52
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "libntp/clockwork.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 8,
+      "old_count": 3,
+      "new_start": 9,
+      "new_count": 2,
+      "target_lines": [
+        8,
+        9,
+        10
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "libntp/ntp_c.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 92,
+      "old_count": 3,
+      "new_start": 93,
+      "new_count": 5,
+      "target_lines": [
+        92,
+        93,
+        94
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "libntp/statestr.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 191,
+      "old_count": 0,
+      "new_start": 192,
+      "new_count": 1,
+      "target_lines": [
+        191,
+        192
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "libntp/statestr.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 216,
+      "old_count": 0,
+      "new_start": 218,
+      "new_count": 1,
+      "target_lines": [
+        216,
+        217
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "libntp/statestr.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 318,
+      "old_count": 11,
+      "new_start": 320,
+      "new_count": 16,
+      "target_lines": [
+        318,
+        319,
+        320,
+        321,
+        322,
+        323,
+        324,
+        325,
+        326,
+        328
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "libntp/statestr.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "delete",
+      "old_start": 362,
+      "old_count": 1,
+      "new_start": 369,
+      "new_count": 0,
+      "target_lines": [
+        362
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "libntp/statestr.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 367,
+      "old_count": 3,
+      "new_start": 375,
+      "new_count": 6,
+      "target_lines": [
+        367,
+        368,
+        369
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_control.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 39,
+      "old_count": 3,
+      "new_start": 40,
+      "new_count": 2,
+      "target_lines": [
+        39,
+        40,
+        41
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_control.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 384,
+      "old_count": 0,
+      "new_start": 387,
+      "new_count": 1,
+      "target_lines": [
+        384,
+        385
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_control.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 402,
+      "old_count": 1,
+      "new_start": 405,
+      "new_count": 1,
+      "target_lines": [
+        402
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_control.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 1404,
+      "old_count": 3,
+      "new_start": 1408,
+      "new_count": 2,
+      "target_lines": [
+        1404,
+        1405,
+        1406
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_control.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 1417,
+      "old_count": 0,
+      "new_start": 1423,
+      "new_count": 1,
+      "target_lines": [
+        1417,
+        1418
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_control.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 1424,
+      "old_count": 0,
+      "new_start": 1431,
+      "new_count": 1,
+      "target_lines": [
+        1424,
+        1425
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 133,
+      "old_count": 9,
+      "new_start": 134,
+      "new_count": 4,
+      "target_lines": [
+        133,
+        134,
+        135,
+        136,
+        138,
+        139,
+        140,
+        141
+      ],
+      "hunks": 4,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 156,
+      "old_count": 3,
+      "new_start": 161,
+      "new_count": 2,
+      "target_lines": [
+        156,
+        157,
+        158
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 174,
+      "old_count": 0,
+      "new_start": 181,
+      "new_count": 1,
+      "target_lines": [
+        174,
+        175
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 201,
+      "old_count": 0,
+      "new_start": 209,
+      "new_count": 1,
+      "target_lines": [
+        201,
+        202
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 218,
+      "old_count": 0,
+      "new_start": 227,
+      "new_count": 1,
+      "target_lines": [
+        218,
+        219
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 414,
+      "old_count": 1,
+      "new_start": 423,
+      "new_count": 1,
+      "target_lines": [
+        414
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 446,
+      "old_count": 3,
+      "new_start": 456,
+      "new_count": 2,
+      "target_lines": [
+        446,
+        447,
+        448
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 488,
+      "old_count": 1,
+      "new_start": 499,
+      "new_count": 6,
+      "target_lines": [
+        488
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 644,
+      "old_count": 1,
+      "new_start": 660,
+      "new_count": 5,
+      "target_lines": [
+        644
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 718,
+      "old_count": 0,
+      "new_start": 739,
+      "new_count": 1,
+      "target_lines": [
+        718,
+        719
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 812,
+      "old_count": 0,
+      "new_start": 834,
+      "new_count": 1,
+      "target_lines": [
+        812,
+        813
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 961,
+      "old_count": 1,
+      "new_start": 983,
+      "new_count": 6,
+      "target_lines": [
+        961
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 1026,
+      "old_count": 0,
+      "new_start": 1054,
+      "new_count": 1,
+      "target_lines": [
+        1026,
+        1027
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 1038,
+      "old_count": 6,
+      "new_start": 1067,
+      "new_count": 2,
+      "target_lines": [
+        1038,
+        1039,
+        1042,
+        1043
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1078,
+      "old_count": 1,
+      "new_start": 1108,
+      "new_count": 1,
+      "target_lines": [
+        1078
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 1102,
+      "old_count": 3,
+      "new_start": 1133,
+      "new_count": 2,
+      "target_lines": [
+        1102,
+        1103,
+        1104
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 1161,
+      "old_count": 3,
+      "new_start": 1193,
+      "new_count": 2,
+      "target_lines": [
+        1161,
+        1162,
+        1163
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/libntp/statestr.c",
+      "category": "source",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 7,
+      "old_count": 1,
+      "new_start": 7,
+      "new_count": 3,
+      "target_lines": [
+        7
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/libntp/statestr.c",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 32,
+      "old_count": 6,
+      "new_start": 35,
+      "new_count": 2,
+      "target_lines": [
+        32,
+        33,
+        36,
+        37
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/libntp/statestr.c",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 69,
+      "old_count": 3,
+      "new_start": 74,
+      "new_count": 2,
+      "target_lines": [
+        69,
+        70,
+        71
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "wscript",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 255,
+      "old_count": 1,
+      "new_start": 255,
+      "new_count": 4,
+      "target_lines": [
+        255
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "wscript",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 543,
+      "old_count": 1,
+      "new_start": 546,
+      "new_count": 1,
+      "target_lines": [
+        543
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "wscript",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 578,
+      "old_count": 3,
+      "new_start": 581,
+      "new_count": 10,
+      "target_lines": [
+        578,
+        579,
+        580
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "wscript",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 708,
+      "old_count": 1,
+      "new_start": 718,
+      "new_count": 2,
+      "target_lines": [
+        708
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 4,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "attic/timestamp-info.c",
+      "line": 22,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "attic/timestamp-info.c",
+      "line": 47,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "attic/timestamp-info.c",
+      "line": 65,
+      "col": 29,
+      "message": "Linux /proc path \"/proc/sys/kernel/osrelease\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "attic/timestamp-info.c",
+      "line": 190,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "libntp/isc_interfaceiter.c",
+      "line": 37,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_addr.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "libntp/isc_interfaceiter.c",
+      "line": 153,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "libntp/isc_interfaceiter.c",
+      "line": 227,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "libntp/isc_interfaceiter.c",
+      "line": 253,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "libntp/isc_interfaceiter.c",
+      "line": 259,
+      "col": 37,
+      "message": "Linux /proc path \"/proc/net/if_inet6\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "libntp/isc_interfaceiter.c",
+      "line": 299,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "libntp/isc_interfaceiter.c",
+      "line": 326,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "libntp/isc_interfaceiter.c",
+      "line": 360,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "libntp/isc_interfaceiter.c",
+      "line": 417,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "libntp/isc_interfaceiter.c",
+      "line": 430,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "libntp/isc_interfaceiter.c",
+      "line": 443,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "libntp/isc_interfaceiter.c",
+      "line": 767,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "libntp/isc_interfaceiter.c",
+      "line": 1006,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "libntp/isc_interfaceiter.c",
+      "line": 1007,
+      "col": 29,
+      "message": "Linux /proc path \"/proc/net/if_inet6\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "libntp/isc_interfaceiter.c",
+      "line": 1060,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "libntp/isc_interfaceiter.c",
+      "line": 1408,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "libntp/isc_interfaceiter.c",
+      "line": 1471,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "libntp/isc_interfaceiter.c",
+      "line": 1486,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "libntp/isc_interfaceiter.c",
+      "line": 1494,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "ntpd/ntp_io.c",
+      "line": 32,
+      "col": 1,
+      "message": "Linux kernel header <linux/rtnetlink.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PRCTL",
+      "severity": "error",
+      "file": "ntpd/ntp_sandbox.c",
+      "line": 25,
+      "col": 1,
+      "message": "Linux prctl header <sys/prctl.h>",
+      "suggestion": "prctl() is not in the QNX 8.0 C Library Reference. For PR_SET_NAME use pthread_setname_np(); other prctl options: manual review.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_setname_np.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PRCTL",
+      "severity": "error",
+      "file": "ntpd/ntp_sandbox.c",
+      "line": 88,
+      "col": 7,
+      "message": "Linux prctl API prctl()",
+      "suggestion": "prctl() is not in the QNX 8.0 C Library Reference. For PR_SET_NAME use pthread_setname_np(); other prctl options: manual review.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_setname_np.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "ntpd/ntp_sandbox.c",
+      "line": 304,
+      "col": 8,
+      "message": "Linux syscall number __NR_prlimit64",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "ntpd/ntp_sandbox.c",
+      "line": 331,
+      "col": 8,
+      "message": "Linux syscall number __NR_getrandom",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "ntpd/ntp_sandbox.c",
+      "line": 334,
+      "col": 8,
+      "message": "Linux syscall number __NR_ugetrlimit",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "ntpd/ntp_sandbox.c",
+      "line": 337,
+      "col": 8,
+      "message": "Linux syscall number __NR_getrlimit",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "ntpd/ntp_sandbox.c",
+      "line": 354,
+      "col": 8,
+      "message": "Linux syscall number __NR_openat",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "ntpd/ntp_sandbox.c",
+      "line": 370,
+      "col": 8,
+      "message": "Linux syscall number __NR_rseq",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "ntpd/ntp_sandbox.c",
+      "line": 376,
+      "col": 8,
+      "message": "Linux syscall number __NR_select",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "ntpd/ntp_sandbox.c",
+      "line": 381,
+      "col": 8,
+      "message": "Linux syscall number __NR_setsockopt",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "ntpd/ntp_sandbox.c",
+      "line": 388,
+      "col": 8,
+      "message": "Linux syscall number __NR_time",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "ntpd/ntp_sandbox.c",
+      "line": 409,
+      "col": 8,
+      "message": "Linux syscall number __NR_clone3",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "ntpd/ntp_sandbox.c",
+      "line": 439,
+      "col": 8,
+      "message": "Linux syscall number __NR_ppoll",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "ntpd/ntp_sandbox.c",
+      "line": 453,
+      "col": 8,
+      "message": "Linux syscall number __NR_geteuid32",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "ntpd/ntp_sandbox.c",
+      "line": 457,
+      "col": 8,
+      "message": "Linux syscall number __NR_mmap",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "ntpd/refclock_generic.c",
+      "line": 101,
+      "col": 1,
+      "message": "Linux kernel header <linux/serial.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 39,
+    "sites_by_category": {
+      "source": 35,
+      "build": 4,
+      "other": 0
+    },
+    "sites_source_nontest": 32,
+    "sites_source_test": 3,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.0,
+    "findings_total": 40,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 40,
+      "build": 0,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  }
+}

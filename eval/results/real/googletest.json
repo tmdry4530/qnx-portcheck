@@ -1,0 +1,324 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T12:54:57.559167+09:00",
+  "project": {
+    "name": "googletest",
+    "upstream": "https://github.com/google/googletest",
+    "upstream_base_ref": "v1.13.0",
+    "upstream_base_sha": "b796f7d44681514f58a683a3a71ff17c94edb0c1",
+    "qnx_repo": "https://github.com/qnx-ports/googletest",
+    "qnx_branch": "qnx_v1.13.0",
+    "qnx_head_sha": "989d25b8dbeefe942aef4560575c461ec95bec70",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "af18fa6",
+  "durations": {
+    "fetch": 0.003991687000961974,
+    "scan": 8.57476790700457
+  },
+  "diff_stats": {
+    "files_changed": 4,
+    "compare_files_expected": 4,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "googlemock/CMakeLists.txt",
+    "googlemock/include/gmock/gmock-actions.h",
+    "googletest/CMakeLists.txt",
+    "googletest/src/gtest-death-test.cc"
+  ],
+  "sites": [
+    {
+      "file": "googlemock/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 109,
+      "old_count": 6,
+      "new_start": 109,
+      "new_count": 11,
+      "target_lines": [
+        109,
+        110,
+        111,
+        112,
+        113,
+        114
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "googlemock/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 204,
+      "old_count": 2,
+      "new_start": 209,
+      "new_count": 7,
+      "target_lines": [
+        204,
+        205
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "googlemock/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 217,
+      "old_count": 0,
+      "new_start": 228,
+      "new_count": 9,
+      "target_lines": [
+        217,
+        218
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "googlemock/include/gmock/gmock-actions.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 454,
+      "old_count": 0,
+      "new_start": 455,
+      "new_count": 4,
+      "target_lines": [
+        454,
+        455
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "googlemock/include/gmock/gmock-actions.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 471,
+      "old_count": 0,
+      "new_start": 476,
+      "new_count": 4,
+      "target_lines": [
+        471,
+        472
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "googletest/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 151,
+      "old_count": 6,
+      "new_start": 151,
+      "new_count": 11,
+      "target_lines": [
+        151,
+        152,
+        153,
+        154,
+        155,
+        156
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "googletest/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 257,
+      "old_count": 2,
+      "new_start": 262,
+      "new_count": 7,
+      "target_lines": [
+        257,
+        258
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "googletest/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 263,
+      "old_count": 2,
+      "new_start": 273,
+      "new_count": 7,
+      "target_lines": [
+        263,
+        264
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "googletest/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 280,
+      "old_count": 5,
+      "new_start": 295,
+      "new_count": 13,
+      "target_lines": [
+        280,
+        281,
+        282,
+        283,
+        284
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "googletest/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 317,
+      "old_count": 1,
+      "new_start": 340,
+      "new_count": 5,
+      "target_lines": [
+        317
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "googletest/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 337,
+      "old_count": 0,
+      "new_start": 365,
+      "new_count": 9,
+      "target_lines": [
+        337,
+        338
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "googletest/src/gtest-death-test.cc",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 1294,
+      "old_count": 3,
+      "new_start": 1295,
+      "new_count": 4,
+      "target_lines": [
+        1294,
+        1295,
+        1296
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 9,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "googletest/include/gtest/internal/gtest-port-arch.h",
+      "line": 85,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "googletest/src/gtest-port.cc",
+      "line": 112,
+      "col": 22,
+      "message": "Linux /proc path \"/proc/\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "googletest/src/gtest-port.cc",
+      "line": 214,
+      "col": 24,
+      "message": "Linux /proc path \"/proc/self/as\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 12,
+    "sites_by_category": {
+      "source": 3,
+      "build": 9,
+      "other": 0
+    },
+    "sites_source_nontest": 2,
+    "sites_source_test": 1,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.0,
+    "findings_total": 3,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 3,
+      "build": 0,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  }
+}

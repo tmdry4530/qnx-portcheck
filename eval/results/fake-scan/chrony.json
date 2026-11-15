@@ -1,7 +1,7 @@
 {
   "label": "FAKE-SCAN",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T12:29:00.866222+09:00",
+  "generated_at": "2026-11-15T12:34:18.595910+09:00",
   "project": {
     "name": "chrony",
     "upstream": "https://github.com/mlichvar/chrony",
@@ -17,8 +17,8 @@
   "merge_gap": 3,
   "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
   "durations": {
-    "fetch": 0.002983694983413443,
-    "scan": 0.1117871189780999
+    "fetch": 0.003289698011940345,
+    "scan": 0.11679891298990697
   },
   "diff_stats": {
     "files_changed": 12,

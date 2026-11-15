@@ -1,7 +1,7 @@
 {
   "label": "FAKE-SCAN",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T12:29:04.573598+09:00",
+  "generated_at": "2026-11-15T12:34:22.257591+09:00",
   "project": {
     "name": "s2n-tls",
     "upstream": "https://github.com/aws/s2n-tls",
@@ -17,8 +17,8 @@
   "merge_gap": 3,
   "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
   "durations": {
-    "fetch": 0.003146693983580917,
-    "scan": 0.5984321929863654
+    "fetch": 0.003119476983556524,
+    "scan": 0.5071845430065878
   },
   "diff_stats": {
     "files_changed": 32,

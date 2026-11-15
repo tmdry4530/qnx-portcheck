@@ -1,7 +1,7 @@
 {
   "label": "FAKE-SCAN",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T12:29:02.336017+09:00",
+  "generated_at": "2026-11-15T12:34:20.053651+09:00",
   "project": {
     "name": "libusb",
     "upstream": "https://github.com/libusb/libusb",
@@ -17,8 +17,8 @@
   "merge_gap": 3,
   "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
   "durations": {
-    "fetch": 0.0028621779929380864,
-    "scan": 0.0897516520053614
+    "fetch": 0.0028437949949875474,
+    "scan": 0.09094543399987742
   },
   "diff_stats": {
     "files_changed": 9,

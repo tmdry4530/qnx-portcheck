@@ -1,4 +1,6 @@
+import base64
 import json
+import re
 import os
 import subprocess
 import sys
@@ -240,6 +242,52 @@ def test_scan_validation_and_fake_scan(tmp_path):
             ev.validate_scan_output(bad)
 
 
+@pytest.mark.parametrize("code", [0, 1])
+def test_run_scan_accepts_valid_json_exit_codes(tmp_path, code):
+    payload = {"tool": "qnx-portcheck", "version": "1", "root": "/tmp", "findings": []}
+    script = f"import json,sys; print(json.dumps({payload!r})); sys.exit({code})"
+    encoded = base64.b64encode(script.encode()).decode()
+    obj, _ = ev.run_scan(
+        f"{sys.executable} -c \"import base64;exec(base64.b64decode('{encoded}'))\" {{path}}", tmp_path, 10
+    )
+    assert obj["tool"] == "qnx-portcheck"
+
+
+@pytest.mark.parametrize(
+    "code,expected",
+    [(2, "scanner usage error (exit 2): bad args"), (3, "scanner exited with status 3: bad args")],
+)
+def test_run_scan_rejects_error_exit_codes_even_with_json(tmp_path, code, expected):
+    payload = {"tool": "qnx-portcheck", "version": "1", "root": "/tmp", "findings": []}
+    script = f"import json,sys; print(json.dumps({payload!r})); print('bad args',file=sys.stderr); sys.exit({code})"
+    encoded = base64.b64encode(script.encode()).decode()
+    with pytest.raises(RuntimeError, match=re.escape(expected)):
+        ev.run_scan(
+            f"{sys.executable} -c \"import base64;exec(base64.b64decode('{encoded}'))\" {{path}}",
+            tmp_path,
+            10,
+        )
+
+
+def test_aggregate_by_rule_hand_numbers():
+    project = {
+        "status": "ok",
+        "project": {"name": "alpha"},
+        "sites": [{"category": "source"}, {"category": "build"}, {"category": "other"}],
+        "findings": [
+            {"rule_id": "R1", "matched_sites": [0]},
+            {"rule_id": "R1", "matched_sites": [0, 1]},
+            {"rule_id": "R2", "matched_sites": [2]},
+        ],
+        "metrics": {},
+    }
+    agg = ev.aggregate([project, {**project, "status": "error", "project": {"name": "ignored"}}])
+    assert agg["by_rule"] == {
+        "R1": {"findings": 2, "findings_tp": 2, "sites_hit": 2},
+        "R2": {"findings": 1, "findings_tp": 0, "sites_hit": 0},
+    }
+
+
 def test_summary_warning():
     summary = {"run_config": {"label": "FAKE-SCAN", "projects_count": 0}}
     assert "NOT qnx-portcheck" in ev.render_summary_md(summary)
@@ -324,8 +372,22 @@ def test_summary_table_rows_have_consistent_columns():
         ],
         "aggregate": {"micro": {}, "macro": {}},
     }
-    table_lines = [line for line in ev.render_summary_md(summary).splitlines() if line.startswith("|")]
+    main_table = ev.render_summary_md(summary).split("## Overall (micro)", 1)[0]
+    table_lines = [line for line in main_table.splitlines() if line.startswith("|")]
     assert len({line.count("|") for line in table_lines}) == 1
+
+
+def test_macro_row_follows_micro_and_runtime_follows_both():
+    text = ev.render_summary_md({"run_config": {}, "projects": [], "aggregate": {"micro": {}, "macro": {}}})
+    lines = text.splitlines()
+    micro = next(i for i, line in enumerate(lines) if line.startswith("| **Micro**"))
+    assert lines[micro + 1].startswith("| **Macro**")
+    runtime = next(i for i, line in enumerate(lines) if line == "## Runtime")
+    assert runtime > micro + 1
+    assert lines.index("## Overall (micro)") > micro + 1
+    assert lines.index(next(line for line in lines if line.startswith("The term “src sites”"))) < lines.index(
+        "## Overall (micro)"
+    )
 
 
 def git(cwd, *args, env=None):
@@ -400,3 +462,37 @@ def test_end_to_end_local_git(tmp_path, monkeypatch):
     assert summary_json["run_config"]["window"] == 3
     assert summary_json["run_config"]["merge_gap"] == 3
     assert "NOT qnx-portcheck" in summary.read_text()
+
+    marker = tmp_path / "scanned"
+    conditional = tmp_path / "conditional_scan.py"
+    conditional.write_text(
+        "import pathlib, subprocess, sys\n"
+        "marker=pathlib.Path(sys.argv[1])\n"
+        "if marker.exists(): sys.exit(3)\n"
+        "marker.write_text('done')\n"
+        f"sys.exit(subprocess.call([sys.executable, {str(evaldir/'fake_scan.py')!r}, 'scan', sys.argv[2], '--format', 'json']))\n"
+    )
+    conditional_cmd = f"{sys.executable} {conditional} {marker} {{path}}"
+    reuse_args = [
+        "--projects",
+        str(proj),
+        "--scan-cmd",
+        conditional_cmd,
+        "--label",
+        "FAKE-SCAN",
+        "--work-dir",
+        str(tmp_path / "work"),
+        "--results-dir",
+        str(tmp_path / "results"),
+        "--summary",
+        str(summary),
+        "--reuse-results",
+    ]
+    assert ev.main([arg for arg in reuse_args if arg != "--reuse-results"]) == 0
+    assert ev.main(reuse_args) == 0
+    reused_summary = json.loads((tmp_path / "results/fake-scan/summary.json").read_text())
+    assert reused_summary["projects"][0]["status"] == "ok"
+    assert reused_summary["run_config"]["reused_projects"] == 1
+    assert ev.main(reuse_args + ["--scan-cmd", conditional_cmd + " --different"]) == 2
+    changed = json.loads((tmp_path / "results/fake-scan/local.json").read_text())
+    assert changed["status"] == "error" and changed["error_kind"] == "scanner"

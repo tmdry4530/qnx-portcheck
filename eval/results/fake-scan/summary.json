@@ -1,13 +1,17 @@
 {
   "run_config": {
     "label": "FAKE-SCAN",
-    "date_kst": "2026-11-15T12:29:07.236461+09:00",
+    "date_kst": "2026-11-15T12:34:24.768435+09:00",
     "window": 3,
     "merge_gap": 3,
     "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
     "scanner": "fake-scan/0.0.0-fake",
     "harness_version": "0.1.0",
-    "harness_git_sha": "b068fe8",
+    "harness_git_sha": "5acf9d0",
+    "scanner_source_commit": "af18fa6",
+    "total_runtime_seconds": 7.0,
+    "started_at": "2026-11-15T12:34:17.757376+09:00",
+    "finished_at": "2026-11-15T12:34:24.763480+09:00",
     "projects_count": 33,
     "skipped_unverified": 0
   },
@@ -19,6 +23,7 @@
     "micro": {
       "sites_total": 450,
       "sites_source_nontest": 258,
+      "sites_hit_source_nontest": 21,
       "sites_by_category": {
         "source": 312,
         "build": 106,
@@ -31,6 +36,8 @@
       },
       "findings_total": 2262,
       "findings_tp": 24,
+      "findings_in_patched_files": 442,
+      "findings_tp_in_patched_files": 24,
       "findings_by_category": {
         "source": 2084,
         "build": 178,
@@ -67,6 +74,98 @@
       "precision_in_patched_files": {
         "mean": 0.1069,
         "n": 17
+      }
+    },
+    "by_rule": {
+      "FAKE-LRT": {
+        "findings": 13,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-LPTHREAD": {
+        "findings": 84,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-LINUX": {
+        "findings": 595,
+        "findings_tp": 20,
+        "sites_hit": 17
+      },
+      "FAKE-EVENTFD": {
+        "findings": 178,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-MSG-NOSIGNAL": {
+        "findings": 54,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-EPOLL": {
+        "findings": 949,
+        "findings_tp": 1,
+        "sites_hit": 1
+      },
+      "FAKE-TIMERFD": {
+        "findings": 68,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-SYS-EPOLL-H": {
+        "findings": 11,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-LDL": {
+        "findings": 75,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-PROC-SELF": {
+        "findings": 47,
+        "findings_tp": 2,
+        "sites_hit": 2
+      },
+      "FAKE-PRCTL": {
+        "findings": 31,
+        "findings_tp": 1,
+        "sites_hit": 2
+      },
+      "FAKE-INOTIFY": {
+        "findings": 82,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-CMAKE-SYSTEM-NAME-STREQUAL-LINUX": {
+        "findings": 6,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-SOCK-CLOEXEC": {
+        "findings": 43,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-PTHREAD-SETNAME-NP": {
+        "findings": 15,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-SCHED-SETAFFINITY": {
+        "findings": 4,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-SIGNALFD": {
+        "findings": 2,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-SYS-SYSINFO-H": {
+        "findings": 5,
+        "findings_tp": 0,
+        "sites_hit": 0
       }
     }
   },
@@ -127,6 +226,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.383
       }
     },
     {
@@ -185,6 +288,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.128
       }
     },
     {
@@ -243,6 +350,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.121
       }
     },
     {
@@ -301,6 +412,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.132
       }
     },
     {
@@ -375,6 +490,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.117
       }
     },
     {
@@ -435,6 +554,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.157
       }
     },
     {
@@ -493,6 +616,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.07
       }
     },
     {
@@ -551,6 +678,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.62
       }
     },
     {
@@ -609,6 +740,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.139
       }
     },
     {
@@ -667,6 +802,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.072
       }
     },
     {
@@ -725,6 +864,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.135
       }
     },
     {
@@ -939,6 +1082,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.081
       }
     },
     {
@@ -1008,6 +1155,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.091
       }
     },
     {
@@ -1066,6 +1217,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.166
       }
     },
     {
@@ -1124,6 +1279,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.505
       }
     },
     {
@@ -1182,6 +1341,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.385
       }
     },
     {
@@ -1240,6 +1403,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.104
       }
     },
     {
@@ -1304,6 +1471,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.076
       }
     },
     {
@@ -1398,6 +1569,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.144
       }
     },
     {
@@ -1456,6 +1631,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.004,
+        "scan": 0.244
       }
     },
     {
@@ -1514,6 +1693,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.004,
+        "scan": 0.158
       }
     },
     {
@@ -1572,6 +1755,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.056
       }
     },
     {
@@ -1630,6 +1817,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.118
       }
     },
     {
@@ -1688,6 +1879,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.507
       }
     },
     {
@@ -1746,6 +1941,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 1.041
       }
     },
     {
@@ -1804,6 +2003,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.057
       }
     },
     {
@@ -1862,6 +2065,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.294
       }
     },
     {
@@ -1920,6 +2127,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.18
       }
     },
     {
@@ -1978,6 +2189,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.071
       }
     },
     {
@@ -2036,6 +2251,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.06
       }
     },
     {
@@ -2094,6 +2313,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.066
       }
     },
     {
@@ -2152,6 +2375,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.064
       }
     },
     {
@@ -2210,6 +2437,10 @@
       "scanner": {
         "tool": "fake-scan",
         "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.083
       }
     }
   ]

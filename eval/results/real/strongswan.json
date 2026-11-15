@@ -1,0 +1,1694 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T13:10:30.389582+09:00",
+  "project": {
+    "name": "strongswan",
+    "upstream": "https://github.com/strongswan/strongswan",
+    "upstream_base_ref": "6.0.6",
+    "upstream_base_sha": "4d709df8b25fcf3cacb55cb4f28ab81014829ab1",
+    "qnx_repo": "https://github.com/qnx-ports/strongswan",
+    "qnx_branch": "qnx-6.0.6",
+    "qnx_head_sha": "1b8d7fe7aa628ec293c2c71a850dff085ba0b0ae",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "af18fa6",
+  "durations": {
+    "fetch": 0.003337600006489083,
+    "scan": 31.314991396997357
+  },
+  "diff_stats": {
+    "files_changed": 13,
+    "compare_files_expected": 13,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "configure.ac",
+    "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+    "src/libcharon/plugins/socket_default/socket_default_socket.c",
+    "src/libcharon/plugins/vici/Makefile.am",
+    "src/libcharon/tests/Makefile.am",
+    "src/libipsec/tests/Makefile.am",
+    "src/libstrongswan/networking/tun_device.c",
+    "src/libstrongswan/plugins/sshkey/sshkey_builder.c",
+    "src/libstrongswan/tests/Makefile.am",
+    "src/libstrongswan/tests/suites/test_threading.c",
+    "src/libstrongswan/utils/utils/align.h",
+    "src/libtls/tests/Makefile.am",
+    "src/starter/tests/Makefile.am"
+  ],
+  "sites": [
+    {
+      "file": "configure.ac",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1923,
+      "old_count": 1,
+      "new_start": 1923,
+      "new_count": 1,
+      "target_lines": [
+        1923
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 515,
+      "old_count": 0,
+      "new_start": 516,
+      "new_count": 7,
+      "target_lines": [
+        515,
+        516
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 541,
+      "old_count": 0,
+      "new_start": 549,
+      "new_count": 11,
+      "target_lines": [
+        541,
+        542
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 604,
+      "old_count": 0,
+      "new_start": 623,
+      "new_count": 10,
+      "target_lines": [
+        604,
+        605
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 696,
+      "old_count": 1,
+      "new_start": 724,
+      "new_count": 1,
+      "target_lines": [
+        696
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        53
+      ]
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 716,
+      "old_count": 1,
+      "new_start": 744,
+      "new_count": 1,
+      "target_lines": [
+        716
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 752,
+      "old_count": 0,
+      "new_start": 781,
+      "new_count": 18,
+      "target_lines": [
+        752,
+        753
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 931,
+      "old_count": 0,
+      "new_start": 978,
+      "new_count": 7,
+      "target_lines": [
+        931,
+        932
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 943,
+      "old_count": 0,
+      "new_start": 997,
+      "new_count": 5,
+      "target_lines": [
+        943,
+        944
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 960,
+      "old_count": 0,
+      "new_start": 1019,
+      "new_count": 14,
+      "target_lines": [
+        960,
+        961
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 1072,
+      "old_count": 0,
+      "new_start": 1145,
+      "new_count": 18,
+      "target_lines": [
+        1072,
+        1073
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 2230,
+      "old_count": 0,
+      "new_start": 2321,
+      "new_count": 1,
+      "target_lines": [
+        2230,
+        2231
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 2732,
+      "old_count": 0,
+      "new_start": 2824,
+      "new_count": 8,
+      "target_lines": [
+        2732,
+        2733
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 2961,
+      "old_count": 0,
+      "new_start": 3061,
+      "new_count": 8,
+      "target_lines": [
+        2961,
+        2962
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 3131,
+      "old_count": 0,
+      "new_start": 3239,
+      "new_count": 8,
+      "target_lines": [
+        3131,
+        3132
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/socket_default/socket_default_socket.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 47,
+      "old_count": 0,
+      "new_start": 48,
+      "new_count": 9,
+      "target_lines": [
+        47,
+        48
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/socket_default/socket_default_socket.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 465,
+      "old_count": 3,
+      "new_start": 475,
+      "new_count": 5,
+      "target_lines": [
+        465,
+        466,
+        467
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/vici/Makefile.am",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 49,
+      "old_count": 5,
+      "new_start": 50,
+      "new_count": 4,
+      "target_lines": [
+        49,
+        50,
+        52,
+        53
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/tests/Makefile.am",
+      "category": "build",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 0,
+      "old_count": 4,
+      "new_start": 1,
+      "new_count": 4,
+      "target_lines": [
+        1,
+        3,
+        4
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libipsec/tests/Makefile.am",
+      "category": "build",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 0,
+      "old_count": 4,
+      "new_start": 1,
+      "new_count": 4,
+      "target_lines": [
+        1,
+        3,
+        4
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libstrongswan/networking/tun_device.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 64,
+      "old_count": 3,
+      "new_start": 65,
+      "new_count": 2,
+      "target_lines": [
+        64,
+        65,
+        66
+      ],
+      "hunks": 2,
+      "matched_findings": [
+        68,
+        69
+      ]
+    },
+    {
+      "file": "src/libstrongswan/plugins/sshkey/sshkey_builder.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 197,
+      "old_count": 0,
+      "new_start": 198,
+      "new_count": 1,
+      "target_lines": [
+        197,
+        198
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libstrongswan/plugins/sshkey/sshkey_builder.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 208,
+      "old_count": 0,
+      "new_start": 210,
+      "new_count": 58,
+      "target_lines": [
+        208,
+        209
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libstrongswan/tests/Makefile.am",
+      "category": "build",
+      "is_test": true,
+      "kind": "mixed",
+      "old_start": 16,
+      "old_count": 5,
+      "new_start": 16,
+      "new_count": 5,
+      "target_lines": [
+        16,
+        19,
+        20
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libstrongswan/tests/suites/test_threading.c",
+      "category": "source",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 55,
+      "old_count": 1,
+      "new_start": 55,
+      "new_count": 6,
+      "target_lines": [
+        55
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libstrongswan/utils/utils/align.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 28,
+      "old_count": 0,
+      "new_start": 29,
+      "new_count": 1,
+      "target_lines": [
+        28,
+        29
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libstrongswan/utils/utils/align.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 33,
+      "old_count": 5,
+      "new_start": 34,
+      "new_count": 2,
+      "target_lines": [
+        33,
+        36,
+        37
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libstrongswan/utils/utils/align.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 41,
+      "old_count": 1,
+      "new_start": 43,
+      "new_count": 1,
+      "target_lines": [
+        41
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libtls/tests/Makefile.am",
+      "category": "build",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 0,
+      "old_count": 4,
+      "new_start": 1,
+      "new_count": 4,
+      "target_lines": [
+        1,
+        3,
+        4
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/starter/tests/Makefile.am",
+      "category": "build",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 0,
+      "old_count": 4,
+      "new_start": 1,
+      "new_count": 4,
+      "target_lines": [
+        1,
+        3,
+        4
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 7,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/charon-tkm/src/tkm/tkm_kernel_ipsec.c",
+      "line": 21,
+      "col": 1,
+      "message": "Linux kernel header <linux/xfrm.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/conftest/hooks/reset_seq.c",
+      "line": 42,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/conftest/hooks/reset_seq.c",
+      "line": 43,
+      "col": 1,
+      "message": "Linux kernel header <linux/xfrm.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/include/linux/if_alg.h",
+      "line": 15,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/include/linux/ipsec.h",
+      "line": 3,
+      "col": 1,
+      "message": "Linux kernel header <linux/pfkeyv2.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/include/linux/netlink.h",
+      "line": 3,
+      "col": 1,
+      "message": "Linux kernel header <linux/kernel.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/include/linux/netlink.h",
+      "line": 5,
+      "col": 1,
+      "message": "Linux kernel header <linux/socket.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/include/linux/netlink.h",
+      "line": 6,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/include/linux/pfkeyv2.h",
+      "line": 8,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/include/linux/rtnetlink.h",
+      "line": 5,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_link.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/include/linux/rtnetlink.h",
+      "line": 6,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_addr.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/include/linux/rtnetlink.h",
+      "line": 7,
+      "col": 1,
+      "message": "Linux kernel header <linux/neighbour.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/include/linux/udp.h",
+      "line": 19,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/include/linux/udp.h",
+      "line": 39,
+      "col": 1,
+      "message": "Linux kernel header <linux/config.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/include/linux/udp.h",
+      "line": 40,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/include/linux/xfrm.h",
+      "line": 3,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/network/pf_handler.c",
+      "line": 32,
+      "col": 1,
+      "message": "Linux kernel header <linux/filter.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/connmark/connmark_listener.c",
+      "line": 24,
+      "col": 1,
+      "message": "Linux kernel header <linux/netfilter/xt_esp.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/connmark/connmark_listener.c",
+      "line": 25,
+      "col": 1,
+      "message": "Linux kernel header <linux/netfilter/xt_tcpudp.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/connmark/connmark_listener.c",
+      "line": 26,
+      "col": 1,
+      "message": "Linux kernel header <linux/netfilter/xt_mark.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/connmark/connmark_listener.c",
+      "line": 27,
+      "col": 1,
+      "message": "Linux kernel header <linux/netfilter/xt_MARK.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/connmark/connmark_listener.c",
+      "line": 28,
+      "col": 1,
+      "message": "Linux kernel header <linux/netfilter/xt_policy.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/connmark/connmark_listener.c",
+      "line": 29,
+      "col": 1,
+      "message": "Linux kernel header <linux/netfilter/xt_CONNMARK.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/dhcp/dhcp_socket.c",
+      "line": 29,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_arp.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/dhcp/dhcp_socket.c",
+      "line": 30,
+      "col": 1,
+      "message": "Linux kernel header <linux/filter.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/farp/farp_spoofer.c",
+      "line": 31,
+      "col": 1,
+      "message": "Linux kernel header <linux/filter.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/forecast/forecast_forwarder.c",
+      "line": 23,
+      "col": 1,
+      "message": "Linux kernel header <linux/socket.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/forecast/forecast_forwarder.c",
+      "line": 25,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_packet.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/forecast/forecast_forwarder.c",
+      "line": 26,
+      "col": 1,
+      "message": "Linux kernel header <linux/filter.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/forecast/forecast_listener.c",
+      "line": 22,
+      "col": 1,
+      "message": "Linux kernel header <linux/netfilter/xt_MARK.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/forecast/forecast_listener.c",
+      "line": 23,
+      "col": 1,
+      "message": "Linux kernel header <linux/netfilter/xt_esp.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "src/libcharon/plugins/ha/ha_kernel.c",
+      "line": 30,
+      "col": 24,
+      "message": "Linux /proc path \"/proc/net/ipt_CLUSTERIP\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/libcharon/plugins/kernel_libipsec/kernel_libipsec_esp_handler.c",
+      "line": 22,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/libcharon/plugins/kernel_libipsec/kernel_libipsec_ipsec.c",
+      "line": 464,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_ipsec.c",
+      "line": 49,
+      "col": 1,
+      "message": "Linux kernel header <linux/ipsec.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_ipsec.c",
+      "line": 50,
+      "col": 1,
+      "message": "Linux kernel header <linux/netlink.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_ipsec.c",
+      "line": 51,
+      "col": 1,
+      "message": "Linux kernel header <linux/rtnetlink.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_ipsec.c",
+      "line": 52,
+      "col": 1,
+      "message": "Linux kernel header <linux/xfrm.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_ipsec.c",
+      "line": 53,
+      "col": 1,
+      "message": "Linux kernel header <linux/udp.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_ipsec.c",
+      "line": 54,
+      "col": 1,
+      "message": "Linux kernel header <linux/ethtool.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_ipsec.c",
+      "line": 55,
+      "col": 1,
+      "message": "Linux kernel header <linux/sockios.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_net.c",
+      "line": 42,
+      "col": 1,
+      "message": "Linux kernel header <linux/netlink.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_net.c",
+      "line": 43,
+      "col": 1,
+      "message": "Linux kernel header <linux/rtnetlink.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_net.c",
+      "line": 44,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_addrlabel.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_net.c",
+      "line": 49,
+      "col": 1,
+      "message": "Linux kernel header <linux/fib_rules.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_plugin.c",
+      "line": 63,
+      "col": 13,
+      "message": "Linux /proc path \"/proc/sys/net/core/xfrm_acq_expires\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_shared.c",
+      "line": 41,
+      "col": 1,
+      "message": "Linux kernel header <linux/netlink.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_shared.c",
+      "line": 42,
+      "col": 1,
+      "message": "Linux kernel header <linux/rtnetlink.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_shared.c",
+      "line": 43,
+      "col": 1,
+      "message": "Linux kernel header <linux/xfrm.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_shared.h",
+      "line": 21,
+      "col": 1,
+      "message": "Linux kernel header <linux/rtnetlink.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "line": 50,
+      "col": 1,
+      "message": "Linux kernel header <linux/pfkeyv2.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "line": 62,
+      "col": 1,
+      "message": "Linux kernel header <linux/ipsec.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "line": 67,
+      "col": 1,
+      "message": "Linux kernel header <linux/udp.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "line": 696,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": [
+        4
+      ]
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "line": 700,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "line": 757,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "line": 1850,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "src/libimcv/imc/imc_os_info.c",
+      "line": 171,
+      "col": 29,
+      "message": "Linux /proc path \"/proc/sys/net/ipv4/ip_forward\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "src/libimcv/imc/imc_os_info.c",
+      "line": 212,
+      "col": 30,
+      "message": "Linux /proc path \"/proc/uptime\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "src/libimcv/imc/imc_os_info.c",
+      "line": 240,
+      "col": 47,
+      "message": "Linux /proc path \"/proc/\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-INOTIFY",
+      "severity": "note",
+      "file": "src/libimcv/plugins/imc_swima/imc_swima.c",
+      "line": 38,
+      "col": 1,
+      "message": "Linux inotify header <sys/inotify.h>",
+      "suggestion": "inotify_init()/inotify_add_watch() exist in QNX 8.0 in libfsnotify: link with -l fsnotify; the fsevmgr filesystem event manager service must be running (FSNOTIFY_PREFIX must match).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/inotify_init.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-INOTIFY",
+      "severity": "note",
+      "file": "src/libimcv/plugins/imc_swima/imc_swima.c",
+      "line": 102,
+      "col": 7,
+      "message": "Linux inotify API inotify_init1()",
+      "suggestion": "inotify_init()/inotify_add_watch() exist in QNX 8.0 in libfsnotify: link with -l fsnotify; the fsevmgr filesystem event manager service must be running (FSNOTIFY_PREFIX must match).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/inotify_init.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-INOTIFY",
+      "severity": "note",
+      "file": "src/libimcv/plugins/imc_swima/imc_swima.c",
+      "line": 110,
+      "col": 7,
+      "message": "Linux inotify API inotify_add_watch()",
+      "suggestion": "inotify_init()/inotify_add_watch() exist in QNX 8.0 in libfsnotify: link with -l fsnotify; the fsevmgr filesystem event manager service must be running (FSNOTIFY_PREFIX must match).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/inotify_init.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "src/libstrongswan/Android.mk",
+      "line": 146,
+      "col": 17,
+      "message": "Linux link library '-ldl'",
+      "suggestion": "On QNX 8.0 dlopen() is documented in libc, which qcc usually links automatically; drop or guard libdl for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/d/dlopen.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libstrongswan/networking/streams/stream_vsock.c",
+      "line": 21,
+      "col": 1,
+      "message": "Linux kernel header <linux/vm_sockets.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/libstrongswan/networking/tun_device.c",
+      "line": 30,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/libstrongswan/networking/tun_device.c",
+      "line": 59,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libstrongswan/networking/tun_device.c",
+      "line": 60,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libstrongswan/networking/tun_device.c",
+      "line": 61,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_tun.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        20
+      ]
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libstrongswan/networking/tun_device.c",
+      "line": 62,
+      "col": 1,
+      "message": "Linux kernel header <linux/ipv6.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        20
+      ]
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/libstrongswan/networking/tun_device.c",
+      "line": 116,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libstrongswan/plugins/af_alg/af_alg_ops.c",
+      "line": 21,
+      "col": 1,
+      "message": "Linux kernel header <linux/socket.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libstrongswan/plugins/af_alg/af_alg_ops.h",
+      "line": 26,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_alg.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libstrongswan/plugins/blowfish/bf_skey.c",
+      "line": 60,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libstrongswan/plugins/blowfish/bf_skey.c",
+      "line": 61,
+      "col": 1,
+      "message": "Linux kernel header <linux/string.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libstrongswan/plugins/blowfish/blowfish.h",
+      "line": 97,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libstrongswan/plugins/des/des_crypter.c",
+      "line": 191,
+      "col": 1,
+      "message": "Linux kernel header <linux/string.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/libstrongswan/plugins/des/des_crypter.c",
+      "line": 199,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "src/libstrongswan/threading/thread.c",
+      "line": 27,
+      "col": 1,
+      "message": "Linux syscall header <sys/syscall.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "src/libstrongswan/threading/thread.c",
+      "line": 30,
+      "col": 9,
+      "message": "Linux syscall API syscall()",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "src/libstrongswan/threading/thread.c",
+      "line": 30,
+      "col": 17,
+      "message": "Linux syscall number SYS_gettid",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PRCTL",
+      "severity": "error",
+      "file": "src/libstrongswan/utils/capabilities.c",
+      "line": 31,
+      "col": 1,
+      "message": "Linux prctl header <sys/prctl.h>",
+      "suggestion": "prctl() is not in the QNX 8.0 C Library Reference. For PR_SET_NAME use pthread_setname_np(); other prctl options: manual review.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_setname_np.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PRCTL",
+      "severity": "error",
+      "file": "src/libstrongswan/utils/capabilities.c",
+      "line": 427,
+      "col": 3,
+      "message": "Linux prctl API prctl()",
+      "suggestion": "prctl() is not in the QNX 8.0 C Library Reference. For PR_SET_NAME use pthread_setname_np(); other prctl options: manual review.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_setname_np.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/libstrongswan/utils/capabilities.h",
+      "line": 32,
+      "col": 1,
+      "message": "Linux kernel header <linux/capability.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/libstrongswan/utils/utils.c",
+      "line": 30,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "src/libstrongswan/utils/utils.c",
+      "line": 33,
+      "col": 1,
+      "message": "Linux syscall header <sys/syscall.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "src/libstrongswan/utils/utils.c",
+      "line": 51,
+      "col": 17,
+      "message": "Linux /proc path \"/proc/self/fd\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/libstrongswan/utils/utils.c",
+      "line": 180,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "src/libstrongswan/utils/utils.c",
+      "line": 187,
+      "col": 17,
+      "message": "Linux /proc path \"/proc/self/fd\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "src/libstrongswan/utils/utils.c",
+      "line": 190,
+      "col": 17,
+      "message": "Linux syscall API syscall()",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "src/libstrongswan/utils/utils.c",
+      "line": 190,
+      "col": 25,
+      "message": "Linux syscall number __NR_getdents64",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "src/libtnccs/Android.mk",
+      "line": 19,
+      "col": 17,
+      "message": "Linux link library '-ldl'",
+      "suggestion": "On QNX 8.0 dlopen() is documented in libc, which qcc usually links automatically; drop or guard libdl for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/d/dlopen.html",
+      "confidence": "high",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 30,
+    "sites_by_category": {
+      "source": 23,
+      "build": 7,
+      "other": 0
+    },
+    "sites_source_nontest": 22,
+    "sites_source_test": 1,
+    "sites_hit_source_nontest": 2,
+    "sites_hit_by_category": {
+      "source": 2,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.087,
+    "recall_source_nontest": 0.0909,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.0667,
+    "findings_total": 92,
+    "findings_tp": 3,
+    "findings_by_category": {
+      "source": 90,
+      "build": 2,
+      "other": 0
+    },
+    "findings_in_patched_files": 13,
+    "findings_tp_in_patched_files": 3,
+    "precision": 0.0326,
+    "precision_in_patched_files": 0.2308
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  }
+}

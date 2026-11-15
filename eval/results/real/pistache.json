@@ -1,0 +1,1120 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T13:10:01.253989+09:00",
+  "project": {
+    "name": "pistache",
+    "upstream": "https://github.com/pistacheio/pistache",
+    "upstream_base_ref": "v0.4.26",
+    "upstream_base_sha": "ddffda861aa49012dcda28f1362d0339e718cd52",
+    "qnx_repo": "https://github.com/qnx-ports/pistache",
+    "qnx_branch": "qnx-v0.4.26",
+    "qnx_head_sha": "9dc3359fba4f6e82842b9ea80744558321361fc1",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "af18fa6",
+  "durations": {
+    "fetch": 0.002672345988685265,
+    "scan": 14.170239086990478
+  },
+  "diff_stats": {
+    "files_changed": 14,
+    "compare_files_expected": 14,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "include/pistache/emosandlibevdefs.h",
+    "include/pistache/pist_strerror_r.h",
+    "include/pistache/ps_sendfile.h",
+    "include/pistache/pst_errno.h",
+    "include/pistache/winornix.h",
+    "meson.build",
+    "src/common/eventmeth.cc",
+    "src/common/pist_check.cc",
+    "src/common/pist_strerror_r.cc",
+    "src/common/ps_sendfile.cc",
+    "src/common/transport.cc",
+    "tests/headers_test.cc",
+    "tests/meson.build",
+    "version.txt"
+  ],
+  "sites": [
+    {
+      "file": "include/pistache/emosandlibevdefs.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 42,
+      "old_count": 1,
+      "new_start": 42,
+      "new_count": 1,
+      "target_lines": [
+        42
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/pistache/pist_strerror_r.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 19,
+      "old_count": 1,
+      "new_start": 19,
+      "new_count": 1,
+      "target_lines": [
+        19
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        9
+      ]
+    },
+    {
+      "file": "include/pistache/ps_sendfile.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 22,
+      "old_count": 1,
+      "new_start": 22,
+      "new_count": 1,
+      "target_lines": [
+        22
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/pistache/ps_sendfile.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 37,
+      "old_count": 1,
+      "new_start": 37,
+      "new_count": 1,
+      "target_lines": [
+        37
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/pistache/ps_sendfile.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 45,
+      "old_count": 1,
+      "new_start": 45,
+      "new_count": 1,
+      "target_lines": [
+        45
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        10,
+        11
+      ]
+    },
+    {
+      "file": "include/pistache/ps_sendfile.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 53,
+      "old_count": 1,
+      "new_start": 53,
+      "new_count": 1,
+      "target_lines": [
+        53
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/pistache/pst_errno.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 25,
+      "old_count": 0,
+      "new_start": 26,
+      "new_count": 2,
+      "target_lines": [
+        25,
+        26
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/pistache/winornix.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 137,
+      "old_count": 0,
+      "new_start": 138,
+      "new_count": 6,
+      "target_lines": [
+        137,
+        138
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/pistache/winornix.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 185,
+      "old_count": 1,
+      "new_start": 191,
+      "new_count": 1,
+      "target_lines": [
+        185
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        13
+      ]
+    },
+    {
+      "file": "meson.build",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 24,
+      "old_count": 1,
+      "new_start": 24,
+      "new_count": 2,
+      "target_lines": [
+        24
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "meson.build",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 188,
+      "old_count": 1,
+      "new_start": 189,
+      "new_count": 1,
+      "target_lines": [
+        188
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/common/eventmeth.cc",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1919,
+      "old_count": 2,
+      "new_start": 1919,
+      "new_count": 2,
+      "target_lines": [
+        1919,
+        1920
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/common/eventmeth.cc",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 3552,
+      "old_count": 1,
+      "new_start": 3552,
+      "new_count": 1,
+      "target_lines": [
+        3552
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        19
+      ]
+    },
+    {
+      "file": "src/common/pist_check.cc",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 30,
+      "old_count": 0,
+      "new_start": 31,
+      "new_count": 3,
+      "target_lines": [
+        30,
+        31
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/common/pist_check.cc",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 133,
+      "old_count": 0,
+      "new_start": 137,
+      "new_count": 6,
+      "target_lines": [
+        133,
+        134
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/common/pist_strerror_r.cc",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 264,
+      "old_count": 1,
+      "new_start": 264,
+      "new_count": 1,
+      "target_lines": [
+        264
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        28
+      ]
+    },
+    {
+      "file": "src/common/ps_sendfile.cc",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 141,
+      "old_count": 1,
+      "new_start": 141,
+      "new_count": 1,
+      "target_lines": [
+        141
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/common/transport.cc",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 19,
+      "old_count": 1,
+      "new_start": 19,
+      "new_count": 1,
+      "target_lines": [
+        19
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/common/transport.cc",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 54,
+      "old_count": 1,
+      "new_start": 54,
+      "new_count": 1,
+      "target_lines": [
+        54
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/common/transport.cc",
+      "category": "source",
+      "is_test": false,
+      "kind": "delete",
+      "old_start": 852,
+      "old_count": 1,
+      "new_start": 851,
+      "new_count": 0,
+      "target_lines": [
+        852
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/headers_test.cc",
+      "category": "source",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 574,
+      "old_count": 1,
+      "new_start": 574,
+      "new_count": 1,
+      "target_lines": [
+        574
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        49
+      ]
+    },
+    {
+      "file": "tests/meson.build",
+      "category": "build",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 5,
+      "old_count": 1,
+      "new_start": 5,
+      "new_count": 6,
+      "target_lines": [
+        5
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "version.txt",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1,
+      "old_count": 1,
+      "new_start": 1,
+      "new_count": 1,
+      "target_lines": [
+        1
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 3,
+    "other_sites": 1,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "LNX-EVENTFD",
+      "severity": "warning",
+      "file": "include/pistache/eventmeth.h",
+      "line": 28,
+      "col": 1,
+      "message": "Linux eventfd header <sys/eventfd.h>",
+      "suggestion": "eventfd is not in the QNX 8.0 C Library Reference; libeventfd is listed only in the screen.notify_fd package (Wayland on Screen). Otherwise replace with a pipe()/pipe2() wake-up fd watched by poll().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.screen/topic/manual/cscreen_wayland.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "include/pistache/eventmeth.h",
+      "line": 62,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EVENTFD",
+      "severity": "warning",
+      "file": "include/pistache/eventmeth.h",
+      "line": 65,
+      "col": 5,
+      "message": "Linux eventfd API eventfd_write()",
+      "suggestion": "eventfd is not in the QNX 8.0 C Library Reference; libeventfd is listed only in the screen.notify_fd package (Wayland on Screen). Otherwise replace with a pipe()/pipe2() wake-up fd watched by poll().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.screen/topic/manual/cscreen_wayland.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EVENTFD",
+      "severity": "warning",
+      "file": "include/pistache/eventmeth.h",
+      "line": 67,
+      "col": 5,
+      "message": "Linux eventfd API eventfd_read()",
+      "suggestion": "eventfd is not in the QNX 8.0 C Library Reference; libeventfd is listed only in the screen.notify_fd package (Wayland on Screen). Otherwise replace with a pipe()/pipe2() wake-up fd watched by poll().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.screen/topic/manual/cscreen_wayland.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-TIMERFD",
+      "severity": "warning",
+      "file": "include/pistache/http.h",
+      "line": 28,
+      "col": 1,
+      "message": "Linux timerfd header <sys/timerfd.h>",
+      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-TIMERFD",
+      "severity": "warning",
+      "file": "include/pistache/http.h",
+      "line": 319,
+      "col": 39,
+      "message": "Linux timerfd API timerfd_create()",
+      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EVENTFD",
+      "severity": "warning",
+      "file": "include/pistache/mailbox.h",
+      "line": 105,
+      "col": 32,
+      "message": "Linux eventfd API eventfd()",
+      "suggestion": "eventfd is not in the QNX 8.0 C Library Reference; libeventfd is listed only in the screen.notify_fd package (Wayland on Screen). Otherwise replace with a pipe()/pipe2() wake-up fd watched by poll().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.screen/topic/manual/cscreen_wayland.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EVENTFD",
+      "severity": "warning",
+      "file": "include/pistache/mailbox.h",
+      "line": 321,
+      "col": 32,
+      "message": "Linux eventfd API eventfd()",
+      "suggestion": "eventfd is not in the QNX 8.0 C Library Reference; libeventfd is listed only in the screen.notify_fd package (Wayland on Screen). Otherwise replace with a pipe()/pipe2() wake-up fd watched by poll().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.screen/topic/manual/cscreen_wayland.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SPLICE",
+      "severity": "error",
+      "file": "include/pistache/mime.h",
+      "line": 226,
+      "col": 25,
+      "message": "Linux splice API splice()",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "include/pistache/pist_strerror_r.h",
+      "line": 18,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": [
+        1
+      ]
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "include/pistache/ps_sendfile.h",
+      "line": 43,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": [
+        4
+      ]
+    },
+    {
+      "rule_id": "LNX-SENDFILE",
+      "severity": "error",
+      "file": "include/pistache/ps_sendfile.h",
+      "line": 44,
+      "col": 1,
+      "message": "Linux sendfile header <sys/sendfile.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        4
+      ]
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "include/pistache/ps_strl.h",
+      "line": 19,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "include/pistache/winornix.h",
+      "line": 184,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": [
+        8
+      ]
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "include/pistache/winornix.h",
+      "line": 314,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "meson.build",
+      "line": 226,
+      "col": 43,
+      "message": "Linux link library 'dl'",
+      "suggestion": "On QNX 8.0 dlopen() is documented in libc, which qcc usually links automatically; drop or guard libdl for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/d/dlopen.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "meson.build",
+      "line": 228,
+      "col": 54,
+      "message": "Linux link library 'dl'",
+      "suggestion": "On QNX 8.0 dlopen() is documented in libc, which qcc usually links automatically; drop or guard libdl for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/d/dlopen.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/common/eventmeth.cc",
+      "line": 1907,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/common/eventmeth.cc",
+      "line": 1928,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/common/eventmeth.cc",
+      "line": 3552,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": [
+        12
+      ]
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/common/os.cc",
+      "line": 27,
+      "col": 1,
+      "message": "Linux epoll header <sys/epoll.h>",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/common/os.cc",
+      "line": 181,
+      "col": 41,
+      "message": "Linux epoll API epoll_create()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/common/os.cc",
+      "line": 220,
+      "col": 17,
+      "message": "Linux epoll API epoll_ctl()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/common/os.cc",
+      "line": 254,
+      "col": 17,
+      "message": "Linux epoll API epoll_ctl()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/common/os.cc",
+      "line": 267,
+      "col": 17,
+      "message": "Linux epoll API epoll_ctl()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/common/os.cc",
+      "line": 307,
+      "col": 17,
+      "message": "Linux epoll API epoll_ctl()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/common/os.cc",
+      "line": 454,
+      "col": 29,
+      "message": "Linux epoll API epoll_wait()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EVENTFD",
+      "severity": "warning",
+      "file": "src/common/os.cc",
+      "line": 590,
+      "col": 28,
+      "message": "Linux eventfd API eventfd()",
+      "suggestion": "eventfd is not in the QNX 8.0 C Library Reference; libeventfd is listed only in the screen.notify_fd package (Wayland on Screen). Otherwise replace with a pipe()/pipe2() wake-up fd watched by poll().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.screen/topic/manual/cscreen_wayland.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/common/pist_strerror_r.cc",
+      "line": 263,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": [
+        15
+      ]
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "src/common/pist_syslog.cc",
+      "line": 584,
+      "col": 19,
+      "message": "Linux /proc path \"/proc/self/exe\"",
+      "suggestion": "Linux /proc/self/exe does not exist on QNX 8.0; procnto exposes /proc/<pid>/exefile (the path of the executable file used to run the process). Note QNX docs say /proc is for debugging, not production monitoring.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/common/ps_sendfile.cc",
+      "line": 276,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SENDFILE",
+      "severity": "error",
+      "file": "src/common/ps_sendfile.cc",
+      "line": 277,
+      "col": 1,
+      "message": "Linux sendfile header <sys/sendfile.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/common/ps_strl.cc",
+      "line": 19,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-TIMERFD",
+      "severity": "warning",
+      "file": "src/common/timer_pool.cc",
+      "line": 22,
+      "col": 1,
+      "message": "Linux timerfd header <sys/timerfd.h>",
+      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-TIMERFD",
+      "severity": "warning",
+      "file": "src/common/timer_pool.cc",
+      "line": 67,
+      "col": 27,
+      "message": "Linux timerfd API timerfd_create()",
+      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-TIMERFD",
+      "severity": "warning",
+      "file": "src/common/timer_pool.cc",
+      "line": 91,
+      "col": 13,
+      "message": "Linux timerfd API timerfd_settime()",
+      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-TIMERFD",
+      "severity": "warning",
+      "file": "src/common/timer_pool.cc",
+      "line": 135,
+      "col": 13,
+      "message": "Linux timerfd API timerfd_settime()",
+      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-TIMERFD",
+      "severity": "warning",
+      "file": "src/common/transport.cc",
+      "line": 41,
+      "col": 1,
+      "message": "Linux timerfd header <sys/timerfd.h>",
+      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-TIMERFD",
+      "severity": "warning",
+      "file": "src/common/transport.cc",
+      "line": 945,
+      "col": 15,
+      "message": "Linux timerfd API timerfd_settime()",
+      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-TIMERFD",
+      "severity": "warning",
+      "file": "src/server/endpoint.cc",
+      "line": 84,
+      "col": 21,
+      "message": "Linux timerfd API timerfd_create()",
+      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-TIMERFD",
+      "severity": "warning",
+      "file": "src/server/endpoint.cc",
+      "line": 114,
+      "col": 13,
+      "message": "Linux timerfd API timerfd_settime()",
+      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/server/listener.cc",
+      "line": 35,
+      "col": 1,
+      "message": "Linux epoll header <sys/epoll.h>",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-TIMERFD",
+      "severity": "warning",
+      "file": "src/server/listener.cc",
+      "line": 41,
+      "col": 1,
+      "message": "Linux timerfd header <sys/timerfd.h>",
+      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/server/listener.cc",
+      "line": 252,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-ACCEPT4",
+      "severity": "note",
+      "file": "src/server/listener.cc",
+      "line": 884,
+      "col": 13,
+      "message": "Linux accept4 API accept4()",
+      "suggestion": "accept4() is provided by the QNX 8.0 io-sock stack (FreeBSD semantics; see FreeBSD accept(2)). io-sock applications link against libsocket.so (-l socket); there is no libsocket.a.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.io_sock/topic/socket_api.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "subprojects/cpp-httplib/httplib.h",
+      "line": 187,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "subprojects/cpp-httplib/httplib.h",
+      "line": 3111,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "subprojects/cpp-httplib/httplib.h",
+      "line": 3394,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "subprojects/cpp-httplib/httplib.h",
+      "line": 5217,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "tests/headers_test.cc",
+      "line": 574,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": [
+        20
+      ]
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "tests/helpers/fd_utils.cc",
+      "line": 36,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "tests/helpers/fd_utils.cc",
+      "line": 81,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "tests/helpers/fd_utils.cc",
+      "line": 83,
+      "col": 43,
+      "message": "Linux /proc path \"/proc/self/fd\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EVENTFD",
+      "severity": "warning",
+      "file": "tests/helpers_test.cc",
+      "line": 46,
+      "col": 19,
+      "message": "Linux eventfd API eventfd()",
+      "suggestion": "eventfd is not in the QNX 8.0 C Library Reference; libeventfd is listed only in the screen.notify_fd package (Wayland on Screen). Otherwise replace with a pipe()/pipe2() wake-up fd watched by poll().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.screen/topic/manual/cscreen_wayland.html",
+      "confidence": "medium",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 23,
+    "sites_by_category": {
+      "source": 19,
+      "build": 3,
+      "other": 1
+    },
+    "sites_source_nontest": 18,
+    "sites_source_test": 1,
+    "sites_hit_source_nontest": 5,
+    "sites_hit_by_category": {
+      "source": 6,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.3158,
+    "recall_source_nontest": 0.2778,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.2727,
+    "findings_total": 54,
+    "findings_tp": 7,
+    "findings_by_category": {
+      "source": 52,
+      "build": 2,
+      "other": 0
+    },
+    "findings_in_patched_files": 16,
+    "findings_tp_in_patched_files": 7,
+    "precision": 0.1296,
+    "precision_in_patched_files": 0.4375
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  }
+}

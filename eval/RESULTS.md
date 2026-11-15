@@ -1,53 +1,122 @@
-> **FAKE-SCAN harness smoke results — produced with eval/fake_scan.py, NOT qnx-portcheck. These numbers only show the harness works end-to-end; they are NOT real metrics.**
-
 # qnx-portcheck evaluation results
 
-- Label: FAKE-SCAN
-- Date (KST): 2026-11-15T12:29:07.236461+09:00
+Numbers below come from an actual run of qnx-portcheck on the upstream base commits listed in eval/projects.yaml, compared with the qnx-ports patches (see METHOD.md). The tool was not run on a QNX target.
+
+- Label: REAL
+- Date (KST): 2026-11-15T13:11:28.500362+09:00
 - Window: ±3 lines
 - Merge gap: 3 lines
-- Scan command: `python3 eval/fake_scan.py scan {path} --format json`
-- Scanner: fake-scan/0.0.0-fake
+- Scan command: `qnx-portcheck scan {path} --format json --fail-on never`
+- Scanner: qnx-portcheck/0.1.0
 - Harness version: 0.1.0
+- Scanner source commit: af18fa6
+- Harness git SHA: 5acf9d0
+- Total runtime: 1066.7 s
 - Projects: 33
+- Reused projects: 0
 
 | project | upstream base | src sites (all/non-test) | build sites | other sites | new files | findings | TP | recall src | recall src non-test | recall build | precision | precision (patched files) | status |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| asio | `814f67e730` | 14/8 | 0 | 0 | 0 | 202 | 0 | 0.000 | 0.000 | — | 0.000 | 0.000 | ok |
-| avahi | `4294bbff57` | 3/3 | 1 | 1 | 0 | 61 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | ok |
-| aws-c-io | `bfb0819d39` | 11/11 | 2 | 0 | 0 | 472 | 1 | 0.091 | 0.091 | 0.000 | 0.002 | 0.007 | ok |
-| c-ares | `6508d6ad27` | 16/16 | 17 | 0 | 0 | 77 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | ok |
-| chrony | `d622b222a9` | 11/8 | 3 | 0 | 3 | 26 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | ok |
-| dlt-daemon | `0f2d4cfffa` | 2/2 | 14 | 0 | 0 | 50 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | ok |
-| glog | `b33e3bad4c` | 27/14 | 10 | 0 | 0 | 19 | 2 | 0.074 | 0.143 | 0.000 | 0.105 | 0.125 | ok |
-| gnutls | `5dd9a55040` | 6/6 | 0 | 0 | 0 | 23 | 0 | 0.000 | 0.000 | — | 0.000 | — | ok |
-| googletest | `b796f7d446` | 3/2 | 9 | 0 | 0 | 2 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | — | ok |
-| iperf3 | `dfcea9f6a0` | 4/4 | 0 | 0 | 0 | 28 | 0 | 0.000 | 0.000 | — | 0.000 | — | ok |
-| libevent | `5df3037d10` | 1/1 | 1 | 0 | 0 | 111 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | ok |
-| libmetal | `f8a0e51aee` | 0/0 | 2 | 0 | 31 | 34 | 0 | — | — | 0.000 | 0.000 | — | ok |
-| libusb | `e782eeb251` | 4/4 | 7 | 0 | 2 | 30 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | ok |
-| libuv | `5152db2cbf` | 40/19 | 1 | 0 | 0 | 289 | 6 | 0.150 | 0.316 | 0.000 | 0.021 | 0.091 | ok |
-| libwebsockets | `fbb0baf6af` | 5/5 | 1 | 0 | 0 | 174 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | ok |
-| libxml2 | `de918d45e1` | 1/1 | 0 | 0 | 0 | 4 | 0 | 0.000 | 0.000 | — | 0.000 | — | ok |
-| lldpd | `df8d729859` | 22/22 | 3 | 0 | 0 | 65 | 1 | 0.091 | 0.091 | 0.000 | 0.015 | 0.333 | ok |
+| asio | `814f67e730` | 14/8 | 0 | 0 | 0 | 16 | 0 | 0.000 | 0.000 | — | 0.000 | — | ok |
+| avahi | `4294bbff57` | 3/3 | 1 | 1 | 0 | 31 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | ok |
+| aws-c-io | `bfb0819d39` | 11/11 | 2 | 0 | 0 | 20 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | ok |
+| c-ares | `6508d6ad27` | 16/16 | 17 | 0 | 0 | 17 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | — | ok |
+| chrony | `d622b222a9` | 11/8 | 3 | 0 | 3 | 28 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | ok |
+| dlt-daemon | `0f2d4cfffa` | 2/2 | 14 | 0 | 0 | 77 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | ok |
+| glog | `b33e3bad4c` | 27/14 | 10 | 0 | 0 | 21 | 1 | 0.037 | 0.071 | 0.000 | 0.048 | 0.125 | ok |
+| gnutls | `5dd9a55040` | 6/6 | 0 | 0 | 0 | 15 | 0 | 0.000 | 0.000 | — | 0.000 | — | ok |
+| googletest | `b796f7d446` | 3/2 | 9 | 0 | 0 | 3 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | — | ok |
+| iperf3 | `dfcea9f6a0` | 4/4 | 0 | 0 | 0 | 20 | 0 | 0.000 | 0.000 | — | 0.000 | — | ok |
+| libevent | `5df3037d10` | 1/1 | 1 | 0 | 0 | 44 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | — | ok |
+| libmetal | `f8a0e51aee` | 0/0 | 2 | 0 | 31 | 21 | 0 | — | — | 0.000 | 0.000 | — | ok |
+| libusb | `e782eeb251` | 4/4 | 7 | 0 | 2 | 20 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | — | ok |
+| libuv | `5152db2cbf` | 40/19 | 1 | 0 | 0 | 216 | 1 | 0.025 | 0.053 | 0.000 | 0.005 | 0.019 | ok |
+| libwebsockets | `fbb0baf6af` | 5/5 | 1 | 0 | 0 | 89 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | ok |
+| libxml2 | `de918d45e1` | 1/1 | 0 | 0 | 0 | 5 | 0 | 0.000 | 0.000 | — | 0.000 | — | ok |
+| lldpd | `df8d729859` | 22/22 | 3 | 0 | 0 | 58 | 1 | 0.091 | 0.091 | 0.000 | 0.017 | 0.333 | ok |
 | lua | `cb88c1cd5d` | 5/5 | 0 | 10 | 1 | 1 | 0 | 0.000 | 0.000 | — | 0.000 | — | ok |
-| mosquitto | `b0277869d9` | 0/0 | 2 | 20 | 7 | 62 | 0 | — | — | 0.000 | 0.000 | — | ok |
-| nghttp2 | `526ff38e02` | 1/1 | 3 | 0 | 0 | 15 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | — | ok |
-| ntpsec | `39b19ff71b` | 35/32 | 4 | 0 | 0 | 16 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | — | ok |
+| mosquitto | `b0277869d9` | 0/0 | 2 | 20 | 7 | 25 | 0 | — | — | 0.000 | 0.000 | — | ok |
+| nghttp2 | `526ff38e02` | 1/1 | 3 | 0 | 0 | 8 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | — | ok |
+| ntpsec | `39b19ff71b` | 35/32 | 4 | 0 | 0 | 40 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | — | ok |
 | open-amp | `604cdf9a45` | 4/4 | 0 | 0 | 0 | 0 | 0 | 0.000 | 0.000 | — | — | — | ok |
-| pistache | `ddffda861a` | 19/18 | 3 | 1 | 0 | 272 | 6 | 0.316 | 0.278 | 0.000 | 0.022 | 0.043 | ok |
-| s2n-tls | `a7862238a9` | 32/32 | 1 | 0 | 0 | 30 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | ok |
-| strongswan | `4d709df8b2` | 23/22 | 7 | 0 | 0 | 101 | 5 | 0.130 | 0.136 | 0.000 | 0.050 | 0.217 | ok |
+| pistache | `ddffda861a` | 19/18 | 3 | 1 | 0 | 54 | 7 | 0.316 | 0.278 | 0.000 | 0.130 | 0.438 | ok |
+| s2n-tls | `a7862238a9` | 32/32 | 1 | 0 | 0 | 16 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | ok |
+| strongswan | `4d709df8b2` | 23/22 | 7 | 0 | 0 | 92 | 3 | 0.087 | 0.091 | 0.000 | 0.033 | 0.231 | ok |
 | tinyxml2 | `321ea883b7` | 2/2 | 0 | 0 | 0 | 0 | 0 | 0.000 | 0.000 | — | — | — | ok |
-| unbound | `a33f0638e1` | 21/16 | 0 | 0 | 0 | 73 | 3 | 0.095 | 0.125 | — | 0.041 | 1.000 | ok |
-| aws-c-common | `2b67a658e4` | 0/0 | 3 | 0 | 0 | 16 | 0 | — | — | 0.000 | 0.000 | — | ok |
-| check | `11970a7e11` | 0/0 | 4 | 0 | 0 | 9 | 0 | — | — | 0.000 | 0.000 | 0.000 | ok |
+| unbound | `a33f0638e1` | 21/16 | 0 | 0 | 0 | 24 | 7 | 0.191 | 0.250 | — | 0.292 | 0.467 | ok |
+| aws-c-common | `2b67a658e4` | 0/0 | 3 | 0 | 0 | 10 | 0 | — | — | 0.000 | 0.000 | — | ok |
+| check | `11970a7e11` | 0/0 | 4 | 0 | 0 | 4 | 0 | — | — | 0.000 | 0.000 | 0.000 | ok |
 | fribidi | `68162babff` | 0/0 | 1 | 0 | 0 | 0 | 0 | — | — | 0.000 | — | — | ok |
 | jansson | `684e18c927` | 0/0 | 2 | 0 | 0 | 0 | 0 | — | — | 0.000 | — | — | ok |
 | libyaml | `2c891fc7a7` | 0/0 | 4 | 0 | 0 | 0 | 0 | — | — | 0.000 | — | — | ok |
 | re2 | `6dcd83d60f` | 0/0 | 1 | 0 | 0 | 0 | 0 | — | — | 0.000 | — | — | ok |
-| **Micro** | — | 312/258 | 106 | 32 | — | 2262 | 24 | 0.070 | 0.081 | 0.000 | 0.011 | 0.054 | — |
-| **Macro** | — | — | — | — | — | — | — | 0.038 | 0.047 | 0.000 | 0.009 | 0.107 | — |
+| **Micro** | — | 312/258 | 106 | 32 | — | 975 | 20 | 0.051 | 0.058 | 0.000 | 0.021 | 0.150 | — |
+| **Macro** | — | — | — | — | — | — | — | 0.030 | 0.033 | 0.000 | 0.019 | 0.124 | — |
+The term “src sites” means source-file change sites in upstream base coordinates; “(non-test)” excludes test paths.
+
+## Overall (micro)
+
+Overall (micro): source-site recall 0.051 (16/312), non-test source-site recall 0.058 (15/258), build-site recall 0.000 (0/106), precision 0.021 (20/975), precision in patched files 0.150 (20/133).
+
+## Hits by rule
+
+| rule_id | findings | TP findings | sites hit |
+|---|---:|---:|---:|
+| LNX-ACCEPT4 | 5 | 0 | 0 |
+| LNX-EPOLL | 72 | 0 | 0 |
+| LNX-EVENTFD | 24 | 0 | 0 |
+| LNX-INOTIFY | 19 | 0 | 0 |
+| LNX-LINK-FLAGS | 27 | 0 | 0 |
+| LNX-LINK-FLAGS-OTHER | 1 | 0 | 0 |
+| LNX-LINUX-HEADER | 180 | 5 | 3 |
+| LNX-LINUX-IFDEF | 314 | 8 | 8 |
+| LNX-PIPE2 | 9 | 0 | 0 |
+| LNX-PRCTL | 26 | 1 | 2 |
+| LNX-PROCFS | 79 | 1 | 1 |
+| LNX-SENDFILE | 20 | 1 | 1 |
+| LNX-SPLICE | 1 | 0 | 0 |
+| LNX-SYSCALL | 154 | 4 | 3 |
+| LNX-SYSINFO | 13 | 0 | 0 |
+| LNX-TIMERFD | 31 | 0 | 0 |
+
+## Runtime
+
+| project | fetch seconds | scan seconds |
+|---|---:|---:|
+| asio | 0.003 | 14.562 |
+| avahi | 0.004 | 3.178 |
+| aws-c-io | 0.003 | 6.912 |
+| c-ares | 0.003 | 3.933 |
+| chrony | 0.003 | 3.017 |
+| dlt-daemon | 0.003 | 23.639 |
+| glog | 0.004 | 0.990 |
+| gnutls | 0.004 | 19.430 |
+| googletest | 0.004 | 8.575 |
+| iperf3 | 0.005 | 1.142 |
+| libevent | 0.003 | 5.038 |
+| libmetal | 0.004 | 0.701 |
+| libusb | 0.003 | 5.985 |
+| libuv | 0.004 | 5.984 |
+| libwebsockets | 0.003 | 750.722 |
+| libxml2 | 0.005 | 95.465 |
+| lldpd | 0.004 | 2.523 |
+| lua | 0.003 | 1.721 |
+| mosquitto | 0.003 | 4.120 |
+| nghttp2 | 0.004 | 15.541 |
+| ntpsec | 0.004 | 5.579 |
+| open-amp | 0.003 | 0.434 |
+| pistache | 0.003 | 14.170 |
+| s2n-tls | 0.003 | 14.939 |
+| strongswan | 0.003 | 31.315 |
+| tinyxml2 | 0.003 | 0.683 |
+| unbound | 0.003 | 15.413 |
+| aws-c-common | 0.004 | 4.764 |
+| check | 0.003 | 0.862 |
+| fribidi | 0.003 | 0.621 |
+| jansson | 0.003 | 0.637 |
+| libyaml | 0.004 | 1.196 |
+| re2 | 0.003 | 2.543 |
+Total runtime: 1066.7 seconds.
 
 ## Out of scope
 
@@ -84,7 +153,5 @@
 - **jansson**: new files 0 (); rename-only 0; deleted-empty 0; binary 0; submodule 0; mode-only 0; build-file change sites 2; other-file change sites 0.
 - **libyaml**: new files 0 (); rename-only 0; deleted-empty 0; binary 0; submodule 0; mode-only 0; build-file change sites 4; other-file change sites 0.
 - **re2**: new files 0 (); rename-only 0; deleted-empty 0; binary 0; submodule 0; mode-only 0; build-file change sites 1; other-file change sites 0.
-
-The term “src sites” means source-file change sites in upstream base coordinates; “(non-test)” excludes test paths.
 
 See [METHOD.md](METHOD.md) for methodology.
