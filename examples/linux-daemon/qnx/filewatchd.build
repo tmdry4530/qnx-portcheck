@@ -1,0 +1,4 @@
+# Example mkifs buildfile snippet; adapt paths and startup ordering for the image.
+fsevmgr
+libfsnotify.so.1
+[perms=0755] /usr/bin/filewatchd=filewatchd

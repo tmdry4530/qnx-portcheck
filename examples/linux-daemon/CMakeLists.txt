@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.16)
+project(filewatchd C)
+option(FILEWATCHD_USE_POLL "Use poll() instead of epoll" OFF)
+if(QNX)
+  set(FILEWATCHD_USE_POLL ON)
+endif()
+if(FILEWATCHD_USE_POLL)
+  add_executable(filewatchd src/filewatchd_poll.c)
+else()
+  add_executable(filewatchd src/filewatchd.c)
+endif()
+if(QNX)
+  # QNX docs say inotify functions are in libfsnotify (-l fsnotify).
+  # QNX is set by the toolchain file that qnx-portcheck scaffold generates (set(QNX TRUE)).
+  target_link_libraries(filewatchd PRIVATE fsnotify)
+endif()
