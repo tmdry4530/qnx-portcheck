@@ -1,20 +1,62 @@
 {
   "run_config": {
     "label": "REAL",
-    "date_kst": "2026-11-15T13:47:34.205391+09:00",
+    "date_kst": "2026-11-15T13:59:56.880379+09:00",
     "window": 3,
     "merge_gap": 3,
     "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
     "scanner": "qnx-portcheck/0.1.0",
     "harness_version": "0.1.0",
-    "harness_git_sha": "0020611",
+    "harness_git_sha": "7bbc52a",
     "scanner_source_commit": "511aa2e",
-    "total_runtime_seconds": 1124.5,
-    "started_at": "2026-11-15T13:20:09.917099+09:00",
-    "finished_at": "2026-11-15T13:47:34.188193+09:00",
+    "total_runtime_seconds": 0.0,
+    "started_at": "2026-11-15T13:59:56.872288+09:00",
+    "finished_at": "2026-11-15T13:59:56.879071+09:00",
     "projects_count": 33,
-    "reused_projects": 0,
-    "skipped_unverified": 0
+    "reused_projects": 33,
+    "skipped_unverified": 0,
+    "split": "all",
+    "generated_at_range": "2026-11-15T13:20:09.919449+09:00 to 2026-11-15T13:47:31.477107+09:00"
+  },
+  "splits": {
+    "rule": "Projects sorted by name using Python's case-sensitive string ordering alternate by index: even to tune, odd to holdout.",
+    "tune": [
+      "asio",
+      "aws-c-common",
+      "c-ares",
+      "chrony",
+      "fribidi",
+      "gnutls",
+      "iperf3",
+      "libevent",
+      "libusb",
+      "libwebsockets",
+      "libyaml",
+      "lua",
+      "nghttp2",
+      "open-amp",
+      "re2",
+      "strongswan",
+      "unbound"
+    ],
+    "holdout": [
+      "avahi",
+      "aws-c-io",
+      "check",
+      "dlt-daemon",
+      "glog",
+      "googletest",
+      "jansson",
+      "libmetal",
+      "libuv",
+      "libxml2",
+      "lldpd",
+      "mosquitto",
+      "ntpsec",
+      "pistache",
+      "s2n-tls",
+      "tinyxml2"
+    ]
   },
   "aggregate": {
     "counts": {
@@ -158,6 +200,286 @@
         "findings_tp": 0,
         "sites_hit": 0
       }
+    },
+    "by_split": {
+      "tune": {
+        "counts": {
+          "ok_projects": 17,
+          "error_projects": 0
+        },
+        "micro": {
+          "sites_total": 173,
+          "sites_source_nontest": 100,
+          "sites_hit_source_nontest": 6,
+          "sites_by_category": {
+            "source": 115,
+            "build": 48,
+            "other": 10
+          },
+          "sites_hit_by_category": {
+            "source": 6,
+            "build": 0,
+            "other": 0
+          },
+          "findings_total": 384,
+          "findings_tp": 10,
+          "findings_in_patched_files": 35,
+          "findings_tp_in_patched_files": 10,
+          "findings_by_category": {
+            "source": 379,
+            "build": 5,
+            "other": 0
+          },
+          "recall_source": 0.0522,
+          "recall_source_nontest": 0.06,
+          "recall_build": 0.0,
+          "recall_in_scope": 0.0368,
+          "precision": 0.026,
+          "precision_in_patched_files": 0.2857
+        },
+        "macro": {
+          "recall_source": {
+            "mean": 0.0213,
+            "n": 13
+          },
+          "recall_source_nontest": {
+            "mean": 0.0262,
+            "n": 13
+          },
+          "recall_build": {
+            "mean": 0.0,
+            "n": 11
+          },
+          "recall_in_scope": {
+            "mean": 0.0151,
+            "n": 17
+          },
+          "precision": {
+            "mean": 0.0249,
+            "n": 13
+          },
+          "precision_in_patched_files": {
+            "mean": 0.1744,
+            "n": 4
+          }
+        },
+        "by_rule": {
+          "LNX-LINUX-IFDEF": {
+            "findings": 128,
+            "findings_tp": 1,
+            "sites_hit": 1
+          },
+          "LNX-LINUX-HEADER": {
+            "findings": 93,
+            "findings_tp": 5,
+            "sites_hit": 3
+          },
+          "LNX-TIMERFD": {
+            "findings": 9,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-PIPE2": {
+            "findings": 7,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-LINK-FLAGS": {
+            "findings": 5,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-PRCTL": {
+            "findings": 12,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-INOTIFY": {
+            "findings": 9,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-EPOLL": {
+            "findings": 18,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-PROCFS": {
+            "findings": 24,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-SYSCALL": {
+            "findings": 58,
+            "findings_tp": 4,
+            "sites_hit": 3
+          },
+          "LNX-SENDFILE": {
+            "findings": 9,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-ACCEPT4": {
+            "findings": 4,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-EVENTFD": {
+            "findings": 7,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-SYSINFO": {
+            "findings": 1,
+            "findings_tp": 0,
+            "sites_hit": 0
+          }
+        }
+      },
+      "holdout": {
+        "counts": {
+          "ok_projects": 16,
+          "error_projects": 0
+        },
+        "micro": {
+          "sites_total": 277,
+          "sites_source_nontest": 158,
+          "sites_hit_source_nontest": 9,
+          "sites_by_category": {
+            "source": 197,
+            "build": 58,
+            "other": 22
+          },
+          "sites_hit_by_category": {
+            "source": 10,
+            "build": 0,
+            "other": 0
+          },
+          "findings_total": 591,
+          "findings_tp": 10,
+          "findings_in_patched_files": 98,
+          "findings_tp_in_patched_files": 10,
+          "findings_by_category": {
+            "source": 568,
+            "build": 23,
+            "other": 0
+          },
+          "recall_source": 0.0508,
+          "recall_source_nontest": 0.057,
+          "recall_build": 0.0,
+          "recall_in_scope": 0.0392,
+          "precision": 0.0169,
+          "precision_in_patched_files": 0.102
+        },
+        "macro": {
+          "recall_source": {
+            "mean": 0.0391,
+            "n": 12
+          },
+          "recall_source_nontest": {
+            "mean": 0.0411,
+            "n": 12
+          },
+          "recall_build": {
+            "mean": 0.0,
+            "n": 14
+          },
+          "recall_in_scope": {
+            "mean": 0.0253,
+            "n": 16
+          },
+          "precision": {
+            "mean": 0.0142,
+            "n": 14
+          },
+          "precision_in_patched_files": {
+            "mean": 0.1017,
+            "n": 9
+          }
+        },
+        "by_rule": {
+          "LNX-LINUX-HEADER": {
+            "findings": 87,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-LINUX-IFDEF": {
+            "findings": 186,
+            "findings_tp": 7,
+            "sites_hit": 7
+          },
+          "LNX-PROCFS": {
+            "findings": 55,
+            "findings_tp": 1,
+            "sites_hit": 1
+          },
+          "LNX-PRCTL": {
+            "findings": 14,
+            "findings_tp": 1,
+            "sites_hit": 2
+          },
+          "LNX-INOTIFY": {
+            "findings": 10,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-EPOLL": {
+            "findings": 54,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-EVENTFD": {
+            "findings": 17,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-PIPE2": {
+            "findings": 2,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-TIMERFD": {
+            "findings": 22,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-SYSCALL": {
+            "findings": 96,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-SYSINFO": {
+            "findings": 12,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-SENDFILE": {
+            "findings": 11,
+            "findings_tp": 1,
+            "sites_hit": 1
+          },
+          "LNX-LINK-FLAGS": {
+            "findings": 22,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-LINK-FLAGS-OTHER": {
+            "findings": 1,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-SPLICE": {
+            "findings": 1,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-ACCEPT4": {
+            "findings": 1,
+            "findings_tp": 0,
+            "sites_hit": 0
+          }
+        }
+      }
     }
   },
   "projects": [
@@ -167,6 +489,7 @@
       "upstream_base_sha": "814f67e730e154547aea3f4d99f709cbdf1ea4a0",
       "qnx_head_sha": "c142007f88ef1f9c7b24a1cffe74dd11b17f779f",
       "status": "ok",
+      "split": "tune",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -230,6 +553,7 @@
       "upstream_base_sha": "4294bbff57cbddbbe3cfd2bbde34823277eb8723",
       "qnx_head_sha": "7bf7222d4dc6b0a8a23b4a3be52658a8389ff9ff",
       "status": "ok",
+      "split": "holdout",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -293,6 +617,7 @@
       "upstream_base_sha": "bfb0819d3906502483611ce832a5ec6b897c8421",
       "qnx_head_sha": "fd881c1f7d14c3593065c71d4d4bc5f1a22e0cc1",
       "status": "ok",
+      "split": "holdout",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -356,6 +681,7 @@
       "upstream_base_sha": "6508d6ad270eeedbbece3f07f0e6d7ee244b8589",
       "qnx_head_sha": "341b3c9561d492c30ea4475e2800f08ac52170bf",
       "status": "ok",
+      "split": "tune",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -419,6 +745,7 @@
       "upstream_base_sha": "d622b222a9acbda3a4c842beeb593e7075c32bec",
       "qnx_head_sha": "7a9445af34dd93baf770e35d35cc9e022069d9e3",
       "status": "ok",
+      "split": "tune",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -498,6 +825,7 @@
       "upstream_base_sha": "0f2d4cfffada6f8448a2cb27995b38eb4271044f",
       "qnx_head_sha": "d71e62ee50a42bd578b85db7eaaf56d25471b8c5",
       "status": "ok",
+      "split": "holdout",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -563,6 +891,7 @@
       "upstream_base_sha": "b33e3bad4c46c8a6345525fd822af355e5ef9446",
       "qnx_head_sha": "a527632506d63fac2eb835dfd742897cea0a056f",
       "status": "ok",
+      "split": "holdout",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -626,6 +955,7 @@
       "upstream_base_sha": "5dd9a55040da54371807471bf3169d7a9a1f527e",
       "qnx_head_sha": "b57078e47bee94beb27cb81452c75bec298ed327",
       "status": "ok",
+      "split": "tune",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -689,6 +1019,7 @@
       "upstream_base_sha": "b796f7d44681514f58a683a3a71ff17c94edb0c1",
       "qnx_head_sha": "989d25b8dbeefe942aef4560575c461ec95bec70",
       "status": "ok",
+      "split": "holdout",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -752,6 +1083,7 @@
       "upstream_base_sha": "dfcea9f6a09ead01089a3c9d20c7032f2c0af2c1",
       "qnx_head_sha": "a5416aebaff3851feca5cc8809b7a53372b8be92",
       "status": "ok",
+      "split": "tune",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -815,6 +1147,7 @@
       "upstream_base_sha": "5df3037d10556bfcb675bc73e516978b75fc7bc7",
       "qnx_head_sha": "54bf4c64c2879e2f53fe81767772effa25054fc4",
       "status": "ok",
+      "split": "tune",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -878,6 +1211,7 @@
       "upstream_base_sha": "f8a0e51aee8e6993b6df243422f705bd7fea6079",
       "qnx_head_sha": "3e2223af62372ff1d6df96797f2af8bcdb48811c",
       "status": "ok",
+      "split": "holdout",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -1097,6 +1431,7 @@
       "upstream_base_sha": "e782eeb2514266f6738e242cdcb18e3ae1ed06fa",
       "qnx_head_sha": "4a7f548b901470bd9bb602feeee02ace96c4f1b4",
       "status": "ok",
+      "split": "tune",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -1171,6 +1506,7 @@
       "upstream_base_sha": "5152db2cbfeb5582e9c27c5ea1dba2cd9e10759b",
       "qnx_head_sha": "f0b6e4b5dc26de68c60ff526faf9e8bbd20c79f6",
       "status": "ok",
+      "split": "holdout",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -1234,6 +1570,7 @@
       "upstream_base_sha": "fbb0baf6af9c4324f0f1591734c78b0089b599d4",
       "qnx_head_sha": "7f399a12e06bc16e62a8503190363b4864c1db46",
       "status": "ok",
+      "split": "tune",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -1297,6 +1634,7 @@
       "upstream_base_sha": "de918d45e1b2276a28a4cd32bcf556bef65284e4",
       "qnx_head_sha": "235a060dec5c9413f4f7d4f81109a5117dbc27a1",
       "status": "ok",
+      "split": "holdout",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -1360,6 +1698,7 @@
       "upstream_base_sha": "df8d7298598f4ff4cbb20957ccb4e8e2bde96f06",
       "qnx_head_sha": "ac20728ae28736e97010bf4964bdc51f444d9099",
       "status": "ok",
+      "split": "holdout",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -1423,6 +1762,7 @@
       "upstream_base_sha": "cb88c1cd5d22fe7c56f4f374ded7c16f7cf14bf3",
       "qnx_head_sha": "12b3c3b66e473b2ff65309abcce3e5d7574930b4",
       "status": "ok",
+      "split": "tune",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -1492,6 +1832,7 @@
       "upstream_base_sha": "b0277869d9806f6fab8e1bc11c4a4987c9a79ded",
       "qnx_head_sha": "35aa903edcceedc2c8010c4c47c7a316a89c9725",
       "status": "ok",
+      "split": "holdout",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -1591,6 +1932,7 @@
       "upstream_base_sha": "526ff38e0249acbcc4d0e8958c12cdeae9960cfe",
       "qnx_head_sha": "56d4a4a8d40e5ff5b1259b5ba8effd0d2aba60d2",
       "status": "ok",
+      "split": "tune",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -1654,6 +1996,7 @@
       "upstream_base_sha": "39b19ff71b785452e2c49033dad8e18a0e95a1ae",
       "qnx_head_sha": "a144accf831d03c5599ea2b45b02f98de89412e2",
       "status": "ok",
+      "split": "holdout",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -1717,6 +2060,7 @@
       "upstream_base_sha": "604cdf9a4561bda7c2274fee64c0f5c90933b9d4",
       "qnx_head_sha": "742c97bfea28044e24018e4f97a7de7b676c9be6",
       "status": "ok",
+      "split": "tune",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -1780,6 +2124,7 @@
       "upstream_base_sha": "ddffda861aa49012dcda28f1362d0339e718cd52",
       "qnx_head_sha": "9dc3359fba4f6e82842b9ea80744558321361fc1",
       "status": "ok",
+      "split": "holdout",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -1843,6 +2188,7 @@
       "upstream_base_sha": "a7862238a9d6703e0a3e2d7ea4341de8d57429bd",
       "qnx_head_sha": "76466302298aee279692bee38fd61ffd0128799d",
       "status": "ok",
+      "split": "holdout",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -1906,6 +2252,7 @@
       "upstream_base_sha": "4d709df8b25fcf3cacb55cb4f28ab81014829ab1",
       "qnx_head_sha": "1b8d7fe7aa628ec293c2c71a850dff085ba0b0ae",
       "status": "ok",
+      "split": "tune",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -1969,6 +2316,7 @@
       "upstream_base_sha": "321ea883b7190d4e85cae5512a12e5eaa8f8731f",
       "qnx_head_sha": "9dadb75f769c71562278ab5d3c2185041f3d337d",
       "status": "ok",
+      "split": "holdout",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -2032,6 +2380,7 @@
       "upstream_base_sha": "a33f0638e1dacf2633cf2292078a674576bca852",
       "qnx_head_sha": "5d76fff70001114ecfc01a14840c9dec134375f4",
       "status": "ok",
+      "split": "tune",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -2095,6 +2444,7 @@
       "upstream_base_sha": "2b67a658e461520f1de20d64342b91ddcedc7ebb",
       "qnx_head_sha": "f8abf334260c020f13979202d92d15731325ee23",
       "status": "ok",
+      "split": "tune",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -2158,6 +2508,7 @@
       "upstream_base_sha": "11970a7e112dfe243a2e68773f014687df2900e8",
       "qnx_head_sha": "bdd4d582f388806e01bcd0c4b505a83682e49078",
       "status": "ok",
+      "split": "holdout",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -2221,6 +2572,7 @@
       "upstream_base_sha": "68162babff4f39c4e2dc164a5e825af93bda9983",
       "qnx_head_sha": "3297df003a0d1dc86278a9da2481b8594e543719",
       "status": "ok",
+      "split": "tune",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -2284,6 +2636,7 @@
       "upstream_base_sha": "684e18c927e89615c2d501737e90018f4930d6c5",
       "qnx_head_sha": "bbf20222758941f7678d36cca53a092ff6420114",
       "status": "ok",
+      "split": "holdout",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -2347,6 +2700,7 @@
       "upstream_base_sha": "2c891fc7a770e8ba2fec34fc6b545c672beb37e6",
       "qnx_head_sha": "66e65e9309a02e90f7e752bc033775aaa3744039",
       "status": "ok",
+      "split": "tune",
       "error": null,
       "error_kind": null,
       "metrics": {
@@ -2410,6 +2764,7 @@
       "upstream_base_sha": "6dcd83d60f7944926bfd308cc13979fc53dd69ca",
       "qnx_head_sha": "099c91ad82bca90a503018962c2523ff8a827f11",
       "status": "ok",
+      "split": "tune",
       "error": null,
       "error_kind": null,
       "metrics": {
