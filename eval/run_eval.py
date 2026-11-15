@@ -75,6 +75,13 @@ TEST_COMPONENTS = {
     "testsuite",
 }
 REQUIRED = ("name", "upstream", "upstream_base_sha", "qnx_repo", "qnx_head_sha", "extraction")
+SPLIT_RULE = "Projects sorted by name using Python's case-sensitive string ordering alternate by index: even to tune, odd to holdout."
+
+
+def assign_splits(projects: list[dict]) -> dict[str, str]:
+    """Sort the full project names with plain Python string ordering (case-sensitive, code-point order); assign indexes 0, 2, 4, ... to tune and indexes 1, 3, 5, ... to holdout."""
+    names = sorted(p["name"] for p in projects)
+    return {name: ("tune" if i % 2 == 0 else "holdout") for i, name in enumerate(names)}
 
 
 @dataclass
@@ -836,9 +843,10 @@ def render_summary_md(summary: dict) -> str:
         f"- Total runtime: {cfg.get('total_runtime_seconds', '—')} s",
         f"- Projects: {cfg.get('projects_count', 0)}",
         f"- Reused projects: {cfg.get('reused_projects', 0)}",
+        f"- Scan results generated (KST): {cfg.get('generated_at_range', '— to —')}",
         "",
-        "| project | upstream base | src sites (all/non-test) | build sites | other sites | new files | findings | TP | recall src | recall src non-test | recall build | precision | precision (patched files) | status |",
-        "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|",
+        "| project | split | upstream base | src sites (all/non-test) | build sites | other sites | new files | findings | TP | recall src | recall src non-test | recall build | precision | precision (patched files) | status |",
+        "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|",
     ]
     for p in summary.get("projects", []):
         m = p.get("metrics", {})
@@ -846,13 +854,13 @@ def render_summary_md(summary: dict) -> str:
         upstream = p.get("upstream_base_sha", p.get("project", {}).get("upstream_base_sha", "—"))
         name = p.get("name", p.get("project", {}).get("name", "—"))
         out.append(
-            f"| {name} | `{str(upstream)[:10]}` | {m.get('sites_by_category', {}).get('source', 0)}/{m.get('sites_source_nontest', 0)} | {m.get('sites_by_category', {}).get('build', 0)} | {m.get('sites_by_category', {}).get('other', 0)} | {len(o.get('new_files', []))} | {m.get('findings_total', 0)} | {m.get('findings_tp', 0)} | {_fmt(m.get('recall_source'))} | {_fmt(m.get('recall_source_nontest'))} | {_fmt(m.get('recall_build'))} | {_fmt(m.get('precision'))} | {_fmt(m.get('precision_in_patched_files'))} | {p.get('status')} |"
+            f"| {name} | {p.get('split', '—')} | `{str(upstream)[:10]}` | {m.get('sites_by_category', {}).get('source', 0)}/{m.get('sites_source_nontest', 0)} | {m.get('sites_by_category', {}).get('build', 0)} | {m.get('sites_by_category', {}).get('other', 0)} | {len(o.get('new_files', []))} | {m.get('findings_total', 0)} | {m.get('findings_tp', 0)} | {_fmt(m.get('recall_source'))} | {_fmt(m.get('recall_source_nontest'))} | {_fmt(m.get('recall_build'))} | {_fmt(m.get('precision'))} | {_fmt(m.get('precision_in_patched_files'))} | {p.get('status')} |"
         )
     agg = summary.get("aggregate", {})
     micro = agg.get("micro", {})
     macro = agg.get("macro", {})
     out.append(
-        f"| **Micro** | — | {micro.get('sites_by_category', {}).get('source', 0)}/{micro.get('sites_source_nontest', 0)} | {micro.get('sites_by_category', {}).get('build', 0)} | {micro.get('sites_by_category', {}).get('other', 0)} | — | {micro.get('findings_total', 0)} | {micro.get('findings_tp', 0)} | {_fmt(micro.get('recall_source'))} | {_fmt(micro.get('recall_source_nontest'))} | {_fmt(micro.get('recall_build'))} | {_fmt(micro.get('precision'))} | {_fmt(micro.get('precision_in_patched_files'))} | — |"
+        f"| **Micro** | — | — | {micro.get('sites_by_category', {}).get('source', 0)}/{micro.get('sites_source_nontest', 0)} | {micro.get('sites_by_category', {}).get('build', 0)} | {micro.get('sites_by_category', {}).get('other', 0)} | — | {micro.get('findings_total', 0)} | {micro.get('findings_tp', 0)} | {_fmt(micro.get('recall_source'))} | {_fmt(micro.get('recall_source_nontest'))} | {_fmt(micro.get('recall_build'))} | {_fmt(micro.get('precision'))} | {_fmt(micro.get('precision_in_patched_files'))} | — |"
     )
     macro_ratios = (
         "recall_source",
@@ -862,7 +870,7 @@ def render_summary_md(summary: dict) -> str:
         "precision_in_patched_files",
     )
     out.append(
-        "| **Macro** | — | — | — | — | — | — | — | "
+        "| **Macro** | — | — | — | — | — | — | — | — | "
         + " | ".join(_fmt(macro.get(k, {}).get("mean")) for k in macro_ratios)
         + " | — |"
     )
@@ -873,6 +881,27 @@ def render_summary_md(summary: dict) -> str:
     out.append(
         f"Overall (micro): source-site recall {_fmt(micro.get('recall_source'))} ({micro.get('sites_hit_by_category', {}).get('source', 0)}/{micro.get('sites_by_category', {}).get('source', 0)}), non-test source-site recall {_fmt(micro.get('recall_source_nontest'))} ({micro.get('sites_hit_source_nontest', 0)}/{micro.get('sites_source_nontest', 0)}), build-site recall {_fmt(micro.get('recall_build'))} ({micro.get('sites_hit_by_category', {}).get('build', 0)}/{micro.get('sites_by_category', {}).get('build', 0)}), precision {_fmt(micro.get('precision'))} ({micro.get('findings_tp', 0)}/{micro.get('findings_total', 0)}), precision in patched files {_fmt(micro.get('precision_in_patched_files'))} ({micro.get('findings_tp_in_patched_files', 0)}/{micro.get('findings_in_patched_files', 0)})."
     )
+    out.append("")
+    for split_name in ("tune", "holdout"):
+        split_agg = agg.get("by_split", {}).get(split_name)
+        count = sum(p.get("split") == split_name for p in summary.get("projects", []))
+        if split_agg is None:
+            out.append(f"Split {split_name} (micro, 0 projects): — (not run)")
+        else:
+            sm = split_agg["micro"]
+            out.append(
+                f"Split {split_name} (micro, {count} projects): source-site recall {_fmt(sm.get('recall_source'))} ({sm.get('sites_hit_by_category', {}).get('source', 0)}/{sm.get('sites_by_category', {}).get('source', 0)}), non-test source-site recall {_fmt(sm.get('recall_source_nontest'))} ({sm.get('sites_hit_source_nontest', 0)}/{sm.get('sites_source_nontest', 0)}), build-site recall {_fmt(sm.get('recall_build'))} ({sm.get('sites_hit_by_category', {}).get('build', 0)}/{sm.get('sites_by_category', {}).get('build', 0)}), precision {_fmt(sm.get('precision'))} ({sm.get('findings_tp', 0)}/{sm.get('findings_total', 0)}), precision in patched files {_fmt(sm.get('precision_in_patched_files'))} ({sm.get('findings_tp_in_patched_files', 0)}/{sm.get('findings_in_patched_files', 0)})."
+            )
+    splits = summary.get("splits", {})
+    out += [
+        "",
+        "## Splits",
+        "",
+        splits.get("rule", SPLIT_RULE),
+        "",
+        f"- Tune: {', '.join(splits.get('tune', [])) or '—'}",
+        f"- Holdout: {', '.join(splits.get('holdout', [])) or '—'}",
+    ]
     out += [
         "",
         "## Hits by rule",
@@ -925,13 +954,27 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--include-unverified", action="store_true")
     ap.add_argument("--timeout", type=int, default=600)
     ap.add_argument("--reuse-results", action="store_true")
+    ap.add_argument(
+        "--require-reuse", action="store_true", help="reuse matching results only; never fetch or scan"
+    )
+    ap.add_argument("--split", choices=("tune", "holdout", "all"), default="all")
     args = ap.parse_args(argv)
-    projects = load_projects(args.projects)
+    all_projects = load_projects(args.projects)
+    split_by_name = assign_splits(all_projects)
+    split_members = {
+        "tune": sorted(name for name, split in split_by_name.items() if split == "tune"),
+        "holdout": sorted(name for name, split in split_by_name.items() if split == "holdout"),
+    }
+    projects = list(all_projects)
+    if args.split != "all":
+        projects = [p for p in projects if split_by_name[p["name"]] == args.split]
     if args.only:
         wanted = {n.strip() for n in args.only.split(",") if n.strip()}
         projects = [p for p in projects if p["name"] in wanted]
     skipped = [p for p in projects if not p.get("verified", False) and not args.include_unverified]
     projects = [p for p in projects if p not in skipped]
+    if args.require_reuse:
+        args.reuse_results = True
     started_at = _kst_now()
     run_start = time.monotonic()
     source_cp = subprocess.run(
@@ -959,14 +1002,47 @@ def main(argv: list[str] | None = None) -> int:
                     and prior.get("scan_cmd") == args.scan_cmd
                     and prior.get("scanner_source_commit") == args.scanner_source_commit
                 ):
+                    prior["split"] = split_by_name[p["name"]]
                     results.append(prior)
                     reused_projects += 1
                     print(f"[{args.label}] {p['name']}: reused", file=sys.stderr, flush=True)
                     continue
             except (OSError, json.JSONDecodeError):
                 pass
+        if args.require_reuse:
+            meta = {
+                k: p.get(k)
+                for k in (
+                    "name",
+                    "upstream",
+                    "upstream_base_ref",
+                    "upstream_base_sha",
+                    "qnx_repo",
+                    "qnx_branch",
+                    "qnx_head_sha",
+                    "expected_scope",
+                    "verified",
+                )
+            }
+            results.append(
+                {
+                    "label": args.label,
+                    "generated_at": _kst_now(),
+                    "project": meta,
+                    "split": split_by_name[p["name"]],
+                    "status": "error",
+                    "error_kind": "not-reused",
+                    "error": "No matching prior result was available; project was not fetched or scanned.",
+                    "metrics": {},
+                    "out_of_scope": {},
+                    "durations": {"fetch": 0.0, "scan": 0.0},
+                }
+            )
+            print(f"[{args.label}] {p['name']}: ERROR no reusable result", file=sys.stderr, flush=True)
+            continue
         print(f"[{args.label}] {p['name']} ...", file=sys.stderr, flush=True)
         r = evaluate_project(p, args)
+        r["split"] = split_by_name[p["name"]]
         results.append(r)
         if r["status"] == "ok":
             print(f"[{args.label}] {p['name']}: ok", file=sys.stderr, flush=True)
@@ -1000,6 +1076,7 @@ def main(argv: list[str] | None = None) -> int:
             "upstream_base_sha": r["project"].get("upstream_base_sha"),
             "qnx_head_sha": r["project"].get("qnx_head_sha"),
             "status": r["status"],
+            "split": r.get("split", split_by_name[r["project"]["name"]]),
             "error": r.get("error"),
             "error_kind": r.get("error_kind"),
             "metrics": r.get("metrics", {}),
@@ -1027,8 +1104,22 @@ def main(argv: list[str] | None = None) -> int:
             "projects_count": len(projects),
             "reused_projects": reused_projects,
             "skipped_unverified": len(skipped),
+            "split": args.split,
+            "generated_at_range": (
+                f"{min(r['generated_at'] for r in results if r.get('generated_at'))} to {max(r['generated_at'] for r in results if r.get('generated_at'))}"
+                if any(r.get("generated_at") for r in results)
+                else "— to —"
+            ),
         },
-        "aggregate": aggregate(results),
+        "splits": {"rule": SPLIT_RULE, **split_members},
+        "aggregate": {
+            **aggregate(results),
+            "by_split": {
+                split: aggregate([r for r in results if r.get("split") == split])
+                for split in ("tune", "holdout")
+                if any(r.get("split") == split for r in results)
+            },
+        },
         "projects": compact,
     }
     outdir.mkdir(parents=True, exist_ok=True)

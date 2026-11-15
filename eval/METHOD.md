@@ -82,6 +82,27 @@ Per project, and overall:
 
 Ratios with an empty denominator are shown as `—` (null in JSON).
 
+## Tune / holdout split
+
+To keep rule tuning honest, the corpus is split deterministically into two halves:
+
+- take the **full** project list from `projects.yaml` (before `--only` and before unverified filtering);
+- sort it by the `name` field with plain Python string ordering (`sorted(names)`: case-sensitive, Unicode
+  code-point order, so `"Zeta"` sorts before `"alpha"`);
+- index 0, 2, 4, ... goes to **tune**, index 1, 3, 5, ... goes to **holdout**.
+
+Because membership is computed from the full list, `--only` never moves a project between splits. With the current
+33 projects this gives 17 tune and 16 holdout projects; both lists are written to `summary.json` (`splits`) and to
+`RESULTS.md` (`## Splits`). Rules should be tuned by looking at tune projects only; holdout numbers are the check.
+
+`--split tune|holdout|all` (default `all`) evaluates only that split. Each result records its `split`, and
+`summary.json` has `aggregate.by_split`. `RESULTS.md` prints `Split tune (micro, N projects): ...` and
+`Split holdout (micro, N projects): ...` right after the `Overall (micro): ...` line, in the same wording.
+
+`--reuse-results` reuses a stored per-project result when the base/head SHAs, window, merge gap, scan command and
+scanner source commit all match. `--require-reuse` goes further: a project that cannot be reused is marked
+`error` (`error_kind: not-reused`) without fetching or scanning, so results can be re-scored without re-scanning.
+
 ## Running
 
 ```bash
@@ -93,7 +114,7 @@ PATH=$PWD/.venv/bin:$PATH .venv/bin/python eval/run_eval.py --label REAL        
 ```
 
 Options: `--only a,b`, `--window N`, `--merge-gap N`, `--scan-cmd "<cmd with {path}>"`, `--work-dir`,
-`--results-dir`, `--timeout`. The default scan command is
+`--results-dir`, `--timeout`, `--split`, `--reuse-results`, `--require-reuse`. The default scan command is
 `qnx-portcheck scan {path} --format json --fail-on never`; exit codes 0 and 1 are accepted with valid JSON,
 exit code 2 (usage error) marks the project as failed.
 
