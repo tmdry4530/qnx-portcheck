@@ -38,9 +38,34 @@ def test_assign_splits_is_deterministic_case_sensitive_and_balanced():
 def test_real_corpus_split_counts():
     projects = ev.load_projects(Path(__file__).parents[1] / "projects.yaml")
     splits = ev.assign_splits(projects)
-    assert len(projects) == 33
+    originals = [p for p in projects if "split" not in p]
+    assert len(projects) == 48
     assert sum(value == "tune" for value in splits.values()) == 17
     assert sum(value == "holdout" for value in splits.values()) == 16
+    assert sum(value == "fresh" for value in splits.values()) == 15
+    assert {n: splits[n] for n in (p["name"] for p in originals)} == ev.assign_splits(
+        [{"name": p["name"]} for p in originals]
+    )
+
+
+def test_fresh_entries_do_not_shift_original_split_and_invalid_explicit_rejected():
+    originals = [{"name": "alpha"}, {"name": "gamma"}, {"name": "omega"}]
+    original_splits = ev.assign_splits(originals)
+    combined = originals + [{"name": "beta", "split": "fresh"}, {"name": "delta", "split": "fresh"}]
+    combined_splits = ev.assign_splits(combined)
+    assert {p["name"]: combined_splits[p["name"]] for p in originals} == original_splits
+    assert combined_splits["beta"] == combined_splits["delta"] == "fresh"
+    with pytest.raises(ValueError, match="explicit split"):
+        ev.assign_splits([{"name": "bad", "split": "tune"}])
+
+
+def test_validate_project_rejects_unknown_explicit_split(tmp_path):
+    project_file = _corpus(tmp_path)
+    project_file.write_text(
+        project_file.read_text().replace("    verified: true", "    verified: true\n    split: holdout", 1)
+    )
+    with pytest.raises(ValueError, match="split must be 'fresh'"):
+        ev.load_projects(project_file)
 
 
 def _git(cwd, *args):
@@ -180,7 +205,8 @@ def test_split_markdown_lines_match_aggregates_and_demo_contract(tmp_path):
         projects.append({"status": "ok", "name": name, "split": split, "metrics": metrics})
     aggregate = ev.aggregate(projects)
     aggregate["by_split"] = {
-        split: ev.aggregate([p for p in projects if p["split"] == split]) for split in ("tune", "holdout")
+        split: ev.aggregate([p for p in projects if p["split"] == split])
+        for split in ("tune", "holdout", "fresh")
     }
     summary = {
         "run_config": {
@@ -191,7 +217,7 @@ def test_split_markdown_lines_match_aggregates_and_demo_contract(tmp_path):
             "projects_count": 2,
             "generated_at_range": "x to y",
         },
-        "splits": {"rule": ev.SPLIT_RULE, "tune": ["alpha"], "holdout": ["beta"]},
+        "splits": {"rule": ev.SPLIT_RULE, "tune": ["alpha"], "holdout": ["beta"], "fresh": []},
         "projects": projects,
         "aggregate": aggregate,
     }
@@ -200,8 +226,8 @@ def test_split_markdown_lines_match_aggregates_and_demo_contract(tmp_path):
     assert next(line for line in lines if line.startswith("Split tune (micro")).startswith(
         "Split tune (micro"
     )
-    assert next(line for line in lines if line.startswith("Split holdout (micro")).startswith(
-        "Split holdout (micro"
+    assert next(line for line in lines if line.startswith("Split holdout (seen during tuning)")).startswith(
+        "Split holdout (seen during tuning)"
     )
     tune_line = next(line for line in lines if line.startswith("Split tune (micro"))
     tune_micro = aggregate["by_split"]["tune"]["micro"]
@@ -214,3 +240,33 @@ def test_split_markdown_lines_match_aggregates_and_demo_contract(tmp_path):
     path.write_text(rendered)
     parsed, reason = build_assets.load_eval(path)
     assert reason == "" and parsed["recall_source"] == f"{aggregate['micro']['recall_source']:.3f}"
+
+
+def test_fresh_only_and_overall_excludes_fresh_end_to_end(tmp_path):
+    projects = _corpus(tmp_path)
+    content = projects.read_text()
+    # beta and gamma are marked fresh, with beta sorting between original names.
+    content = content.replace("  - name: beta\n", "  - name: beta\n    split: fresh\n")
+    content = content.replace("  - name: gamma\n", "  - name: gamma\n    split: fresh\n")
+    projects.write_text(content)
+
+    assert _run(tmp_path, projects, ("--split", "fresh")) == 0
+    fresh_summary = json.loads((tmp_path / "results/fake-scan/summary.json").read_text())
+    assert {p["name"] for p in fresh_summary["projects"]} == {"beta", "gamma"}
+    for p in fresh_summary["projects"]:
+        row = json.loads((tmp_path / f"results/fake-scan/{p['name']}.json").read_text())
+        assert row["split"] == "fresh"
+
+    assert _run(tmp_path, projects, ("--only", "alpha,beta")) == 0
+    summary = json.loads((tmp_path / "results/fake-scan/summary.json").read_text())
+    alpha = next(p for p in summary["projects"] if p["name"] == "alpha")
+    assert summary["aggregate"]["micro"] == ev.aggregate([alpha])["micro"]
+    markdown = (tmp_path / "RESULTS.md").read_text()
+    assert "- Projects: 1" in markdown
+    split_lines = [line for line in markdown.splitlines() if line.startswith("Split ")]
+    assert [line.split(" (micro", 1)[0] for line in split_lines] == [
+        "Split tune",
+        "Split holdout (seen during tuning)",
+        "Split fresh",
+    ]
+    assert "(seen during tuning)" in split_lines[1]

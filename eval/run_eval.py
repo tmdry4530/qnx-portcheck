@@ -75,13 +75,19 @@ TEST_COMPONENTS = {
     "testsuite",
 }
 REQUIRED = ("name", "upstream", "upstream_base_sha", "qnx_repo", "qnx_head_sha", "extraction")
-SPLIT_RULE = "Projects sorted by name using Python's case-sensitive string ordering alternate by index: even to tune, odd to holdout."
+SPLIT_RULE = "Original projects (entries without split) sorted by name using Python's case-sensitive string ordering alternate by index: even to tune, odd to holdout. Fresh projects are selected later by the committed criteria in METHOD.md and never shift tune/holdout."
 
 
 def assign_splits(projects: list[dict]) -> dict[str, str]:
-    """Sort the full project names with plain Python string ordering (case-sensitive, code-point order); assign indexes 0, 2, 4, ... to tune and indexes 1, 3, 5, ... to holdout."""
-    names = sorted(p["name"] for p in projects)
-    return {name: ("tune" if i % 2 == 0 else "holdout") for i, name in enumerate(names)}
+    """Assign explicit fresh projects and alternate original names by sorted index."""
+    names = sorted(p["name"] for p in projects if "split" not in p)
+    result = {name: ("tune" if i % 2 == 0 else "holdout") for i, name in enumerate(names)}
+    for p in projects:
+        if "split" in p:
+            if p["split"] != "fresh":
+                raise ValueError(f"unknown explicit split for {p.get('name')}: {p['split']!r}")
+            result[p["name"]] = "fresh"
+    return result
 
 
 @dataclass
@@ -166,6 +172,8 @@ def _mini_yaml_load(text: str) -> Any:
 
 
 def validate_project(p: dict[str, Any]) -> None:
+    if "split" in p and p["split"] != "fresh":
+        raise ValueError(f"split must be 'fresh' when present: {p['split']!r}")
     for key in REQUIRED:
         if key not in p or p[key] in (None, ""):
             raise ValueError(f"project missing required field: {key}")
@@ -841,14 +849,17 @@ def render_summary_md(summary: dict) -> str:
         f"- Scanner source commit: {cfg.get('scanner_source_commit', '—') or '—'}",
         f"- Harness git SHA: {cfg.get('harness_git_sha', '—') or '—'}",
         f"- Total runtime: {cfg.get('total_runtime_seconds', '—')} s",
-        f"- Projects: {cfg.get('projects_count', 0)}",
+        f"- Projects: {cfg.get('original_projects_count', cfg.get('projects_count', 0))}",
+        f"- Fresh projects: {cfg.get('fresh_projects_count', 0)}",
         f"- Reused projects: {cfg.get('reused_projects', 0)}",
         f"- Scan results generated (KST): {cfg.get('generated_at_range', '— to —')}",
         "",
         "| project | split | upstream base | src sites (all/non-test) | build sites | other sites | new files | findings | TP | recall src | recall src non-test | recall build | precision | precision (patched files) | status |",
         "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|",
     ]
-    for p in summary.get("projects", []):
+    original_projects = [p for p in summary.get("projects", []) if p.get("split") != "fresh"]
+    fresh_projects = [p for p in summary.get("projects", []) if p.get("split") == "fresh"]
+    for p in original_projects:
         m = p.get("metrics", {})
         o = p.get("out_of_scope", {})
         upstream = p.get("upstream_base_sha", p.get("project", {}).get("upstream_base_sha", "—"))
@@ -874,6 +885,30 @@ def render_summary_md(summary: dict) -> str:
         + " | ".join(_fmt(macro.get(k, {}).get("mean")) for k in macro_ratios)
         + " | — |"
     )
+    if fresh_projects:
+        out += [
+            "",
+            "## Fresh projects",
+            "",
+            "| project | split | upstream base | src sites (all/non-test) | build sites | other sites | new files | findings | TP | recall src | recall src non-test | recall build | precision | precision (patched files) | status |",
+            "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|",
+        ]
+        for p in fresh_projects:
+            m, o = p.get("metrics", {}), p.get("out_of_scope", {})
+            upstream = p.get("upstream_base_sha", p.get("project", {}).get("upstream_base_sha", "—"))
+            name = p.get("name", p.get("project", {}).get("name", "—"))
+            out.append(
+                f"| {name} | fresh | `{str(upstream)[:10]}` | {m.get('sites_by_category', {}).get('source', 0)}/{m.get('sites_source_nontest', 0)} | {m.get('sites_by_category', {}).get('build', 0)} | {m.get('sites_by_category', {}).get('other', 0)} | {len(o.get('new_files', []))} | {m.get('findings_total', 0)} | {m.get('findings_tp', 0)} | {_fmt(m.get('recall_source'))} | {_fmt(m.get('recall_source_nontest'))} | {_fmt(m.get('recall_build'))} | {_fmt(m.get('precision'))} | {_fmt(m.get('precision_in_patched_files'))} | {p.get('status')} |"
+            )
+        fm = aggregate(fresh_projects)
+        out.append(
+            f"| **Micro** | — | — | {fm['micro'].get('sites_by_category', {}).get('source', 0)}/{fm['micro'].get('sites_source_nontest', 0)} | {fm['micro'].get('sites_by_category', {}).get('build', 0)} | {fm['micro'].get('sites_by_category', {}).get('other', 0)} | — | {fm['micro'].get('findings_total', 0)} | {fm['micro'].get('findings_tp', 0)} | {_fmt(fm['micro'].get('recall_source'))} | {_fmt(fm['micro'].get('recall_source_nontest'))} | {_fmt(fm['micro'].get('recall_build'))} | {_fmt(fm['micro'].get('precision'))} | {_fmt(fm['micro'].get('precision_in_patched_files'))} | — |"
+        )
+        out.append(
+            "| **Macro** | — | — | — | — | — | — | — | — | "
+            + " | ".join(_fmt(fm["macro"].get(k, {}).get("mean")) for k in macro_ratios)
+            + " | — |"
+        )
     out.append(
         "The term “src sites” means source-file change sites in upstream base coordinates; “(non-test)” excludes test paths."
     )
@@ -882,15 +917,16 @@ def render_summary_md(summary: dict) -> str:
         f"Overall (micro): source-site recall {_fmt(micro.get('recall_source'))} ({micro.get('sites_hit_by_category', {}).get('source', 0)}/{micro.get('sites_by_category', {}).get('source', 0)}), non-test source-site recall {_fmt(micro.get('recall_source_nontest'))} ({micro.get('sites_hit_source_nontest', 0)}/{micro.get('sites_source_nontest', 0)}), build-site recall {_fmt(micro.get('recall_build'))} ({micro.get('sites_hit_by_category', {}).get('build', 0)}/{micro.get('sites_by_category', {}).get('build', 0)}), precision {_fmt(micro.get('precision'))} ({micro.get('findings_tp', 0)}/{micro.get('findings_total', 0)}), precision in patched files {_fmt(micro.get('precision_in_patched_files'))} ({micro.get('findings_tp_in_patched_files', 0)}/{micro.get('findings_in_patched_files', 0)})."
     )
     out.append("")
-    for split_name in ("tune", "holdout"):
+    for split_name in ("tune", "holdout", "fresh"):
         split_agg = agg.get("by_split", {}).get(split_name)
         count = sum(p.get("split") == split_name for p in summary.get("projects", []))
+        wording = "Split holdout (seen during tuning)" if split_name == "holdout" else f"Split {split_name}"
         if split_agg is None:
-            out.append(f"Split {split_name} (micro, 0 projects): — (not run)")
+            out.append(f"{wording} (micro, {count} projects): — (not run)")
         else:
             sm = split_agg["micro"]
             out.append(
-                f"Split {split_name} (micro, {count} projects): source-site recall {_fmt(sm.get('recall_source'))} ({sm.get('sites_hit_by_category', {}).get('source', 0)}/{sm.get('sites_by_category', {}).get('source', 0)}), non-test source-site recall {_fmt(sm.get('recall_source_nontest'))} ({sm.get('sites_hit_source_nontest', 0)}/{sm.get('sites_source_nontest', 0)}), build-site recall {_fmt(sm.get('recall_build'))} ({sm.get('sites_hit_by_category', {}).get('build', 0)}/{sm.get('sites_by_category', {}).get('build', 0)}), precision {_fmt(sm.get('precision'))} ({sm.get('findings_tp', 0)}/{sm.get('findings_total', 0)}), precision in patched files {_fmt(sm.get('precision_in_patched_files'))} ({sm.get('findings_tp_in_patched_files', 0)}/{sm.get('findings_in_patched_files', 0)})."
+                f"{wording} (micro, {count} projects): source-site recall {_fmt(sm.get('recall_source'))} ({sm.get('sites_hit_by_category', {}).get('source', 0)}/{sm.get('sites_by_category', {}).get('source', 0)}), non-test source-site recall {_fmt(sm.get('recall_source_nontest'))} ({sm.get('sites_hit_source_nontest', 0)}/{sm.get('sites_source_nontest', 0)}), build-site recall {_fmt(sm.get('recall_build'))} ({sm.get('sites_hit_by_category', {}).get('build', 0)}/{sm.get('sites_by_category', {}).get('build', 0)}), precision {_fmt(sm.get('precision'))} ({sm.get('findings_tp', 0)}/{sm.get('findings_total', 0)}), precision in patched files {_fmt(sm.get('precision_in_patched_files'))} ({sm.get('findings_tp_in_patched_files', 0)}/{sm.get('findings_in_patched_files', 0)})."
             )
     splits = summary.get("splits", {})
     out += [
@@ -900,7 +936,8 @@ def render_summary_md(summary: dict) -> str:
         splits.get("rule", SPLIT_RULE),
         "",
         f"- Tune: {', '.join(splits.get('tune', [])) or '—'}",
-        f"- Holdout: {', '.join(splits.get('holdout', [])) or '—'}",
+        f"- Holdout (seen during tuning): {', '.join(splits.get('holdout', [])) or '—'}",
+        f"- Fresh projects: {', '.join(splits.get('fresh', [])) or '—'}",
     ]
     out += [
         "",
@@ -913,26 +950,40 @@ def render_summary_md(summary: dict) -> str:
         out.append(
             f"| {rule} | {counts.get('findings', 0)} | {counts.get('findings_tp', 0)} | {counts.get('sites_hit', 0)} |"
         )
+    out += [
+        "",
+        "## Hits by rule (fresh)",
+        "",
+        "| rule_id | findings | TP findings | sites hit |",
+        "|---|---:|---:|---:|",
+    ]
+    for rule, counts in sorted(agg.get("by_rule_fresh", {}).items()):
+        out.append(
+            f"| {rule} | {counts.get('findings', 0)} | {counts.get('findings_tp', 0)} | {counts.get('sites_hit', 0)} |"
+        )
     out += ["", "## Runtime", "", "| project | fetch seconds | scan seconds |", "|---|---:|---:|"]
     for p in summary.get("projects", []):
         d = p.get("durations", {})
-        out.append(f"| {p.get('name', '—')} | {d.get('fetch', 0):.3f} | {d.get('scan', 0):.3f} |")
+        suffix = " (fresh)" if p.get("split") == "fresh" else ""
+        out.append(f"| {p.get('name', '—')}{suffix} | {d.get('fetch', 0):.3f} | {d.get('scan', 0):.3f} |")
     out.append(f"Total runtime: {cfg.get('total_runtime_seconds', 0):.1f} seconds.")
     out += ["", "## Out of scope", ""]
     for p in summary.get("projects", []):
         o = p.get("out_of_scope", {})
         name = p.get("name", p.get("project", {}).get("name", "—"))
         paths = [item.get("path", "") for item in o.get("new_files", [])]
+        suffix = " (fresh)" if p.get("split") == "fresh" else ""
         out.append(
-            f"- **{name}**: new files {len(paths)} ({', '.join(paths[:5])}); rename-only {len(o.get('rename_only', []))}; deleted-empty {len(o.get('deleted_empty', []))}; binary {len(o.get('binary', []))}; submodule {len(o.get('submodule', []))}; mode-only {len(o.get('mode_only', []))}; build-file change sites {o.get('build_sites', 0)}; other-file change sites {o.get('other_sites', 0)}."
+            f"- **{name}{suffix}**: new files {len(paths)} ({', '.join(paths[:5])}); rename-only {len(o.get('rename_only', []))}; deleted-empty {len(o.get('deleted_empty', []))}; binary {len(o.get('binary', []))}; submodule {len(o.get('submodule', []))}; mode-only {len(o.get('mode_only', []))}; build-file change sites {o.get('build_sites', 0)}; other-file change sites {o.get('other_sites', 0)}."
         )
     errors = [p for p in summary.get("projects", []) if p.get("status") == "error"]
     if errors:
         out += ["", "## Errors", ""]
         for p in errors:
             name = p.get("name", p.get("project", {}).get("name", "—"))
+            suffix = " (fresh)" if p.get("split") == "fresh" else ""
             out.append(
-                f"- **{name}** [{p.get('error_kind', 'other')}]: {str(p.get('error', 'Unknown error'))[:300]}"
+                f"- **{name}{suffix}** [{p.get('error_kind', 'other')}]: {str(p.get('error', 'Unknown error'))[:300]}"
             )
     out += ["", "See [METHOD.md](METHOD.md) for methodology.", ""]
     return "\n".join(out)
@@ -957,17 +1008,20 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument(
         "--require-reuse", action="store_true", help="reuse matching results only; never fetch or scan"
     )
-    ap.add_argument("--split", choices=("tune", "holdout", "all"), default="all")
+    ap.add_argument("--split", choices=("tune", "holdout", "fresh", "original", "all"), default="all")
     args = ap.parse_args(argv)
     all_projects = load_projects(args.projects)
     split_by_name = assign_splits(all_projects)
     split_members = {
         "tune": sorted(name for name, split in split_by_name.items() if split == "tune"),
         "holdout": sorted(name for name, split in split_by_name.items() if split == "holdout"),
+        "fresh": sorted(name for name, split in split_by_name.items() if split == "fresh"),
     }
     projects = list(all_projects)
-    if args.split != "all":
+    if args.split in ("tune", "holdout", "fresh"):
         projects = [p for p in projects if split_by_name[p["name"]] == args.split]
+    elif args.split == "original":
+        projects = [p for p in projects if split_by_name[p["name"]] in ("tune", "holdout")]
     if args.only:
         wanted = {n.strip() for n in args.only.split(",") if n.strip()}
         projects = [p for p in projects if p["name"] in wanted]
@@ -1102,6 +1156,8 @@ def main(argv: list[str] | None = None) -> int:
             "started_at": started_at,
             "finished_at": finished_at,
             "projects_count": len(projects),
+            "original_projects_count": sum(split_by_name[p["name"]] != "fresh" for p in projects),
+            "fresh_projects_count": sum(split_by_name[p["name"]] == "fresh" for p in projects),
             "reused_projects": reused_projects,
             "skipped_unverified": len(skipped),
             "split": args.split,
@@ -1113,11 +1169,15 @@ def main(argv: list[str] | None = None) -> int:
         },
         "splits": {"rule": SPLIT_RULE, **split_members},
         "aggregate": {
-            **aggregate(results),
+            **aggregate([r for r in results if r.get("split") != "fresh"]),
+            "by_rule_fresh": aggregate([r for r in results if r.get("split") == "fresh"])["by_rule"],
             "by_split": {
-                split: aggregate([r for r in results if r.get("split") == split])
-                for split in ("tune", "holdout")
-                if any(r.get("split") == split for r in results)
+                split: (
+                    aggregate([r for r in results if r.get("split") == split])
+                    if any(r.get("split") == split for r in results)
+                    else None
+                )
+                for split in ("tune", "holdout", "fresh")
             },
         },
         "projects": compact,
