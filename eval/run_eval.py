@@ -90,6 +90,60 @@ def assign_splits(projects: list[dict]) -> dict[str, str]:
     return result
 
 
+def display_scan_cmd(cmd: str) -> str:
+    """Return a portable display form of a scanner command."""
+    repo_root = Path(__file__).resolve().parent.parent
+    tokens = shlex.split(cmd)
+    for index, token in enumerate(tokens):
+        if token == "{path}" or not os.path.isabs(token):
+            continue
+        path = Path(token)
+        name = path.name
+        if index == 0 and (name in {"python", "python3"} or re.fullmatch(r"python3\.\d+", name)):
+            tokens[index] = "python"
+        elif index == 0 and name == "qnx-portcheck":
+            tokens[index] = "qnx-portcheck"
+        else:
+            try:
+                tokens[index] = path.resolve().relative_to(repo_root).as_posix()
+            except ValueError:
+                tokens[index] = f"<abs>/{name}"
+    return " ".join(token if re.fullmatch(r"[^\s'\"]+", token) else shlex.quote(token) for token in tokens)
+
+
+def sanitize_paths(value: Any, repo_root: str | Path, work_dir: str | Path) -> Any:
+    """Recursively remove machine-specific absolute paths from artifact data."""
+    repo = Path(repo_root).resolve()
+    work = Path(work_dir).resolve()
+    try:
+        work_value = work.relative_to(repo).as_posix()
+        work_replacement = "eval/work" if work_value == "eval/work" else work_value
+    except ValueError:
+        work_replacement = "<work>"
+    roots = sorted((str(work), str(repo)), key=len, reverse=True)
+
+    def clean(text: str) -> str:
+        text = text.replace(roots[0], work_replacement)
+        text = text.replace(str(repo), ".")
+        pattern = re.compile(
+            r"(?<![\w<])(?:/workspace/|/tmp/|/home/|/root/|/Users/)[^\s\"'<>]+|(?<![\w])([A-Za-z]:\\[^\s\"'<>]+)"
+        )
+
+        def replace(match: re.Match) -> str:
+            path = match.group(0).rstrip("/\\")
+            return f"<abs>/{re.split(r'[/\\\\]', path)[-1]}"
+
+        return pattern.sub(replace, text)
+
+    if isinstance(value, dict):
+        return {key: sanitize_paths(item, repo, work) for key, item in value.items()}
+    if isinstance(value, list):
+        return [sanitize_paths(item, repo, work) for item in value]
+    if isinstance(value, str):
+        return clean(value)
+    return value
+
+
 @dataclass
 class Hunk:
     old_start: int
@@ -1053,7 +1107,7 @@ def main(argv: list[str] | None = None) -> int:
                     and prior.get("project", {}).get("qnx_head_sha") == p["qnx_head_sha"]
                     and prior.get("window") == args.window
                     and prior.get("merge_gap") == args.merge_gap
-                    and prior.get("scan_cmd") == args.scan_cmd
+                    and display_scan_cmd(prior.get("scan_cmd", "")) == display_scan_cmd(args.scan_cmd)
                     and prior.get("scanner_source_commit") == args.scanner_source_commit
                 ):
                     prior["split"] = split_by_name[p["name"]]
@@ -1183,10 +1237,17 @@ def main(argv: list[str] | None = None) -> int:
         "projects": compact,
     }
     outdir.mkdir(parents=True, exist_ok=True)
+    repo_root = here.parent
     for r in results:
+        result_for_output = dict(r)
+        if "scan_cmd" in result_for_output:
+            result_for_output["scan_cmd"] = display_scan_cmd(result_for_output["scan_cmd"])
+        artifact = sanitize_paths(result_for_output, repo_root, args.work_dir)
         (outdir / (r["project"]["name"] + ".json")).write_text(
-            json.dumps(_json_safe(r), indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+            json.dumps(_json_safe(artifact), indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
         )
+    summary["run_config"]["scan_cmd"] = display_scan_cmd(summary["run_config"]["scan_cmd"])
+    summary = sanitize_paths(summary, repo_root, args.work_dir)
     (outdir / "summary.json").write_text(
         json.dumps(_json_safe(summary), indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
