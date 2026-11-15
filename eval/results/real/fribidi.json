@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:47:28.939688+09:00",
+  "generated_at": "2026-11-15T14:15:03.420328+09:00",
   "project": {
     "name": "fribidi",
     "upstream": "https://github.com/fribidi/fribidi",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "511aa2e",
+  "scanner_source_commit": "5118669",
   "durations": {
-    "fetch": 0.014933316997485235,
-    "scan": 0.6775057639752049
+    "fetch": 0.0030460309935733676,
+    "scan": 0.19077441000263207
   },
   "diff_stats": {
     "files_changed": 1,
@@ -59,7 +59,56 @@
     "rename_only": [],
     "deleted_empty": []
   },
-  "findings": [],
+  "findings": [
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 87,
+      "col": 1,
+      "message": "Host OS case `mingw*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 94,
+      "col": 1,
+      "message": "Host OS case `mingw*|cygwin*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "lib/fribidi-types.h",
+      "line": 35,
+      "col": 1,
+      "message": "Platform branch for __OpenBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "lib/fribidi-types.h",
+      "line": 39,
+      "col": 1,
+      "message": "Platform branch for _AIX has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    }
+  ],
   "metrics": {
     "sites_total": 1,
     "sites_by_category": {
@@ -79,16 +128,16 @@
     "recall_source_nontest": null,
     "recall_build": 0.0,
     "recall_in_scope": 0.0,
-    "findings_total": 0,
+    "findings_total": 4,
     "findings_tp": 0,
     "findings_by_category": {
-      "source": 0,
-      "build": 0,
+      "source": 2,
+      "build": 2,
       "other": 0
     },
     "findings_in_patched_files": 0,
     "findings_tp_in_patched_files": 0,
-    "precision": null,
+    "precision": 0.0,
     "precision_in_patched_files": null
   },
   "status": "ok",

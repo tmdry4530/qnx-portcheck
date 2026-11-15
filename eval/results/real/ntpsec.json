@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:40:20.221658+09:00",
+  "generated_at": "2026-11-15T14:14:50.877039+09:00",
   "project": {
     "name": "ntpsec",
     "upstream": "https://github.com/ntpsec/ntpsec",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "511aa2e",
+  "scanner_source_commit": "5118669",
   "durations": {
-    "fetch": 0.012550472019938752,
-    "scan": 9.289630109997233
+    "fetch": 0.0033924150047823787,
+    "scan": 0.8790589470008854
   },
   "diff_stats": {
     "files_changed": 9,
@@ -720,6 +720,54 @@
       "matched_sites": []
     },
     {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "attic/timestamp-info.c",
+      "line": 49,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "attic/timestamp-info.c",
+      "line": 51,
+      "col": 1,
+      "message": "Platform branch for __FreeBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "attic/timestamp-info.c",
+      "line": 53,
+      "col": 1,
+      "message": "Platform branch for __OpenBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "attic/timestamp-info.c",
+      "line": 55,
+      "col": 1,
+      "message": "Platform branch for __NetBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
       "rule_id": "LNX-PROCFS",
       "severity": "warning",
       "file": "attic/timestamp-info.c",
@@ -741,6 +789,78 @@
       "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
       "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
       "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX-DEFINE",
+      "severity": "warning",
+      "file": "include/ntp.h",
+      "line": 549,
+      "col": 1,
+      "message": "Defines min() which QNX <stdlib.h> already defines as a macro",
+      "suggestion": "QNX 8.0 <stdlib.h> defines min() and max() macros (C only); wrap this definition in #ifndef <name> or rename it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/m/max.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX-DEFINE",
+      "severity": "warning",
+      "file": "include/ntp.h",
+      "line": 550,
+      "col": 1,
+      "message": "Defines max() which QNX <stdlib.h> already defines as a macro",
+      "suggestion": "QNX 8.0 <stdlib.h> defines min() and max() macros (C only); wrap this definition in #ifndef <name> or rename it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/m/max.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "include/ntp_fp.h",
+      "line": 128,
+      "col": 1,
+      "message": "struct timeval used (first at line 160) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "include/ntp_malloc.h",
+      "line": 24,
+      "col": 1,
+      "message": "Platform branch for _AIX has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "include/ntp_stdlib.h",
+      "line": 118,
+      "col": 1,
+      "message": "Platform branch for __NetBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "include/timespecops.h",
+      "line": 11,
+      "col": 1,
+      "message": "struct timeval used (first at line 66) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
       "matched_sites": []
     },
     {
@@ -789,18 +909,6 @@
       "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
       "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
       "confidence": "high",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-PROCFS",
-      "severity": "warning",
-      "file": "libntp/isc_interfaceiter.c",
-      "line": 259,
-      "col": 37,
-      "message": "Linux /proc path \"/proc/net/if_inet6\"",
-      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
-      "confidence": "medium",
       "matched_sites": []
     },
     {
@@ -900,18 +1008,6 @@
       "matched_sites": []
     },
     {
-      "rule_id": "LNX-PROCFS",
-      "severity": "warning",
-      "file": "libntp/isc_interfaceiter.c",
-      "line": 1007,
-      "col": 29,
-      "message": "Linux /proc path \"/proc/net/if_inet6\"",
-      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
-      "confidence": "medium",
-      "matched_sites": []
-    },
-    {
       "rule_id": "LNX-LINUX-IFDEF",
       "severity": "warning",
       "file": "libntp/isc_interfaceiter.c",
@@ -969,6 +1065,18 @@
       "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
       "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
       "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "libntp/syssignal.c",
+      "line": 31,
+      "col": 1,
+      "message": "Platform branch for __NetBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
       "matched_sites": []
     },
     {
@@ -1164,6 +1272,18 @@
       "matched_sites": []
     },
     {
+      "rule_id": "PORT-SA-RESTART",
+      "severity": "warning",
+      "file": "ntpd/ntpd.c",
+      "line": 587,
+      "col": 17,
+      "message": "SA_RESTART used",
+      "suggestion": "The QNX 8.0 struct sigaction documents sa_flags SA_NOCLDSTOP, SA_NOCLDWAIT, SA_NODEFER, SA_ONSTACK, SA_RESETHAND and SA_SIGINFO only; there is no SA_RESTART. Guard it (#ifdef SA_RESTART) and handle EINTR.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/s/sigaction_struct.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
       "rule_id": "LNX-LINUX-HEADER",
       "severity": "error",
       "file": "ntpd/refclock_generic.c",
@@ -1195,10 +1315,10 @@
     "recall_source_nontest": 0.0,
     "recall_build": 0.0,
     "recall_in_scope": 0.0,
-    "findings_total": 40,
+    "findings_total": 50,
     "findings_tp": 0,
     "findings_by_category": {
-      "source": 40,
+      "source": 50,
       "build": 0,
       "other": 0
     },

@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:20:34.861086+09:00",
+  "generated_at": "2026-11-15T14:14:29.538732+09:00",
   "project": {
     "name": "c-ares",
     "upstream": "https://github.com/c-ares/c-ares",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "511aa2e",
+  "scanner_source_commit": "5118669",
   "durations": {
-    "fetch": 0.003916217014193535,
-    "scan": 3.9100671659980435
+    "fetch": 0.002883626992115751,
+    "scan": 0.6912867020000704
   },
   "diff_stats": {
     "files_changed": 13,
@@ -106,7 +106,9 @@
         258
       ],
       "hunks": 3,
-      "matched_findings": []
+      "matched_findings": [
+        23
+      ]
     },
     {
       "file": "configure.ac",
@@ -137,7 +139,9 @@
         77
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        29
+      ]
     },
     {
       "file": "m4/ax_append_compile_flags.m4",
@@ -676,6 +680,102 @@
   },
   "findings": [
     {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 135,
+      "col": 1,
+      "message": "CMake platform condition `APPLE` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 264,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"Darwin\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 266,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"Linux\" OR CMAKE_SYSTEM_NAME S...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 268,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"SunOS\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 270,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"AIX\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 272,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"FreeBSD\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 403,
+      "col": 1,
+      "message": "CMake platform condition `(NOT APPLE) OR IOS_V10 OR MACOS_V1012` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 493,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"SunOS\" AND NOT CMAKE_THREAD_L...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
       "rule_id": "LNX-LINK-FLAGS",
       "severity": "warning",
       "file": "CMakeLists.txt",
@@ -685,6 +785,310 @@
       "suggestion": "On QNX 8.0 pthread_create() is documented in libc, which qcc usually links automatically; drop or guard libpthread for QNX builds.",
       "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_create.html",
       "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 626,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"Darwin\" OR CMAKE_SYSTEM_NAME ...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 643,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"SunOS\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 645,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"AIX\" OR CMAKE_SYSTEM_NAME STR...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 657,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"SunOS\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 659,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"AIX\" OR CMAKE_SYSTEM_NAME STR...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 817,
+      "col": 1,
+      "message": "CMake platform condition `${CMAKE_SYSTEM_NAME} STREQUAL \"Linux\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 823,
+      "col": 1,
+      "message": "CMake platform condition `\"${CMAKE_HOST_SYSTEM_NAME}\" STREQUAL \"Windows\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "cmake/EnableWarnings.cmake",
+      "line": 377,
+      "col": 1,
+      "message": "CMake platform condition `NOT (WIN32 AND (CMAKE_HOST_SYSTEM_NAME MATCHES \"CYGWIN\"))` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 58,
+      "col": 1,
+      "message": "Host OS case `mingw*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 62,
+      "col": 1,
+      "message": "Host OS case `cygwin*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 90,
+      "col": 1,
+      "message": "Host OS case `cygwin* | mingw* | pw32* | cegcc*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 159,
+      "col": 1,
+      "message": "Host OS case `solaris*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 166,
+      "col": 1,
+      "message": "Host OS case `solaris2*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 178,
+      "col": 1,
+      "message": "Host OS case `cygwin* | mingw* | pw32* | cegcc* | os2*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 251,
+      "col": 1,
+      "message": "Host OS case `*android*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": [
+        3
+      ]
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 290,
+      "col": 1,
+      "message": "Host OS case `hpux*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 684,
+      "col": 1,
+      "message": "Host OS case `solaris*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 687,
+      "col": 1,
+      "message": "Host OS case `aix*|openbsd*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 699,
+      "col": 1,
+      "message": "Host OS case `solaris*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 702,
+      "col": 1,
+      "message": "Host OS case `aix*|openbsd*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-QNXNTO",
+      "severity": "note",
+      "file": "include/ares.h",
+      "line": 74,
+      "col": 1,
+      "message": "__QNXNTO__ tested without __QNX__",
+      "suggestion": "QNX 8.0 lists __QNXNTO__ as deprecated; qcc defines __QNX__ (800 for QNX 8.0). Test __QNX__ (optionally keep __QNXNTO__ for older releases).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/manifests.html",
+      "confidence": "high",
+      "matched_sites": [
+        5
+      ]
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "include/ares.h",
+      "line": 108,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "src/lib/CMakeLists.txt",
+      "line": 39,
+      "col": 1,
+      "message": "CMake platform condition `ANDROID` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "src/lib/CMakeLists.txt",
+      "line": 100,
+      "col": 1,
+      "message": "CMake platform condition `ANDROID` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "src/lib/CMakeLists.txt",
+      "line": 120,
+      "col": 1,
+      "message": "CMake platform condition `WIN32 OR CYGWIN` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
       "matched_sites": []
     },
     {
@@ -712,6 +1116,30 @@
       "matched_sites": []
     },
     {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/lib/ares_private.h",
+      "line": 117,
+      "col": 1,
+      "message": "Platform branch for __HAIKU__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/lib/ares_private.h",
+      "line": 393,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
       "rule_id": "LNX-LINUX-IFDEF",
       "severity": "warning",
       "file": "src/lib/ares_set_socket_functions.c",
@@ -721,6 +1149,78 @@
       "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
       "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
       "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/lib/ares_set_socket_functions.c",
+      "line": 64,
+      "col": 1,
+      "message": "Platform branch for __FreeBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/lib/ares_set_socket_functions.c",
+      "line": 70,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/lib/ares_sysconfig.c",
+      "line": 389,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/lib/ares_sysconfig.c",
+      "line": 401,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/lib/ares_sysconfig.c",
+      "line": 515,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/lib/ares_sysconfig_mac.c",
+      "line": 27,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
       "matched_sites": []
     },
     {
@@ -736,111 +1236,15 @@
       "matched_sites": []
     },
     {
-      "rule_id": "LNX-INOTIFY",
+      "rule_id": "PORT-OS-IFDEF",
       "severity": "note",
       "file": "src/lib/event/ares_event_configchg.c",
-      "line": 47,
+      "line": 382,
       "col": 1,
-      "message": "Linux inotify header <sys/inotify.h>",
-      "suggestion": "inotify_init()/inotify_add_watch() exist in QNX 8.0 in libfsnotify: link with -l fsnotify; the fsevmgr filesystem event manager service must be running (FSNOTIFY_PREFIX must match).",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/inotify_init.html",
-      "confidence": "high",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-INOTIFY",
-      "severity": "note",
-      "file": "src/lib/event/ares_event_configchg.c",
-      "line": 150,
-      "col": 19,
-      "message": "Linux inotify API inotify_init1()",
-      "suggestion": "inotify_init()/inotify_add_watch() exist in QNX 8.0 in libfsnotify: link with -l fsnotify; the fsevmgr filesystem event manager service must be running (FSNOTIFY_PREFIX must match).",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/inotify_init.html",
-      "confidence": "high",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-INOTIFY",
-      "severity": "note",
-      "file": "src/lib/event/ares_event_configchg.c",
-      "line": 157,
-      "col": 7,
-      "message": "Linux inotify API inotify_add_watch()",
-      "suggestion": "inotify_init()/inotify_add_watch() exist in QNX 8.0 in libfsnotify: link with -l fsnotify; the fsevmgr filesystem event manager service must be running (FSNOTIFY_PREFIX must match).",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/inotify_init.html",
-      "confidence": "high",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-EPOLL",
-      "severity": "warning",
-      "file": "src/lib/event/ares_event_epoll.c",
-      "line": 30,
-      "col": 1,
-      "message": "Linux epoll header <sys/epoll.h>",
-      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
-      "confidence": "high",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-EPOLL",
-      "severity": "warning",
-      "file": "src/lib/event/ares_event_epoll.c",
-      "line": 74,
-      "col": 18,
-      "message": "Linux epoll API epoll_create1()",
-      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
-      "confidence": "high",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-EPOLL",
-      "severity": "warning",
-      "file": "src/lib/event/ares_event_epoll.c",
-      "line": 104,
-      "col": 7,
-      "message": "Linux epoll API epoll_ctl()",
-      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
-      "confidence": "high",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-EPOLL",
-      "severity": "warning",
-      "file": "src/lib/event/ares_event_epoll.c",
-      "line": 118,
-      "col": 3,
-      "message": "Linux epoll API epoll_ctl()",
-      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
-      "confidence": "high",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-EPOLL",
-      "severity": "warning",
-      "file": "src/lib/event/ares_event_epoll.c",
-      "line": 137,
-      "col": 3,
-      "message": "Linux epoll API epoll_ctl()",
-      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
-      "confidence": "high",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-EPOLL",
-      "severity": "warning",
-      "file": "src/lib/event/ares_event_epoll.c",
-      "line": 152,
-      "col": 8,
-      "message": "Linux epoll API epoll_wait()",
-      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
-      "confidence": "high",
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
       "matched_sites": []
     },
     {
@@ -853,6 +1257,90 @@
       "suggestion": "pipe2() is in QNX 8.0 libc but supports only O_CLOEXEC and O_NONBLOCK flags; check that no other flags (e.g. O_DIRECT) are passed.",
       "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pipe2.html",
       "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "src/tools/CMakeLists.txt",
+      "line": 23,
+      "col": 1,
+      "message": "CMake platform condition `ANDROID` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "src/tools/CMakeLists.txt",
+      "line": 57,
+      "col": 1,
+      "message": "CMake platform condition `ANDROID` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/tools/adig.c",
+      "line": 1321,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/tools/adig.c",
+      "line": 1339,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "test/ares-test-main.cc",
+      "line": 31,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "test/ares-test-main.cc",
+      "line": 98,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "test/ares-test-mock-et.cc",
+      "line": 106,
+      "col": 1,
+      "message": "Platform branch for __NetBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
       "matched_sites": []
     },
     {
@@ -889,27 +1377,27 @@
     },
     "sites_source_nontest": 16,
     "sites_source_test": 0,
-    "sites_hit_source_nontest": 0,
+    "sites_hit_source_nontest": 1,
     "sites_hit_by_category": {
-      "source": 0,
-      "build": 0,
-      "other": 0
-    },
-    "recall_source": 0.0,
-    "recall_source_nontest": 0.0,
-    "recall_build": 0.0,
-    "recall_in_scope": 0.0,
-    "findings_total": 17,
-    "findings_tp": 0,
-    "findings_by_category": {
-      "source": 16,
+      "source": 1,
       "build": 1,
       "other": 0
     },
-    "findings_in_patched_files": 0,
-    "findings_tp_in_patched_files": 0,
-    "precision": 0.0,
-    "precision_in_patched_files": null
+    "recall_source": 0.0625,
+    "recall_source_nontest": 0.0625,
+    "recall_build": 0.0588,
+    "recall_in_scope": 0.0606,
+    "findings_total": 57,
+    "findings_tp": 2,
+    "findings_by_category": {
+      "source": 23,
+      "build": 34,
+      "other": 0
+    },
+    "findings_in_patched_files": 19,
+    "findings_tp_in_patched_files": 2,
+    "precision": 0.0351,
+    "precision_in_patched_files": 0.1053
   },
   "status": "ok",
   "scanner": {

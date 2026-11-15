@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:20:24.761181+09:00",
+  "generated_at": "2026-11-15T14:14:28.151745+09:00",
   "project": {
     "name": "avahi",
     "upstream": "https://github.com/avahi/avahi",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "511aa2e",
+  "scanner_source_commit": "5118669",
   "durations": {
-    "fetch": 0.0033145209890790284,
-    "scan": 3.196412281016819
+    "fetch": 0.0032996129884850234,
+    "scan": 0.6562986779899802
   },
   "diff_stats": {
     "files_changed": 5,
@@ -209,6 +209,18 @@
       "matched_sites": []
     },
     {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "avahi-autoipd/main.c",
+      "line": 33,
+      "col": 1,
+      "message": "Platform branch for __FreeBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
       "rule_id": "LNX-LINUX-IFDEF",
       "severity": "warning",
       "file": "avahi-autoipd/main.c",
@@ -218,6 +230,18 @@
       "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
       "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
       "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "avahi-autoipd/main.c",
+      "line": 42,
+      "col": 1,
+      "message": "Platform branch for __FreeBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
       "matched_sites": []
     },
     {
@@ -257,6 +281,42 @@
       "matched_sites": []
     },
     {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "avahi-client/check-nss.c",
+      "line": 36,
+      "col": 1,
+      "message": "Platform branch for __FreeBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "avahi-compat-libdns_sd/dns_sd.h",
+      "line": 46,
+      "col": 1,
+      "message": "Platform branch for __FreeBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "avahi-compat-libdns_sd/dns_sd.h",
+      "line": 50,
+      "col": 1,
+      "message": "Platform branch for __sun__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
       "rule_id": "LNX-LINUX-IFDEF",
       "severity": "warning",
       "file": "avahi-compat-libdns_sd/warn.c",
@@ -269,15 +329,15 @@
       "matched_sites": []
     },
     {
-      "rule_id": "LNX-PROCFS",
-      "severity": "warning",
-      "file": "avahi-compat-libdns_sd/warn.c",
-      "line": 62,
-      "col": 28,
-      "message": "Linux /proc path \"/proc/self/exe\"",
-      "suggestion": "Linux /proc/self/exe does not exist on QNX 8.0; procnto exposes /proc/<pid>/exefile (the path of the executable file used to run the process). Note QNX docs say /proc is for debugging, not production monitoring.",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
-      "confidence": "high",
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "avahi-core/cache.h",
+      "line": 29,
+      "col": 1,
+      "message": "struct timeval used (first at line 48) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
       "matched_sites": []
     },
     {
@@ -329,6 +389,42 @@
       "matched_sites": []
     },
     {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "avahi-core/iface-pfroute.c",
+      "line": 131,
+      "col": 1,
+      "message": "Platform branch for __NetBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "avahi-core/iface.h",
+      "line": 44,
+      "col": 1,
+      "message": "struct timeval used (first at line 89) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "avahi-core/internal.h",
+      "line": 41,
+      "col": 1,
+      "message": "struct timeval used (first at line 60) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
       "rule_id": "LNX-LINUX-HEADER",
       "severity": "error",
       "file": "avahi-core/netlink.h",
@@ -347,6 +443,30 @@
       "line": 28,
       "col": 1,
       "message": "Linux kernel header <linux/rtnetlink.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "avahi-core/querier.h",
+      "line": 24,
+      "col": 1,
+      "message": "struct timeval used (first at line 28) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "avahi-core/timeeventq.h",
+      "line": 29,
+      "col": 1,
+      "message": "struct timeval used (first at line 39) without including <sys/time.h>",
       "suggestion": "manual review",
       "doc_url": null,
       "confidence": "manual-review",
@@ -389,51 +509,27 @@
       "matched_sites": []
     },
     {
-      "rule_id": "LNX-INOTIFY",
+      "rule_id": "PORT-SA-RESTART",
+      "severity": "warning",
+      "file": "avahi-daemon/main.c",
+      "line": 1143,
+      "col": 19,
+      "message": "SA_RESTART used",
+      "suggestion": "The QNX 8.0 struct sigaction documents sa_flags SA_NOCLDSTOP, SA_NOCLDWAIT, SA_NODEFER, SA_ONSTACK, SA_RESETHAND and SA_SIGINFO only; there is no SA_RESTART. Guard it (#ifdef SA_RESTART) and handle EINTR.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/s/sigaction_struct.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
       "severity": "note",
       "file": "avahi-daemon/main.c",
-      "line": 47,
+      "line": 1494,
       "col": 1,
-      "message": "Linux inotify header <sys/inotify.h>",
-      "suggestion": "inotify_init()/inotify_add_watch() exist in QNX 8.0 in libfsnotify: link with -l fsnotify; the fsevmgr filesystem event manager service must be running (FSNOTIFY_PREFIX must match).",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/inotify_init.html",
-      "confidence": "high",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-INOTIFY",
-      "severity": "note",
-      "file": "avahi-daemon/main.c",
-      "line": 948,
-      "col": 5,
-      "message": "Linux inotify API inotify_add_watch()",
-      "suggestion": "inotify_init()/inotify_add_watch() exist in QNX 8.0 in libfsnotify: link with -l fsnotify; the fsevmgr filesystem event manager service must be running (FSNOTIFY_PREFIX must match).",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/inotify_init.html",
-      "confidence": "high",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-INOTIFY",
-      "severity": "note",
-      "file": "avahi-daemon/main.c",
-      "line": 953,
-      "col": 5,
-      "message": "Linux inotify API inotify_add_watch()",
-      "suggestion": "inotify_init()/inotify_add_watch() exist in QNX 8.0 in libfsnotify: link with -l fsnotify; the fsevmgr filesystem event manager service must be running (FSNOTIFY_PREFIX must match).",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/inotify_init.html",
-      "confidence": "high",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-INOTIFY",
-      "severity": "note",
-      "file": "avahi-daemon/main.c",
-      "line": 1231,
-      "col": 23,
-      "message": "Linux inotify API inotify_init()",
-      "suggestion": "inotify_init()/inotify_add_watch() exist in QNX 8.0 in libfsnotify: link with -l fsnotify; the fsevmgr filesystem event manager service must be running (FSNOTIFY_PREFIX must match).",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/inotify_init.html",
-      "confidence": "high",
+      "message": "Platform branch for __FreeBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
       "matched_sites": []
     },
     {
@@ -495,6 +591,18 @@
       "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_setname_np.html",
       "confidence": "high",
       "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-SA-RESTART",
+      "severity": "warning",
+      "file": "avahi-utils/sigint.c",
+      "line": 100,
+      "col": 19,
+      "message": "SA_RESTART used",
+      "suggestion": "The QNX 8.0 struct sigaction documents sa_flags SA_NOCLDSTOP, SA_NOCLDWAIT, SA_NODEFER, SA_ONSTACK, SA_RESETHAND and SA_SIGINFO only; there is no SA_RESTART. Guard it (#ifdef SA_RESTART) and handle EINTR.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/s/sigaction_struct.html",
+      "confidence": "high",
+      "matched_sites": []
     }
   ],
   "metrics": {
@@ -516,14 +624,14 @@
     "recall_source_nontest": 0.0,
     "recall_build": 0.0,
     "recall_in_scope": 0.0,
-    "findings_total": 31,
+    "findings_total": 40,
     "findings_tp": 0,
     "findings_by_category": {
-      "source": 31,
+      "source": 40,
       "build": 0,
       "other": 0
     },
-    "findings_in_patched_files": 4,
+    "findings_in_patched_files": 3,
     "findings_tp_in_patched_files": 0,
     "precision": 0.0,
     "precision_in_patched_files": 0.0

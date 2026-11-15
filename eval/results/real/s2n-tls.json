@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:40:44.559801+09:00",
+  "generated_at": "2026-11-15T14:14:52.541759+09:00",
   "project": {
     "name": "s2n-tls",
     "upstream": "https://github.com/aws/s2n-tls",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "511aa2e",
+  "scanner_source_commit": "5118669",
   "durations": {
-    "fetch": 0.009228456008713692,
-    "scan": 15.138973020017147
+    "fetch": 0.0032578470127191395,
+    "scan": 2.3794871690042783
   },
   "diff_stats": {
     "files_changed": 32,
@@ -74,7 +74,10 @@
         92
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        0,
+        1
+      ]
     },
     {
       "file": "crypto/s2n_drbg.c",
@@ -106,7 +109,9 @@
         25
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        14
+      ]
     },
     {
       "file": "tls/extensions/s2n_client_psk.c",
@@ -138,7 +143,9 @@
         28
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        49
+      ]
     },
     {
       "file": "tls/extensions/s2n_supported_versions.c",
@@ -154,7 +161,9 @@
         24
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        50
+      ]
     },
     {
       "file": "tls/s2n_alerts.c",
@@ -170,7 +179,9 @@
         30
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        51
+      ]
     },
     {
       "file": "tls/s2n_cbc.c",
@@ -186,7 +197,9 @@
         26
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        52
+      ]
     },
     {
       "file": "tls/s2n_client_hello.c",
@@ -202,7 +215,9 @@
         45
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        53
+      ]
     },
     {
       "file": "tls/s2n_client_key_exchange.c",
@@ -218,7 +233,9 @@
         34
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        54
+      ]
     },
     {
       "file": "tls/s2n_config.h",
@@ -250,7 +267,9 @@
         62
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        56
+      ]
     },
     {
       "file": "tls/s2n_early_data.c",
@@ -266,7 +285,9 @@
         26
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        57
+      ]
     },
     {
       "file": "tls/s2n_early_data_io.c",
@@ -282,7 +303,9 @@
         23
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        58
+      ]
     },
     {
       "file": "tls/s2n_fingerprint_ja4.c",
@@ -314,7 +337,9 @@
         40
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        59
+      ]
     },
     {
       "file": "tls/s2n_ktls_io.c",
@@ -364,7 +389,9 @@
         24
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        64
+      ]
     },
     {
       "file": "tls/s2n_prf.c",
@@ -380,7 +407,9 @@
         38
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        65
+      ]
     },
     {
       "file": "tls/s2n_psk.c",
@@ -396,7 +425,9 @@
         28
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        66
+      ]
     },
     {
       "file": "tls/s2n_record_read.c",
@@ -412,7 +443,9 @@
         31
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        67
+      ]
     },
     {
       "file": "tls/s2n_record_write.c",
@@ -428,7 +461,9 @@
         33
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        68
+      ]
     },
     {
       "file": "tls/s2n_recv.c",
@@ -444,7 +479,9 @@
         39
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        69
+      ]
     },
     {
       "file": "tls/s2n_resume.c",
@@ -460,7 +497,9 @@
         31
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        70
+      ]
     },
     {
       "file": "tls/s2n_send.c",
@@ -476,7 +515,9 @@
         35
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        71
+      ]
     },
     {
       "file": "tls/s2n_server_hello.c",
@@ -492,7 +533,9 @@
         37
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        72
+      ]
     },
     {
       "file": "tls/s2n_server_new_session_ticket.c",
@@ -540,7 +583,9 @@
         24
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        74
+      ]
     },
     {
       "file": "utils/s2n_blob.c",
@@ -556,7 +601,9 @@
         26
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        75
+      ]
     },
     {
       "file": "utils/s2n_mem.c",
@@ -572,7 +619,9 @@
         33
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        79
+      ]
     },
     {
       "file": "utils/s2n_random.c",
@@ -602,6 +651,142 @@
     "deleted_empty": []
   },
   "findings": [
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 92,
+      "col": 1,
+      "message": "CMake platform condition `APPLE` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": [
+        0
+      ]
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 94,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"FreeBSD\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": [
+        0
+      ]
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 96,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"NetBSD\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 98,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"OpenBSD\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 100,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"Android\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 179,
+      "col": 1,
+      "message": "CMake platform condition `NOT APPLE` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 366,
+      "col": 1,
+      "message": "CMake platform condition `NOT S2N_EXECINFO_AVAILABLE AND CMAKE_SYSTEM_NAME STREQUAL...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 739,
+      "col": 1,
+      "message": "CMake platform condition `UNIX AND NOT APPLE` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "bin/echo.c",
+      "line": 33,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 349) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "bin/s2nc.c",
+      "line": 38,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 475) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "crypto/s2n_drbg.c",
+      "line": 24,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 195) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
     {
       "rule_id": "LNX-LINUX-HEADER",
       "severity": "error",
@@ -639,6 +824,20 @@
       "matched_sites": []
     },
     {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "stuffer/s2n_stuffer.c",
+      "line": 23,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 205) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        2
+      ]
+    },
+    {
       "rule_id": "LNX-LINK-FLAGS",
       "severity": "warning",
       "file": "tests/LD_PRELOAD/Makefile",
@@ -651,6 +850,126 @@
       "matched_sites": []
     },
     {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tests/cbmc/proofs/s2n_array_insert/s2n_array_insert_harness.c",
+      "line": 21,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 57) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tests/cbmc/proofs/s2n_stuffer_raw_write/s2n_stuffer_raw_write_harness.c",
+      "line": 23,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 46) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tests/cbmc/proofs/s2n_stuffer_reserve/s2n_stuffer_reserve_harness.c",
+      "line": 24,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 48) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tests/cbmc/proofs/s2n_stuffer_reserve_space/s2n_stuffer_reserve_space_harness.c",
+      "line": 23,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 45) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tests/cbmc/proofs/s2n_stuffer_reserve_uint16/s2n_stuffer_reserve_uint16_harness.c",
+      "line": 23,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 44) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tests/cbmc/proofs/s2n_stuffer_reserve_uint24/s2n_stuffer_reserve_uint24_harness.c",
+      "line": 23,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 43) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tests/cbmc/proofs/s2n_stuffer_skip_write/s2n_stuffer_skip_write_harness.c",
+      "line": 22,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 42) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tests/cbmc/proofs/s2n_stuffer_wipe_n/s2n_stuffer_wipe_n_harness.c",
+      "line": 21,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 36) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tests/cbmc/proofs/s2n_stuffer_write/s2n_stuffer_write_harness.c",
+      "line": 22,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 56) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tests/cbmc/proofs/s2n_stuffer_write_bytes/s2n_stuffer_write_bytes_harness.c",
+      "line": 22,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 51) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
       "rule_id": "LNX-LINUX-IFDEF",
       "severity": "warning",
       "file": "tests/features/S2N_KTLS_SUPPORTED.c",
@@ -660,18 +979,6 @@
       "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
       "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
       "confidence": "high",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-LINUX-HEADER",
-      "severity": "error",
-      "file": "tests/features/S2N_KTLS_SUPPORTED.c",
-      "line": 18,
-      "col": 1,
-      "message": "Linux kernel header <linux/tls.h>",
-      "suggestion": "manual review",
-      "doc_url": null,
-      "confidence": "manual-review",
       "matched_sites": []
     },
     {
@@ -735,6 +1042,54 @@
       "matched_sites": []
     },
     {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tests/unit/s2n_cookie_test.c",
+      "line": 24,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 163) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "tests/unit/s2n_fork_generation_number_test.c",
+      "line": 16,
+      "col": 1,
+      "message": "Platform branch for __FreeBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "tests/unit/s2n_fork_generation_number_test.c",
+      "line": 334,
+      "col": 1,
+      "message": "Platform branch for __FreeBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tests/unit/s2n_handshake_type_test.c",
+      "line": 19,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 39) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
       "rule_id": "LNX-LINUX-IFDEF",
       "severity": "warning",
       "file": "tests/unit/s2n_ktls_io_sendfile_test.c",
@@ -747,6 +1102,54 @@
       "matched_sites": []
     },
     {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "tests/unit/s2n_ktls_io_sendfile_test.c",
+      "line": 48,
+      "col": 1,
+      "message": "Platform branch for __FreeBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "tests/unit/s2n_mem_usage_test.c",
+      "line": 16,
+      "col": 1,
+      "message": "Platform branch for __FreeBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "tests/unit/s2n_mem_usage_test.c",
+      "line": 25,
+      "col": 1,
+      "message": "Platform branch for __OpenBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tests/unit/s2n_mem_usage_test.c",
+      "line": 47,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 102) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
       "rule_id": "LNX-PROCFS",
       "severity": "warning",
       "file": "tests/unit/s2n_mem_usage_test.c",
@@ -756,6 +1159,254 @@
       "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
       "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
       "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tests/unit/s2n_post_handshake_recv_test.c",
+      "line": 29,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 60) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "tests/unit/s2n_random_test.c",
+      "line": 16,
+      "col": 1,
+      "message": "Platform branch for __FreeBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "tests/unit/s2n_rfc5952_test.c",
+      "line": 20,
+      "col": 1,
+      "message": "Platform branch for __FreeBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "tests/unit/s2n_self_talk_broken_pipe_test.c",
+      "line": 59,
+      "col": 1,
+      "message": "Platform branch for __FreeBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tests/unit/s2n_send_multirecord_test.c",
+      "line": 26,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 60) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tests/unit/s2n_send_test.c",
+      "line": 23,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 93) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tls/extensions/s2n_client_psk.c",
+      "line": 26,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 222) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tls/extensions/s2n_client_supported_versions.c",
+      "line": 26,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 105) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        4
+      ]
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tls/extensions/s2n_supported_versions.c",
+      "line": 22,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 35) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        5
+      ]
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tls/s2n_alerts.c",
+      "line": 28,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 253) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        6
+      ]
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tls/s2n_cbc.c",
+      "line": 24,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 60) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        7
+      ]
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tls/s2n_client_hello.c",
+      "line": 43,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 465) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        8
+      ]
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tls/s2n_client_key_exchange.c",
+      "line": 32,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 53) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        9
+      ]
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tls/s2n_config.h",
+      "line": 32,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 45) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tls/s2n_connection.c",
+      "line": 58,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 1106) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        11
+      ]
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tls/s2n_early_data.c",
+      "line": 24,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 377) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        12
+      ]
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tls/s2n_early_data_io.c",
+      "line": 21,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 185) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        13
+      ]
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tls/s2n_handshake_io.c",
+      "line": 38,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 1178) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        15
+      ]
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "tls/s2n_ktls_io.c",
+      "line": 16,
+      "col": 1,
+      "message": "Platform branch for __FreeBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
       "matched_sites": []
     },
     {
@@ -793,6 +1444,234 @@
       "doc_url": null,
       "confidence": "manual-review",
       "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tls/s2n_post_handshake.c",
+      "line": 22,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 96) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        18
+      ]
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tls/s2n_prf.c",
+      "line": 36,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 178) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        19
+      ]
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tls/s2n_psk.c",
+      "line": 26,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 285) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        20
+      ]
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tls/s2n_record_read.c",
+      "line": 29,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 127) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        21
+      ]
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tls/s2n_record_write.c",
+      "line": 31,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 83) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        22
+      ]
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tls/s2n_recv.c",
+      "line": 37,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 63) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        23
+      ]
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tls/s2n_resume.c",
+      "line": 29,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 100) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        24
+      ]
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tls/s2n_send.c",
+      "line": 33,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 63) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        25
+      ]
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tls/s2n_server_hello.c",
+      "line": 35,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 224) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        26
+      ]
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "tls/s2n_server_new_session_ticket.c",
+      "line": 29,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 97) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "utils/s2n_array.c",
+      "line": 22,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 136) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        29
+      ]
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "utils/s2n_blob.c",
+      "line": 24,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 51) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        30
+      ]
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "utils/s2n_fork_detection.c",
+      "line": 341,
+      "col": 1,
+      "message": "Platform branch for __OpenBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "utils/s2n_fork_detection_features.h",
+      "line": 21,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "utils/s2n_fork_detection_features.h",
+      "line": 25,
+      "col": 1,
+      "message": "Platform branch for __FreeBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "utils/s2n_mem.c",
+      "line": 31,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 56) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        31
+      ]
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "utils/s2n_random.c",
+      "line": 83,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 312) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
     }
   ],
   "metrics": {
@@ -804,27 +1683,27 @@
     },
     "sites_source_nontest": 32,
     "sites_source_test": 0,
-    "sites_hit_source_nontest": 0,
+    "sites_hit_source_nontest": 23,
     "sites_hit_by_category": {
-      "source": 0,
-      "build": 0,
+      "source": 23,
+      "build": 1,
       "other": 0
     },
-    "recall_source": 0.0,
-    "recall_source_nontest": 0.0,
-    "recall_build": 0.0,
-    "recall_in_scope": 0.0,
-    "findings_total": 16,
-    "findings_tp": 0,
+    "recall_source": 0.7188,
+    "recall_source_nontest": 0.7188,
+    "recall_build": 1.0,
+    "recall_in_scope": 0.7273,
+    "findings_total": 81,
+    "findings_tp": 25,
     "findings_by_category": {
-      "source": 10,
-      "build": 6,
+      "source": 67,
+      "build": 14,
       "other": 0
     },
-    "findings_in_patched_files": 2,
-    "findings_tp_in_patched_files": 0,
-    "precision": 0.0,
-    "precision_in_patched_files": 0.0
+    "findings_in_patched_files": 39,
+    "findings_tp_in_patched_files": 25,
+    "precision": 0.3086,
+    "precision_in_patched_files": 0.641
   },
   "status": "ok",
   "scanner": {

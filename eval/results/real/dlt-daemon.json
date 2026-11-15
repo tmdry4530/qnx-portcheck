@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:20:41.937261+09:00",
+  "generated_at": "2026-11-15T14:14:30.807052+09:00",
   "project": {
     "name": "dlt-daemon",
     "upstream": "https://github.com/COVESA/dlt-daemon",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "511aa2e",
+  "scanner_source_commit": "5118669",
   "durations": {
-    "fetch": 0.003747214999748394,
-    "scan": 23.95961438800441
+    "fetch": 0.0034740550036076456,
+    "scan": 1.0324847429874353
   },
   "diff_stats": {
     "files_changed": 7,
@@ -211,7 +211,9 @@
         20
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        62
+      ]
     },
     {
       "file": "tests/CMakeLists.txt",
@@ -320,18 +322,6 @@
       "matched_sites": []
     },
     {
-      "rule_id": "LNX-LINUX-HEADER",
-      "severity": "error",
-      "file": "include/dlt/dlt_common.h",
-      "line": 80,
-      "col": 1,
-      "message": "Linux kernel header <linux/limits.h>",
-      "suggestion": "manual review",
-      "doc_url": null,
-      "confidence": "manual-review",
-      "matched_sites": []
-    },
-    {
       "rule_id": "LNX-LINUX-IFDEF",
       "severity": "warning",
       "file": "src/console/dlt-control-common.c",
@@ -380,18 +370,6 @@
       "matched_sites": []
     },
     {
-      "rule_id": "LNX-LINUX-HEADER",
-      "severity": "error",
-      "file": "src/console/dlt-receive.c",
-      "line": 81,
-      "col": 1,
-      "message": "Linux kernel header <linux/limits.h>",
-      "suggestion": "manual review",
-      "doc_url": null,
-      "confidence": "manual-review",
-      "matched_sites": []
-    },
-    {
       "rule_id": "LNX-LINUX-IFDEF",
       "severity": "warning",
       "file": "src/console/logstorage/dlt-logstorage-ctrl.c",
@@ -413,6 +391,30 @@
       "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
       "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
       "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/core_dump_handler/cityhash_c/city_c.c",
+      "line": 33,
+      "col": 1,
+      "message": "Platform branch for __hpux has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/core_dump_handler/cityhash_c/city_c.c",
+      "line": 57,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
       "matched_sites": []
     },
     {
@@ -464,6 +466,18 @@
       "matched_sites": []
     },
     {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "src/daemon/CMakeLists.txt",
+      "line": 49,
+      "col": 1,
+      "message": "CMake platform condition `\"${CMAKE_SYSTEM_NAME}\" MATCHES \"Linux|CYGWIN\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
       "rule_id": "LNX-LINUX-IFDEF",
       "severity": "warning",
       "file": "src/daemon/dlt-daemon.c",
@@ -473,18 +487,6 @@
       "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
       "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
       "confidence": "high",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-TIMERFD",
-      "severity": "warning",
-      "file": "src/daemon/dlt-daemon.c",
-      "line": 45,
-      "col": 1,
-      "message": "Linux timerfd header <sys/timerfd.h>",
-      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
-      "confidence": "medium",
       "matched_sites": []
     },
     {
@@ -512,18 +514,6 @@
       "matched_sites": []
     },
     {
-      "rule_id": "LNX-LINUX-HEADER",
-      "severity": "error",
-      "file": "src/daemon/dlt-daemon.c",
-      "line": 52,
-      "col": 1,
-      "message": "Linux kernel header <linux/stat.h>",
-      "suggestion": "manual review",
-      "doc_url": null,
-      "confidence": "manual-review",
-      "matched_sites": []
-    },
-    {
       "rule_id": "LNX-LINUX-IFDEF",
       "severity": "warning",
       "file": "src/daemon/dlt-daemon.c",
@@ -533,18 +523,6 @@
       "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
       "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
       "confidence": "high",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-LINUX-HEADER",
-      "severity": "error",
-      "file": "src/daemon/dlt-daemon.c",
-      "line": 57,
-      "col": 1,
-      "message": "Linux kernel header <linux/vm_sockets.h>",
-      "suggestion": "manual review",
-      "doc_url": null,
-      "confidence": "manual-review",
       "matched_sites": []
     },
     {
@@ -584,30 +562,6 @@
       "matched_sites": []
     },
     {
-      "rule_id": "LNX-TIMERFD",
-      "severity": "warning",
-      "file": "src/daemon/dlt-daemon.c",
-      "line": 3798,
-      "col": 20,
-      "message": "Linux timerfd API timerfd_create()",
-      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
-      "confidence": "medium",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-TIMERFD",
-      "severity": "warning",
-      "file": "src/daemon/dlt-daemon.c",
-      "line": 3809,
-      "col": 13,
-      "message": "Linux timerfd API timerfd_settime()",
-      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
-      "confidence": "medium",
-      "matched_sites": []
-    },
-    {
       "rule_id": "LNX-LINUX-IFDEF",
       "severity": "warning",
       "file": "src/daemon/dlt_daemon_client.c",
@@ -620,18 +574,6 @@
       "matched_sites": []
     },
     {
-      "rule_id": "LNX-TIMERFD",
-      "severity": "warning",
-      "file": "src/daemon/dlt_daemon_client.c",
-      "line": 43,
-      "col": 1,
-      "message": "Linux timerfd header <sys/timerfd.h>",
-      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
-      "confidence": "medium",
-      "matched_sites": []
-    },
-    {
       "rule_id": "LNX-LINUX-IFDEF",
       "severity": "warning",
       "file": "src/daemon/dlt_daemon_client.c",
@@ -656,14 +598,14 @@
       "matched_sites": []
     },
     {
-      "rule_id": "LNX-LINUX-HEADER",
-      "severity": "error",
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
       "file": "src/daemon/dlt_daemon_client.c",
-      "line": 47,
+      "line": 1464,
       "col": 1,
-      "message": "Linux kernel header <linux/stat.h>",
-      "suggestion": "manual review",
-      "doc_url": null,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
       "confidence": "manual-review",
       "matched_sites": []
     },
@@ -677,18 +619,6 @@
       "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
       "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
       "confidence": "high",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-TIMERFD",
-      "severity": "warning",
-      "file": "src/daemon/dlt_daemon_socket.c",
-      "line": 44,
-      "col": 1,
-      "message": "Linux timerfd header <sys/timerfd.h>",
-      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
-      "confidence": "medium",
       "matched_sites": []
     },
     {
@@ -710,18 +640,6 @@
       "line": 47,
       "col": 31,
       "message": "Linux syscall number __NR_statx",
-      "suggestion": "manual review",
-      "doc_url": null,
-      "confidence": "manual-review",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-LINUX-HEADER",
-      "severity": "error",
-      "file": "src/daemon/dlt_daemon_socket.c",
-      "line": 48,
-      "col": 1,
-      "message": "Linux kernel header <linux/stat.h>",
       "suggestion": "manual review",
       "doc_url": null,
       "confidence": "manual-review",
@@ -812,6 +730,18 @@
       "matched_sites": []
     },
     {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "src/lib/CMakeLists.txt",
+      "line": 33,
+      "col": 1,
+      "message": "CMake platform condition `\"${CMAKE_SYSTEM_NAME}\" MATCHES \"Linux|CYGWIN\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
       "rule_id": "LNX-LINUX-IFDEF",
       "severity": "warning",
       "file": "src/lib/dlt_user.c",
@@ -821,18 +751,6 @@
       "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
       "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
       "confidence": "high",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-PRCTL",
-      "severity": "error",
-      "file": "src/lib/dlt_user.c",
-      "line": 50,
-      "col": 1,
-      "message": "Linux prctl header <sys/prctl.h>",
-      "suggestion": "prctl() is not in the QNX 8.0 C Library Reference. For PR_SET_NAME use pthread_setname_np(); other prctl options: manual review.",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_setname_np.html",
-      "confidence": "medium",
       "matched_sites": []
     },
     {
@@ -848,39 +766,15 @@
       "matched_sites": []
     },
     {
-      "rule_id": "LNX-LINUX-HEADER",
-      "severity": "error",
-      "file": "src/lib/dlt_user.c",
-      "line": 68,
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/shared/dlt_common.c",
+      "line": 3111,
       "col": 1,
-      "message": "Linux kernel header <linux/vm_sockets.h>",
-      "suggestion": "manual review",
-      "doc_url": null,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
       "confidence": "manual-review",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-PRCTL",
-      "severity": "error",
-      "file": "src/lib/dlt_user.c",
-      "line": 3171,
-      "col": 9,
-      "message": "Linux prctl API prctl()",
-      "suggestion": "prctl() is not in the QNX 8.0 C Library Reference. For PR_SET_NAME use pthread_setname_np(); other prctl options: manual review.",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_setname_np.html",
-      "confidence": "high",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-PRCTL",
-      "severity": "error",
-      "file": "src/lib/dlt_user.c",
-      "line": 3817,
-      "col": 9,
-      "message": "Linux prctl API prctl()",
-      "suggestion": "prctl() is not in the QNX 8.0 C Library Reference. For PR_SET_NAME use pthread_setname_np(); other prctl options: manual review.",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_setname_np.html",
-      "confidence": "high",
       "matched_sites": []
     },
     {
@@ -904,18 +798,6 @@
       "message": "Linux-only preprocessor condition",
       "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
       "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
-      "confidence": "high",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-INOTIFY",
-      "severity": "note",
-      "file": "src/system/dlt-system-filetransfer.c",
-      "line": 54,
-      "col": 1,
-      "message": "Linux inotify header <sys/inotify.h>",
-      "suggestion": "inotify_init()/inotify_add_watch() exist in QNX 8.0 in libfsnotify: link with -l fsnotify; the fsevmgr filesystem event manager service must be running (FSNOTIFY_PREFIX must match).",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/inotify_init.html",
       "confidence": "high",
       "matched_sites": []
     },
@@ -956,18 +838,6 @@
       "matched_sites": []
     },
     {
-      "rule_id": "LNX-INOTIFY",
-      "severity": "note",
-      "file": "src/system/dlt-system-filetransfer.c",
-      "line": 614,
-      "col": 18,
-      "message": "Linux inotify API inotify_init()",
-      "suggestion": "inotify_init()/inotify_add_watch() exist in QNX 8.0 in libfsnotify: link with -l fsnotify; the fsevmgr filesystem event manager service must be running (FSNOTIFY_PREFIX must match).",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/inotify_init.html",
-      "confidence": "high",
-      "matched_sites": []
-    },
-    {
       "rule_id": "LNX-LINUX-IFDEF",
       "severity": "warning",
       "file": "src/system/dlt-system-filetransfer.c",
@@ -976,18 +846,6 @@
       "message": "Linux-only preprocessor condition",
       "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
       "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
-      "confidence": "high",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-INOTIFY",
-      "severity": "note",
-      "file": "src/system/dlt-system-filetransfer.c",
-      "line": 667,
-      "col": 21,
-      "message": "Linux inotify API inotify_add_watch()",
-      "suggestion": "inotify_init()/inotify_add_watch() exist in QNX 8.0 in libfsnotify: link with -l fsnotify; the fsevmgr filesystem event manager service must be running (FSNOTIFY_PREFIX must match).",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/inotify_init.html",
       "confidence": "high",
       "matched_sites": []
     },
@@ -1196,6 +1054,20 @@
       "matched_sites": []
     },
     {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "tests/CMakeLists.txt",
+      "line": 18,
+      "col": 1,
+      "message": "CMake platform condition `\"${CMAKE_SYSTEM_NAME}\" MATCHES \"Linux|CYGWIN\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": [
+        10
+      ]
+    },
+    {
       "rule_id": "LNX-LINUX-HEADER",
       "severity": "error",
       "file": "tests/mod_system_logger/mod_system_logger.c",
@@ -1244,24 +1116,24 @@
     "sites_hit_source_nontest": 0,
     "sites_hit_by_category": {
       "source": 0,
-      "build": 0,
+      "build": 1,
       "other": 0
     },
     "recall_source": 0.0,
     "recall_source_nontest": 0.0,
-    "recall_build": 0.0,
-    "recall_in_scope": 0.0,
-    "findings_total": 77,
-    "findings_tp": 0,
+    "recall_build": 0.0714,
+    "recall_in_scope": 0.0625,
+    "findings_total": 66,
+    "findings_tp": 1,
     "findings_by_category": {
-      "source": 77,
-      "build": 0,
+      "source": 63,
+      "build": 3,
       "other": 0
     },
-    "findings_in_patched_files": 3,
-    "findings_tp_in_patched_files": 0,
-    "precision": 0.0,
-    "precision_in_patched_files": 0.0
+    "findings_in_patched_files": 4,
+    "findings_tp_in_patched_files": 1,
+    "precision": 0.0152,
+    "precision_in_patched_files": 0.25
   },
   "status": "ok",
   "scanner": {

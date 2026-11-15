@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:47:04.667484+09:00",
+  "generated_at": "2026-11-15T14:15:00.146183+09:00",
   "project": {
     "name": "tinyxml2",
     "upstream": "https://github.com/leethomason/tinyxml2",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "511aa2e",
+  "scanner_source_commit": "5118669",
   "durations": {
-    "fetch": 0.01591524202376604,
-    "scan": 0.7145888160157483
+    "fetch": 0.003339068003697321,
+    "scan": 0.12575672499951907
   },
   "diff_stats": {
     "files_changed": 2,
@@ -44,7 +44,9 @@
         27
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        2
+      ]
     },
     {
       "file": "xmltest.cpp",
@@ -76,7 +78,46 @@
     "rename_only": [],
     "deleted_empty": []
   },
-  "findings": [],
+  "findings": [
+    {
+      "rule_id": "PORT-QNXNTO",
+      "severity": "note",
+      "file": "tinyxml2.cpp",
+      "line": 27,
+      "col": 1,
+      "message": "__QNXNTO__ tested without __QNX__",
+      "suggestion": "QNX 8.0 lists __QNXNTO__ as deprecated; qcc defines __QNX__ (800 for QNX 8.0). Test __QNX__ (optionally keep __QNXNTO__ for older releases).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/manifests.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "tinyxml2.cpp",
+      "line": 106,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-QNXNTO",
+      "severity": "note",
+      "file": "tinyxml2.h",
+      "line": 27,
+      "col": 1,
+      "message": "__QNXNTO__ tested without __QNX__",
+      "suggestion": "QNX 8.0 lists __QNXNTO__ as deprecated; qcc defines __QNX__ (800 for QNX 8.0). Test __QNX__ (optionally keep __QNXNTO__ for older releases).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/manifests.html",
+      "confidence": "high",
+      "matched_sites": [
+        0
+      ]
+    }
+  ],
   "metrics": {
     "sites_total": 2,
     "sites_by_category": {
@@ -86,27 +127,27 @@
     },
     "sites_source_nontest": 2,
     "sites_source_test": 0,
-    "sites_hit_source_nontest": 0,
+    "sites_hit_source_nontest": 1,
     "sites_hit_by_category": {
-      "source": 0,
+      "source": 1,
       "build": 0,
       "other": 0
     },
-    "recall_source": 0.0,
-    "recall_source_nontest": 0.0,
+    "recall_source": 0.5,
+    "recall_source_nontest": 0.5,
     "recall_build": null,
-    "recall_in_scope": 0.0,
-    "findings_total": 0,
-    "findings_tp": 0,
+    "recall_in_scope": 0.5,
+    "findings_total": 3,
+    "findings_tp": 1,
     "findings_by_category": {
-      "source": 0,
+      "source": 3,
       "build": 0,
       "other": 0
     },
-    "findings_in_patched_files": 0,
-    "findings_tp_in_patched_files": 0,
-    "precision": null,
-    "precision_in_patched_files": null
+    "findings_in_patched_files": 1,
+    "findings_tp_in_patched_files": 1,
+    "precision": 0.3333,
+    "precision_in_patched_files": 1.0
   },
   "status": "ok",
   "scanner": {

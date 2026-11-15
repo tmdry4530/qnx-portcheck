@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:39:55.932588+09:00",
+  "generated_at": "2026-11-15T14:14:47.745283+09:00",
   "project": {
     "name": "lldpd",
     "upstream": "https://github.com/lldpd/lldpd",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "511aa2e",
+  "scanner_source_commit": "5118669",
   "durations": {
-    "fetch": 0.013832775002811104,
-    "scan": 2.5269003239809535
+    "fetch": 0.004182367003522813,
+    "scan": 0.54325149700162
   },
   "diff_stats": {
     "files_changed": 8,
@@ -355,7 +355,7 @@
       ],
       "hunks": 1,
       "matched_findings": [
-        55
+        63
       ]
     },
     {
@@ -372,7 +372,7 @@
       ],
       "hunks": 1,
       "matched_findings": [
-        55
+        63
       ]
     },
     {
@@ -870,6 +870,90 @@
       "matched_sites": []
     },
     {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "include/osx/if_bridgevar.h",
+      "line": 108,
+      "col": 1,
+      "message": "struct timeval used (first at line 391) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS-OTHER",
+      "severity": "warning",
+      "file": "m4/libcap.m4",
+      "line": 9,
+      "col": 19,
+      "message": "Linux-specific link library '-lcap'",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "m4/os.m4",
+      "line": 40,
+      "col": 1,
+      "message": "Host OS case `solaris*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "m4/os.m4",
+      "line": 44,
+      "col": 1,
+      "message": "Host OS case `hpux*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "m4/os.m4",
+      "line": 48,
+      "col": 1,
+      "message": "Host OS case `netbsd*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "src/client/display.c",
+      "line": 32,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 603) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "src/daemon/client.c",
+      "line": 22,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 85) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
       "rule_id": "LNX-LINUX-HEADER",
       "severity": "error",
       "file": "src/daemon/interfaces-linux.c",
@@ -975,6 +1059,18 @@
       "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
       "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
       "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "src/daemon/lldpd.c",
+      "line": 45,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 1938) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
       "matched_sites": []
     },
     {
@@ -1137,6 +1233,78 @@
       "matched_sites": []
     },
     {
+      "rule_id": "PORT-SA-RESTART",
+      "severity": "warning",
+      "file": "src/daemon/priv.c",
+      "line": 743,
+      "col": 16,
+      "message": "SA_RESTART used",
+      "suggestion": "The QNX 8.0 struct sigaction documents sa_flags SA_NOCLDSTOP, SA_NOCLDWAIT, SA_NODEFER, SA_ONSTACK, SA_RESETHAND and SA_SIGINFO only; there is no SA_RESTART. Guard it (#ifdef SA_RESTART) and handle EINTR.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/s/sigaction_struct.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-SA-RESTART",
+      "severity": "warning",
+      "file": "src/daemon/priv.c",
+      "line": 750,
+      "col": 16,
+      "message": "SA_RESTART used",
+      "suggestion": "The QNX 8.0 struct sigaction documents sa_flags SA_NOCLDSTOP, SA_NOCLDWAIT, SA_NODEFER, SA_ONSTACK, SA_RESETHAND and SA_SIGINFO only; there is no SA_RESTART. Guard it (#ifdef SA_RESTART) and handle EINTR.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/s/sigaction_struct.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-SA-RESTART",
+      "severity": "warning",
+      "file": "src/daemon/priv.c",
+      "line": 758,
+      "col": 15,
+      "message": "SA_RESTART used",
+      "suggestion": "The QNX 8.0 struct sigaction documents sa_flags SA_NOCLDSTOP, SA_NOCLDWAIT, SA_NODEFER, SA_ONSTACK, SA_RESETHAND and SA_SIGINFO only; there is no SA_RESTART. Guard it (#ifdef SA_RESTART) and handle EINTR.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/s/sigaction_struct.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "src/daemon/protocols/edp.c",
+      "line": 28,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 300) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX",
+      "severity": "warning",
+      "file": "src/daemon/protocols/sonmp.c",
+      "line": 27,
+      "col": 1,
+      "message": "MIN()/MAX() used (first at line 373) but not defined in this file; <sys/param.h> is not a POSIX header and its MIN/MAX macros are a BSD/glibc extension",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX-DEFINE",
+      "severity": "warning",
+      "file": "src/lib/atoms/custom.c",
+      "line": 31,
+      "col": 1,
+      "message": "Defines min() which QNX <stdlib.h> already defines as a macro",
+      "suggestion": "QNX 8.0 <stdlib.h> defines min() and max() macros (C only); wrap this definition in #ifndef <name> or rename it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/m/max.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
       "rule_id": "LNX-LINUX-HEADER",
       "severity": "error",
       "file": "src/lldpd-structs.h",
@@ -1168,17 +1336,17 @@
     "recall_source_nontest": 0.0909,
     "recall_build": 0.0,
     "recall_in_scope": 0.08,
-    "findings_total": 58,
+    "findings_total": 72,
     "findings_tp": 1,
     "findings_by_category": {
-      "source": 58,
-      "build": 0,
+      "source": 68,
+      "build": 4,
       "other": 0
     },
-    "findings_in_patched_files": 3,
+    "findings_in_patched_files": 10,
     "findings_tp_in_patched_files": 1,
-    "precision": 0.0172,
-    "precision_in_patched_files": 0.3333
+    "precision": 0.0139,
+    "precision_in_patched_files": 0.1
   },
   "status": "ok",
   "scanner": {

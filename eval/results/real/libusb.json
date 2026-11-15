@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:21:42.080589+09:00",
+  "generated_at": "2026-11-15T14:14:37.790972+09:00",
   "project": {
     "name": "libusb",
     "upstream": "https://github.com/libusb/libusb",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "511aa2e",
+  "scanner_source_commit": "5118669",
   "durations": {
-    "fetch": 0.003088449011556804,
-    "scan": 6.087558706989512
+    "fetch": 0.0028436339925974607,
+    "scan": 0.5908760050078854
   },
   "diff_stats": {
     "files_changed": 9,
@@ -66,7 +66,11 @@
         92
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        12,
+        13,
+        14
+      ]
     },
     {
       "file": "configure.ac",
@@ -232,63 +236,237 @@
   },
   "findings": [
     {
-      "rule_id": "LNX-TIMERFD",
+      "rule_id": "BLD-AUTOCONF-HOST",
       "severity": "warning",
-      "file": "libusb/io.c",
-      "line": 37,
+      "file": "configure.ac",
+      "line": 51,
       "col": 1,
-      "message": "Linux timerfd header <sys/timerfd.h>",
-      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
-      "confidence": "medium",
+      "message": "Host OS case `*-linux-android*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
       "matched_sites": []
     },
     {
-      "rule_id": "LNX-TIMERFD",
+      "rule_id": "BLD-AUTOCONF-HOST",
       "severity": "warning",
-      "file": "libusb/io.c",
-      "line": 1151,
-      "col": 17,
-      "message": "Linux timerfd API timerfd_create()",
-      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
-      "confidence": "medium",
+      "file": "configure.ac",
+      "line": 52,
+      "col": 1,
+      "message": "Host OS case `AC_MSG_RESULT([This is a Linux-Android s` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
       "matched_sites": []
     },
     {
-      "rule_id": "LNX-TIMERFD",
+      "rule_id": "BLD-AUTOCONF-HOST",
       "severity": "warning",
-      "file": "libusb/io.c",
-      "line": 1334,
-      "col": 6,
-      "message": "Linux timerfd API timerfd_settime()",
-      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
-      "confidence": "medium",
+      "file": "configure.ac",
+      "line": 60,
+      "col": 1,
+      "message": "Host OS case `*-linux* | *-uclinux*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
       "matched_sites": []
     },
     {
-      "rule_id": "LNX-TIMERFD",
+      "rule_id": "BLD-AUTOCONF-HOST",
       "severity": "warning",
-      "file": "libusb/io.c",
-      "line": 1364,
-      "col": 8,
-      "message": "Linux timerfd API timerfd_settime()",
-      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
-      "confidence": "medium",
+      "file": "configure.ac",
+      "line": 61,
+      "col": 1,
+      "message": "Host OS case `AC_MSG_RESULT([Linux]` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
       "matched_sites": []
     },
     {
-      "rule_id": "LNX-TIMERFD",
+      "rule_id": "BLD-AUTOCONF-HOST",
       "severity": "warning",
-      "file": "libusb/io.c",
-      "line": 1436,
-      "col": 7,
-      "message": "Linux timerfd API timerfd_settime()",
-      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
-      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
-      "confidence": "medium",
+      "file": "configure.ac",
+      "line": 65,
+      "col": 1,
+      "message": "Host OS case `*-darwin*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 66,
+      "col": 1,
+      "message": "Host OS case `AC_MSG_RESULT([Darwin/Mac OS X]` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 70,
+      "col": 1,
+      "message": "Host OS case `*-openbsd*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 71,
+      "col": 1,
+      "message": "Host OS case `AC_MSG_RESULT([OpenBSD]` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 75,
+      "col": 1,
+      "message": "Host OS case `*-netbsd*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 76,
+      "col": 1,
+      "message": "Host OS case `AC_MSG_RESULT([NetBSD]` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 80,
+      "col": 1,
+      "message": "Host OS case `*-mingw* | *msys*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 87,
+      "col": 1,
+      "message": "Host OS case `*-cygwin*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 88,
+      "col": 1,
+      "message": "Host OS case `AC_MSG_RESULT([Cygwin (using Windows bac` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": [
+        1
+      ]
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 92,
+      "col": 1,
+      "message": "Host OS case `*-haiku*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": [
+        1
+      ]
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 93,
+      "col": 1,
+      "message": "Host OS case `AC_MSG_RESULT([Haiku]` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": [
+        1
+      ]
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 97,
+      "col": 1,
+      "message": "Host OS case `*-solaris*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 98,
+      "col": 1,
+      "message": "Host OS case `AC_MSG_RESULT([SunOS]` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "examples/fxload.c",
+      "line": 35,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "examples/fxload.c",
+      "line": 58,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
       "matched_sites": []
     },
     {
@@ -301,6 +479,66 @@
       "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
       "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
       "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "libusb/libusb.h",
+      "line": 75,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "libusb/libusb.h",
+      "line": 80,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "libusb/libusb.h",
+      "line": 126,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "libusb/libusbi.h",
+      "line": 205,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "libusb/libusbi.h",
+      "line": 296,
+      "col": 1,
+      "message": "struct timeval used (first at line 483) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
       "matched_sites": []
     },
     {
@@ -400,6 +638,18 @@
       "matched_sites": []
     },
     {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "libusb/os/threads_posix.c",
+      "line": 26,
+      "col": 1,
+      "message": "Platform branch for __OpenBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
       "rule_id": "LNX-SYSCALL",
       "severity": "error",
       "file": "libusb/os/threads_posix.c",
@@ -408,6 +658,30 @@
       "message": "Linux syscall header <sys/syscall.h>",
       "suggestion": "manual review",
       "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "libusb/os/threads_posix.c",
+      "line": 31,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "libusb/os/threads_posix.c",
+      "line": 33,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
       "confidence": "manual-review",
       "matched_sites": []
     },
@@ -424,26 +698,14 @@
       "matched_sites": []
     },
     {
-      "rule_id": "LNX-SYSCALL",
-      "severity": "error",
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
       "file": "libusb/os/threads_posix.c",
-      "line": 66,
-      "col": 8,
-      "message": "Linux syscall API syscall()",
-      "suggestion": "manual review",
-      "doc_url": null,
-      "confidence": "manual-review",
-      "matched_sites": []
-    },
-    {
-      "rule_id": "LNX-SYSCALL",
-      "severity": "error",
-      "file": "libusb/os/threads_posix.c",
-      "line": 66,
-      "col": 16,
-      "message": "Linux syscall number SYS_gettid",
-      "suggestion": "manual review",
-      "doc_url": null,
+      "line": 67,
+      "col": 1,
+      "message": "Platform branch for __OpenBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
       "confidence": "manual-review",
       "matched_sites": []
     },
@@ -470,6 +732,54 @@
       "doc_url": null,
       "confidence": "manual-review",
       "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "libusb/os/threads_posix.c",
+      "line": 71,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "libusb/os/threads_posix.c",
+      "line": 73,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "libusb/os/threads_windows.h",
+      "line": 84,
+      "col": 1,
+      "message": "struct timeval used (first at line 84) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "libusb/os/windows_common.h",
+      "line": 42,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
     }
   ],
   "metrics": {
@@ -484,24 +794,24 @@
     "sites_hit_source_nontest": 0,
     "sites_hit_by_category": {
       "source": 0,
-      "build": 0,
+      "build": 1,
       "other": 0
     },
     "recall_source": 0.0,
     "recall_source_nontest": 0.0,
-    "recall_build": 0.0,
-    "recall_in_scope": 0.0,
-    "findings_total": 20,
-    "findings_tp": 0,
+    "recall_build": 0.1429,
+    "recall_in_scope": 0.0909,
+    "findings_total": 45,
+    "findings_tp": 3,
     "findings_by_category": {
-      "source": 20,
-      "build": 0,
+      "source": 28,
+      "build": 17,
       "other": 0
     },
-    "findings_in_patched_files": 0,
-    "findings_tp_in_patched_files": 0,
-    "precision": 0.0,
-    "precision_in_patched_files": null
+    "findings_in_patched_files": 19,
+    "findings_tp_in_patched_files": 3,
+    "precision": 0.0667,
+    "precision_in_patched_files": 0.1579
   },
   "status": "ok",
   "scanner": {

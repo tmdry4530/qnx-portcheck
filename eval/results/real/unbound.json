@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:47:05.409202+09:00",
+  "generated_at": "2026-11-15T14:15:00.278768+09:00",
   "project": {
     "name": "unbound",
     "upstream": "https://github.com/NLnetLabs/unbound",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "511aa2e",
+  "scanner_source_commit": "5118669",
   "durations": {
-    "fetch": 0.013075697992462665,
-    "scan": 17.061318155989284
+    "fetch": 0.003000758995767683,
+    "scan": 2.0166166560084093
   },
   "diff_stats": {
     "files_changed": 10,
@@ -162,7 +162,7 @@
       ],
       "hunks": 2,
       "matched_findings": [
-        6
+        7
       ]
     },
     {
@@ -247,7 +247,7 @@
       ],
       "hunks": 1,
       "matched_findings": [
-        12
+        13
       ]
     },
     {
@@ -280,7 +280,9 @@
         51
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        41
+      ]
     },
     {
       "file": "testcode/replay.h",
@@ -296,7 +298,9 @@
         145
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        42
+      ]
     },
     {
       "file": "testcode/unitldns.c",
@@ -380,7 +384,9 @@
         47
       ],
       "hunks": 1,
-      "matched_findings": []
+      "matched_findings": [
+        45
+      ]
     },
     {
       "file": "util/timehist.h",
@@ -479,6 +485,18 @@
       "matched_sites": [
         4
       ]
+    },
+    {
+      "rule_id": "PORT-MINMAX-DEFINE",
+      "severity": "warning",
+      "file": "compat/getentropy_linux.c",
+      "line": 74,
+      "col": 1,
+      "message": "Defines min() which QNX <stdlib.h> already defines as a macro",
+      "suggestion": "QNX 8.0 <stdlib.h> defines min() and max() macros (C only); wrap this definition in #ifndef <name> or rename it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/m/max.html",
+      "confidence": "high",
+      "matched_sites": []
     },
     {
       "rule_id": "LNX-SYSCALL",
@@ -617,12 +635,180 @@
       "matched_sites": []
     },
     {
+      "rule_id": "PORT-MINMAX-DEFINE",
+      "severity": "warning",
+      "file": "compat/getentropy_osx.c",
+      "line": 69,
+      "col": 1,
+      "message": "Defines min() which QNX <stdlib.h> already defines as a macro",
+      "suggestion": "QNX 8.0 <stdlib.h> defines min() and max() macros (C only); wrap this definition in #ifndef <name> or rename it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/m/max.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
       "rule_id": "LNX-SYSCALL",
       "severity": "error",
       "file": "compat/getentropy_solaris.c",
       "line": 25,
       "col": 1,
       "message": "Linux syscall header <sys/syscall.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX-DEFINE",
+      "severity": "warning",
+      "file": "compat/getentropy_solaris.c",
+      "line": 58,
+      "col": 1,
+      "message": "Defines min() which QNX <stdlib.h> already defines as a macro",
+      "suggestion": "QNX 8.0 <stdlib.h> defines min() and max() macros (C only); wrap this definition in #ifndef <name> or rename it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/m/max.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 1374,
+      "col": 1,
+      "message": "Host OS case `linux*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 1381,
+      "col": 1,
+      "message": "Host OS case `darwin*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 1933,
+      "col": 1,
+      "message": "Host OS case `Darwin|*darwin*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 1936,
+      "col": 1,
+      "message": "Host OS case `*solaris*|*sunos*|SunOS` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 1937,
+      "col": 1,
+      "message": "Host OS case `AC_LIBOBJ(getentropy_solaris` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 1949,
+      "col": 1,
+      "message": "Host OS case `*freebsd*|*FreeBSD` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 1950,
+      "col": 1,
+      "message": "Host OS case `AC_LIBOBJ(getentropy_freebsd` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 1952,
+      "col": 1,
+      "message": "Host OS case `*linux*|Linux|*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "configure.ac",
+      "line": 1953,
+      "col": 1,
+      "message": "Host OS case `AC_LIBOBJ(getentropy_linux` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "daemon/daemon.h",
+      "line": 70,
+      "col": 1,
+      "message": "struct timeval used (first at line 139) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "dnstap/dnstap.h",
+      "line": 41,
+      "col": 1,
+      "message": "struct timeval used (first at line 153) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "dynlibmod/dynlibmod.h",
+      "line": 42,
+      "col": 1,
+      "message": "struct timeval used (first at line 74) without including <sys/time.h>",
       "suggestion": "manual review",
       "doc_url": null,
       "confidence": "manual-review",
@@ -653,6 +839,30 @@
       "matched_sites": []
     },
     {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "libunbound/unbound-event.h",
+      "line": 82,
+      "col": 1,
+      "message": "struct timeval used (first at line 82) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "pythonmod/pythonmod.h",
+      "line": 43,
+      "col": 1,
+      "message": "struct timeval used (first at line 76) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
       "rule_id": "LNX-LINUX-HEADER",
       "severity": "error",
       "file": "services/listen_dnsport.c",
@@ -661,6 +871,94 @@
       "message": "Linux kernel header <linux/net_tstamp.h>",
       "suggestion": "manual review",
       "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "services/listen_dnsport.c",
+      "line": 650,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "services/listen_dnsport.c",
+      "line": 915,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "services/listen_dnsport.h",
+      "line": 54,
+      "col": 1,
+      "message": "struct timeval used (first at line 542) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "services/mesh.h",
+      "line": 55,
+      "col": 1,
+      "message": "struct timeval used (first at line 127) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "services/outside_network.h",
+      "line": 50,
+      "col": 1,
+      "message": "struct timeval used (first at line 80) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        13
+      ]
+    },
+    {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "testcode/replay.h",
+      "line": 144,
+      "col": 1,
+      "message": "struct timeval used (first at line 232) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        14
+      ]
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "testcode/unitldns.c",
+      "line": 117,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
       "confidence": "manual-review",
       "matched_sites": []
     },
@@ -677,6 +975,32 @@
       "matched_sites": []
     },
     {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "util/data/msgreply.h",
+      "line": 46,
+      "col": 1,
+      "message": "struct timeval used (first at line 561) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": [
+        19
+      ]
+    },
+    {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "util/module.h",
+      "line": 158,
+      "col": 1,
+      "message": "struct timeval used (first at line 272) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
       "rule_id": "LNX-LINUX-HEADER",
       "severity": "error",
       "file": "util/netevent.c",
@@ -685,6 +1009,18 @@
       "message": "Linux kernel header <linux/net_tstamp.h>",
       "suggestion": "manual review",
       "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "util/netevent.c",
+      "line": 866,
+      "col": 1,
+      "message": "Platform branch for __NetBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
       "confidence": "manual-review",
       "matched_sites": []
     },
@@ -711,6 +1047,54 @@
       "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
       "confidence": "high",
       "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "util/storage/lookup3.c",
+      "line": 82,
+      "col": 1,
+      "message": "Platform branch for __FreeBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "util/timehist.h",
+      "line": 53,
+      "col": 1,
+      "message": "struct timeval used (first at line 53) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "util/ub_event.h",
+      "line": 73,
+      "col": 1,
+      "message": "struct timeval used (first at line 73) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "util/winsock_event.h",
+      "line": 118,
+      "col": 1,
+      "message": "struct timeval used (first at line 149) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
     }
   ],
   "metrics": {
@@ -722,27 +1106,27 @@
     },
     "sites_source_nontest": 16,
     "sites_source_test": 5,
-    "sites_hit_source_nontest": 4,
+    "sites_hit_source_nontest": 6,
     "sites_hit_by_category": {
-      "source": 4,
+      "source": 7,
       "build": 0,
       "other": 0
     },
-    "recall_source": 0.1905,
-    "recall_source_nontest": 0.25,
+    "recall_source": 0.3333,
+    "recall_source_nontest": 0.375,
     "recall_build": null,
-    "recall_in_scope": 0.1905,
-    "findings_total": 24,
-    "findings_tp": 7,
+    "recall_in_scope": 0.3333,
+    "findings_total": 55,
+    "findings_tp": 10,
     "findings_by_category": {
-      "source": 24,
-      "build": 0,
+      "source": 46,
+      "build": 9,
       "other": 0
     },
-    "findings_in_patched_files": 15,
-    "findings_tp_in_patched_files": 7,
-    "precision": 0.2917,
-    "precision_in_patched_files": 0.4667
+    "findings_in_patched_files": 21,
+    "findings_tp_in_patched_files": 10,
+    "precision": 0.1818,
+    "precision_in_patched_files": 0.4762
   },
   "status": "ok",
   "scanner": {

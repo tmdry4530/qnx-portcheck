@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:20:38.783196+09:00",
+  "generated_at": "2026-11-15T14:14:30.244603+09:00",
   "project": {
     "name": "chrony",
     "upstream": "https://github.com/mlichvar/chrony",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "511aa2e",
+  "scanner_source_commit": "5118669",
   "durations": {
-    "fetch": 0.0035729600058402866,
-    "scan": 3.142893478012411
+    "fetch": 0.002994221984408796,
+    "scan": 0.5520392410107888
   },
   "diff_stats": {
     "files_changed": 12,
@@ -330,6 +330,18 @@
       "matched_sites": []
     },
     {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "privops.h",
+      "line": 32,
+      "col": 1,
+      "message": "struct timeval used (first at line 32) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
       "rule_id": "LNX-LINUX-HEADER",
       "severity": "error",
       "file": "refclock_rtc.c",
@@ -628,6 +640,30 @@
       "doc_url": null,
       "confidence": "manual-review",
       "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-SA-RESTART",
+      "severity": "warning",
+      "file": "util.c",
+      "line": 1123,
+      "col": 17,
+      "message": "SA_RESTART used",
+      "suggestion": "The QNX 8.0 struct sigaction documents sa_flags SA_NOCLDSTOP, SA_NOCLDWAIT, SA_NODEFER, SA_ONSTACK, SA_RESETHAND and SA_SIGINFO only; there is no SA_RESTART. Guard it (#ifdef SA_RESTART) and handle EINTR.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/s/sigaction_struct.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-TIMEVAL",
+      "severity": "note",
+      "file": "util.h",
+      "line": 36,
+      "col": 1,
+      "message": "struct timeval used (first at line 45) without including <sys/time.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
     }
   ],
   "metrics": {
@@ -649,10 +685,10 @@
     "recall_source_nontest": 0.0,
     "recall_build": 0.0,
     "recall_in_scope": 0.0,
-    "findings_total": 28,
+    "findings_total": 31,
     "findings_tp": 0,
     "findings_by_category": {
-      "source": 28,
+      "source": 31,
       "build": 0,
       "other": 0
     },
