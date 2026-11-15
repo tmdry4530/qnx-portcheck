@@ -1,0 +1,919 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T13:20:34.861086+09:00",
+  "project": {
+    "name": "c-ares",
+    "upstream": "https://github.com/c-ares/c-ares",
+    "upstream_base_ref": "v1.34",
+    "upstream_base_sha": "6508d6ad270eeedbbece3f07f0e6d7ee244b8589",
+    "qnx_repo": "https://github.com/qnx-ports/c-ares",
+    "qnx_branch": "qnx_v1.34",
+    "qnx_head_sha": "341b3c9561d492c30ea4475e2800f08ac52170bf",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "511aa2e",
+  "durations": {
+    "fetch": 0.003916217014193535,
+    "scan": 3.9100671659980435
+  },
+  "diff_stats": {
+    "files_changed": 13,
+    "compare_files_expected": 13,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "configure.ac",
+    "include/ares.h",
+    "m4/ax_append_compile_flags.m4",
+    "m4/ax_append_flag.m4",
+    "m4/ax_check_compile_flag.m4",
+    "src/lib/ares_destroy.c",
+    "src/lib/ares_gethostbyaddr.c",
+    "src/lib/ares_gethostbyname.c",
+    "src/lib/ares_init.c",
+    "src/lib/ares_options.c",
+    "src/lib/ares_private.h",
+    "src/lib/ares_sysconfig.c",
+    "src/lib/ares_sysconfig_files.c"
+  ],
+  "sites": [
+    {
+      "file": "configure.ac",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 47,
+      "old_count": 0,
+      "new_start": 48,
+      "new_count": 1,
+      "target_lines": [
+        47,
+        48
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "configure.ac",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 115,
+      "old_count": 0,
+      "new_start": 117,
+      "new_count": 1,
+      "target_lines": [
+        115,
+        116
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "configure.ac",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 243,
+      "old_count": 0,
+      "new_start": 246,
+      "new_count": 5,
+      "target_lines": [
+        243,
+        244
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "configure.ac",
+      "category": "build",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 252,
+      "old_count": 7,
+      "new_start": 259,
+      "new_count": 9,
+      "target_lines": [
+        252,
+        255,
+        257,
+        258
+      ],
+      "hunks": 3,
+      "matched_findings": []
+    },
+    {
+      "file": "configure.ac",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 815,
+      "old_count": 0,
+      "new_start": 830,
+      "new_count": 7,
+      "target_lines": [
+        815,
+        816
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/ares.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 77,
+      "old_count": 1,
+      "new_start": 77,
+      "new_count": 1,
+      "target_lines": [
+        77
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "m4/ax_append_compile_flags.m4",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1,
+      "old_count": 3,
+      "new_start": 1,
+      "new_count": 3,
+      "target_lines": [
+        1,
+        2,
+        3
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "m4/ax_append_compile_flags.m4",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 7,
+      "old_count": 1,
+      "new_start": 7,
+      "new_count": 1,
+      "target_lines": [
+        7
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "m4/ax_append_compile_flags.m4",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 22,
+      "old_count": 0,
+      "new_start": 23,
+      "new_count": 2,
+      "target_lines": [
+        22,
+        23
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "m4/ax_append_compile_flags.m4",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 31,
+      "old_count": 33,
+      "new_start": 33,
+      "new_count": 8,
+      "target_lines": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        57,
+        60,
+        61,
+        63
+      ],
+      "hunks": 4,
+      "matched_findings": []
+    },
+    {
+      "file": "m4/ax_append_flag.m4",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 2,
+      "old_count": 1,
+      "new_start": 2,
+      "new_count": 1,
+      "target_lines": [
+        2
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "m4/ax_append_flag.m4",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 26,
+      "old_count": 42,
+      "new_start": 26,
+      "new_count": 20,
+      "target_lines": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        52,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67
+      ],
+      "hunks": 3,
+      "matched_findings": []
+    },
+    {
+      "file": "m4/ax_check_compile_flag.m4",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 2,
+      "old_count": 1,
+      "new_start": 2,
+      "new_count": 1,
+      "target_lines": [
+        2
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "m4/ax_check_compile_flag.m4",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 7,
+      "old_count": 1,
+      "new_start": 7,
+      "new_count": 1,
+      "target_lines": [
+        7
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "m4/ax_check_compile_flag.m4",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 21,
+      "old_count": 0,
+      "new_start": 22,
+      "new_count": 2,
+      "target_lines": [
+        21,
+        22
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "m4/ax_check_compile_flag.m4",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 30,
+      "old_count": 30,
+      "new_start": 32,
+      "new_count": 6,
+      "target_lines": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        56,
+        59
+      ],
+      "hunks": 3,
+      "matched_findings": []
+    },
+    {
+      "file": "m4/ax_check_compile_flag.m4",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 64,
+      "old_count": 1,
+      "new_start": 45,
+      "new_count": 1,
+      "target_lines": [
+        64
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "m4/ax_check_compile_flag.m4",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 68,
+      "old_count": 1,
+      "new_start": 49,
+      "new_count": 1,
+      "target_lines": [
+        68
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/lib/ares_destroy.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 71,
+      "old_count": 0,
+      "new_start": 72,
+      "new_count": 9,
+      "target_lines": [
+        71,
+        72
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/lib/ares_gethostbyaddr.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 68,
+      "old_count": 0,
+      "new_start": 69,
+      "new_count": 6,
+      "target_lines": [
+        68,
+        69
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/lib/ares_gethostbyname.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 104,
+      "old_count": 0,
+      "new_start": 105,
+      "new_count": 5,
+      "target_lines": [
+        104,
+        105
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/lib/ares_init.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 66,
+      "old_count": 0,
+      "new_start": 67,
+      "new_count": 189,
+      "target_lines": [
+        66,
+        67
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/lib/ares_init.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 253,
+      "old_count": 0,
+      "new_start": 443,
+      "new_count": 21,
+      "target_lines": [
+        253,
+        254
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/lib/ares_init.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 337,
+      "old_count": 0,
+      "new_start": 548,
+      "new_count": 11,
+      "target_lines": [
+        337,
+        338
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/lib/ares_init.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 568,
+      "old_count": 0,
+      "new_start": 790,
+      "new_count": 9,
+      "target_lines": [
+        568,
+        569
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/lib/ares_init.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 600,
+      "old_count": 0,
+      "new_start": 831,
+      "new_count": 114,
+      "target_lines": [
+        600,
+        601
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/lib/ares_options.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 479,
+      "old_count": 0,
+      "new_start": 480,
+      "new_count": 7,
+      "target_lines": [
+        479,
+        480
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/lib/ares_private.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 72,
+      "old_count": 3,
+      "new_start": 73,
+      "new_count": 6,
+      "target_lines": [
+        72,
+        73,
+        74
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/lib/ares_private.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 256,
+      "old_count": 0,
+      "new_start": 263,
+      "new_count": 7,
+      "target_lines": [
+        256,
+        257
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/lib/ares_private.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 383,
+      "old_count": 4,
+      "new_start": 397,
+      "new_count": 8,
+      "target_lines": [
+        383,
+        384,
+        385,
+        386
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/lib/ares_private.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 470,
+      "old_count": 0,
+      "new_start": 492,
+      "new_count": 6,
+      "target_lines": [
+        470,
+        471
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/lib/ares_sysconfig.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 493,
+      "old_count": 9,
+      "new_start": 494,
+      "new_count": 14,
+      "target_lines": [
+        493,
+        494,
+        496,
+        497,
+        499,
+        500,
+        501
+      ],
+      "hunks": 4,
+      "matched_findings": []
+    },
+    {
+      "file": "src/lib/ares_sysconfig_files.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 618,
+      "old_count": 0,
+      "new_start": 619,
+      "new_count": 19,
+      "target_lines": [
+        618,
+        619
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 17,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 494,
+      "col": 34,
+      "message": "Linux link library '-lpthread'",
+      "suggestion": "On QNX 8.0 pthread_create() is documented in libc, which qcc usually links automatically; drop or guard libpthread for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_create.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PRCTL",
+      "severity": "error",
+      "file": "src/lib/ares_android.c",
+      "line": 29,
+      "col": 1,
+      "message": "Linux prctl header <sys/prctl.h>",
+      "suggestion": "prctl() is not in the QNX 8.0 C Library Reference. For PR_SET_NAME use pthread_setname_np(); other prctl options: manual review.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_setname_np.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PRCTL",
+      "severity": "error",
+      "file": "src/lib/ares_android.c",
+      "line": 92,
+      "col": 7,
+      "message": "Linux prctl API prctl()",
+      "suggestion": "prctl() is not in the QNX 8.0 C Library Reference. For PR_SET_NAME use pthread_setname_np(); other prctl options: manual review.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_setname_np.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/lib/ares_set_socket_functions.c",
+      "line": 58,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/lib/event/ares_event_configchg.c",
+      "line": 46,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-INOTIFY",
+      "severity": "note",
+      "file": "src/lib/event/ares_event_configchg.c",
+      "line": 47,
+      "col": 1,
+      "message": "Linux inotify header <sys/inotify.h>",
+      "suggestion": "inotify_init()/inotify_add_watch() exist in QNX 8.0 in libfsnotify: link with -l fsnotify; the fsevmgr filesystem event manager service must be running (FSNOTIFY_PREFIX must match).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/inotify_init.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-INOTIFY",
+      "severity": "note",
+      "file": "src/lib/event/ares_event_configchg.c",
+      "line": 150,
+      "col": 19,
+      "message": "Linux inotify API inotify_init1()",
+      "suggestion": "inotify_init()/inotify_add_watch() exist in QNX 8.0 in libfsnotify: link with -l fsnotify; the fsevmgr filesystem event manager service must be running (FSNOTIFY_PREFIX must match).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/inotify_init.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-INOTIFY",
+      "severity": "note",
+      "file": "src/lib/event/ares_event_configchg.c",
+      "line": 157,
+      "col": 7,
+      "message": "Linux inotify API inotify_add_watch()",
+      "suggestion": "inotify_init()/inotify_add_watch() exist in QNX 8.0 in libfsnotify: link with -l fsnotify; the fsevmgr filesystem event manager service must be running (FSNOTIFY_PREFIX must match).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/inotify_init.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/lib/event/ares_event_epoll.c",
+      "line": 30,
+      "col": 1,
+      "message": "Linux epoll header <sys/epoll.h>",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/lib/event/ares_event_epoll.c",
+      "line": 74,
+      "col": 18,
+      "message": "Linux epoll API epoll_create1()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/lib/event/ares_event_epoll.c",
+      "line": 104,
+      "col": 7,
+      "message": "Linux epoll API epoll_ctl()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/lib/event/ares_event_epoll.c",
+      "line": 118,
+      "col": 3,
+      "message": "Linux epoll API epoll_ctl()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/lib/event/ares_event_epoll.c",
+      "line": 137,
+      "col": 3,
+      "message": "Linux epoll API epoll_ctl()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/lib/event/ares_event_epoll.c",
+      "line": 152,
+      "col": 8,
+      "message": "Linux epoll API epoll_wait()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PIPE2",
+      "severity": "note",
+      "file": "src/lib/event/ares_event_wake_pipe.c",
+      "line": 68,
+      "col": 7,
+      "message": "Linux pipe2 API pipe2()",
+      "suggestion": "pipe2() is in QNX 8.0 libc but supports only O_CLOEXEC and O_NONBLOCK flags; check that no other flags (e.g. O_DIRECT) are passed.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pipe2.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/ares-test-ns.cc",
+      "line": 148,
+      "col": 17,
+      "message": "Linux /proc path \"/proc/\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "test/ares-test.cc",
+      "line": 442,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 33,
+    "sites_by_category": {
+      "source": 16,
+      "build": 17,
+      "other": 0
+    },
+    "sites_source_nontest": 16,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.0,
+    "findings_total": 17,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 16,
+      "build": 1,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  }
+}

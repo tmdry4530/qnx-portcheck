@@ -1,0 +1,151 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T13:40:29.549890+09:00",
+  "project": {
+    "name": "open-amp",
+    "upstream": "https://github.com/OpenAMP/open-amp",
+    "upstream_base_ref": "v2025.04.0",
+    "upstream_base_sha": "604cdf9a4561bda7c2274fee64c0f5c90933b9d4",
+    "qnx_repo": "https://github.com/qnx-ports/open-amp",
+    "qnx_branch": "qnx-v2025.04.0",
+    "qnx_head_sha": "742c97bfea28044e24018e4f97a7de7b676c9be6",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "511aa2e",
+  "durations": {
+    "fetch": 0.010218058014288545,
+    "scan": 0.4693056920077652
+  },
+  "diff_stats": {
+    "files_changed": 3,
+    "compare_files_expected": 3,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "lib/include/openamp/remoteproc_virtio.h",
+    "lib/include/openamp/rpmsg_virtio.h",
+    "lib/include/openamp/virtqueue.h"
+  ],
+  "sites": [
+    {
+      "file": "lib/include/openamp/remoteproc_virtio.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 31,
+      "old_count": 3,
+      "new_start": 32,
+      "new_count": 4,
+      "target_lines": [
+        31,
+        32,
+        33
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "lib/include/openamp/rpmsg_virtio.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 36,
+      "old_count": 3,
+      "new_start": 37,
+      "new_count": 4,
+      "target_lines": [
+        36,
+        37,
+        38
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "lib/include/openamp/virtqueue.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 51,
+      "old_count": 3,
+      "new_start": 52,
+      "new_count": 4,
+      "target_lines": [
+        51,
+        52,
+        53
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "lib/include/openamp/virtqueue.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 58,
+      "old_count": 3,
+      "new_start": 63,
+      "new_count": 4,
+      "target_lines": [
+        58,
+        59,
+        60
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 0,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [],
+  "metrics": {
+    "sites_total": 4,
+    "sites_by_category": {
+      "source": 4,
+      "build": 0,
+      "other": 0
+    },
+    "sites_source_nontest": 4,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": null,
+    "recall_in_scope": 0.0,
+    "findings_total": 0,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": null,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  }
+}

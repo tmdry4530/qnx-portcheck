@@ -1,0 +1,772 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T13:40:00.273930+09:00",
+  "project": {
+    "name": "mosquitto",
+    "upstream": "https://github.com/eclipse-mosquitto/mosquitto",
+    "upstream_base_ref": "v2.0.15",
+    "upstream_base_sha": "b0277869d9806f6fab8e1bc11c4a4987c9a79ded",
+    "qnx_repo": "https://github.com/qnx-ports/mosquitto",
+    "qnx_branch": "qnx_v2.0.15",
+    "qnx_head_sha": "35aa903edcceedc2c8010c4c47c7a316a89c9725",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "511aa2e",
+  "durations": {
+    "fetch": 0.015914889983832836,
+    "scan": 4.244381394004449
+  },
+  "diff_stats": {
+    "files_changed": 19,
+    "compare_files_expected": 19,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "client/CMakeLists.txt",
+    "src/CMakeLists.txt",
+    "test/broker/02-subpub-qos2-receive-maximum-1.py",
+    "test/broker/02-subpub-qos2-receive-maximum-2.py",
+    "test/broker/06-bridge-clean-session-csF-lcsF.py",
+    "test/broker/06-bridge-clean-session-csF-lcsN.py",
+    "test/broker/06-bridge-clean-session-csF-lcsT.py",
+    "test/broker/06-bridge-clean-session-csT-lcsF.py",
+    "test/broker/06-bridge-clean-session-csT-lcsN.py",
+    "test/broker/06-bridge-clean-session-csT-lcsT.py",
+    "test/broker/08-ssl-bridge.py",
+    "test/ptest.py"
+  ],
+  "sites": [
+    {
+      "file": "client/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 50,
+      "old_count": 0,
+      "new_start": 51,
+      "new_count": 6,
+      "target_lines": [
+        50,
+        51
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 81,
+      "old_count": 1,
+      "new_start": 81,
+      "new_count": 1,
+      "target_lines": [
+        81
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/02-subpub-qos2-receive-maximum-1.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 5,
+      "old_count": 0,
+      "new_start": 6,
+      "new_count": 1,
+      "target_lines": [
+        5,
+        6
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/02-subpub-qos2-receive-maximum-1.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 46,
+      "old_count": 1,
+      "new_start": 47,
+      "new_count": 4,
+      "target_lines": [
+        46
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/02-subpub-qos2-receive-maximum-2.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 5,
+      "old_count": 0,
+      "new_start": 6,
+      "new_count": 1,
+      "target_lines": [
+        5,
+        6
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/02-subpub-qos2-receive-maximum-2.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 49,
+      "old_count": 1,
+      "new_start": 50,
+      "new_count": 4,
+      "target_lines": [
+        49
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csF-lcsF.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 3,
+      "old_count": 0,
+      "new_start": 4,
+      "new_count": 1,
+      "target_lines": [
+        3,
+        4
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csF-lcsF.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 8,
+      "old_count": 1,
+      "new_start": 9,
+      "new_count": 4,
+      "target_lines": [
+        8
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csF-lcsN.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 3,
+      "old_count": 0,
+      "new_start": 4,
+      "new_count": 1,
+      "target_lines": [
+        3,
+        4
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csF-lcsN.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 8,
+      "old_count": 1,
+      "new_start": 9,
+      "new_count": 4,
+      "target_lines": [
+        8
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csF-lcsT.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 3,
+      "old_count": 0,
+      "new_start": 4,
+      "new_count": 1,
+      "target_lines": [
+        3,
+        4
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csF-lcsT.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 8,
+      "old_count": 1,
+      "new_start": 9,
+      "new_count": 4,
+      "target_lines": [
+        8
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csT-lcsF.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 3,
+      "old_count": 0,
+      "new_start": 4,
+      "new_count": 1,
+      "target_lines": [
+        3,
+        4
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csT-lcsF.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 8,
+      "old_count": 1,
+      "new_start": 9,
+      "new_count": 4,
+      "target_lines": [
+        8
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csT-lcsN.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 3,
+      "old_count": 0,
+      "new_start": 4,
+      "new_count": 1,
+      "target_lines": [
+        3,
+        4
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csT-lcsN.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 8,
+      "old_count": 1,
+      "new_start": 9,
+      "new_count": 4,
+      "target_lines": [
+        8
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csT-lcsT.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 3,
+      "old_count": 0,
+      "new_start": 4,
+      "new_count": 1,
+      "target_lines": [
+        3,
+        4
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csT-lcsT.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 8,
+      "old_count": 1,
+      "new_start": 9,
+      "new_count": 4,
+      "target_lines": [
+        8
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/08-ssl-bridge.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 2,
+      "old_count": 0,
+      "new_start": 3,
+      "new_count": 1,
+      "target_lines": [
+        2,
+        3
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/08-ssl-bridge.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 56,
+      "old_count": 1,
+      "new_start": 57,
+      "new_count": 4,
+      "target_lines": [
+        56
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/ptest.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 6,
+      "old_count": 0,
+      "new_start": 7,
+      "new_count": 2,
+      "target_lines": [
+        6,
+        7
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/ptest.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 65,
+      "old_count": 6,
+      "new_start": 67,
+      "new_count": 3,
+      "target_lines": [
+        65,
+        67,
+        70
+      ],
+      "hunks": 3,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [
+      {
+        "path": "cmake/FindOpenSSL.cmake",
+        "category": "build",
+        "added_lines": 4
+      },
+      {
+        "path": "test/broker/c/Makefile.qnx",
+        "category": "other",
+        "added_lines": 47
+      },
+      {
+        "path": "test/broker/test_qnx.py",
+        "category": "other",
+        "added_lines": 201
+      },
+      {
+        "path": "test/client/test_qnx.sh",
+        "category": "other",
+        "added_lines": 46
+      },
+      {
+        "path": "test/lib/c/Makefile.qnx",
+        "category": "other",
+        "added_lines": 78
+      },
+      {
+        "path": "test/lib/cpp/Makefile.qnx",
+        "category": "other",
+        "added_lines": 96
+      },
+      {
+        "path": "test/lib/test_qnx.py",
+        "category": "other",
+        "added_lines": 93
+      }
+    ],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 2,
+    "other_sites": 20,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "apps/mosquitto_ctrl/CMakeLists.txt",
+      "line": 33,
+      "col": 41,
+      "message": "Linux link library 'dl'",
+      "suggestion": "On QNX 8.0 dlopen() is documented in libc, which qcc usually links automatically; drop or guard libdl for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/d/dlopen.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "apps/mosquitto_ctrl/CMakeLists.txt",
+      "line": 41,
+      "col": 41,
+      "message": "Linux link library 'dl'",
+      "suggestion": "On QNX 8.0 dlopen() is documented in libc, which qcc usually links automatically; drop or guard libdl for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/d/dlopen.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "apps/mosquitto_ctrl/Makefile",
+      "line": 9,
+      "col": 35,
+      "message": "Linux link library '-lpthread'",
+      "suggestion": "On QNX 8.0 pthread_create() is documented in libc, which qcc usually links automatically; drop or guard libpthread for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_create.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "apps/mosquitto_ctrl/Makefile",
+      "line": 45,
+      "col": 100,
+      "message": "Linux link library '-ldl'",
+      "suggestion": "On QNX 8.0 dlopen() is documented in libc, which qcc usually links automatically; drop or guard libdl for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/d/dlopen.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "config.mk",
+      "line": 188,
+      "col": 32,
+      "message": "Linux link library '-ldl'",
+      "suggestion": "On QNX 8.0 dlopen() is documented in libc, which qcc usually links automatically; drop or guard libdl for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/d/dlopen.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "config.mk",
+      "line": 193,
+      "col": 32,
+      "message": "Linux link library '-lrt'",
+      "suggestion": "On QNX 8.0 clock_gettime() is documented in libc, which qcc usually links automatically; drop or guard librt for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/c/clock_gettime.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "config.mk",
+      "line": 195,
+      "col": 28,
+      "message": "Linux link library '-lrt'",
+      "suggestion": "On QNX 8.0 clock_gettime() is documented in libc, which qcc usually links automatically; drop or guard librt for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/c/clock_gettime.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS-OTHER",
+      "severity": "warning",
+      "file": "config.mk",
+      "line": 288,
+      "col": 32,
+      "message": "Linux-specific link library '-lsystemd'",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "lib/mosquitto_internal.h",
+      "line": 62,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "lib/net_mosq.c",
+      "line": 39,
+      "col": 1,
+      "message": "Linux kernel header <linux/in.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "lib/net_mosq.c",
+      "line": 40,
+      "col": 1,
+      "message": "Linux kernel header <linux/in6.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "lib/thread_mosq.c",
+      "line": 26,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "lib/thread_mosq.c",
+      "line": 46,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "lib/util_mosq.c",
+      "line": 34,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/mux_epoll.c",
+      "line": 31,
+      "col": 1,
+      "message": "Linux epoll header <sys/epoll.h>",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/mux_epoll.c",
+      "line": 90,
+      "col": 20,
+      "message": "Linux epoll API epoll_create()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/mux_epoll.c",
+      "line": 98,
+      "col": 7,
+      "message": "Linux epoll API epoll_ctl()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/mux_epoll.c",
+      "line": 117,
+      "col": 6,
+      "message": "Linux epoll API epoll_ctl()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/mux_epoll.c",
+      "line": 118,
+      "col": 27,
+      "message": "Linux epoll API epoll_ctl()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/mux_epoll.c",
+      "line": 136,
+      "col": 6,
+      "message": "Linux epoll API epoll_ctl()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/mux_epoll.c",
+      "line": 137,
+      "col": 27,
+      "message": "Linux epoll API epoll_ctl()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/mux_epoll.c",
+      "line": 154,
+      "col": 6,
+      "message": "Linux epoll API epoll_ctl()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/mux_epoll.c",
+      "line": 170,
+      "col": 6,
+      "message": "Linux epoll API epoll_ctl()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-EPOLL",
+      "severity": "warning",
+      "file": "src/mux_epoll.c",
+      "line": 189,
+      "col": 16,
+      "message": "Linux epoll API epoll_wait()",
+      "suggestion": "QNX 8.0 documents ionotify() as corresponding to Linux epoll(); poll()/select() are also available. No epoll page exists in the QNX 8.0 C Library Reference. A libepoll is listed in the com.qnx.<baselineId>.target.screen.notify_fd package (documented for Wayland on Screen); verify it is in your SDP before relying on it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/net.c",
+      "line": 769,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 22,
+    "sites_by_category": {
+      "source": 0,
+      "build": 2,
+      "other": 20
+    },
+    "sites_source_nontest": 0,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": null,
+    "recall_source_nontest": null,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.0,
+    "findings_total": 25,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 17,
+      "build": 8,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  }
+}

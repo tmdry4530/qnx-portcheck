@@ -1,0 +1,511 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T13:21:42.080589+09:00",
+  "project": {
+    "name": "libusb",
+    "upstream": "https://github.com/libusb/libusb",
+    "upstream_base_ref": "master",
+    "upstream_base_sha": "e782eeb2514266f6738e242cdcb18e3ae1ed06fa",
+    "qnx_repo": "https://github.com/qnx-ports/libusb",
+    "qnx_branch": "libusb-1.0.23",
+    "qnx_head_sha": "4a7f548b901470bd9bb602feeee02ace96c4f1b4",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "511aa2e",
+  "durations": {
+    "fetch": 0.003088449011556804,
+    "scan": 6.087558706989512
+  },
+  "diff_stats": {
+    "files_changed": 9,
+    "compare_files_expected": 9,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "Makefile.am",
+    "configure.ac",
+    "examples/dpfp_threaded.c",
+    "examples/sam3u_benchmark.c",
+    "libusb/Makefile.am",
+    "libusb/core.c",
+    "libusb/libusbi.h"
+  ],
+  "sites": [
+    {
+      "file": "Makefile.am",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 16,
+      "old_count": 0,
+      "new_start": 17,
+      "new_count": 4,
+      "target_lines": [
+        16,
+        17
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "configure.ac",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 91,
+      "old_count": 0,
+      "new_start": 92,
+      "new_count": 6,
+      "target_lines": [
+        91,
+        92
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "configure.ac",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 172,
+      "old_count": 0,
+      "new_start": 179,
+      "new_count": 6,
+      "target_lines": [
+        172,
+        173
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "configure.ac",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 198,
+      "old_count": 0,
+      "new_start": 211,
+      "new_count": 1,
+      "target_lines": [
+        198,
+        199
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "examples/dpfp_threaded.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 33,
+      "old_count": 1,
+      "new_start": 33,
+      "new_count": 3,
+      "target_lines": [
+        33
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "examples/sam3u_benchmark.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 32,
+      "old_count": 1,
+      "new_start": 32,
+      "new_count": 3,
+      "target_lines": [
+        32
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "libusb/Makefile.am",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 24,
+      "old_count": 0,
+      "new_start": 25,
+      "new_count": 1,
+      "target_lines": [
+        24,
+        25
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "libusb/Makefile.am",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 31,
+      "old_count": 0,
+      "new_start": 33,
+      "new_count": 1,
+      "target_lines": [
+        31,
+        32
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "libusb/Makefile.am",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 87,
+      "old_count": 0,
+      "new_start": 90,
+      "new_count": 4,
+      "target_lines": [
+        87,
+        88
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "libusb/core.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 24,
+      "old_count": 1,
+      "new_start": 24,
+      "new_count": 1,
+      "target_lines": [
+        24
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "libusb/libusbi.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 578,
+      "old_count": 1,
+      "new_start": 578,
+      "new_count": 1,
+      "target_lines": [
+        578
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [
+      {
+        "path": "libusb/os/nto_qnx_usbfs.c",
+        "category": "source",
+        "added_lines": 2499
+      },
+      {
+        "path": "libusb/os/nto_qnx_usbfs.h",
+        "category": "source",
+        "added_lines": 98
+      }
+    ],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 7,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "LNX-TIMERFD",
+      "severity": "warning",
+      "file": "libusb/io.c",
+      "line": 37,
+      "col": 1,
+      "message": "Linux timerfd header <sys/timerfd.h>",
+      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-TIMERFD",
+      "severity": "warning",
+      "file": "libusb/io.c",
+      "line": 1151,
+      "col": 17,
+      "message": "Linux timerfd API timerfd_create()",
+      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-TIMERFD",
+      "severity": "warning",
+      "file": "libusb/io.c",
+      "line": 1334,
+      "col": 6,
+      "message": "Linux timerfd API timerfd_settime()",
+      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-TIMERFD",
+      "severity": "warning",
+      "file": "libusb/io.c",
+      "line": 1364,
+      "col": 8,
+      "message": "Linux timerfd API timerfd_settime()",
+      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-TIMERFD",
+      "severity": "warning",
+      "file": "libusb/io.c",
+      "line": 1436,
+      "col": 7,
+      "message": "Linux timerfd API timerfd_settime()",
+      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "libusb/libusb.h",
+      "line": 57,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "libusb/os/linux_netlink.c",
+      "line": 41,
+      "col": 1,
+      "message": "Linux kernel header <linux/netlink.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "libusb/os/linux_usbfs.c",
+      "line": 317,
+      "col": 11,
+      "message": "Linux /proc path \"/proc/bus/usb\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "libusb/os/linux_usbfs.c",
+      "line": 709,
+      "col": 35,
+      "message": "Linux /proc path \"/proc/self/fd/%d\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "libusb/os/linux_usbfs.c",
+      "line": 721,
+      "col": 34,
+      "message": "Linux /proc path \"/proc/bus/usb\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "libusb/os/linux_usbfs.c",
+      "line": 722,
+      "col": 23,
+      "message": "Linux /proc path \"/proc/bus/usb/%hhu/%hhu\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "libusb/os/linux_usbfs.h",
+      "line": 23,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PIPE2",
+      "severity": "note",
+      "file": "libusb/os/poll_posix.c",
+      "line": 33,
+      "col": 12,
+      "message": "Linux pipe2 API pipe2()",
+      "suggestion": "pipe2() is in QNX 8.0 libc but supports only O_CLOEXEC and O_NONBLOCK flags; check that no other flags (e.g. O_DIRECT) are passed.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pipe2.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "libusb/os/threads_posix.c",
+      "line": 25,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "libusb/os/threads_posix.c",
+      "line": 30,
+      "col": 1,
+      "message": "Linux syscall header <sys/syscall.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "libusb/os/threads_posix.c",
+      "line": 65,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "libusb/os/threads_posix.c",
+      "line": 66,
+      "col": 8,
+      "message": "Linux syscall API syscall()",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "libusb/os/threads_posix.c",
+      "line": 66,
+      "col": 16,
+      "message": "Linux syscall number SYS_gettid",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "libusb/os/threads_posix.c",
+      "line": 70,
+      "col": 8,
+      "message": "Linux syscall API syscall()",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "libusb/os/threads_posix.c",
+      "line": 70,
+      "col": 16,
+      "message": "Linux syscall number SYS_getthrid",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 11,
+    "sites_by_category": {
+      "source": 4,
+      "build": 7,
+      "other": 0
+    },
+    "sites_source_nontest": 4,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.0,
+    "findings_total": 20,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 20,
+      "build": 0,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  }
+}

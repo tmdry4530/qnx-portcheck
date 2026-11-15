@@ -1,0 +1,1001 @@
+{
+  "label": "FAKE-SCAN",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T12:34:22.257591+09:00",
+  "project": {
+    "name": "s2n-tls",
+    "upstream": "https://github.com/aws/s2n-tls",
+    "upstream_base_ref": "v1.5.25",
+    "upstream_base_sha": "a7862238a9d6703e0a3e2d7ea4341de8d57429bd",
+    "qnx_repo": "https://github.com/qnx-ports/s2n-tls",
+    "qnx_branch": "qnx-v1.5.25",
+    "qnx_head_sha": "76466302298aee279692bee38fd61ffd0128799d",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
+  "durations": {
+    "fetch": 0.003119476983556524,
+    "scan": 0.5071845430065878
+  },
+  "diff_stats": {
+    "files_changed": 32,
+    "compare_files_expected": 32,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "CMakeLists.txt",
+    "crypto/s2n_drbg.c",
+    "stuffer/s2n_stuffer.c",
+    "tls/extensions/s2n_client_psk.c",
+    "tls/extensions/s2n_client_supported_versions.c",
+    "tls/extensions/s2n_supported_versions.c",
+    "tls/s2n_alerts.c",
+    "tls/s2n_cbc.c",
+    "tls/s2n_client_hello.c",
+    "tls/s2n_client_key_exchange.c",
+    "tls/s2n_config.h",
+    "tls/s2n_connection.c",
+    "tls/s2n_early_data.c",
+    "tls/s2n_early_data_io.c",
+    "tls/s2n_fingerprint_ja4.c",
+    "tls/s2n_handshake_io.c",
+    "tls/s2n_ktls_io.c",
+    "tls/s2n_post_handshake.c",
+    "tls/s2n_prf.c",
+    "tls/s2n_psk.c",
+    "tls/s2n_record_read.c",
+    "tls/s2n_record_write.c",
+    "tls/s2n_recv.c",
+    "tls/s2n_resume.c",
+    "tls/s2n_send.c",
+    "tls/s2n_server_hello.c",
+    "tls/s2n_server_new_session_ticket.c",
+    "tls/s2n_tls13_handshake.c",
+    "utils/s2n_array.c",
+    "utils/s2n_blob.c",
+    "utils/s2n_mem.c",
+    "utils/s2n_random.c"
+  ],
+  "sites": [
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 92,
+      "old_count": 1,
+      "new_start": 92,
+      "new_count": 1,
+      "target_lines": [
+        92
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "crypto/s2n_drbg.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 29,
+      "old_count": 0,
+      "new_start": 30,
+      "new_count": 3,
+      "target_lines": [
+        29,
+        30
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "stuffer/s2n_stuffer.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 24,
+      "old_count": 0,
+      "new_start": 25,
+      "new_count": 5,
+      "target_lines": [
+        24,
+        25
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/extensions/s2n_client_psk.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 35,
+      "old_count": 0,
+      "new_start": 36,
+      "new_count": 4,
+      "target_lines": [
+        35,
+        36
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/extensions/s2n_client_supported_versions.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 27,
+      "old_count": 0,
+      "new_start": 28,
+      "new_count": 4,
+      "target_lines": [
+        27,
+        28
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/extensions/s2n_supported_versions.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 23,
+      "old_count": 0,
+      "new_start": 24,
+      "new_count": 4,
+      "target_lines": [
+        23,
+        24
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/s2n_alerts.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 29,
+      "old_count": 0,
+      "new_start": 30,
+      "new_count": 4,
+      "target_lines": [
+        29,
+        30
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/s2n_cbc.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 25,
+      "old_count": 0,
+      "new_start": 26,
+      "new_count": 5,
+      "target_lines": [
+        25,
+        26
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/s2n_client_hello.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 44,
+      "old_count": 0,
+      "new_start": 45,
+      "new_count": 4,
+      "target_lines": [
+        44,
+        45
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/s2n_client_key_exchange.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 33,
+      "old_count": 0,
+      "new_start": 34,
+      "new_count": 4,
+      "target_lines": [
+        33,
+        34
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/s2n_config.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 47,
+      "old_count": 0,
+      "new_start": 48,
+      "new_count": 4,
+      "target_lines": [
+        47,
+        48
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/s2n_connection.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 61,
+      "old_count": 0,
+      "new_start": 62,
+      "new_count": 3,
+      "target_lines": [
+        61,
+        62
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/s2n_early_data.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 25,
+      "old_count": 0,
+      "new_start": 26,
+      "new_count": 4,
+      "target_lines": [
+        25,
+        26
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/s2n_early_data_io.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 22,
+      "old_count": 0,
+      "new_start": 23,
+      "new_count": 4,
+      "target_lines": [
+        22,
+        23
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/s2n_fingerprint_ja4.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 79,
+      "old_count": 0,
+      "new_start": 80,
+      "new_count": 3,
+      "target_lines": [
+        79,
+        80
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/s2n_handshake_io.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 39,
+      "old_count": 0,
+      "new_start": 40,
+      "new_count": 4,
+      "target_lines": [
+        39,
+        40
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/s2n_ktls_io.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 213,
+      "old_count": 3,
+      "new_start": 214,
+      "new_count": 5,
+      "target_lines": [
+        213,
+        214,
+        215
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/s2n_ktls_io.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 256,
+      "old_count": 3,
+      "new_start": 262,
+      "new_count": 5,
+      "target_lines": [
+        256,
+        257,
+        258
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/s2n_post_handshake.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 23,
+      "old_count": 0,
+      "new_start": 24,
+      "new_count": 4,
+      "target_lines": [
+        23,
+        24
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/s2n_prf.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 37,
+      "old_count": 0,
+      "new_start": 38,
+      "new_count": 4,
+      "target_lines": [
+        37,
+        38
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/s2n_psk.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 27,
+      "old_count": 0,
+      "new_start": 28,
+      "new_count": 4,
+      "target_lines": [
+        27,
+        28
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/s2n_record_read.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 30,
+      "old_count": 0,
+      "new_start": 31,
+      "new_count": 4,
+      "target_lines": [
+        30,
+        31
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/s2n_record_write.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 32,
+      "old_count": 0,
+      "new_start": 33,
+      "new_count": 5,
+      "target_lines": [
+        32,
+        33
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/s2n_recv.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 38,
+      "old_count": 0,
+      "new_start": 39,
+      "new_count": 5,
+      "target_lines": [
+        38,
+        39
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/s2n_resume.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 30,
+      "old_count": 0,
+      "new_start": 31,
+      "new_count": 4,
+      "target_lines": [
+        30,
+        31
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/s2n_send.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 34,
+      "old_count": 0,
+      "new_start": 35,
+      "new_count": 4,
+      "target_lines": [
+        34,
+        35
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/s2n_server_hello.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 36,
+      "old_count": 0,
+      "new_start": 37,
+      "new_count": 4,
+      "target_lines": [
+        36,
+        37
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/s2n_server_new_session_ticket.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 41,
+      "old_count": 0,
+      "new_start": 42,
+      "new_count": 4,
+      "target_lines": [
+        41,
+        42
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tls/s2n_tls13_handshake.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 21,
+      "old_count": 0,
+      "new_start": 22,
+      "new_count": 4,
+      "target_lines": [
+        21,
+        22
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "utils/s2n_array.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 23,
+      "old_count": 0,
+      "new_start": 24,
+      "new_count": 4,
+      "target_lines": [
+        23,
+        24
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "utils/s2n_blob.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 25,
+      "old_count": 0,
+      "new_start": 26,
+      "new_count": 4,
+      "target_lines": [
+        25,
+        26
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "utils/s2n_mem.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 32,
+      "old_count": 0,
+      "new_start": 33,
+      "new_count": 4,
+      "target_lines": [
+        32,
+        33
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "utils/s2n_random.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 100,
+      "old_count": 0,
+      "new_start": 101,
+      "new_count": 3,
+      "target_lines": [
+        100,
+        101
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 1,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "col": 15,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "crypto/s2n_ktls_crypto.h",
+      "line": 22,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 21,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "s2n.mk",
+      "line": 21,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 26,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "s2n.mk",
+      "line": 21,
+      "message": "FAKE scanner token hit: -lrt",
+      "rule_id": "FAKE-LRT",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 91,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/LD_PRELOAD/Makefile",
+      "line": 29,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/features/S2N_KTLS_SUPPORTED.c",
+      "line": 17,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 15,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/features/S2N_KTLS_SUPPORTED.c",
+      "line": 18,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 36,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/features/S2N_KTLS_SUPPORTED.c",
+      "line": 24,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 57,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/testlib/Makefile",
+      "line": 34,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 62,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/testlib/Makefile",
+      "line": 34,
+      "message": "FAKE scanner token hit: -lrt",
+      "rule_id": "FAKE-LRT",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 57,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/unit/Makefile",
+      "line": 39,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 25,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/unit/s2n_fork_generation_number_test.c",
+      "line": 59,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/unit/s2n_ktls_io_sendfile_test.c",
+      "line": 45,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 32,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/unit/s2n_mem_usage_test.c",
+      "line": 63,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 25,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/unit/s2n_random_test.c",
+      "line": 79,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 25,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tls/s2n_ktls_io.c",
+      "line": 107,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 25,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tls/s2n_ktls_io.c",
+      "line": 116,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 25,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tls/s2n_ktls_io.c",
+      "line": 124,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 25,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tls/s2n_ktls_io.c",
+      "line": 135,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 25,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tls/s2n_ktls_io.c",
+      "line": 159,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 25,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tls/s2n_ktls_io.c",
+      "line": 167,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 25,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tls/s2n_ktls_io.c",
+      "line": 175,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 25,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tls/s2n_ktls_io.c",
+      "line": 183,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 25,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tls/s2n_ktls_io.c",
+      "line": 252,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 25,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tls/s2n_ktls_io.c",
+      "line": 508,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 33,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tls/s2n_ktls_parameters.h",
+      "line": 23,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 33,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tls/s2n_ktls_parameters.h",
+      "line": 24,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 15,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tls/s2n_ktls_parameters.h",
+      "line": 28,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 36,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tls/s2n_ktls_parameters.h",
+      "line": 39,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 26,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "utils/s2n_prelude.h",
+      "line": 29,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 21,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "utils/s2n_random.c",
+      "line": 22,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 33,
+    "sites_by_category": {
+      "source": 32,
+      "build": 1,
+      "other": 0
+    },
+    "sites_source_nontest": 32,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.0,
+    "findings_total": 30,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 24,
+      "build": 6,
+      "other": 0
+    },
+    "findings_in_patched_files": 11,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": 0.0
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "fake-scan",
+    "version": "0.0.0-fake"
+  }
+}

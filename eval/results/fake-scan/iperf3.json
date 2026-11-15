@@ -1,0 +1,484 @@
+{
+  "label": "FAKE-SCAN",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T12:34:19.744636+09:00",
+  "project": {
+    "name": "iperf3",
+    "upstream": "https://github.com/esnet/iperf",
+    "upstream_base_ref": 3.7,
+    "upstream_base_sha": "dfcea9f6a09ead01089a3c9d20c7032f2c0af2c1",
+    "qnx_repo": "https://github.com/qnx-ports/iperf3",
+    "qnx_branch": "qnx-3.7",
+    "qnx_head_sha": "a5416aebaff3851feca5cc8809b7a53372b8be92",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
+  "durations": {
+    "fetch": 0.0032845089735928923,
+    "scan": 0.07194344801246189
+  },
+  "diff_stats": {
+    "files_changed": 3,
+    "compare_files_expected": 3,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "src/iperf_udp.c",
+    "src/portable_endian.h",
+    "src/timer.h"
+  ],
+  "sites": [
+    {
+      "file": "src/iperf_udp.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 384,
+      "old_count": 2,
+      "new_start": 384,
+      "new_count": 3,
+      "target_lines": [
+        384,
+        385
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/iperf_udp.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 496,
+      "old_count": 2,
+      "new_start": 497,
+      "new_count": 3,
+      "target_lines": [
+        496,
+        497
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/portable_endian.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 67,
+      "old_count": 0,
+      "new_start": 68,
+      "new_count": 4,
+      "target_lines": [
+        67,
+        68
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/timer.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 32,
+      "old_count": 3,
+      "new_start": 33,
+      "new_count": 4,
+      "target_lines": [
+        32,
+        33,
+        34
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 0,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "col": 42,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "aclocal.m4",
+      "line": 1965,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 47,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "aclocal.m4",
+      "line": 1984,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 42,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "aclocal.m4",
+      "line": 1988,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 48,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "aclocal.m4",
+      "line": 1992,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 69,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "configure",
+      "line": 11515,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 36,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "configure",
+      "line": 11516,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 7,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "configure",
+      "line": 11521,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 41,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "configure",
+      "line": 11552,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 69,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "configure",
+      "line": 11576,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 38,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "configure",
+      "line": 11577,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 7,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "configure",
+      "line": 11582,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 43,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "configure",
+      "line": 11613,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 67,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "configure",
+      "line": 11619,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 36,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "configure",
+      "line": 11620,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 7,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "configure",
+      "line": 11625,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 41,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "configure",
+      "line": 11656,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 69,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "configure",
+      "line": 11697,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 38,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "configure",
+      "line": 11698,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 7,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "configure",
+      "line": 11703,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 43,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "configure",
+      "line": 11734,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 20,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "configure",
+      "line": 13118,
+      "message": "FAKE scanner token hit: -lrt",
+      "rule_id": "FAKE-LRT",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 20,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "configure.ac",
+      "line": 196,
+      "message": "FAKE scanner token hit: -lrt",
+      "rule_id": "FAKE-LRT",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/flowlabel.h",
+      "line": 31,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 59,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/flowlabel.h",
+      "line": 34,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 23,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/flowlabel.h",
+      "line": 36,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/iperf_api.c",
+      "line": 4014,
+      "message": "FAKE scanner token hit: sched_setaffinity",
+      "rule_id": "FAKE-SCHED-SETAFFINITY",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/iperf_api.c",
+      "line": 4062,
+      "message": "FAKE scanner token hit: sched_setaffinity",
+      "rule_id": "FAKE-SCHED-SETAFFINITY",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/main.c",
+      "line": 91,
+      "message": "FAKE scanner token hit: sched_setaffinity",
+      "rule_id": "FAKE-SCHED-SETAFFINITY",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 4,
+    "sites_by_category": {
+      "source": 4,
+      "build": 0,
+      "other": 0
+    },
+    "sites_source_nontest": 4,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": null,
+    "recall_in_scope": 0.0,
+    "findings_total": 28,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 6,
+      "build": 22,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "fake-scan",
+    "version": "0.0.0-fake"
+  }
+}

@@ -1,0 +1,498 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T13:20:09.919449+09:00",
+  "project": {
+    "name": "asio",
+    "upstream": "https://github.com/chriskohlhoff/asio",
+    "upstream_base_ref": "asio-1-29-0",
+    "upstream_base_sha": "814f67e730e154547aea3f4d99f709cbdf1ea4a0",
+    "qnx_repo": "https://github.com/qnx-ports/asio",
+    "qnx_branch": "qnx-asio-1-29-0",
+    "qnx_head_sha": "c142007f88ef1f9c7b24a1cffe74dd11b17f779f",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "511aa2e",
+  "durations": {
+    "fetch": 0.0027867619937751442,
+    "scan": 14.833685152989347
+  },
+  "diff_stats": {
+    "files_changed": 5,
+    "compare_files_expected": 5,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "asio/include/asio/detail/impl/posix_thread.ipp",
+    "asio/include/asio/detail/socket_types.hpp",
+    "asio/src/examples/cpp11/local/fd_passing_stream_client.cpp",
+    "asio/src/examples/cpp11/local/fd_passing_stream_server.cpp",
+    "asio/src/tests/unit/ip/multicast.cpp"
+  ],
+  "sites": [
+    {
+      "file": "asio/include/asio/detail/impl/posix_thread.ipp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 5,
+      "old_count": 0,
+      "new_start": 6,
+      "new_count": 1,
+      "target_lines": [
+        5,
+        6
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "asio/include/asio/detail/impl/posix_thread.ipp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 49,
+      "old_count": 0,
+      "new_start": 51,
+      "new_count": 5,
+      "target_lines": [
+        49,
+        50
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "asio/include/asio/detail/socket_types.hpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 5,
+      "old_count": 0,
+      "new_start": 6,
+      "new_count": 1,
+      "target_lines": [
+        5,
+        6
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "asio/include/asio/detail/socket_types.hpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 414,
+      "old_count": 1,
+      "new_start": 415,
+      "new_count": 7,
+      "target_lines": [
+        414
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "asio/src/examples/cpp11/local/fd_passing_stream_client.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 6,
+      "old_count": 0,
+      "new_start": 7,
+      "new_count": 1,
+      "target_lines": [
+        6,
+        7
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "asio/src/examples/cpp11/local/fd_passing_stream_client.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 25,
+      "old_count": 0,
+      "new_start": 27,
+      "new_count": 8,
+      "target_lines": [
+        25,
+        26
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "asio/src/examples/cpp11/local/fd_passing_stream_server.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 6,
+      "old_count": 0,
+      "new_start": 7,
+      "new_count": 1,
+      "target_lines": [
+        6,
+        7
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "asio/src/examples/cpp11/local/fd_passing_stream_server.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 24,
+      "old_count": 0,
+      "new_start": 26,
+      "new_count": 8,
+      "target_lines": [
+        24,
+        25
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "asio/src/tests/unit/ip/multicast.cpp",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 5,
+      "old_count": 0,
+      "new_start": 6,
+      "new_count": 1,
+      "target_lines": [
+        5,
+        6
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "asio/src/tests/unit/ip/multicast.cpp",
+      "category": "source",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 149,
+      "old_count": 1,
+      "new_start": 150,
+      "new_count": 2,
+      "target_lines": [
+        149
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "asio/src/tests/unit/ip/multicast.cpp",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 154,
+      "old_count": 0,
+      "new_start": 157,
+      "new_count": 1,
+      "target_lines": [
+        154,
+        155
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "asio/src/tests/unit/ip/multicast.cpp",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 159,
+      "old_count": 0,
+      "new_start": 163,
+      "new_count": 1,
+      "target_lines": [
+        159,
+        160
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "asio/src/tests/unit/ip/multicast.cpp",
+      "category": "source",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 210,
+      "old_count": 1,
+      "new_start": 214,
+      "new_count": 1,
+      "target_lines": [
+        210
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "asio/src/tests/unit/ip/multicast.cpp",
+      "category": "source",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 214,
+      "old_count": 1,
+      "new_start": 218,
+      "new_count": 1,
+      "target_lines": [
+        214
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 0,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "asio/include/asio/detail/config.hpp",
+      "line": 826,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "asio/include/asio/detail/config.hpp",
+      "line": 827,
+      "col": 1,
+      "message": "Linux kernel header <linux/version.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "asio/include/asio/detail/config.hpp",
+      "line": 1195,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "asio/include/asio/detail/config.hpp",
+      "line": 1238,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "asio/include/asio/detail/config.hpp",
+      "line": 1380,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-TIMERFD",
+      "severity": "warning",
+      "file": "asio/include/asio/detail/epoll_reactor.hpp",
+      "line": 37,
+      "col": 1,
+      "message": "Linux timerfd header <sys/timerfd.h>",
+      "suggestion": "timerfd is not in the QNX 8.0 C Library Reference (libtimerfd is listed only in the screen.notify_fd package for Wayland on Screen). Documented libc alternative: timer_create() with a struct sigevent, armed with timer_settime().",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/t/timer_create.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PIPE2",
+      "severity": "note",
+      "file": "asio/src/tests/unit/readable_pipe.cpp",
+      "line": 66,
+      "col": 19,
+      "message": "Linux pipe2 API pipe2()",
+      "suggestion": "pipe2() is in QNX 8.0 libc but supports only O_CLOEXEC and O_NONBLOCK flags; check that no other flags (e.g. O_DIRECT) are passed.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pipe2.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "asio/src/tests/unit/socket_base.cpp",
+      "line": 251,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "asio/src/tests/unit/socket_base.cpp",
+      "line": 274,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "asio/src/tests/unit/socket_base.cpp",
+      "line": 290,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "asio/src/tests/unit/socket_base.cpp",
+      "line": 310,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "asio/src/tests/unit/socket_base.cpp",
+      "line": 432,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "asio/src/tests/unit/socket_base.cpp",
+      "line": 442,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "asio/src/tests/unit/socket_base.cpp",
+      "line": 452,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "asio/src/tests/unit/socket_base.cpp",
+      "line": 462,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PIPE2",
+      "severity": "note",
+      "file": "asio/src/tests/unit/writable_pipe.cpp",
+      "line": 66,
+      "col": 19,
+      "message": "Linux pipe2 API pipe2()",
+      "suggestion": "pipe2() is in QNX 8.0 libc but supports only O_CLOEXEC and O_NONBLOCK flags; check that no other flags (e.g. O_DIRECT) are passed.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pipe2.html",
+      "confidence": "high",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 14,
+    "sites_by_category": {
+      "source": 14,
+      "build": 0,
+      "other": 0
+    },
+    "sites_source_nontest": 8,
+    "sites_source_test": 6,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": null,
+    "recall_in_scope": 0.0,
+    "findings_total": 16,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 16,
+      "build": 0,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "label": "FAKE-SCAN",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T12:34:23.839461+09:00",
+  "project": {
+    "name": "tinyxml2",
+    "upstream": "https://github.com/leethomason/tinyxml2",
+    "upstream_base_ref": "10.0.0",
+    "upstream_base_sha": "321ea883b7190d4e85cae5512a12e5eaa8f8731f",
+    "qnx_repo": "https://github.com/qnx-ports/tinyxml2",
+    "qnx_branch": "qnx_10.0.0",
+    "qnx_head_sha": "9dadb75f769c71562278ab5d3c2185041f3d337d",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
+  "durations": {
+    "fetch": 0.0031299339898396283,
+    "scan": 0.05732491900562309
+  },
+  "diff_stats": {
+    "files_changed": 2,
+    "compare_files_expected": 2,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "tinyxml2.h",
+    "xmltest.cpp"
+  ],
+  "sites": [
+    {
+      "file": "tinyxml2.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 27,
+      "old_count": 1,
+      "new_start": 27,
+      "new_count": 1,
+      "target_lines": [
+        27
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "xmltest.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 47,
+      "old_count": 8,
+      "new_start": 48,
+      "new_count": 6,
+      "target_lines": [
+        47,
+        48,
+        50,
+        51,
+        54
+      ],
+      "hunks": 3,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 0,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [],
+  "metrics": {
+    "sites_total": 2,
+    "sites_by_category": {
+      "source": 2,
+      "build": 0,
+      "other": 0
+    },
+    "sites_source_nontest": 2,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": null,
+    "recall_in_scope": 0.0,
+    "findings_total": 0,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": null,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "fake-scan",
+    "version": "0.0.0-fake"
+  }
+}

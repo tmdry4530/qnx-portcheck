@@ -1,0 +1,358 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T13:21:06.860359+09:00",
+  "project": {
+    "name": "gnutls",
+    "upstream": "https://github.com/gnutls/gnutls",
+    "upstream_base_ref": "3.6.15",
+    "upstream_base_sha": "5dd9a55040da54371807471bf3169d7a9a1f527e",
+    "qnx_repo": "https://github.com/qnx-ports/gnutls",
+    "qnx_branch": "qnx-3.6.15",
+    "qnx_head_sha": "b57078e47bee94beb27cb81452c75bec298ed327",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "511aa2e",
+  "durations": {
+    "fetch": 0.003118366003036499,
+    "scan": 19.633288054988952
+  },
+  "diff_stats": {
+    "files_changed": 1,
+    "compare_files_expected": 1,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "src/tests.c"
+  ],
+  "sites": [
+    {
+      "file": "src/tests.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 679,
+      "old_count": 0,
+      "new_start": 680,
+      "new_count": 1,
+      "target_lines": [
+        679,
+        680
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/tests.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 684,
+      "old_count": 0,
+      "new_start": 686,
+      "new_count": 1,
+      "target_lines": [
+        684,
+        685
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/tests.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 700,
+      "old_count": 0,
+      "new_start": 703,
+      "new_count": 1,
+      "target_lines": [
+        700,
+        701
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/tests.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 707,
+      "old_count": 0,
+      "new_start": 711,
+      "new_count": 1,
+      "target_lines": [
+        707,
+        708
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/tests.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 713,
+      "old_count": 0,
+      "new_start": 718,
+      "new_count": 2,
+      "target_lines": [
+        713,
+        714
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/tests.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 720,
+      "old_count": 0,
+      "new_start": 727,
+      "new_count": 1,
+      "target_lines": [
+        720,
+        721
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 0,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "lib/fips.c",
+      "line": 40,
+      "col": 27,
+      "message": "Linux /proc path \"/proc/sys/crypto/fips_enabled\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "lib/nettle/sysrng-linux.c",
+      "line": 55,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "lib/nettle/sysrng-linux.c",
+      "line": 59,
+      "col": 1,
+      "message": "Linux syscall header <sys/syscall.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "lib/nettle/sysrng-linux.c",
+      "line": 61,
+      "col": 15,
+      "message": "Linux syscall number SYS_getrandom",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "lib/nettle/sysrng-linux.c",
+      "line": 62,
+      "col": 35,
+      "message": "Linux syscall API syscall()",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "lib/nettle/sysrng-linux.c",
+      "line": 62,
+      "col": 43,
+      "message": "Linux syscall number SYS_getrandom",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "lib/nettle/sysrng-linux.c",
+      "line": 181,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "tests/keylog-func.c",
+      "line": 31,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "tests/rng-no-onload.c",
+      "line": 35,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "tests/rng-sigint.c",
+      "line": 32,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "tests/seccomp.c",
+      "line": 29,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "tests/seccomp.c",
+      "line": 30,
+      "col": 1,
+      "message": "Linux syscall header <sys/syscall.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "tests/seccomp.c",
+      "line": 76,
+      "col": 8,
+      "message": "Linux syscall number SYS_getrandom",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "tests/tls13/prf-early.c",
+      "line": 28,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "tests/tls13/prf.c",
+      "line": 27,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 6,
+    "sites_by_category": {
+      "source": 6,
+      "build": 0,
+      "other": 0
+    },
+    "sites_source_nontest": 6,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": null,
+    "recall_in_scope": 0.0,
+    "findings_total": 15,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 15,
+      "build": 0,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  }
+}

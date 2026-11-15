@@ -1,0 +1,1188 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T13:39:55.932588+09:00",
+  "project": {
+    "name": "lldpd",
+    "upstream": "https://github.com/lldpd/lldpd",
+    "upstream_base_ref": "1.0.22",
+    "upstream_base_sha": "df8d7298598f4ff4cbb20957ccb4e8e2bde96f06",
+    "qnx_repo": "https://github.com/qnx-ports/lldpd",
+    "qnx_branch": "qnx-1.0.22",
+    "qnx_head_sha": "ac20728ae28736e97010bf4964bdc51f444d9099",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "511aa2e",
+  "durations": {
+    "fetch": 0.013832775002811104,
+    "scan": 2.5269003239809535
+  },
+  "diff_stats": {
+    "files_changed": 8,
+    "compare_files_expected": 8,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "configure.ac",
+    "m4/os.m4",
+    "src/daemon/Makefile.am",
+    "src/daemon/interfaces-bsd.c",
+    "src/daemon/lldpd.c",
+    "src/daemon/lldpd.h",
+    "src/daemon/priv-bsd.c",
+    "src/daemon/priv.c"
+  ],
+  "sites": [
+    {
+      "file": "configure.ac",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 166,
+      "old_count": 0,
+      "new_start": 167,
+      "new_count": 11,
+      "target_lines": [
+        166,
+        167
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "m4/os.m4",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 25,
+      "old_count": 0,
+      "new_start": 26,
+      "new_count": 1,
+      "target_lines": [
+        25,
+        26
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/Makefile.am",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 94,
+      "old_count": 0,
+      "new_start": 95,
+      "new_count": 8,
+      "target_lines": [
+        94,
+        95
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/interfaces-bsd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 31,
+      "old_count": 1,
+      "new_start": 31,
+      "new_count": 1,
+      "target_lines": [
+        31
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/interfaces-bsd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 92,
+      "old_count": 1,
+      "new_start": 92,
+      "new_count": 1,
+      "target_lines": [
+        92
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/interfaces-bsd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 144,
+      "old_count": 1,
+      "new_start": 144,
+      "new_count": 1,
+      "target_lines": [
+        144
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/interfaces-bsd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 363,
+      "old_count": 4,
+      "new_start": 363,
+      "new_count": 2,
+      "target_lines": [
+        363,
+        366
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/interfaces-bsd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 588,
+      "old_count": 3,
+      "new_start": 589,
+      "new_count": 4,
+      "target_lines": [
+        588,
+        589,
+        590
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/interfaces-bsd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 622,
+      "old_count": 0,
+      "new_start": 627,
+      "new_count": 11,
+      "target_lines": [
+        622,
+        623
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/interfaces-bsd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 627,
+      "old_count": 0,
+      "new_start": 643,
+      "new_count": 1,
+      "target_lines": [
+        627,
+        628
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/interfaces-bsd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 643,
+      "old_count": 3,
+      "new_start": 660,
+      "new_count": 4,
+      "target_lines": [
+        643,
+        644,
+        645
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/lldpd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1824,
+      "old_count": 1,
+      "new_start": 1824,
+      "new_count": 15,
+      "target_lines": [
+        1824
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/lldpd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 1914,
+      "old_count": 0,
+      "new_start": 1929,
+      "new_count": 27,
+      "target_lines": [
+        1914,
+        1915
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/lldpd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1950,
+      "old_count": 4,
+      "new_start": 1991,
+      "new_count": 5,
+      "target_lines": [
+        1950,
+        1951,
+        1952,
+        1953
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/lldpd.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 216,
+      "old_count": 0,
+      "new_start": 217,
+      "new_count": 5,
+      "target_lines": [
+        216,
+        217
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/lldpd.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 228,
+      "old_count": 0,
+      "new_start": 234,
+      "new_count": 3,
+      "target_lines": [
+        228,
+        229
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/lldpd.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 393,
+      "old_count": 0,
+      "new_start": 402,
+      "new_count": 4,
+      "target_lines": [
+        393,
+        394
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/priv-bsd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 105,
+      "old_count": 1,
+      "new_start": 105,
+      "new_count": 1,
+      "target_lines": [
+        105
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/priv-bsd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 112,
+      "old_count": 0,
+      "new_start": 113,
+      "new_count": 8,
+      "target_lines": [
+        112,
+        113
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/priv.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 39,
+      "old_count": 0,
+      "new_start": 40,
+      "new_count": 1,
+      "target_lines": [
+        39,
+        40
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        55
+      ]
+    },
+    {
+      "file": "src/daemon/priv.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 46,
+      "old_count": 1,
+      "new_start": 47,
+      "new_count": 1,
+      "target_lines": [
+        46
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        55
+      ]
+    },
+    {
+      "file": "src/daemon/priv.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 190,
+      "old_count": 0,
+      "new_start": 192,
+      "new_count": 105,
+      "target_lines": [
+        190,
+        191
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/priv.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 265,
+      "old_count": 1,
+      "new_start": 371,
+      "new_count": 1,
+      "target_lines": [
+        265
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/priv.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 326,
+      "old_count": 0,
+      "new_start": 433,
+      "new_count": 53,
+      "target_lines": [
+        326,
+        327
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/priv.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 394,
+      "old_count": 1,
+      "new_start": 553,
+      "new_count": 5,
+      "target_lines": [
+        394
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 3,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/ethtool.h",
+      "line": 16,
+      "col": 1,
+      "message": "Linux kernel header <linux/kernel.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/ethtool.h",
+      "line": 18,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/ethtool.h",
+      "line": 19,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_ether.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/filter.h",
+      "line": 8,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/filter.h",
+      "line": 11,
+      "col": 1,
+      "message": "Linux kernel header <linux/bpf_common.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/if.h",
+      "line": 22,
+      "col": 1,
+      "message": "Linux kernel header <linux/libc-compat.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/if.h",
+      "line": 24,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/if.h",
+      "line": 25,
+      "col": 1,
+      "message": "Linux kernel header <linux/socket.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/if.h",
+      "line": 34,
+      "col": 1,
+      "message": "Linux kernel header <linux/hdlc/ioctl.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/if_addr.h",
+      "line": 4,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/if_addr.h",
+      "line": 6,
+      "col": 1,
+      "message": "Linux kernel header <linux/netlink.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/if_bonding.h",
+      "line": 46,
+      "col": 1,
+      "message": "Linux kernel header <linux/if.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/if_bonding.h",
+      "line": 48,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/if_bonding.h",
+      "line": 49,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_ether.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/if_bridge.h",
+      "line": 16,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/if_bridge.h",
+      "line": 18,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_ether.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/if_ether.h",
+      "line": 24,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/if_link.h",
+      "line": 4,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/if_link.h",
+      "line": 6,
+      "col": 1,
+      "message": "Linux kernel header <linux/netlink.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/if_packet.h",
+      "line": 4,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/kernel.h",
+      "line": 4,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/neighbour.h",
+      "line": 4,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/neighbour.h",
+      "line": 6,
+      "col": 1,
+      "message": "Linux kernel header <linux/netlink.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/netlink.h",
+      "line": 4,
+      "col": 1,
+      "message": "Linux kernel header <linux/kernel.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/netlink.h",
+      "line": 6,
+      "col": 1,
+      "message": "Linux kernel header <linux/socket.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/netlink.h",
+      "line": 7,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/rtnetlink.h",
+      "line": 4,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/rtnetlink.h",
+      "line": 6,
+      "col": 1,
+      "message": "Linux kernel header <linux/netlink.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/rtnetlink.h",
+      "line": 7,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_link.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/rtnetlink.h",
+      "line": 8,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_addr.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/rtnetlink.h",
+      "line": 9,
+      "col": 1,
+      "message": "Linux kernel header <linux/neighbour.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/types.h",
+      "line": 8,
+      "col": 1,
+      "message": "Linux kernel header <linux/posix_types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/wireless.h",
+      "line": 13,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/wireless.h",
+      "line": 74,
+      "col": 1,
+      "message": "Linux kernel header <linux/socket.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "include/linux/wireless.h",
+      "line": 75,
+      "col": 1,
+      "message": "Linux kernel header <linux/if.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/daemon/interfaces-linux.c",
+      "line": 30,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_vlan.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/daemon/interfaces-linux.c",
+      "line": 31,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_bonding.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/daemon/interfaces-linux.c",
+      "line": 32,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_bridge.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/daemon/interfaces-linux.c",
+      "line": 33,
+      "col": 1,
+      "message": "Linux kernel header <linux/wireless.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/daemon/interfaces-linux.c",
+      "line": 34,
+      "col": 1,
+      "message": "Linux kernel header <linux/sockios.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/daemon/interfaces-linux.c",
+      "line": 35,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_packet.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/daemon/interfaces-linux.c",
+      "line": 36,
+      "col": 1,
+      "message": "Linux kernel header <linux/ethtool.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "src/daemon/interfaces-linux.c",
+      "line": 309,
+      "col": 38,
+      "message": "Linux /proc path \"/proc/net/bonding/%s\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "src/daemon/interfaces-linux.c",
+      "line": 315,
+      "col": 39,
+      "message": "Linux /proc path \"/proc/self/net/bonding/%s\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "src/daemon/lldpd.h",
+      "line": 64,
+      "col": 25,
+      "message": "Linux /proc path \"/proc/sys/net/\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/daemon/netlink.c",
+      "line": 26,
+      "col": 1,
+      "message": "Linux kernel header <linux/netlink.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/daemon/netlink.c",
+      "line": 27,
+      "col": 1,
+      "message": "Linux kernel header <linux/rtnetlink.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/daemon/netlink.c",
+      "line": 28,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_bridge.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/daemon/priv-linux.c",
+      "line": 33,
+      "col": 1,
+      "message": "Linux kernel header <linux/filter.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/daemon/priv-linux.c",
+      "line": 34,
+      "col": 1,
+      "message": "Linux kernel header <linux/sockios.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/daemon/priv-linux.c",
+      "line": 35,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_ether.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/daemon/priv-linux.c",
+      "line": 36,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_packet.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/daemon/priv-linux.c",
+      "line": 37,
+      "col": 1,
+      "message": "Linux kernel header <linux/ethtool.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "src/daemon/priv-linux.c",
+      "line": 111,
+      "col": 8,
+      "message": "Linux /proc path \"/proc/net/bonding/[^/]*\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "src/daemon/priv-linux.c",
+      "line": 112,
+      "col": 8,
+      "message": "Linux /proc path \"/proc/self/net/bonding/[^/]*\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PRCTL",
+      "severity": "error",
+      "file": "src/daemon/priv.c",
+      "line": 43,
+      "col": 1,
+      "message": "Linux prctl header <sys/prctl.h>",
+      "suggestion": "prctl() is not in the QNX 8.0 C Library Reference. For PR_SET_NAME use pthread_setname_np(); other prctl options: manual review.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_setname_np.html",
+      "confidence": "medium",
+      "matched_sites": [
+        19,
+        20
+      ]
+    },
+    {
+      "rule_id": "LNX-PRCTL",
+      "severity": "error",
+      "file": "src/daemon/priv.c",
+      "line": 674,
+      "col": 6,
+      "message": "Linux prctl API prctl()",
+      "suggestion": "prctl() is not in the QNX 8.0 C Library Reference. For PR_SET_NAME use pthread_setname_np(); other prctl options: manual review.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_setname_np.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/lldpd-structs.h",
+      "line": 32,
+      "col": 1,
+      "message": "Linux kernel header <linux/if.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 25,
+    "sites_by_category": {
+      "source": 22,
+      "build": 3,
+      "other": 0
+    },
+    "sites_source_nontest": 22,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 2,
+    "sites_hit_by_category": {
+      "source": 2,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0909,
+    "recall_source_nontest": 0.0909,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.08,
+    "findings_total": 58,
+    "findings_tp": 1,
+    "findings_by_category": {
+      "source": 58,
+      "build": 0,
+      "other": 0
+    },
+    "findings_in_patched_files": 3,
+    "findings_tp_in_patched_files": 1,
+    "precision": 0.0172,
+    "precision_in_patched_files": 0.3333
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  }
+}

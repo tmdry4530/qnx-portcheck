@@ -1,0 +1,453 @@
+{
+  "label": "FAKE-SCAN",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T12:34:18.970538+09:00",
+  "project": {
+    "name": "gnutls",
+    "upstream": "https://github.com/gnutls/gnutls",
+    "upstream_base_ref": "3.6.15",
+    "upstream_base_sha": "5dd9a55040da54371807471bf3169d7a9a1f527e",
+    "qnx_repo": "https://github.com/qnx-ports/gnutls",
+    "qnx_branch": "qnx-3.6.15",
+    "qnx_head_sha": "b57078e47bee94beb27cb81452c75bec298ed327",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
+  "durations": {
+    "fetch": 0.0034758829860948026,
+    "scan": 0.6204354670189787
+  },
+  "diff_stats": {
+    "files_changed": 1,
+    "compare_files_expected": 1,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "src/tests.c"
+  ],
+  "sites": [
+    {
+      "file": "src/tests.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 679,
+      "old_count": 0,
+      "new_start": 680,
+      "new_count": 1,
+      "target_lines": [
+        679,
+        680
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/tests.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 684,
+      "old_count": 0,
+      "new_start": 686,
+      "new_count": 1,
+      "target_lines": [
+        684,
+        685
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/tests.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 700,
+      "old_count": 0,
+      "new_start": 703,
+      "new_count": 1,
+      "target_lines": [
+        700,
+        701
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/tests.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 707,
+      "old_count": 0,
+      "new_start": 711,
+      "new_count": 1,
+      "target_lines": [
+        707,
+        708
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/tests.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 713,
+      "old_count": 0,
+      "new_start": 718,
+      "new_count": 2,
+      "target_lines": [
+        713,
+        714
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/tests.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 720,
+      "old_count": 0,
+      "new_start": 727,
+      "new_count": 1,
+      "target_lines": [
+        720,
+        721
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 0,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/nettle/sysrng-linux.c",
+      "line": 55,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/nettle/sysrng-linux.c",
+      "line": 181,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 8,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/state.c",
+      "line": 592,
+      "message": "FAKE scanner token hit: MSG_NOSIGNAL",
+      "rule_id": "FAKE-MSG-NOSIGNAL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 8,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/fastopen.c",
+      "line": 237,
+      "message": "FAKE scanner token hit: MSG_NOSIGNAL",
+      "rule_id": "FAKE-MSG-NOSIGNAL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 35,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/fastopen.c",
+      "line": 239,
+      "message": "FAKE scanner token hit: MSG_NOSIGNAL",
+      "rule_id": "FAKE-MSG-NOSIGNAL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 8,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/sockets.c",
+      "line": 106,
+      "message": "FAKE scanner token hit: MSG_NOSIGNAL",
+      "rule_id": "FAKE-MSG-NOSIGNAL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 47,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/sockets.c",
+      "line": 111,
+      "message": "FAKE scanner token hit: MSG_NOSIGNAL",
+      "rule_id": "FAKE-MSG-NOSIGNAL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 30,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/Makefile.am",
+      "line": 268,
+      "message": "FAKE scanner token hit: -lpthread",
+      "rule_id": "FAKE-LPTHREAD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 36,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/Makefile.am",
+      "line": 269,
+      "message": "FAKE scanner token hit: -lpthread",
+      "rule_id": "FAKE-LPTHREAD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 31,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/Makefile.am",
+      "line": 270,
+      "message": "FAKE scanner token hit: -lpthread",
+      "rule_id": "FAKE-LPTHREAD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 30,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/Makefile.am",
+      "line": 271,
+      "message": "FAKE scanner token hit: -lpthread",
+      "rule_id": "FAKE-LPTHREAD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 48,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/Makefile.am",
+      "line": 392,
+      "message": "FAKE scanner token hit: -lpthread",
+      "rule_id": "FAKE-LPTHREAD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 14,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/keylog-func.c",
+      "line": 31,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/no-signal.c",
+      "line": 48,
+      "message": "FAKE scanner token hit: MSG_NOSIGNAL",
+      "rule_id": "FAKE-MSG-NOSIGNAL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 12,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/no-signal.c",
+      "line": 243,
+      "message": "FAKE scanner token hit: MSG_NOSIGNAL",
+      "rule_id": "FAKE-MSG-NOSIGNAL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 14,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/rng-no-onload.c",
+      "line": 35,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 74,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/rng-sigint.c",
+      "line": 32,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/seccomp.c",
+      "line": 29,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 28,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/suite/Makefile.am",
+      "line": 83,
+      "message": "FAKE scanner token hit: -lrt",
+      "rule_id": "FAKE-LRT",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 34,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/suite/Makefile.am",
+      "line": 85,
+      "message": "FAKE scanner token hit: -lrt",
+      "rule_id": "FAKE-LRT",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 52,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/suite/Makefile.am",
+      "line": 85,
+      "message": "FAKE scanner token hit: -lpthread",
+      "rule_id": "FAKE-LPTHREAD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 14,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/tls13/prf-early.c",
+      "line": 28,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 14,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "tests/tls13/prf.c",
+      "line": 27,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 6,
+    "sites_by_category": {
+      "source": 6,
+      "build": 0,
+      "other": 0
+    },
+    "sites_source_nontest": 6,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": null,
+    "recall_in_scope": 0.0,
+    "findings_total": 23,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 15,
+      "build": 8,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "fake-scan",
+    "version": "0.0.0-fake"
+  }
+}

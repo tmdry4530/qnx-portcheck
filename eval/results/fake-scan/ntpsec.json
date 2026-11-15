@@ -1,0 +1,926 @@
+{
+  "label": "FAKE-SCAN",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T12:34:21.876789+09:00",
+  "project": {
+    "name": "ntpsec",
+    "upstream": "https://github.com/ntpsec/ntpsec",
+    "upstream_base_ref": "master",
+    "upstream_base_sha": "39b19ff71b785452e2c49033dad8e18a0e95a1ae",
+    "qnx_repo": "https://github.com/qnx-ports/ntpsec",
+    "qnx_branch": "master",
+    "qnx_head_sha": "a144accf831d03c5599ea2b45b02f98de89412e2",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
+  "durations": {
+    "fetch": 0.004313886980526149,
+    "scan": 0.15758217999245971
+  },
+  "diff_stats": {
+    "files_changed": 9,
+    "compare_files_expected": 9,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "include/ntp_syscall.h",
+    "include/ntp_types.h",
+    "libntp/clockwork.c",
+    "libntp/ntp_c.c",
+    "libntp/statestr.c",
+    "ntpd/ntp_control.c",
+    "ntpd/ntp_loopfilter.c",
+    "tests/libntp/statestr.c",
+    "wscript"
+  ],
+  "sites": [
+    {
+      "file": "include/ntp_syscall.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 12,
+      "old_count": 4,
+      "new_start": 13,
+      "new_count": 7,
+      "target_lines": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "hunks": 3,
+      "matched_findings": []
+    },
+    {
+      "file": "include/ntp_types.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 50,
+      "old_count": 3,
+      "new_start": 50,
+      "new_count": 2,
+      "target_lines": [
+        50,
+        51,
+        52
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "libntp/clockwork.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 8,
+      "old_count": 3,
+      "new_start": 9,
+      "new_count": 2,
+      "target_lines": [
+        8,
+        9,
+        10
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "libntp/ntp_c.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 92,
+      "old_count": 3,
+      "new_start": 93,
+      "new_count": 5,
+      "target_lines": [
+        92,
+        93,
+        94
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "libntp/statestr.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 191,
+      "old_count": 0,
+      "new_start": 192,
+      "new_count": 1,
+      "target_lines": [
+        191,
+        192
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "libntp/statestr.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 216,
+      "old_count": 0,
+      "new_start": 218,
+      "new_count": 1,
+      "target_lines": [
+        216,
+        217
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "libntp/statestr.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 318,
+      "old_count": 11,
+      "new_start": 320,
+      "new_count": 16,
+      "target_lines": [
+        318,
+        319,
+        320,
+        321,
+        322,
+        323,
+        324,
+        325,
+        326,
+        328
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "libntp/statestr.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "delete",
+      "old_start": 362,
+      "old_count": 1,
+      "new_start": 369,
+      "new_count": 0,
+      "target_lines": [
+        362
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "libntp/statestr.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 367,
+      "old_count": 3,
+      "new_start": 375,
+      "new_count": 6,
+      "target_lines": [
+        367,
+        368,
+        369
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_control.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 39,
+      "old_count": 3,
+      "new_start": 40,
+      "new_count": 2,
+      "target_lines": [
+        39,
+        40,
+        41
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_control.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 384,
+      "old_count": 0,
+      "new_start": 387,
+      "new_count": 1,
+      "target_lines": [
+        384,
+        385
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_control.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 402,
+      "old_count": 1,
+      "new_start": 405,
+      "new_count": 1,
+      "target_lines": [
+        402
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_control.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 1404,
+      "old_count": 3,
+      "new_start": 1408,
+      "new_count": 2,
+      "target_lines": [
+        1404,
+        1405,
+        1406
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_control.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 1417,
+      "old_count": 0,
+      "new_start": 1423,
+      "new_count": 1,
+      "target_lines": [
+        1417,
+        1418
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_control.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 1424,
+      "old_count": 0,
+      "new_start": 1431,
+      "new_count": 1,
+      "target_lines": [
+        1424,
+        1425
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 133,
+      "old_count": 9,
+      "new_start": 134,
+      "new_count": 4,
+      "target_lines": [
+        133,
+        134,
+        135,
+        136,
+        138,
+        139,
+        140,
+        141
+      ],
+      "hunks": 4,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 156,
+      "old_count": 3,
+      "new_start": 161,
+      "new_count": 2,
+      "target_lines": [
+        156,
+        157,
+        158
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 174,
+      "old_count": 0,
+      "new_start": 181,
+      "new_count": 1,
+      "target_lines": [
+        174,
+        175
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 201,
+      "old_count": 0,
+      "new_start": 209,
+      "new_count": 1,
+      "target_lines": [
+        201,
+        202
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 218,
+      "old_count": 0,
+      "new_start": 227,
+      "new_count": 1,
+      "target_lines": [
+        218,
+        219
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 414,
+      "old_count": 1,
+      "new_start": 423,
+      "new_count": 1,
+      "target_lines": [
+        414
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 446,
+      "old_count": 3,
+      "new_start": 456,
+      "new_count": 2,
+      "target_lines": [
+        446,
+        447,
+        448
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 488,
+      "old_count": 1,
+      "new_start": 499,
+      "new_count": 6,
+      "target_lines": [
+        488
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 644,
+      "old_count": 1,
+      "new_start": 660,
+      "new_count": 5,
+      "target_lines": [
+        644
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 718,
+      "old_count": 0,
+      "new_start": 739,
+      "new_count": 1,
+      "target_lines": [
+        718,
+        719
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 812,
+      "old_count": 0,
+      "new_start": 834,
+      "new_count": 1,
+      "target_lines": [
+        812,
+        813
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 961,
+      "old_count": 1,
+      "new_start": 983,
+      "new_count": 6,
+      "target_lines": [
+        961
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 1026,
+      "old_count": 0,
+      "new_start": 1054,
+      "new_count": 1,
+      "target_lines": [
+        1026,
+        1027
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 1038,
+      "old_count": 6,
+      "new_start": 1067,
+      "new_count": 2,
+      "target_lines": [
+        1038,
+        1039,
+        1042,
+        1043
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1078,
+      "old_count": 1,
+      "new_start": 1108,
+      "new_count": 1,
+      "target_lines": [
+        1078
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 1102,
+      "old_count": 3,
+      "new_start": 1133,
+      "new_count": 2,
+      "target_lines": [
+        1102,
+        1103,
+        1104
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "ntpd/ntp_loopfilter.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 1161,
+      "old_count": 3,
+      "new_start": 1193,
+      "new_count": 2,
+      "target_lines": [
+        1161,
+        1162,
+        1163
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/libntp/statestr.c",
+      "category": "source",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 7,
+      "old_count": 1,
+      "new_start": 7,
+      "new_count": 3,
+      "target_lines": [
+        7
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/libntp/statestr.c",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 32,
+      "old_count": 6,
+      "new_start": 35,
+      "new_count": 2,
+      "target_lines": [
+        32,
+        33,
+        36,
+        37
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/libntp/statestr.c",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 69,
+      "old_count": 3,
+      "new_start": 74,
+      "new_count": 2,
+      "target_lines": [
+        69,
+        70,
+        71
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "wscript",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 255,
+      "old_count": 1,
+      "new_start": 255,
+      "new_count": 4,
+      "target_lines": [
+        255
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "wscript",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 543,
+      "old_count": 1,
+      "new_start": 546,
+      "new_count": 1,
+      "target_lines": [
+        543
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "wscript",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 578,
+      "old_count": 3,
+      "new_start": 581,
+      "new_count": 10,
+      "target_lines": [
+        578,
+        579,
+        580
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "wscript",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 708,
+      "old_count": 1,
+      "new_start": 718,
+      "new_count": 2,
+      "target_lines": [
+        708
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 4,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "attic/timestamp-info.c",
+      "line": 22,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "attic/timestamp-info.c",
+      "line": 47,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 8,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "attic/timestamp-info.c",
+      "line": 190,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "attic/timestamp-info.c",
+      "line": 199,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 12,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "attic/timestamp-info.c",
+      "line": 205,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 57,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "attic/tls-tester.c",
+      "line": 25,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 57,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "attic/tls-tester.c",
+      "line": 26,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 42,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/ntp_net.h",
+      "line": 19,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 43,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/ntp_net.h",
+      "line": 20,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 12,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libntp/isc_interfaceiter.c",
+      "line": 37,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "ntpd/ntp_io.c",
+      "line": 32,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 17,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "ntpd/ntp_sandbox.c",
+      "line": 25,
+      "message": "FAKE scanner token hit: prctl",
+      "rule_id": "FAKE-PRCTL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 7,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "ntpd/ntp_sandbox.c",
+      "line": 88,
+      "message": "FAKE scanner token hit: prctl",
+      "rule_id": "FAKE-PRCTL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 29,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "ntpd/ntp_sandbox.c",
+      "line": 89,
+      "message": "FAKE scanner token hit: prctl",
+      "rule_id": "FAKE-PRCTL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "ntpd/refclock_generic.c",
+      "line": 101,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 7,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "ntpd/refclock_generic.c",
+      "line": 5612,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 39,
+    "sites_by_category": {
+      "source": 35,
+      "build": 4,
+      "other": 0
+    },
+    "sites_source_nontest": 32,
+    "sites_source_test": 3,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.0,
+    "findings_total": 16,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 16,
+      "build": 0,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "fake-scan",
+    "version": "0.0.0-fake"
+  }
+}

@@ -1,0 +1,536 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T13:20:24.761181+09:00",
+  "project": {
+    "name": "avahi",
+    "upstream": "https://github.com/avahi/avahi",
+    "upstream_base_ref": "master",
+    "upstream_base_sha": "4294bbff57cbddbbe3cfd2bbde34823277eb8723",
+    "qnx_repo": "https://github.com/qnx-ports/avahi",
+    "qnx_branch": "qnx-0.9.x",
+    "qnx_head_sha": "7bf7222d4dc6b0a8a23b4a3be52658a8389ff9ff",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "511aa2e",
+  "durations": {
+    "fetch": 0.0033145209890790284,
+    "scan": 3.196412281016819
+  },
+  "diff_stats": {
+    "files_changed": 5,
+    "compare_files_expected": 5,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "avahi-common/Makefile.am",
+    "avahi-compat-howl/include/salt/platform.h",
+    "avahi-daemon/main.c",
+    "avahi-utils/sigint.c",
+    "initscript/gentoo/avahi-daemon.in"
+  ],
+  "sites": [
+    {
+      "file": "avahi-common/Makefile.am",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 22,
+      "old_count": 0,
+      "new_start": 23,
+      "new_count": 4,
+      "target_lines": [
+        22,
+        23
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "avahi-compat-howl/include/salt/platform.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 80,
+      "old_count": 1,
+      "new_start": 80,
+      "new_count": 5,
+      "target_lines": [
+        80
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "avahi-daemon/main.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 92,
+      "old_count": 0,
+      "new_start": 93,
+      "new_count": 4,
+      "target_lines": [
+        92,
+        93
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "avahi-utils/sigint.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 34,
+      "old_count": 0,
+      "new_start": 35,
+      "new_count": 4,
+      "target_lines": [
+        34,
+        35
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "initscript/gentoo/avahi-daemon.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 10,
+      "old_count": 1,
+      "new_start": 10,
+      "new_count": 1,
+      "target_lines": [
+        10
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 1,
+    "other_sites": 1,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "avahi-autoipd/iface-linux.c",
+      "line": 29,
+      "col": 1,
+      "message": "Linux kernel header <linux/types.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "avahi-autoipd/iface-linux.c",
+      "line": 31,
+      "col": 1,
+      "message": "Linux kernel header <linux/netlink.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "avahi-autoipd/iface-linux.c",
+      "line": 32,
+      "col": 1,
+      "message": "Linux kernel header <linux/rtnetlink.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "avahi-autoipd/iface-linux.c",
+      "line": 33,
+      "col": 1,
+      "message": "Linux kernel header <linux/if.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "avahi-autoipd/iface-linux.c",
+      "line": 34,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_arp.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "avahi-autoipd/iface-linux.c",
+      "line": 42,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_addr.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "avahi-autoipd/iface-linux.c",
+      "line": 47,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_addr.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "avahi-autoipd/main.c",
+      "line": 37,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "avahi-autoipd/main.c",
+      "line": 64,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "avahi-autoipd/main.c",
+      "line": 289,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "avahi-autoipd/main.c",
+      "line": 452,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "avahi-compat-libdns_sd/warn.c",
+      "line": 50,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "avahi-compat-libdns_sd/warn.c",
+      "line": 62,
+      "col": 28,
+      "message": "Linux /proc path \"/proc/self/exe\"",
+      "suggestion": "Linux /proc/self/exe does not exist on QNX 8.0; procnto exposes /proc/<pid>/exefile (the path of the executable file used to run the process). Note QNX docs say /proc is for debugging, not production monitoring.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "avahi-core/domain-util.c",
+      "line": 53,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "avahi-core/domain-util.c",
+      "line": 124,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "avahi-core/iface-linux.c",
+      "line": 36,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_addr.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "avahi-core/iface-linux.c",
+      "line": 41,
+      "col": 1,
+      "message": "Linux kernel header <linux/if_addr.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "avahi-core/netlink.h",
+      "line": 26,
+      "col": 1,
+      "message": "Linux kernel header <linux/netlink.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "avahi-core/netlink.h",
+      "line": 28,
+      "col": 1,
+      "message": "Linux kernel header <linux/rtnetlink.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PRCTL",
+      "severity": "error",
+      "file": "avahi-daemon/caps.c",
+      "line": 29,
+      "col": 1,
+      "message": "Linux prctl header <sys/prctl.h>",
+      "suggestion": "prctl() is not in the QNX 8.0 C Library Reference. For PR_SET_NAME use pthread_setname_np(); other prctl options: manual review.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_setname_np.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PRCTL",
+      "severity": "error",
+      "file": "avahi-daemon/caps.c",
+      "line": 58,
+      "col": 9,
+      "message": "Linux prctl API prctl()",
+      "suggestion": "prctl() is not in the QNX 8.0 C Library Reference. For PR_SET_NAME use pthread_setname_np(); other prctl options: manual review.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_setname_np.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PRCTL",
+      "severity": "error",
+      "file": "avahi-daemon/caps.c",
+      "line": 76,
+      "col": 9,
+      "message": "Linux prctl API prctl()",
+      "suggestion": "prctl() is not in the QNX 8.0 C Library Reference. For PR_SET_NAME use pthread_setname_np(); other prctl options: manual review.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_setname_np.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-INOTIFY",
+      "severity": "note",
+      "file": "avahi-daemon/main.c",
+      "line": 47,
+      "col": 1,
+      "message": "Linux inotify header <sys/inotify.h>",
+      "suggestion": "inotify_init()/inotify_add_watch() exist in QNX 8.0 in libfsnotify: link with -l fsnotify; the fsevmgr filesystem event manager service must be running (FSNOTIFY_PREFIX must match).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/inotify_init.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-INOTIFY",
+      "severity": "note",
+      "file": "avahi-daemon/main.c",
+      "line": 948,
+      "col": 5,
+      "message": "Linux inotify API inotify_add_watch()",
+      "suggestion": "inotify_init()/inotify_add_watch() exist in QNX 8.0 in libfsnotify: link with -l fsnotify; the fsevmgr filesystem event manager service must be running (FSNOTIFY_PREFIX must match).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/inotify_init.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-INOTIFY",
+      "severity": "note",
+      "file": "avahi-daemon/main.c",
+      "line": 953,
+      "col": 5,
+      "message": "Linux inotify API inotify_add_watch()",
+      "suggestion": "inotify_init()/inotify_add_watch() exist in QNX 8.0 in libfsnotify: link with -l fsnotify; the fsevmgr filesystem event manager service must be running (FSNOTIFY_PREFIX must match).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/inotify_init.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-INOTIFY",
+      "severity": "note",
+      "file": "avahi-daemon/main.c",
+      "line": 1231,
+      "col": 23,
+      "message": "Linux inotify API inotify_init()",
+      "suggestion": "inotify_init()/inotify_add_watch() exist in QNX 8.0 in libfsnotify: link with -l fsnotify; the fsevmgr filesystem event manager service must be running (FSNOTIFY_PREFIX must match).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/inotify_init.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PRCTL",
+      "severity": "error",
+      "file": "avahi-daemon/setproctitle.c",
+      "line": 31,
+      "col": 1,
+      "message": "Linux prctl header <sys/prctl.h>",
+      "suggestion": "prctl() is not in the QNX 8.0 C Library Reference. For PR_SET_NAME use pthread_setname_np(); other prctl options: manual review.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_setname_np.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "avahi-daemon/setproctitle.c",
+      "line": 38,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "avahi-daemon/setproctitle.c",
+      "line": 50,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "avahi-daemon/setproctitle.c",
+      "line": 88,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PRCTL",
+      "severity": "error",
+      "file": "avahi-daemon/setproctitle.c",
+      "line": 108,
+      "col": 9,
+      "message": "Linux prctl API prctl()",
+      "suggestion": "prctl() is not in the QNX 8.0 C Library Reference. For PR_SET_NAME use pthread_setname_np(); other prctl options: manual review.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_setname_np.html",
+      "confidence": "high",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 5,
+    "sites_by_category": {
+      "source": 3,
+      "build": 1,
+      "other": 1
+    },
+    "sites_source_nontest": 3,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.0,
+    "findings_total": 31,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 31,
+      "build": 0,
+      "other": 0
+    },
+    "findings_in_patched_files": 4,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": 0.0
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  }
+}

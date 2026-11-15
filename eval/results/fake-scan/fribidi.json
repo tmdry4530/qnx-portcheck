@@ -1,0 +1,98 @@
+{
+  "label": "FAKE-SCAN",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T12:34:24.470920+09:00",
+  "project": {
+    "name": "fribidi",
+    "upstream": "https://github.com/fribidi/fribidi",
+    "upstream_base_ref": "v1.0.16",
+    "upstream_base_sha": "68162babff4f39c4e2dc164a5e825af93bda9983",
+    "qnx_repo": "https://github.com/qnx-ports/fribidi",
+    "qnx_branch": "qnx_v1.0.16",
+    "qnx_head_sha": "3297df003a0d1dc86278a9da2481b8594e543719",
+    "expected_scope": "build-only",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
+  "durations": {
+    "fetch": 0.0027701349754352123,
+    "scan": 0.05969807301880792
+  },
+  "diff_stats": {
+    "files_changed": 1,
+    "compare_files_expected": 1,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "meson.build"
+  ],
+  "sites": [
+    {
+      "file": "meson.build",
+      "category": "build",
+      "is_test": false,
+      "kind": "delete",
+      "old_start": 24,
+      "old_count": 4,
+      "new_start": 23,
+      "new_count": 0,
+      "target_lines": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 1,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [],
+  "metrics": {
+    "sites_total": 1,
+    "sites_by_category": {
+      "source": 0,
+      "build": 1,
+      "other": 0
+    },
+    "sites_source_nontest": 0,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": null,
+    "recall_source_nontest": null,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.0,
+    "findings_total": 0,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": null,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "fake-scan",
+    "version": "0.0.0-fake"
+  }
+}

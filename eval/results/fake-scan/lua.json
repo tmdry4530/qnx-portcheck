@@ -1,0 +1,352 @@
+{
+  "label": "FAKE-SCAN",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T12:34:21.388266+09:00",
+  "project": {
+    "name": "lua",
+    "upstream": "https://github.com/lua/lua",
+    "upstream_base_ref": "master",
+    "upstream_base_sha": "cb88c1cd5d22fe7c56f4f374ded7c16f7cf14bf3",
+    "qnx_repo": "https://github.com/qnx-ports/lua",
+    "qnx_branch": "qnx_v5.5",
+    "qnx_head_sha": "12b3c3b66e473b2ff65309abcce3e5d7574930b4",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
+  "durations": {
+    "fetch": 0.0028643270197790116,
+    "scan": 0.07645760598825291
+  },
+  "diff_stats": {
+    "files_changed": 9,
+    "compare_files_expected": 9,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "lstrlib.c",
+    "ltests.h",
+    "luaconf.h",
+    "paths did not change",
+    "testes/all.lua",
+    "testes/errors.lua",
+    "testes/files.lua",
+    "testes/strings.lua"
+  ],
+  "sites": [
+    {
+      "file": "lstrlib.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 1311,
+      "old_count": 3,
+      "new_start": 1312,
+      "new_count": 5,
+      "target_lines": [
+        1311,
+        1312,
+        1313
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "ltests.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 165,
+      "old_count": 1,
+      "new_start": 165,
+      "new_count": 1,
+      "target_lines": [
+        165
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "luaconf.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 75,
+      "old_count": 0,
+      "new_start": 76,
+      "new_count": 5,
+      "target_lines": [
+        75,
+        76
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "luaconf.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 241,
+      "old_count": 6,
+      "new_start": 247,
+      "new_count": 2,
+      "target_lines": [
+        241,
+        242,
+        245,
+        246
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "luaconf.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 815,
+      "old_count": 4,
+      "new_start": 823,
+      "new_count": 23,
+      "target_lines": [
+        815,
+        816,
+        817,
+        818
+      ],
+      "hunks": 3,
+      "matched_findings": []
+    },
+    {
+      "file": "testes/all.lua",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 23,
+      "old_count": 1,
+      "new_start": 23,
+      "new_count": 1,
+      "target_lines": [
+        23
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "testes/errors.lua",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 601,
+      "old_count": 2,
+      "new_start": 601,
+      "new_count": 2,
+      "target_lines": [
+        601,
+        602
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "testes/errors.lua",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 681,
+      "old_count": 3,
+      "new_start": 681,
+      "new_count": 2,
+      "target_lines": [
+        681,
+        683
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "testes/files.lua",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 86,
+      "old_count": 1,
+      "new_start": 86,
+      "new_count": 1,
+      "target_lines": [
+        86
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "paths did not change",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 188,
+      "old_count": 5,
+      "new_start": 188,
+      "new_count": 6,
+      "target_lines": [
+        188,
+        189,
+        190,
+        191,
+        192
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "testes/strings.lua",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 97,
+      "old_count": 3,
+      "new_start": 97,
+      "new_count": 3,
+      "target_lines": [
+        97,
+        98,
+        99
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "testes/strings.lua",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 109,
+      "old_count": 1,
+      "new_start": 109,
+      "new_count": 1,
+      "target_lines": [
+        109
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "testes/strings.lua",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 203,
+      "old_count": 2,
+      "new_start": 203,
+      "new_count": 2,
+      "target_lines": [
+        203,
+        204
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "testes/strings.lua",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 441,
+      "old_count": 1,
+      "new_start": 441,
+      "new_count": 1,
+      "target_lines": [
+        441
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "testes/strings.lua",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 445,
+      "old_count": 4,
+      "new_start": 445,
+      "new_count": 4,
+      "target_lines": [
+        445,
+        446,
+        447,
+        448
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [
+      {
+        "path": "testes/libs/makefile.qnx",
+        "category": "other",
+        "added_lines": 27
+      }
+    ],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 0,
+    "other_sites": 10,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "makefile",
+      "line": 76,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 15,
+    "sites_by_category": {
+      "source": 5,
+      "build": 0,
+      "other": 10
+    },
+    "sites_source_nontest": 5,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": null,
+    "recall_in_scope": 0.0,
+    "findings_total": 1,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 0,
+      "build": 1,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "fake-scan",
+    "version": "0.0.0-fake"
+  }
+}

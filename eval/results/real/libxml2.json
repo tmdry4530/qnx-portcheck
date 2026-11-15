@@ -1,0 +1,160 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T13:38:21.848905+09:00",
+  "project": {
+    "name": "libxml2",
+    "upstream": "https://github.com/GNOME/libxml2",
+    "upstream_base_ref": "v2.13.5",
+    "upstream_base_sha": "de918d45e1b2276a28a4cd32bcf556bef65284e4",
+    "qnx_repo": "https://github.com/qnx-ports/libxml2",
+    "qnx_branch": "qnx-2.13.5",
+    "qnx_head_sha": "235a060dec5c9413f4f7d4f81109a5117dbc27a1",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "511aa2e",
+  "durations": {
+    "fetch": 0.016796520998468623,
+    "scan": 94.05290720501216
+  },
+  "diff_stats": {
+    "files_changed": 1,
+    "compare_files_expected": 1,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "SAX2.c"
+  ],
+  "sites": [
+    {
+      "file": "SAX2.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 431,
+      "old_count": 4,
+      "new_start": 432,
+      "new_count": 5,
+      "target_lines": [
+        431,
+        432,
+        433,
+        434
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 0,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 341,
+      "col": 47,
+      "message": "Linux link library 'dl'",
+      "suggestion": "On QNX 8.0 dlopen() is documented in libc, which qcc usually links automatically; drop or guard libdl for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/d/dlopen.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 342,
+      "col": 35,
+      "message": "Linux link library '-ldl'",
+      "suggestion": "On QNX 8.0 dlopen() is documented in libc, which qcc usually links automatically; drop or guard libdl for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/d/dlopen.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "meson.build",
+      "line": 406,
+      "col": 34,
+      "message": "Linux link library 'dl'",
+      "suggestion": "On QNX 8.0 dlopen() is documented in libc, which qcc usually links automatically; drop or guard libdl for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/d/dlopen.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "meson.build",
+      "line": 408,
+      "col": 39,
+      "message": "Linux link library 'dl'",
+      "suggestion": "On QNX 8.0 dlopen() is documented in libc, which qcc usually links automatically; drop or guard libdl for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/d/dlopen.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "nanohttp.c",
+      "line": 1065,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 1,
+    "sites_by_category": {
+      "source": 1,
+      "build": 0,
+      "other": 0
+    },
+    "sites_source_nontest": 1,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": null,
+    "recall_in_scope": 0.0,
+    "findings_total": 5,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 1,
+      "build": 4,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  }
+}

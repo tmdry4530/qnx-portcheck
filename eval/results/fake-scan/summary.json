@@ -1,0 +1,2447 @@
+{
+  "run_config": {
+    "label": "FAKE-SCAN",
+    "date_kst": "2026-11-15T12:34:24.768435+09:00",
+    "window": 3,
+    "merge_gap": 3,
+    "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
+    "scanner": "fake-scan/0.0.0-fake",
+    "harness_version": "0.1.0",
+    "harness_git_sha": "5acf9d0",
+    "scanner_source_commit": "af18fa6",
+    "total_runtime_seconds": 7.0,
+    "started_at": "2026-11-15T12:34:17.757376+09:00",
+    "finished_at": "2026-11-15T12:34:24.763480+09:00",
+    "projects_count": 33,
+    "skipped_unverified": 0
+  },
+  "aggregate": {
+    "counts": {
+      "ok_projects": 33,
+      "error_projects": 0
+    },
+    "micro": {
+      "sites_total": 450,
+      "sites_source_nontest": 258,
+      "sites_hit_source_nontest": 21,
+      "sites_by_category": {
+        "source": 312,
+        "build": 106,
+        "other": 32
+      },
+      "sites_hit_by_category": {
+        "source": 22,
+        "build": 0,
+        "other": 0
+      },
+      "findings_total": 2262,
+      "findings_tp": 24,
+      "findings_in_patched_files": 442,
+      "findings_tp_in_patched_files": 24,
+      "findings_by_category": {
+        "source": 2084,
+        "build": 178,
+        "other": 0
+      },
+      "recall_source": 0.0705,
+      "recall_source_nontest": 0.0814,
+      "recall_build": 0.0,
+      "recall_in_scope": 0.0526,
+      "precision": 0.0106,
+      "precision_in_patched_files": 0.0543
+    },
+    "macro": {
+      "recall_source": {
+        "mean": 0.0379,
+        "n": 25
+      },
+      "recall_source_nontest": {
+        "mean": 0.0472,
+        "n": 25
+      },
+      "recall_build": {
+        "mean": 0.0,
+        "n": 25
+      },
+      "recall_in_scope": {
+        "mean": 0.025,
+        "n": 33
+      },
+      "precision": {
+        "mean": 0.0095,
+        "n": 27
+      },
+      "precision_in_patched_files": {
+        "mean": 0.1069,
+        "n": 17
+      }
+    },
+    "by_rule": {
+      "FAKE-LRT": {
+        "findings": 13,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-LPTHREAD": {
+        "findings": 84,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-LINUX": {
+        "findings": 595,
+        "findings_tp": 20,
+        "sites_hit": 17
+      },
+      "FAKE-EVENTFD": {
+        "findings": 178,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-MSG-NOSIGNAL": {
+        "findings": 54,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-EPOLL": {
+        "findings": 949,
+        "findings_tp": 1,
+        "sites_hit": 1
+      },
+      "FAKE-TIMERFD": {
+        "findings": 68,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-SYS-EPOLL-H": {
+        "findings": 11,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-LDL": {
+        "findings": 75,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-PROC-SELF": {
+        "findings": 47,
+        "findings_tp": 2,
+        "sites_hit": 2
+      },
+      "FAKE-PRCTL": {
+        "findings": 31,
+        "findings_tp": 1,
+        "sites_hit": 2
+      },
+      "FAKE-INOTIFY": {
+        "findings": 82,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-CMAKE-SYSTEM-NAME-STREQUAL-LINUX": {
+        "findings": 6,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-SOCK-CLOEXEC": {
+        "findings": 43,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-PTHREAD-SETNAME-NP": {
+        "findings": 15,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-SCHED-SETAFFINITY": {
+        "findings": 4,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-SIGNALFD": {
+        "findings": 2,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "FAKE-SYS-SYSINFO-H": {
+        "findings": 5,
+        "findings_tp": 0,
+        "sites_hit": 0
+      }
+    }
+  },
+  "projects": [
+    {
+      "name": "asio",
+      "upstream": "https://github.com/chriskohlhoff/asio",
+      "upstream_base_sha": "814f67e730e154547aea3f4d99f709cbdf1ea4a0",
+      "qnx_head_sha": "c142007f88ef1f9c7b24a1cffe74dd11b17f779f",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 14,
+        "sites_by_category": {
+          "source": 14,
+          "build": 0,
+          "other": 0
+        },
+        "sites_source_nontest": 8,
+        "sites_source_test": 6,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": 0.0,
+        "recall_build": null,
+        "recall_in_scope": 0.0,
+        "findings_total": 202,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 200,
+          "build": 2,
+          "other": 0
+        },
+        "findings_in_patched_files": 1,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": 0.0
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 0,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 5,
+        "compare_files_expected": 5,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.383
+      }
+    },
+    {
+      "name": "avahi",
+      "upstream": "https://github.com/avahi/avahi",
+      "upstream_base_sha": "4294bbff57cbddbbe3cfd2bbde34823277eb8723",
+      "qnx_head_sha": "7bf7222d4dc6b0a8a23b4a3be52658a8389ff9ff",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 5,
+        "sites_by_category": {
+          "source": 3,
+          "build": 1,
+          "other": 1
+        },
+        "sites_source_nontest": 3,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": 0.0,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0,
+        "findings_total": 61,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 48,
+          "build": 13,
+          "other": 0
+        },
+        "findings_in_patched_files": 17,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": 0.0
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 1,
+        "other_sites": 1,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 5,
+        "compare_files_expected": 5,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.128
+      }
+    },
+    {
+      "name": "aws-c-io",
+      "upstream": "https://github.com/awslabs/aws-c-io",
+      "upstream_base_sha": "bfb0819d3906502483611ce832a5ec6b897c8421",
+      "qnx_head_sha": "fd881c1f7d14c3593065c71d4d4bc5f1a22e0cc1",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 13,
+        "sites_by_category": {
+          "source": 11,
+          "build": 2,
+          "other": 0
+        },
+        "sites_source_nontest": 11,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 1,
+        "sites_hit_by_category": {
+          "source": 1,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0909,
+        "recall_source_nontest": 0.0909,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0769,
+        "findings_total": 472,
+        "findings_tp": 1,
+        "findings_by_category": {
+          "source": 471,
+          "build": 1,
+          "other": 0
+        },
+        "findings_in_patched_files": 134,
+        "findings_tp_in_patched_files": 1,
+        "precision": 0.0021,
+        "precision_in_patched_files": 0.0075
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 2,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 5,
+        "compare_files_expected": 5,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.121
+      }
+    },
+    {
+      "name": "c-ares",
+      "upstream": "https://github.com/c-ares/c-ares",
+      "upstream_base_sha": "6508d6ad270eeedbbece3f07f0e6d7ee244b8589",
+      "qnx_head_sha": "341b3c9561d492c30ea4475e2800f08ac52170bf",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 33,
+        "sites_by_category": {
+          "source": 16,
+          "build": 17,
+          "other": 0
+        },
+        "sites_source_nontest": 16,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": 0.0,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0,
+        "findings_total": 77,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 61,
+          "build": 16,
+          "other": 0
+        },
+        "findings_in_patched_files": 1,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": 0.0
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 17,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 13,
+        "compare_files_expected": 13,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.132
+      }
+    },
+    {
+      "name": "chrony",
+      "upstream": "https://github.com/mlichvar/chrony",
+      "upstream_base_sha": "d622b222a9acbda3a4c842beeb593e7075c32bec",
+      "qnx_head_sha": "7a9445af34dd93baf770e35d35cc9e022069d9e3",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 14,
+        "sites_by_category": {
+          "source": 11,
+          "build": 3,
+          "other": 0
+        },
+        "sites_source_nontest": 8,
+        "sites_source_test": 3,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": 0.0,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0,
+        "findings_total": 26,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 24,
+          "build": 2,
+          "other": 0
+        },
+        "findings_in_patched_files": 10,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": 0.0
+      },
+      "out_of_scope": {
+        "new_files": [
+          {
+            "path": "adjtime_qnx.h",
+            "category": "source",
+            "added_lines": 154
+          },
+          {
+            "path": "sys_qnx.c",
+            "category": "source",
+            "added_lines": 399
+          },
+          {
+            "path": "sys_qnx.h",
+            "category": "source",
+            "added_lines": 41
+          }
+        ],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 3,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 12,
+        "compare_files_expected": 12,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.117
+      }
+    },
+    {
+      "name": "dlt-daemon",
+      "upstream": "https://github.com/COVESA/dlt-daemon",
+      "upstream_base_sha": "0f2d4cfffada6f8448a2cb27995b38eb4271044f",
+      "qnx_head_sha": "d71e62ee50a42bd578b85db7eaaf56d25471b8c5",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 16,
+        "sites_by_category": {
+          "source": 2,
+          "build": 14,
+          "other": 0
+        },
+        "sites_source_nontest": 2,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": 0.0,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0,
+        "findings_total": 50,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 50,
+          "build": 0,
+          "other": 0
+        },
+        "findings_in_patched_files": 3,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": 0.0
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [
+          "googletest"
+        ],
+        "mode_only": [],
+        "build_sites": 14,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 7,
+        "compare_files_expected": 7,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.157
+      }
+    },
+    {
+      "name": "glog",
+      "upstream": "https://github.com/google/glog",
+      "upstream_base_sha": "b33e3bad4c46c8a6345525fd822af355e5ef9446",
+      "qnx_head_sha": "a527632506d63fac2eb835dfd742897cea0a056f",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 37,
+        "sites_by_category": {
+          "source": 27,
+          "build": 10,
+          "other": 0
+        },
+        "sites_source_nontest": 14,
+        "sites_source_test": 13,
+        "sites_hit_source_nontest": 2,
+        "sites_hit_by_category": {
+          "source": 2,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0741,
+        "recall_source_nontest": 0.1429,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0541,
+        "findings_total": 19,
+        "findings_tp": 2,
+        "findings_by_category": {
+          "source": 19,
+          "build": 0,
+          "other": 0
+        },
+        "findings_in_patched_files": 16,
+        "findings_tp_in_patched_files": 2,
+        "precision": 0.1053,
+        "precision_in_patched_files": 0.125
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 10,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 11,
+        "compare_files_expected": 11,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.07
+      }
+    },
+    {
+      "name": "gnutls",
+      "upstream": "https://github.com/gnutls/gnutls",
+      "upstream_base_sha": "5dd9a55040da54371807471bf3169d7a9a1f527e",
+      "qnx_head_sha": "b57078e47bee94beb27cb81452c75bec298ed327",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 6,
+        "sites_by_category": {
+          "source": 6,
+          "build": 0,
+          "other": 0
+        },
+        "sites_source_nontest": 6,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": 0.0,
+        "recall_build": null,
+        "recall_in_scope": 0.0,
+        "findings_total": 23,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 15,
+          "build": 8,
+          "other": 0
+        },
+        "findings_in_patched_files": 0,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": null
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 0,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 1,
+        "compare_files_expected": 1,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.62
+      }
+    },
+    {
+      "name": "googletest",
+      "upstream": "https://github.com/google/googletest",
+      "upstream_base_sha": "b796f7d44681514f58a683a3a71ff17c94edb0c1",
+      "qnx_head_sha": "989d25b8dbeefe942aef4560575c461ec95bec70",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 12,
+        "sites_by_category": {
+          "source": 3,
+          "build": 9,
+          "other": 0
+        },
+        "sites_source_nontest": 2,
+        "sites_source_test": 1,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": 0.0,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0,
+        "findings_total": 2,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 2,
+          "build": 0,
+          "other": 0
+        },
+        "findings_in_patched_files": 0,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": null
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 9,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 4,
+        "compare_files_expected": 4,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.139
+      }
+    },
+    {
+      "name": "iperf3",
+      "upstream": "https://github.com/esnet/iperf",
+      "upstream_base_sha": "dfcea9f6a09ead01089a3c9d20c7032f2c0af2c1",
+      "qnx_head_sha": "a5416aebaff3851feca5cc8809b7a53372b8be92",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 4,
+        "sites_by_category": {
+          "source": 4,
+          "build": 0,
+          "other": 0
+        },
+        "sites_source_nontest": 4,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": 0.0,
+        "recall_build": null,
+        "recall_in_scope": 0.0,
+        "findings_total": 28,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 6,
+          "build": 22,
+          "other": 0
+        },
+        "findings_in_patched_files": 0,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": null
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 0,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 3,
+        "compare_files_expected": 3,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.072
+      }
+    },
+    {
+      "name": "libevent",
+      "upstream": "https://github.com/libevent/libevent",
+      "upstream_base_sha": "5df3037d10556bfcb675bc73e516978b75fc7bc7",
+      "qnx_head_sha": "54bf4c64c2879e2f53fe81767772effa25054fc4",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 2,
+        "sites_by_category": {
+          "source": 1,
+          "build": 1,
+          "other": 0
+        },
+        "sites_source_nontest": 1,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": 0.0,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0,
+        "findings_total": 111,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 105,
+          "build": 6,
+          "other": 0
+        },
+        "findings_in_patched_files": 1,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": 0.0
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 1,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 2,
+        "compare_files_expected": 2,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.135
+      }
+    },
+    {
+      "name": "libmetal",
+      "upstream": "https://github.com/OpenAMP/libmetal",
+      "upstream_base_sha": "f8a0e51aee8e6993b6df243422f705bd7fea6079",
+      "qnx_head_sha": "3e2223af62372ff1d6df96797f2af8bcdb48811c",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 2,
+        "sites_by_category": {
+          "source": 0,
+          "build": 2,
+          "other": 0
+        },
+        "sites_source_nontest": 0,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": null,
+        "recall_source_nontest": null,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0,
+        "findings_total": 34,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 34,
+          "build": 0,
+          "other": 0
+        },
+        "findings_in_patched_files": 0,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": null
+      },
+      "out_of_scope": {
+        "new_files": [
+          {
+            "path": "lib/system/qnx/CMakeLists.txt",
+            "category": "build",
+            "added_lines": 21
+          },
+          {
+            "path": "lib/system/qnx/alloc.h",
+            "category": "source",
+            "added_lines": 39
+          },
+          {
+            "path": "lib/system/qnx/assert.h",
+            "category": "source",
+            "added_lines": 27
+          },
+          {
+            "path": "lib/system/qnx/cache.h",
+            "category": "source",
+            "added_lines": 45
+          },
+          {
+            "path": "lib/system/qnx/condition.c",
+            "category": "source",
+            "added_lines": 19
+          },
+          {
+            "path": "lib/system/qnx/condition.h",
+            "category": "source",
+            "added_lines": 59
+          },
+          {
+            "path": "lib/system/qnx/device.c",
+            "category": "source",
+            "added_lines": 29
+          },
+          {
+            "path": "lib/system/qnx/init.c",
+            "category": "source",
+            "added_lines": 77
+          },
+          {
+            "path": "lib/system/qnx/io.c",
+            "category": "source",
+            "added_lines": 45
+          },
+          {
+            "path": "lib/system/qnx/io.h",
+            "category": "source",
+            "added_lines": 43
+          },
+          {
+            "path": "lib/system/qnx/irq.c",
+            "category": "source",
+            "added_lines": 256
+          },
+          {
+            "path": "lib/system/qnx/irq.h",
+            "category": "source",
+            "added_lines": 45
+          },
+          {
+            "path": "lib/system/qnx/log.h",
+            "category": "source",
+            "added_lines": 27
+          },
+          {
+            "path": "lib/system/qnx/mutex.h",
+            "category": "source",
+            "added_lines": 74
+          },
+          {
+            "path": "lib/system/qnx/shmem.c",
+            "category": "source",
+            "added_lines": 103
+          },
+          {
+            "path": "lib/system/qnx/sleep.h",
+            "category": "source",
+            "added_lines": 40
+          },
+          {
+            "path": "lib/system/qnx/sys.h",
+            "category": "source",
+            "added_lines": 86
+          },
+          {
+            "path": "lib/system/qnx/time.c",
+            "category": "source",
+            "added_lines": 30
+          },
+          {
+            "path": "lib/system/qnx/utilities.c",
+            "category": "source",
+            "added_lines": 98
+          },
+          {
+            "path": "test/system/qnx/CMakeLists.txt",
+            "category": "build",
+            "added_lines": 13
+          },
+          {
+            "path": "test/system/qnx/alloc.c",
+            "category": "source",
+            "added_lines": 28
+          },
+          {
+            "path": "test/system/qnx/atomic.c",
+            "category": "source",
+            "added_lines": 47
+          },
+          {
+            "path": "test/system/qnx/condition.c",
+            "category": "source",
+            "added_lines": 101
+          },
+          {
+            "path": "test/system/qnx/irq.c",
+            "category": "source",
+            "added_lines": 68
+          },
+          {
+            "path": "test/system/qnx/main.c",
+            "category": "source",
+            "added_lines": 16
+          },
+          {
+            "path": "test/system/qnx/mutex.c",
+            "category": "source",
+            "added_lines": 44
+          },
+          {
+            "path": "test/system/qnx/rpi4/CMakeLists.txt",
+            "category": "build",
+            "added_lines": 1
+          },
+          {
+            "path": "test/system/qnx/rpi4/device.c",
+            "category": "source",
+            "added_lines": 83
+          },
+          {
+            "path": "test/system/qnx/shmem.c",
+            "category": "source",
+            "added_lines": 58
+          },
+          {
+            "path": "test/system/qnx/spinlock.c",
+            "category": "source",
+            "added_lines": 50
+          },
+          {
+            "path": "test/system/qnx/threads.c",
+            "category": "source",
+            "added_lines": 61
+          }
+        ],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 2,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 33,
+        "compare_files_expected": 33,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.081
+      }
+    },
+    {
+      "name": "libusb",
+      "upstream": "https://github.com/libusb/libusb",
+      "upstream_base_sha": "e782eeb2514266f6738e242cdcb18e3ae1ed06fa",
+      "qnx_head_sha": "4a7f548b901470bd9bb602feeee02ace96c4f1b4",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 11,
+        "sites_by_category": {
+          "source": 4,
+          "build": 7,
+          "other": 0
+        },
+        "sites_source_nontest": 4,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": 0.0,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0,
+        "findings_total": 30,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 30,
+          "build": 0,
+          "other": 0
+        },
+        "findings_in_patched_files": 1,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": 0.0
+      },
+      "out_of_scope": {
+        "new_files": [
+          {
+            "path": "libusb/os/nto_qnx_usbfs.c",
+            "category": "source",
+            "added_lines": 2499
+          },
+          {
+            "path": "libusb/os/nto_qnx_usbfs.h",
+            "category": "source",
+            "added_lines": 98
+          }
+        ],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 7,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 9,
+        "compare_files_expected": 9,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.091
+      }
+    },
+    {
+      "name": "libuv",
+      "upstream": "https://github.com/libuv/libuv",
+      "upstream_base_sha": "5152db2cbfeb5582e9c27c5ea1dba2cd9e10759b",
+      "qnx_head_sha": "f0b6e4b5dc26de68c60ff526faf9e8bbd20c79f6",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 41,
+        "sites_by_category": {
+          "source": 40,
+          "build": 1,
+          "other": 0
+        },
+        "sites_source_nontest": 19,
+        "sites_source_test": 21,
+        "sites_hit_source_nontest": 6,
+        "sites_hit_by_category": {
+          "source": 6,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.15,
+        "recall_source_nontest": 0.3158,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.1463,
+        "findings_total": 289,
+        "findings_tp": 6,
+        "findings_by_category": {
+          "source": 279,
+          "build": 10,
+          "other": 0
+        },
+        "findings_in_patched_files": 66,
+        "findings_tp_in_patched_files": 6,
+        "precision": 0.0208,
+        "precision_in_patched_files": 0.0909
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 1,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 16,
+        "compare_files_expected": 16,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.166
+      }
+    },
+    {
+      "name": "libwebsockets",
+      "upstream": "https://github.com/warmcat/libwebsockets",
+      "upstream_base_sha": "fbb0baf6af9c4324f0f1591734c78b0089b599d4",
+      "qnx_head_sha": "7f399a12e06bc16e62a8503190363b4864c1db46",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 6,
+        "sites_by_category": {
+          "source": 5,
+          "build": 1,
+          "other": 0
+        },
+        "sites_source_nontest": 5,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": 0.0,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0,
+        "findings_total": 174,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 173,
+          "build": 1,
+          "other": 0
+        },
+        "findings_in_patched_files": 12,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": 0.0
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 1,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 4,
+        "compare_files_expected": 4,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.505
+      }
+    },
+    {
+      "name": "libxml2",
+      "upstream": "https://github.com/GNOME/libxml2",
+      "upstream_base_sha": "de918d45e1b2276a28a4cd32bcf556bef65284e4",
+      "qnx_head_sha": "235a060dec5c9413f4f7d4f81109a5117dbc27a1",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 1,
+        "sites_by_category": {
+          "source": 1,
+          "build": 0,
+          "other": 0
+        },
+        "sites_source_nontest": 1,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": 0.0,
+        "recall_build": null,
+        "recall_in_scope": 0.0,
+        "findings_total": 4,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 1,
+          "build": 3,
+          "other": 0
+        },
+        "findings_in_patched_files": 0,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": null
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 0,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 1,
+        "compare_files_expected": 1,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.385
+      }
+    },
+    {
+      "name": "lldpd",
+      "upstream": "https://github.com/lldpd/lldpd",
+      "upstream_base_sha": "df8d7298598f4ff4cbb20957ccb4e8e2bde96f06",
+      "qnx_head_sha": "ac20728ae28736e97010bf4964bdc51f444d9099",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 25,
+        "sites_by_category": {
+          "source": 22,
+          "build": 3,
+          "other": 0
+        },
+        "sites_source_nontest": 22,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 2,
+        "sites_hit_by_category": {
+          "source": 2,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0909,
+        "recall_source_nontest": 0.0909,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.08,
+        "findings_total": 65,
+        "findings_tp": 1,
+        "findings_by_category": {
+          "source": 65,
+          "build": 0,
+          "other": 0
+        },
+        "findings_in_patched_files": 3,
+        "findings_tp_in_patched_files": 1,
+        "precision": 0.0154,
+        "precision_in_patched_files": 0.3333
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 3,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 8,
+        "compare_files_expected": 8,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.104
+      }
+    },
+    {
+      "name": "lua",
+      "upstream": "https://github.com/lua/lua",
+      "upstream_base_sha": "cb88c1cd5d22fe7c56f4f374ded7c16f7cf14bf3",
+      "qnx_head_sha": "12b3c3b66e473b2ff65309abcce3e5d7574930b4",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 15,
+        "sites_by_category": {
+          "source": 5,
+          "build": 0,
+          "other": 10
+        },
+        "sites_source_nontest": 5,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": 0.0,
+        "recall_build": null,
+        "recall_in_scope": 0.0,
+        "findings_total": 1,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 0,
+          "build": 1,
+          "other": 0
+        },
+        "findings_in_patched_files": 0,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": null
+      },
+      "out_of_scope": {
+        "new_files": [
+          {
+            "path": "testes/libs/makefile.qnx",
+            "category": "other",
+            "added_lines": 27
+          }
+        ],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 0,
+        "other_sites": 10,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 9,
+        "compare_files_expected": 9,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.076
+      }
+    },
+    {
+      "name": "mosquitto",
+      "upstream": "https://github.com/eclipse-mosquitto/mosquitto",
+      "upstream_base_sha": "b0277869d9806f6fab8e1bc11c4a4987c9a79ded",
+      "qnx_head_sha": "35aa903edcceedc2c8010c4c47c7a316a89c9725",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 22,
+        "sites_by_category": {
+          "source": 0,
+          "build": 2,
+          "other": 20
+        },
+        "sites_source_nontest": 0,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": null,
+        "recall_source_nontest": null,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0,
+        "findings_total": 62,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 57,
+          "build": 5,
+          "other": 0
+        },
+        "findings_in_patched_files": 0,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": null
+      },
+      "out_of_scope": {
+        "new_files": [
+          {
+            "path": "cmake/FindOpenSSL.cmake",
+            "category": "build",
+            "added_lines": 4
+          },
+          {
+            "path": "test/broker/c/Makefile.qnx",
+            "category": "other",
+            "added_lines": 47
+          },
+          {
+            "path": "test/broker/test_qnx.py",
+            "category": "other",
+            "added_lines": 201
+          },
+          {
+            "path": "test/client/test_qnx.sh",
+            "category": "other",
+            "added_lines": 46
+          },
+          {
+            "path": "test/lib/c/Makefile.qnx",
+            "category": "other",
+            "added_lines": 78
+          },
+          {
+            "path": "test/lib/cpp/Makefile.qnx",
+            "category": "other",
+            "added_lines": 96
+          },
+          {
+            "path": "test/lib/test_qnx.py",
+            "category": "other",
+            "added_lines": 93
+          }
+        ],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 2,
+        "other_sites": 20,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 19,
+        "compare_files_expected": 19,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.144
+      }
+    },
+    {
+      "name": "nghttp2",
+      "upstream": "https://github.com/nghttp2/nghttp2",
+      "upstream_base_sha": "526ff38e0249acbcc4d0e8958c12cdeae9960cfe",
+      "qnx_head_sha": "56d4a4a8d40e5ff5b1259b5ba8effd0d2aba60d2",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 4,
+        "sites_by_category": {
+          "source": 1,
+          "build": 3,
+          "other": 0
+        },
+        "sites_source_nontest": 1,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": 0.0,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0,
+        "findings_total": 15,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 13,
+          "build": 2,
+          "other": 0
+        },
+        "findings_in_patched_files": 0,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": null
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 3,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 2,
+        "compare_files_expected": 2,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.004,
+        "scan": 0.244
+      }
+    },
+    {
+      "name": "ntpsec",
+      "upstream": "https://github.com/ntpsec/ntpsec",
+      "upstream_base_sha": "39b19ff71b785452e2c49033dad8e18a0e95a1ae",
+      "qnx_head_sha": "a144accf831d03c5599ea2b45b02f98de89412e2",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 39,
+        "sites_by_category": {
+          "source": 35,
+          "build": 4,
+          "other": 0
+        },
+        "sites_source_nontest": 32,
+        "sites_source_test": 3,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": 0.0,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0,
+        "findings_total": 16,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 16,
+          "build": 0,
+          "other": 0
+        },
+        "findings_in_patched_files": 0,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": null
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 4,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 9,
+        "compare_files_expected": 9,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.004,
+        "scan": 0.158
+      }
+    },
+    {
+      "name": "open-amp",
+      "upstream": "https://github.com/OpenAMP/open-amp",
+      "upstream_base_sha": "604cdf9a4561bda7c2274fee64c0f5c90933b9d4",
+      "qnx_head_sha": "742c97bfea28044e24018e4f97a7de7b676c9be6",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 4,
+        "sites_by_category": {
+          "source": 4,
+          "build": 0,
+          "other": 0
+        },
+        "sites_source_nontest": 4,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": 0.0,
+        "recall_build": null,
+        "recall_in_scope": 0.0,
+        "findings_total": 0,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "findings_in_patched_files": 0,
+        "findings_tp_in_patched_files": 0,
+        "precision": null,
+        "precision_in_patched_files": null
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 0,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 3,
+        "compare_files_expected": 3,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.056
+      }
+    },
+    {
+      "name": "pistache",
+      "upstream": "https://github.com/pistacheio/pistache",
+      "upstream_base_sha": "ddffda861aa49012dcda28f1362d0339e718cd52",
+      "qnx_head_sha": "9dc3359fba4f6e82842b9ea80744558321361fc1",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 23,
+        "sites_by_category": {
+          "source": 19,
+          "build": 3,
+          "other": 1
+        },
+        "sites_source_nontest": 18,
+        "sites_source_test": 1,
+        "sites_hit_source_nontest": 5,
+        "sites_hit_by_category": {
+          "source": 6,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.3158,
+        "recall_source_nontest": 0.2778,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.2727,
+        "findings_total": 272,
+        "findings_tp": 6,
+        "findings_by_category": {
+          "source": 272,
+          "build": 0,
+          "other": 0
+        },
+        "findings_in_patched_files": 139,
+        "findings_tp_in_patched_files": 6,
+        "precision": 0.0221,
+        "precision_in_patched_files": 0.0432
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 3,
+        "other_sites": 1,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 14,
+        "compare_files_expected": 14,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.118
+      }
+    },
+    {
+      "name": "s2n-tls",
+      "upstream": "https://github.com/aws/s2n-tls",
+      "upstream_base_sha": "a7862238a9d6703e0a3e2d7ea4341de8d57429bd",
+      "qnx_head_sha": "76466302298aee279692bee38fd61ffd0128799d",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 33,
+        "sites_by_category": {
+          "source": 32,
+          "build": 1,
+          "other": 0
+        },
+        "sites_source_nontest": 32,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": 0.0,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0,
+        "findings_total": 30,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 24,
+          "build": 6,
+          "other": 0
+        },
+        "findings_in_patched_files": 11,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": 0.0
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 1,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 32,
+        "compare_files_expected": 32,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.507
+      }
+    },
+    {
+      "name": "strongswan",
+      "upstream": "https://github.com/strongswan/strongswan",
+      "upstream_base_sha": "4d709df8b25fcf3cacb55cb4f28ab81014829ab1",
+      "qnx_head_sha": "1b8d7fe7aa628ec293c2c71a850dff085ba0b0ae",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 30,
+        "sites_by_category": {
+          "source": 23,
+          "build": 7,
+          "other": 0
+        },
+        "sites_source_nontest": 22,
+        "sites_source_test": 1,
+        "sites_hit_source_nontest": 3,
+        "sites_hit_by_category": {
+          "source": 3,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.1304,
+        "recall_source_nontest": 0.1364,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.1,
+        "findings_total": 101,
+        "findings_tp": 5,
+        "findings_by_category": {
+          "source": 96,
+          "build": 5,
+          "other": 0
+        },
+        "findings_in_patched_files": 23,
+        "findings_tp_in_patched_files": 5,
+        "precision": 0.0495,
+        "precision_in_patched_files": 0.2174
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 7,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 13,
+        "compare_files_expected": 13,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 1.041
+      }
+    },
+    {
+      "name": "tinyxml2",
+      "upstream": "https://github.com/leethomason/tinyxml2",
+      "upstream_base_sha": "321ea883b7190d4e85cae5512a12e5eaa8f8731f",
+      "qnx_head_sha": "9dadb75f769c71562278ab5d3c2185041f3d337d",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 2,
+        "sites_by_category": {
+          "source": 2,
+          "build": 0,
+          "other": 0
+        },
+        "sites_source_nontest": 2,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": 0.0,
+        "recall_build": null,
+        "recall_in_scope": 0.0,
+        "findings_total": 0,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "findings_in_patched_files": 0,
+        "findings_tp_in_patched_files": 0,
+        "precision": null,
+        "precision_in_patched_files": null
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 0,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 2,
+        "compare_files_expected": 2,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.057
+      }
+    },
+    {
+      "name": "unbound",
+      "upstream": "https://github.com/NLnetLabs/unbound",
+      "upstream_base_sha": "a33f0638e1dacf2633cf2292078a674576bca852",
+      "qnx_head_sha": "5d76fff70001114ecfc01a14840c9dec134375f4",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 21,
+        "sites_by_category": {
+          "source": 21,
+          "build": 0,
+          "other": 0
+        },
+        "sites_source_nontest": 16,
+        "sites_source_test": 5,
+        "sites_hit_source_nontest": 2,
+        "sites_hit_by_category": {
+          "source": 2,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0952,
+        "recall_source_nontest": 0.125,
+        "recall_build": null,
+        "recall_in_scope": 0.0952,
+        "findings_total": 73,
+        "findings_tp": 3,
+        "findings_by_category": {
+          "source": 8,
+          "build": 65,
+          "other": 0
+        },
+        "findings_in_patched_files": 3,
+        "findings_tp_in_patched_files": 3,
+        "precision": 0.0411,
+        "precision_in_patched_files": 1.0
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 0,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 10,
+        "compare_files_expected": 10,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.294
+      }
+    },
+    {
+      "name": "aws-c-common",
+      "upstream": "https://github.com/awslabs/aws-c-common",
+      "upstream_base_sha": "2b67a658e461520f1de20d64342b91ddcedc7ebb",
+      "qnx_head_sha": "f8abf334260c020f13979202d92d15731325ee23",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 3,
+        "sites_by_category": {
+          "source": 0,
+          "build": 3,
+          "other": 0
+        },
+        "sites_source_nontest": 0,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": null,
+        "recall_source_nontest": null,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0,
+        "findings_total": 16,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 14,
+          "build": 2,
+          "other": 0
+        },
+        "findings_in_patched_files": 0,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": null
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 3,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 1,
+        "compare_files_expected": 1,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.18
+      }
+    },
+    {
+      "name": "check",
+      "upstream": "https://github.com/libcheck/check",
+      "upstream_base_sha": "11970a7e112dfe243a2e68773f014687df2900e8",
+      "qnx_head_sha": "bdd4d582f388806e01bcd0c4b505a83682e49078",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 4,
+        "sites_by_category": {
+          "source": 0,
+          "build": 4,
+          "other": 0
+        },
+        "sites_source_nontest": 0,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": null,
+        "recall_source_nontest": null,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0,
+        "findings_total": 9,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 1,
+          "build": 8,
+          "other": 0
+        },
+        "findings_in_patched_files": 1,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": 0.0
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 4,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 1,
+        "compare_files_expected": 1,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.071
+      }
+    },
+    {
+      "name": "fribidi",
+      "upstream": "https://github.com/fribidi/fribidi",
+      "upstream_base_sha": "68162babff4f39c4e2dc164a5e825af93bda9983",
+      "qnx_head_sha": "3297df003a0d1dc86278a9da2481b8594e543719",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 1,
+        "sites_by_category": {
+          "source": 0,
+          "build": 1,
+          "other": 0
+        },
+        "sites_source_nontest": 0,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": null,
+        "recall_source_nontest": null,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0,
+        "findings_total": 0,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "findings_in_patched_files": 0,
+        "findings_tp_in_patched_files": 0,
+        "precision": null,
+        "precision_in_patched_files": null
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 1,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 1,
+        "compare_files_expected": 1,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.06
+      }
+    },
+    {
+      "name": "jansson",
+      "upstream": "https://github.com/akheron/jansson",
+      "upstream_base_sha": "684e18c927e89615c2d501737e90018f4930d6c5",
+      "qnx_head_sha": "bbf20222758941f7678d36cca53a092ff6420114",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 2,
+        "sites_by_category": {
+          "source": 0,
+          "build": 2,
+          "other": 0
+        },
+        "sites_source_nontest": 0,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": null,
+        "recall_source_nontest": null,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0,
+        "findings_total": 0,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "findings_in_patched_files": 0,
+        "findings_tp_in_patched_files": 0,
+        "precision": null,
+        "precision_in_patched_files": null
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 2,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 1,
+        "compare_files_expected": 1,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.066
+      }
+    },
+    {
+      "name": "libyaml",
+      "upstream": "https://github.com/yaml/libyaml",
+      "upstream_base_sha": "2c891fc7a770e8ba2fec34fc6b545c672beb37e6",
+      "qnx_head_sha": "66e65e9309a02e90f7e752bc033775aaa3744039",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 4,
+        "sites_by_category": {
+          "source": 0,
+          "build": 4,
+          "other": 0
+        },
+        "sites_source_nontest": 0,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": null,
+        "recall_source_nontest": null,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0,
+        "findings_total": 0,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "findings_in_patched_files": 0,
+        "findings_tp_in_patched_files": 0,
+        "precision": null,
+        "precision_in_patched_files": null
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 4,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 2,
+        "compare_files_expected": 2,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.064
+      }
+    },
+    {
+      "name": "re2",
+      "upstream": "https://github.com/google/re2",
+      "upstream_base_sha": "6dcd83d60f7944926bfd308cc13979fc53dd69ca",
+      "qnx_head_sha": "099c91ad82bca90a503018962c2523ff8a827f11",
+      "status": "ok",
+      "error": null,
+      "metrics": {
+        "sites_total": 1,
+        "sites_by_category": {
+          "source": 0,
+          "build": 1,
+          "other": 0
+        },
+        "sites_source_nontest": 0,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": null,
+        "recall_source_nontest": null,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0,
+        "findings_total": 0,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "findings_in_patched_files": 0,
+        "findings_tp_in_patched_files": 0,
+        "precision": null,
+        "precision_in_patched_files": null
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 1,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 1,
+        "compare_files_expected": 1,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "fake-scan",
+        "version": "0.0.0-fake"
+      },
+      "durations": {
+        "fetch": 0.003,
+        "scan": 0.083
+      }
+    }
+  ]
+}

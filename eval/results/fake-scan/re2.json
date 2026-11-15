@@ -1,0 +1,96 @@
+{
+  "label": "FAKE-SCAN",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T12:34:24.675349+09:00",
+  "project": {
+    "name": "re2",
+    "upstream": "https://github.com/google/re2",
+    "upstream_base_ref": "main",
+    "upstream_base_sha": "6dcd83d60f7944926bfd308cc13979fc53dd69ca",
+    "qnx_repo": "https://github.com/qnx-ports/re2",
+    "qnx_branch": "qnx_main",
+    "qnx_head_sha": "099c91ad82bca90a503018962c2523ff8a827f11",
+    "expected_scope": "build-only",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
+  "durations": {
+    "fetch": 0.002851723984349519,
+    "scan": 0.08311492399661802
+  },
+  "diff_stats": {
+    "files_changed": 1,
+    "compare_files_expected": 1,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "CMakeLists.txt"
+  ],
+  "sites": [
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 268,
+      "old_count": 0,
+      "new_start": 269,
+      "new_count": 5,
+      "target_lines": [
+        268,
+        269
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 1,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [],
+  "metrics": {
+    "sites_total": 1,
+    "sites_by_category": {
+      "source": 0,
+      "build": 1,
+      "other": 0
+    },
+    "sites_source_nontest": 0,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": null,
+    "recall_source_nontest": null,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.0,
+    "findings_total": 0,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": null,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "fake-scan",
+    "version": "0.0.0-fake"
+  }
+}

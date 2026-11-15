@@ -1,0 +1,248 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T13:40:04.548865+09:00",
+  "project": {
+    "name": "nghttp2",
+    "upstream": "https://github.com/nghttp2/nghttp2",
+    "upstream_base_ref": "v1.64.0",
+    "upstream_base_sha": "526ff38e0249acbcc4d0e8958c12cdeae9960cfe",
+    "qnx_repo": "https://github.com/qnx-ports/nghttp2",
+    "qnx_branch": "qnx-1.64.0",
+    "qnx_head_sha": "56d4a4a8d40e5ff5b1259b5ba8effd0d2aba60d2",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "511aa2e",
+  "durations": {
+    "fetch": 0.021585640002740547,
+    "scan": 15.638935943017714
+  },
+  "diff_stats": {
+    "files_changed": 2,
+    "compare_files_expected": 2,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "src/util.h",
+    "tests/CMakeLists.txt"
+  ],
+  "sites": [
+    {
+      "file": "src/util.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 59,
+      "old_count": 0,
+      "new_start": 60,
+      "new_count": 3,
+      "target_lines": [
+        59,
+        60
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/CMakeLists.txt",
+      "category": "build",
+      "is_test": true,
+      "kind": "mixed",
+      "old_start": 27,
+      "old_count": 9,
+      "new_start": 28,
+      "new_count": 10,
+      "target_lines": [
+        27,
+        28,
+        30,
+        31,
+        34,
+        35
+      ],
+      "hunks": 3,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/CMakeLists.txt",
+      "category": "build",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 44,
+      "old_count": 3,
+      "new_start": 52,
+      "new_count": 9,
+      "target_lines": [
+        44,
+        45,
+        46
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/CMakeLists.txt",
+      "category": "build",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 50,
+      "old_count": 2,
+      "new_start": 64,
+      "new_count": 4,
+      "target_lines": [
+        50,
+        51
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 3,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "bpf/reuseport_kern.c",
+      "line": 1,
+      "col": 1,
+      "message": "Linux kernel header <linux/udp.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "bpf/reuseport_kern.c",
+      "line": 26,
+      "col": 1,
+      "message": "Linux kernel header <linux/bpf.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-ACCEPT4",
+      "severity": "note",
+      "file": "src/HttpServer.cc",
+      "line": 1908,
+      "col": 17,
+      "message": "Linux accept4 API accept4()",
+      "suggestion": "accept4() is provided by the QNX 8.0 io-sock stack (FreeBSD semantics; see FreeBSD accept(2)). io-sock applications link against libsocket.so (-l socket); there is no libsocket.a.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.io_sock/topic/socket_api.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-ACCEPT4",
+      "severity": "note",
+      "file": "src/shrpx_accept_handler.cc",
+      "line": 67,
+      "col": 5,
+      "message": "Linux accept4 API accept4()",
+      "suggestion": "accept4() is provided by the QNX 8.0 io-sock stack (FreeBSD semantics; see FreeBSD accept(2)). io-sock applications link against libsocket.so (-l socket); there is no libsocket.a.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.io_sock/topic/socket_api.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PIPE2",
+      "severity": "note",
+      "file": "src/shrpx_exec.cc",
+      "line": 45,
+      "col": 7,
+      "message": "Linux pipe2 API pipe2()",
+      "suggestion": "pipe2() is in QNX 8.0 libc but supports only O_CLOEXEC and O_NONBLOCK flags; check that no other flags (e.g. O_DIRECT) are passed.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pipe2.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "src/shrpx_log.cc",
+      "line": 971,
+      "col": 21,
+      "message": "Linux /proc path \"/proc/self/fd/1\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "src/shrpx_log.cc",
+      "line": 976,
+      "col": 21,
+      "message": "Linux /proc path \"/proc/self/fd/2\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/util_test.cc",
+      "line": 458,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 4,
+    "sites_by_category": {
+      "source": 1,
+      "build": 3,
+      "other": 0
+    },
+    "sites_source_nontest": 1,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.0,
+    "findings_total": 8,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 8,
+      "build": 0,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  }
+}

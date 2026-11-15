@@ -1,0 +1,928 @@
+{
+  "label": "FAKE-SCAN",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T12:34:18.888810+09:00",
+  "project": {
+    "name": "glog",
+    "upstream": "https://github.com/google/glog",
+    "upstream_base_ref": "v0.6.0",
+    "upstream_base_sha": "b33e3bad4c46c8a6345525fd822af355e5ef9446",
+    "qnx_repo": "https://github.com/qnx-ports/glog",
+    "qnx_branch": "qnx-v0.6.0",
+    "qnx_head_sha": "a527632506d63fac2eb835dfd742897cea0a056f",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
+  "durations": {
+    "fetch": 0.003229412977816537,
+    "scan": 0.07038579400978051
+  },
+  "diff_stats": {
+    "files_changed": 11,
+    "compare_files_expected": 11,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "CMakeLists.txt",
+    "cmake/DetermineGflagsNamespace.cmake",
+    "cmake/FindUnwind.cmake",
+    "src/glog/platform.h",
+    "src/logging.cc",
+    "src/logging_custom_prefix_unittest.cc",
+    "src/logging_unittest.cc",
+    "src/signalhandler_unittest.cc",
+    "src/symbolize.cc",
+    "src/symbolize.h",
+    "src/symbolize_unittest.cc"
+  ],
+  "sites": [
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 68,
+      "old_count": 1,
+      "new_start": 68,
+      "new_count": 1,
+      "target_lines": [
+        68
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 197,
+      "old_count": 3,
+      "new_start": 198,
+      "new_count": 2,
+      "target_lines": [
+        197,
+        198,
+        199
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 728,
+      "old_count": 3,
+      "new_start": 730,
+      "new_count": 9,
+      "target_lines": [
+        728,
+        729,
+        730
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 821,
+      "old_count": 1,
+      "new_start": 829,
+      "new_count": 1,
+      "target_lines": [
+        821
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 827,
+      "old_count": 1,
+      "new_start": 835,
+      "new_count": 1,
+      "target_lines": [
+        827
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 835,
+      "old_count": 1,
+      "new_start": 843,
+      "new_count": 1,
+      "target_lines": [
+        835
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 841,
+      "old_count": 1,
+      "new_start": 849,
+      "new_count": 1,
+      "target_lines": [
+        841
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 1080,
+      "old_count": 0,
+      "new_start": 1089,
+      "new_count": 23,
+      "target_lines": [
+        1080,
+        1081
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "cmake/DetermineGflagsNamespace.cmake",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 34,
+      "old_count": 6,
+      "new_start": 34,
+      "new_count": 16,
+      "target_lines": [
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "cmake/FindUnwind.cmake",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 9,
+      "old_count": 2,
+      "new_start": 9,
+      "new_count": 7,
+      "target_lines": [
+        9,
+        10
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/glog/platform.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 52,
+      "old_count": 0,
+      "new_start": 53,
+      "new_count": 2,
+      "target_lines": [
+        52,
+        53
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/logging.cc",
+      "category": "source",
+      "is_test": false,
+      "kind": "delete",
+      "old_start": 97,
+      "old_count": 4,
+      "new_start": 96,
+      "new_count": 0,
+      "target_lines": [
+        97,
+        98,
+        99,
+        100
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/logging.cc",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 1048,
+      "old_count": 0,
+      "new_start": 1045,
+      "new_count": 3,
+      "target_lines": [
+        1048,
+        1049
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/logging.cc",
+      "category": "source",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 2389,
+      "old_count": 4,
+      "new_start": 2388,
+      "new_count": 5,
+      "target_lines": [
+        2389,
+        2391,
+        2392
+      ],
+      "hunks": 2,
+      "matched_findings": [
+        2
+      ]
+    },
+    {
+      "file": "src/logging_custom_prefix_unittest.cc",
+      "category": "source",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 1269,
+      "old_count": 1,
+      "new_start": 1269,
+      "new_count": 1,
+      "target_lines": [
+        1269
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/logging_custom_prefix_unittest.cc",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 1304,
+      "old_count": 0,
+      "new_start": 1305,
+      "new_count": 1,
+      "target_lines": [
+        1304,
+        1305
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/logging_custom_prefix_unittest.cc",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 1317,
+      "old_count": 3,
+      "new_start": 1319,
+      "new_count": 7,
+      "target_lines": [
+        1317,
+        1318,
+        1319
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/logging_custom_prefix_unittest.cc",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 1324,
+      "old_count": 7,
+      "new_start": 1333,
+      "new_count": 18,
+      "target_lines": [
+        1324,
+        1325,
+        1328,
+        1329,
+        1330
+      ],
+      "hunks": 3,
+      "matched_findings": []
+    },
+    {
+      "file": "src/logging_custom_prefix_unittest.cc",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 1345,
+      "old_count": 0,
+      "new_start": 1372,
+      "new_count": 1,
+      "target_lines": [
+        1345,
+        1346
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/logging_unittest.cc",
+      "category": "source",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 1376,
+      "old_count": 1,
+      "new_start": 1376,
+      "new_count": 1,
+      "target_lines": [
+        1376
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/logging_unittest.cc",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 1411,
+      "old_count": 0,
+      "new_start": 1412,
+      "new_count": 1,
+      "target_lines": [
+        1411,
+        1412
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/logging_unittest.cc",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 1424,
+      "old_count": 3,
+      "new_start": 1426,
+      "new_count": 7,
+      "target_lines": [
+        1424,
+        1425,
+        1426
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/logging_unittest.cc",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 1431,
+      "old_count": 7,
+      "new_start": 1440,
+      "new_count": 18,
+      "target_lines": [
+        1431,
+        1432,
+        1435,
+        1436,
+        1437
+      ],
+      "hunks": 3,
+      "matched_findings": []
+    },
+    {
+      "file": "src/logging_unittest.cc",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 1452,
+      "old_count": 0,
+      "new_start": 1479,
+      "new_count": 1,
+      "target_lines": [
+        1452,
+        1453
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/signalhandler_unittest.cc",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 53,
+      "old_count": 0,
+      "new_start": 54,
+      "new_count": 10,
+      "target_lines": [
+        53,
+        54
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/signalhandler_unittest.cc",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 65,
+      "old_count": 0,
+      "new_start": 76,
+      "new_count": 1,
+      "target_lines": [
+        65,
+        66
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/symbolize.cc",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 117,
+      "old_count": 0,
+      "new_start": 118,
+      "new_count": 3,
+      "target_lines": [
+        117,
+        118
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/symbolize.cc",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 167,
+      "old_count": 0,
+      "new_start": 171,
+      "new_count": 24,
+      "target_lines": [
+        167,
+        168
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/symbolize.cc",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 311,
+      "old_count": 0,
+      "new_start": 339,
+      "new_count": 4,
+      "target_lines": [
+        311,
+        312
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/symbolize.cc",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 403,
+      "old_count": 1,
+      "new_start": 434,
+      "new_count": 9,
+      "target_lines": [
+        403
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/symbolize.cc",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 411,
+      "old_count": 3,
+      "new_start": 451,
+      "new_count": 5,
+      "target_lines": [
+        411,
+        412,
+        413
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/symbolize.cc",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 429,
+      "old_count": 3,
+      "new_start": 474,
+      "new_count": 4,
+      "target_lines": [
+        429,
+        430,
+        431
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/symbolize.cc",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 503,
+      "old_count": 0,
+      "new_start": 552,
+      "new_count": 198,
+      "target_lines": [
+        503,
+        504
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        10
+      ]
+    },
+    {
+      "file": "src/symbolize.cc",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 665,
+      "old_count": 0,
+      "new_start": 912,
+      "new_count": 1,
+      "target_lines": [
+        665,
+        666
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/symbolize.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 65,
+      "old_count": 0,
+      "new_start": 66,
+      "new_count": 2,
+      "target_lines": [
+        65,
+        66
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/symbolize.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 70,
+      "old_count": 1,
+      "new_start": 72,
+      "new_count": 1,
+      "target_lines": [
+        70
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/symbolize_unittest.cc",
+      "category": "source",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 273,
+      "old_count": 1,
+      "new_start": 273,
+      "new_count": 4,
+      "target_lines": [
+        273
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 10,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/base/mutex.h",
+      "line": 136,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 53,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/glog/platform.h",
+      "line": 41,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 32,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/logging.cc",
+      "line": 2390,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": [
+        13
+      ]
+    },
+    {
+      "col": 20,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/logging.cc",
+      "line": 2462,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 20,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/logging.cc",
+      "line": 2463,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/logging_custom_prefix_unittest.cc",
+      "line": 954,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 37,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/logging_custom_prefix_unittest.cc",
+      "line": 960,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/logging_unittest.cc",
+      "line": 965,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 37,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/logging_unittest.cc",
+      "line": 971,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 59,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/stacktrace_powerpc-inl.h",
+      "line": 114,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 39,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/symbolize.cc",
+      "line": 504,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": [
+        32
+      ]
+    },
+    {
+      "col": 27,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/symbolize.cc",
+      "line": 521,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 26,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/symbolize.cc",
+      "line": 528,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 51,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/symbolize.cc",
+      "line": 536,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 30,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/symbolize.cc",
+      "line": 547,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 28,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/symbolize.cc",
+      "line": 673,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 38,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/symbolize.h",
+      "line": 39,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 42,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/symbolize.h",
+      "line": 129,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 26,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/utilities.cc",
+      "line": 193,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 37,
+    "sites_by_category": {
+      "source": 27,
+      "build": 10,
+      "other": 0
+    },
+    "sites_source_nontest": 14,
+    "sites_source_test": 13,
+    "sites_hit_source_nontest": 2,
+    "sites_hit_by_category": {
+      "source": 2,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0741,
+    "recall_source_nontest": 0.1429,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.0541,
+    "findings_total": 19,
+    "findings_tp": 2,
+    "findings_by_category": {
+      "source": 19,
+      "build": 0,
+      "other": 0
+    },
+    "findings_in_patched_files": 16,
+    "findings_tp_in_patched_files": 2,
+    "precision": 0.1053,
+    "precision_in_patched_files": 0.125
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "fake-scan",
+    "version": "0.0.0-fake"
+  }
+}
