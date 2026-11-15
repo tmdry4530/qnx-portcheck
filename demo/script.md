@@ -100,6 +100,13 @@ Narration:
 
 [EVAL_NUMBERS] Recall and precision against qnx-ports patches across at least fifteen projects belong here, filled from eval/RESULTS.md. We did not run this on a QNX target; we validated it against qnx-ports patches. This is a host tool; no QNX SDP was used. Suggestions follow QNX 8.0 documentation, and generated build files are drafts.
 
+At render time, [EVAL_NUMBERS] is replaced from eval/RESULTS.md (see demo/README.md); if missing or not a real qnx-portcheck run, the placeholder stays.
+
+Evaluation narration templates:
+
+- Across {projects} qnx-ports projects, source-site recall was {recall_source} and precision was {precision}.
+- Scanner commit {scanner_commit_short}, measured {date_short}.
+
 ## 06 — Learn more
 
 Duration: 14 seconds

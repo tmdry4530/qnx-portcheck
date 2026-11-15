@@ -66,6 +66,7 @@ def test_shell_syntax_and_shellcheck():
 
 def test_demo_visual_layout_and_exit_statuses():
     record = (ROOT / "demo/record.sh").read_text(encoding="utf-8")
+    assert "$REPO_ROOT/$OUT" not in record
     assert "scale=1280:590:force_original_aspect_ratio=decrease" in record
     assert "pad=1280:720:(ow-iw)/2:4:color=0x1e1e1e" in record
     assert "FontName=DejaVu Sans,FontSize=16,Outline=1,MarginV=8" in record

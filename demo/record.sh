@@ -5,6 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 cd "$REPO_ROOT"
 OUT="${DEMO_OUT:-demo/out}"
+if [[ "$OUT" != /* ]]; then OUT="${REPO_ROOT%/}/$OUT"; fi
 ASCIINEMA_BIN="${ASCIINEMA:-$(command -v asciinema || true)}"
 if [[ -z "$ASCIINEMA_BIN" ]]; then ASCIINEMA_BIN=/workspace/qnxref/venv/bin/asciinema; fi
 AGG_BIN="${AGG:-$(command -v agg || true)}"
@@ -26,6 +27,8 @@ python3 demo/build_assets.py check
 python3 demo/build_assets.py subs --out "$OUT/subs"
 mkdir -p "$OUT/casts" "$OUT/gifs" "$OUT/raw" "$OUT/cards" "$OUT/clips"
 : > "$OUT/manifest.txt"
+eval_status="$(cat "$OUT/subs/eval_status.txt")"
+printf 'eval\t%s\n' "$eval_status" >> "$OUT/manifest.txt"
 
 while IFS=$'\t' read -r scene_id slug kind duration requires <&3; do
     [[ "$scene_id" == id ]] && continue
@@ -36,6 +39,9 @@ while IFS=$'\t' read -r scene_id slug kind duration requires <&3; do
     fi
     card_path="$OUT/cards/$scene_id.txt"
     if [[ "$mode" != recorded ]]; then
+        if [[ "$mode" == card ]]; then
+            python3 demo/build_assets.py card-text --scene "$scene_id" --out "$card_path"
+        else
         python3 - "$scene_id" "$mode" "$card_path" <<'PY'
 import json, sys, textwrap
 from pathlib import Path
@@ -48,6 +54,7 @@ if mode == 'placeholder':
 text = '\n'.join(textwrap.fill(line, width=60) for line in text.split('\n'))
 Path(sys.argv[3]).write_text(text, encoding='utf-8')
 PY
+        fi
         title_file="$OUT/cards/$scene_id-title.txt"
         python3 - "$scene_id" "$title_file" <<'PY'
 import json, sys, textwrap
@@ -90,7 +97,7 @@ concat_file="$OUT/concat.txt"
 while IFS=$'\t' read -r scene_id slug kind duration requires; do
     [[ "$scene_id" == id ]] && continue
     if [[ -n "${SCENES:-}" && ! " $SCENES " =~  $scene_id  ]]; then continue; fi
-    printf "file '%s'\n" "$REPO_ROOT/$OUT/clips/$scene_id.mp4" >> "$concat_file"
+    printf "file '%s'\n" "$OUT/clips/$scene_id.mp4" >> "$concat_file"
 done < "$OUT/subs/scenes.tsv"
 ffmpeg -nostdin -y -v error -f concat -safe 0 -i "$concat_file" -c:v libx264 -pix_fmt yuv420p -c:a aac -ar 48000 -ac 2 "$OUT/demo-burned.mp4"
 ffmpeg -nostdin -y -v error -i "$OUT/demo-burned.mp4" -i "$OUT/subs/demo.srt" -map 0:v:0 -map 0:a:0 -map 1:0 -c:v copy -c:a copy -c:s mov_text -metadata:s:s:0 language=eng "$OUT/demo.mp4"
