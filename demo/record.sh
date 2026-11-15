@@ -41,6 +41,15 @@ while IFS=$'\t' read -r scene_id slug kind duration requires <&3; do
     if [[ "$mode" != recorded ]]; then
         if [[ "$mode" == card ]]; then
             python3 demo/build_assets.py card-text --scene "$scene_id" --out "$card_path"
+            if [[ "$scene_id" != 05 ]]; then
+                python3 - "$card_path" <<'PY'
+import sys, textwrap
+from pathlib import Path
+path = Path(sys.argv[1])
+text = path.read_text(encoding='utf-8')
+path.write_text('\n'.join(textwrap.fill(line, width=60) for line in text.split('\n')), encoding='utf-8')
+PY
+            fi
         else
         python3 - "$scene_id" "$mode" "$card_path" <<'PY'
 import json, sys, textwrap
@@ -62,8 +71,15 @@ from pathlib import Path
 scene = next(x for x in json.loads(Path('demo/scenes.json').read_text()) if x['id'] == sys.argv[1])
 Path(sys.argv[2]).write_text(textwrap.fill(scene['title'], width=48), encoding='utf-8')
 PY
+        if [[ "$scene_id" == 05 ]]; then
+            headline_file="$OUT/cards/$scene_id-headline.txt"
+            secondary_file="$OUT/cards/$scene_id-secondary.txt"
+            body_filter="drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:textfile='$headline_file':fontcolor=white:fontsize=28:line_spacing=9:x=80:y=175:y_align=0:fix_bounds=1,drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:textfile='$secondary_file':fontcolor=white:fontsize=18:line_spacing=7:x=80:y=430:y_align=0:fix_bounds=1"
+        else
+            body_filter="drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:textfile='$card_path':fontcolor=white:fontsize=25:line_spacing=12:x=80:y=220:y_align=0:fix_bounds=1"
+        fi
         ffmpeg -nostdin -y -v error -f lavfi -i "color=c=0x1e1e1e:s=1280x720:r=30:d=$duration" \
-            -vf "drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:textfile='$title_file':fontcolor=white:fontsize=38:x=80:y=100,drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:textfile='$card_path':fontcolor=white:fontsize=25:line_spacing=12:x=80:y=220:y_align=0:fix_bounds=1" \
+            -vf "drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:textfile='$title_file':fontcolor=white:fontsize=38:x=80:y=100,$body_filter" \
             -an -c:v libx264 -pix_fmt yuv420p "$OUT/raw/$scene_id.mp4"
     else
         export TERM=xterm-256color
