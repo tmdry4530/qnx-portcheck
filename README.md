@@ -176,11 +176,33 @@ page confirmed a replacement, so the suggestion is `manual review` and `doc_url`
 
 ## Evaluation
 
-[EVAL_NUMBERS]
+qnx-portcheck is a **triage aid, not an oracle**: it points at places a QNX port is likely to touch, and a
+person decides what to change. It was **not run on a QNX target**; the numbers below only compare its findings
+with the files and lines that real [qnx-ports](https://github.com/qnx-ports) patches changed.
 
-The scan rules are evaluated against open-source projects that the [qnx-ports](https://github.com/qnx-ports)
-organization has already ported: scan the upstream base commit, then compare findings with the files and lines
-the qnx-ports patch changed. Results, scripts and raw outputs will be in `eval/`. Only numbers from actual runs are reported.
+Method: scan the upstream base commit of a project qnx-ports has already ported, then compare findings with the
+change sites of the qnx-ports patch (±3 lines). Details in [eval/METHOD.md](eval/METHOD.md); per-project numbers,
+per-rule hits and raw outputs in [eval/RESULTS.md](eval/RESULTS.md) and `eval/results/real/`.
+
+Headline, **fresh** split (15 projects, selected by criteria committed before any of them was scanned, and not
+used for tuning):
+
+| metric (micro) | fresh, 15 projects |
+|---|---|
+| source-site recall | 0.079 (23/292) |
+| precision | 0.033 (48/1448) |
+| precision in patched files | 0.191 (48/251) |
+| build-site recall | 0.009 (17/1864) |
+
+- The build-site recall is dominated by SDL, whose patch regenerates `configure`: 1788 of SDL's 1790 build sites
+  are in the generated `configure` and `test/configure` scripts, which qnx-portcheck does not scan. Excluding SDL,
+  build-site recall is 0.230 (17/74). This is a **post-hoc reference value** computed after seeing the results,
+  not a headline number.
+- For comparison, source-site recall on the 33 original projects: tune split (17 projects) 0.157 (18/115), and
+  0.284 (56/197) on the other 16 projects. Those 16 were **seen during tuning**, so 0.284 is not a
+  generalization metric; use the fresh numbers above for that.
+- Low precision means most findings are not at lines a qnx-ports patch changed, so review findings rather than
+  treating each one as a required change.
 
 ## Tutorial
 
