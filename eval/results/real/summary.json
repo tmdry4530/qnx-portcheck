@@ -1,25 +1,27 @@
 {
   "run_config": {
     "label": "REAL",
-    "date_kst": "2026-11-15T14:15:04.407845+09:00",
+    "date_kst": "2026-11-15T14:52:40.447855+09:00",
     "window": 3,
     "merge_gap": 3,
-    "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
+    "scan_cmd": "/workspace/company/shared/hackathons/qnx/wt-dev2-fresh/.venv/bin/python -m qnx_portcheck scan {path} --format json --fail-on never",
     "scanner": "qnx-portcheck/0.1.0",
     "harness_version": "0.1.0",
-    "harness_git_sha": "5118669",
+    "harness_git_sha": "7df6c14",
     "scanner_source_commit": "5118669",
-    "total_runtime_seconds": 38.7,
-    "started_at": "2026-11-15T14:14:25.683957+09:00",
-    "finished_at": "2026-11-15T14:15:04.406026+09:00",
-    "projects_count": 33,
+    "total_runtime_seconds": 386.5,
+    "started_at": "2026-11-15T14:46:13.991187+09:00",
+    "finished_at": "2026-11-15T14:52:40.445663+09:00",
+    "projects_count": 48,
+    "original_projects_count": 33,
+    "fresh_projects_count": 15,
     "reused_projects": 0,
     "skipped_unverified": 0,
     "split": "all",
-    "generated_at_range": "2026-11-15T14:14:25.685985+09:00 to 2026-11-15T14:15:04.013567+09:00"
+    "generated_at_range": "2026-11-15T14:46:13.993389+09:00 to 2026-11-15T14:52:31.912269+09:00"
   },
   "splits": {
-    "rule": "Projects sorted by name using Python's case-sensitive string ordering alternate by index: even to tune, odd to holdout.",
+    "rule": "Original projects (entries without split) sorted by name using Python's case-sensitive string ordering alternate by index: even to tune, odd to holdout. Fresh projects are selected later by the committed criteria in METHOD.md and never shift tune/holdout.",
     "tune": [
       "asio",
       "aws-c-common",
@@ -56,6 +58,23 @@
       "pistache",
       "s2n-tls",
       "tinyxml2"
+    ],
+    "fresh": [
+      "AMQP-CPP",
+      "CANdb",
+      "Catch2",
+      "EmulationStation",
+      "Fast-CDR",
+      "Fast-DDS",
+      "OpenBLAS",
+      "SDL",
+      "abseil-cpp",
+      "abuild",
+      "apk-tools",
+      "azure-iot-sdk-c",
+      "benchmark",
+      "capnproto",
+      "cpuinfo"
     ]
   },
   "aggregate": {
@@ -237,6 +256,78 @@
       },
       "LNX-SPLICE": {
         "findings": 1,
+        "findings_tp": 0,
+        "sites_hit": 0
+      }
+    },
+    "by_rule_fresh": {
+      "LNX-LINK-FLAGS": {
+        "findings": 145,
+        "findings_tp": 12,
+        "sites_hit": 9
+      },
+      "PORT-OS-IFDEF": {
+        "findings": 468,
+        "findings_tp": 17,
+        "sites_hit": 18
+      },
+      "PORT-QNXNTO": {
+        "findings": 21,
+        "findings_tp": 2,
+        "sites_hit": 2
+      },
+      "LNX-PIPE2": {
+        "findings": 7,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "LNX-PROCFS": {
+        "findings": 149,
+        "findings_tp": 4,
+        "sites_hit": 1
+      },
+      "BLD-CMAKE-PLATFORM": {
+        "findings": 286,
+        "findings_tp": 9,
+        "sites_hit": 9
+      },
+      "LNX-LINUX-IFDEF": {
+        "findings": 187,
+        "findings_tp": 4,
+        "sites_hit": 4
+      },
+      "LNX-SYSCALL": {
+        "findings": 66,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "LNX-SPLICE": {
+        "findings": 16,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "LNX-INOTIFY": {
+        "findings": 6,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "LNX-SYSINFO": {
+        "findings": 7,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "LNX-LINUX-HEADER": {
+        "findings": 41,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "PORT-MINMAX-DEFINE": {
+        "findings": 4,
+        "findings_tp": 0,
+        "sites_hit": 0
+      },
+      "BLD-AUTOCONF-HOST": {
+        "findings": 45,
         "findings_tp": 0,
         "sites_hit": 0
       }
@@ -579,6 +670,140 @@
             "sites_hit": 1
           }
         }
+      },
+      "fresh": {
+        "counts": {
+          "ok_projects": 15,
+          "error_projects": 0
+        },
+        "micro": {
+          "sites_total": 2199,
+          "sites_source_nontest": 260,
+          "sites_hit_source_nontest": 18,
+          "sites_by_category": {
+            "source": 292,
+            "build": 1864,
+            "other": 43
+          },
+          "sites_hit_by_category": {
+            "source": 23,
+            "build": 17,
+            "other": 0
+          },
+          "findings_total": 1448,
+          "findings_tp": 48,
+          "findings_in_patched_files": 251,
+          "findings_tp_in_patched_files": 48,
+          "findings_by_category": {
+            "source": 972,
+            "build": 476,
+            "other": 0
+          },
+          "recall_source": 0.0788,
+          "recall_source_nontest": 0.0692,
+          "recall_build": 0.0091,
+          "recall_in_scope": 0.0186,
+          "precision": 0.0331,
+          "precision_in_patched_files": 0.1912
+        },
+        "macro": {
+          "recall_source": {
+            "mean": 0.1723,
+            "n": 15
+          },
+          "recall_source_nontest": {
+            "mean": 0.1828,
+            "n": 13
+          },
+          "recall_build": {
+            "mean": 0.2666,
+            "n": 13
+          },
+          "recall_in_scope": {
+            "mean": 0.2185,
+            "n": 15
+          },
+          "precision": {
+            "mean": 0.0657,
+            "n": 15
+          },
+          "precision_in_patched_files": {
+            "mean": 0.4012,
+            "n": 12
+          }
+        },
+        "by_rule": {
+          "LNX-LINK-FLAGS": {
+            "findings": 145,
+            "findings_tp": 12,
+            "sites_hit": 9
+          },
+          "PORT-OS-IFDEF": {
+            "findings": 468,
+            "findings_tp": 17,
+            "sites_hit": 18
+          },
+          "PORT-QNXNTO": {
+            "findings": 21,
+            "findings_tp": 2,
+            "sites_hit": 2
+          },
+          "LNX-PIPE2": {
+            "findings": 7,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-PROCFS": {
+            "findings": 149,
+            "findings_tp": 4,
+            "sites_hit": 1
+          },
+          "BLD-CMAKE-PLATFORM": {
+            "findings": 286,
+            "findings_tp": 9,
+            "sites_hit": 9
+          },
+          "LNX-LINUX-IFDEF": {
+            "findings": 187,
+            "findings_tp": 4,
+            "sites_hit": 4
+          },
+          "LNX-SYSCALL": {
+            "findings": 66,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-SPLICE": {
+            "findings": 16,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-INOTIFY": {
+            "findings": 6,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-SYSINFO": {
+            "findings": 7,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "LNX-LINUX-HEADER": {
+            "findings": 41,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "PORT-MINMAX-DEFINE": {
+            "findings": 4,
+            "findings_tp": 0,
+            "sites_hit": 0
+          },
+          "BLD-AUTOCONF-HOST": {
+            "findings": 45,
+            "findings_tp": 0,
+            "sites_hit": 0
+          }
+        }
       }
     }
   },
@@ -643,8 +868,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 2.454
+        "fetch": 7.416,
+        "scan": 2.453
       }
     },
     {
@@ -707,8 +932,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 0.656
+        "fetch": 5.179,
+        "scan": 0.648
       }
     },
     {
@@ -771,8 +996,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 0.713
+        "fetch": 6.14,
+        "scan": 0.705
       }
     },
     {
@@ -835,8 +1060,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 0.691
+        "fetch": 5.427,
+        "scan": 0.689
       }
     },
     {
@@ -915,8 +1140,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 0.552
+        "fetch": 5.796,
+        "scan": 0.544
       }
     },
     {
@@ -981,8 +1206,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 1.032
+        "fetch": 6.024,
+        "scan": 1.068
       }
     },
     {
@@ -1045,8 +1270,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 0.228
+        "fetch": 4.129,
+        "scan": 0.23
       }
     },
     {
@@ -1109,8 +1334,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 3.281
+        "fetch": 8.63,
+        "scan": 3.306
       }
     },
     {
@@ -1173,8 +1398,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 0.995
+        "fetch": 6.482,
+        "scan": 1.008
       }
     },
     {
@@ -1237,8 +1462,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 0.204
+        "fetch": 6.001,
+        "scan": 0.213
       }
     },
     {
@@ -1301,8 +1526,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 0.85
+        "fetch": 5.367,
+        "scan": 0.856
       }
     },
     {
@@ -1521,8 +1746,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.004,
-        "scan": 0.329
+        "fetch": 4.272,
+        "scan": 0.245
       }
     },
     {
@@ -1596,8 +1821,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 0.591
+        "fetch": 5.571,
+        "scan": 0.585
       }
     },
     {
@@ -1660,8 +1885,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 1.03
+        "fetch": 6.626,
+        "scan": 1.037
       }
     },
     {
@@ -1724,8 +1949,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 5.786
+        "fetch": 6.947,
+        "scan": 5.896
       }
     },
     {
@@ -1788,8 +2013,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.004,
-        "scan": 2.458
+        "fetch": 7.204,
+        "scan": 2.437
       }
     },
     {
@@ -1852,8 +2077,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.004,
-        "scan": 0.543
+        "fetch": 5.948,
+        "scan": 0.529
       }
     },
     {
@@ -1922,8 +2147,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.004,
-        "scan": 0.349
+        "fetch": 3.696,
+        "scan": 0.344
       }
     },
     {
@@ -2022,8 +2247,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 0.739
+        "fetch": 5.274,
+        "scan": 0.706
       }
     },
     {
@@ -2086,8 +2311,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 1.458
+        "fetch": 4.595,
+        "scan": 1.356
       }
     },
     {
@@ -2150,8 +2375,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 0.879
+        "fetch": 5.695,
+        "scan": 0.874
       }
     },
     {
@@ -2214,7 +2439,7 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
+        "fetch": 5.009,
         "scan": 0.144
       }
     },
@@ -2278,8 +2503,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 0.608
+        "fetch": 4.874,
+        "scan": 0.611
       }
     },
     {
@@ -2342,8 +2567,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 2.379
+        "fetch": 7.288,
+        "scan": 2.396
       }
     },
     {
@@ -2406,8 +2631,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 5.177
+        "fetch": 8.462,
+        "scan": 5.17
       }
     },
     {
@@ -2470,8 +2695,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 0.126
+        "fetch": 5.926,
+        "scan": 0.129
       }
     },
     {
@@ -2534,8 +2759,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 2.017
+        "fetch": 6.372,
+        "scan": 2.021
       }
     },
     {
@@ -2598,8 +2823,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 0.877
+        "fetch": 5.117,
+        "scan": 0.858
       }
     },
     {
@@ -2662,8 +2887,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 0.224
+        "fetch": 5.218,
+        "scan": 0.225
       }
     },
     {
@@ -2726,8 +2951,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 0.191
+        "fetch": 7.177,
+        "scan": 0.195
       }
     },
     {
@@ -2790,8 +3015,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 0.174
+        "fetch": 4.672,
+        "scan": 0.17
       }
     },
     {
@@ -2854,8 +3079,8 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
-        "scan": 0.211
+        "fetch": 4.622,
+        "scan": 0.199
       }
     },
     {
@@ -2918,8 +3143,1107 @@
         "version": "0.1.0"
       },
       "durations": {
-        "fetch": 0.003,
+        "fetch": 5.682,
         "scan": 0.387
+      }
+    },
+    {
+      "name": "AMQP-CPP",
+      "upstream": "https://github.com/CopernicaMarketingSoftware/AMQP-CPP",
+      "upstream_base_sha": "ca49382bfc5bc165dfb7988b891bb010a939a786",
+      "qnx_head_sha": "7a1ae88b3296345e8134047470e32b424ed607d7",
+      "status": "ok",
+      "split": "fresh",
+      "error": null,
+      "error_kind": null,
+      "metrics": {
+        "sites_total": 4,
+        "sites_by_category": {
+          "source": 1,
+          "build": 3,
+          "other": 0
+        },
+        "sites_source_nontest": 1,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 3,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": 0.0,
+        "recall_build": 1.0,
+        "recall_in_scope": 0.75,
+        "findings_total": 16,
+        "findings_tp": 6,
+        "findings_by_category": {
+          "source": 9,
+          "build": 7,
+          "other": 0
+        },
+        "findings_in_patched_files": 6,
+        "findings_tp_in_patched_files": 6,
+        "precision": 0.375,
+        "precision_in_patched_files": 1.0
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 3,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 2,
+        "compare_files_expected": 2,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "qnx-portcheck",
+        "version": "0.1.0"
+      },
+      "durations": {
+        "fetch": 5.009,
+        "scan": 0.348
+      }
+    },
+    {
+      "name": "CANdb",
+      "upstream": "https://github.com/GENIVI/CANdb",
+      "upstream_base_sha": "150c42a8cdfc0748915f09d2cd0c5a68591263a7",
+      "qnx_head_sha": "eb33c39da049a41837f26fecb54173170a4d9e6e",
+      "status": "ok",
+      "split": "fresh",
+      "error": null,
+      "error_kind": null,
+      "metrics": {
+        "sites_total": 12,
+        "sites_by_category": {
+          "source": 2,
+          "build": 5,
+          "other": 5
+        },
+        "sites_source_nontest": 0,
+        "sites_source_test": 2,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": null,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0,
+        "findings_total": 2,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 1,
+          "build": 1,
+          "other": 0
+        },
+        "findings_in_patched_files": 0,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": null
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 5,
+        "other_sites": 5,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 5,
+        "compare_files_expected": 5,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "qnx-portcheck",
+        "version": "0.1.0"
+      },
+      "durations": {
+        "fetch": 4.983,
+        "scan": 0.092
+      }
+    },
+    {
+      "name": "Catch2",
+      "upstream": "https://github.com/catchorg/Catch2",
+      "upstream_base_sha": "4e8d92bf02f7d1c8006a0e7a5ecabd8e62d98502",
+      "qnx_head_sha": "5ed4b70e2273eff469d7d1dca5fec089223768de",
+      "status": "ok",
+      "split": "fresh",
+      "error": null,
+      "error_kind": null,
+      "metrics": {
+        "sites_total": 7,
+        "sites_by_category": {
+          "source": 4,
+          "build": 3,
+          "other": 0
+        },
+        "sites_source_nontest": 4,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 1,
+        "sites_hit_by_category": {
+          "source": 1,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.25,
+        "recall_source_nontest": 0.25,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.1429,
+        "findings_total": 12,
+        "findings_tp": 1,
+        "findings_by_category": {
+          "source": 10,
+          "build": 2,
+          "other": 0
+        },
+        "findings_in_patched_files": 3,
+        "findings_tp_in_patched_files": 1,
+        "precision": 0.0833,
+        "precision_in_patched_files": 0.3333
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 3,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 6,
+        "compare_files_expected": 6,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "qnx-portcheck",
+        "version": "0.1.0"
+      },
+      "durations": {
+        "fetch": 6.544,
+        "scan": 0.821
+      }
+    },
+    {
+      "name": "EmulationStation",
+      "upstream": "https://github.com/RetroPie/EmulationStation",
+      "upstream_base_sha": "51b6f4162d8e89be2ef7a2c9d7c232ac5b31022b",
+      "qnx_head_sha": "68675d5dc0a1026cc71bd8403fc8a636e3d2cffc",
+      "status": "ok",
+      "split": "fresh",
+      "error": null,
+      "error_kind": null,
+      "metrics": {
+        "sites_total": 34,
+        "sites_by_category": {
+          "source": 31,
+          "build": 3,
+          "other": 0
+        },
+        "sites_source_nontest": 31,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 1,
+        "sites_hit_by_category": {
+          "source": 1,
+          "build": 1,
+          "other": 0
+        },
+        "recall_source": 0.0323,
+        "recall_source_nontest": 0.0323,
+        "recall_build": 0.3333,
+        "recall_in_scope": 0.0588,
+        "findings_total": 32,
+        "findings_tp": 2,
+        "findings_by_category": {
+          "source": 21,
+          "build": 11,
+          "other": 0
+        },
+        "findings_in_patched_files": 5,
+        "findings_tp_in_patched_files": 2,
+        "precision": 0.0625,
+        "precision_in_patched_files": 0.4
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 3,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 13,
+        "compare_files_expected": 13,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "qnx-portcheck",
+        "version": "0.1.0"
+      },
+      "durations": {
+        "fetch": 5.213,
+        "scan": 0.428
+      }
+    },
+    {
+      "name": "Fast-CDR",
+      "upstream": "https://github.com/eProsima/Fast-CDR",
+      "upstream_base_sha": "455a4e7e6267631bc1313203ebed489b72c48009",
+      "qnx_head_sha": "80e4f7dbb7a79a8ccd9a79bc629bea8998fa2001",
+      "status": "ok",
+      "split": "fresh",
+      "error": null,
+      "error_kind": null,
+      "metrics": {
+        "sites_total": 11,
+        "sites_by_category": {
+          "source": 2,
+          "build": 8,
+          "other": 1
+        },
+        "sites_source_nontest": 0,
+        "sites_source_test": 2,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": null,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0,
+        "findings_total": 4,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 3,
+          "build": 1,
+          "other": 0
+        },
+        "findings_in_patched_files": 0,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": null
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 8,
+        "other_sites": 1,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 9,
+        "compare_files_expected": 9,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "qnx-portcheck",
+        "version": "0.1.0"
+      },
+      "durations": {
+        "fetch": 7.158,
+        "scan": 0.511
+      }
+    },
+    {
+      "name": "Fast-DDS",
+      "upstream": "https://github.com/eProsima/Fast-DDS",
+      "upstream_base_sha": "7606b96087a8bcfa7d8fe4434cd5d2d253607dfc",
+      "qnx_head_sha": "b0cbb105a6182416d44f56a324fbe4fb3b219417",
+      "status": "ok",
+      "split": "fresh",
+      "error": null,
+      "error_kind": null,
+      "metrics": {
+        "sites_total": 35,
+        "sites_by_category": {
+          "source": 12,
+          "build": 13,
+          "other": 10
+        },
+        "sites_source_nontest": 2,
+        "sites_source_test": 10,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 4,
+          "build": 1,
+          "other": 0
+        },
+        "recall_source": 0.3333,
+        "recall_source_nontest": 0.0,
+        "recall_build": 0.0769,
+        "recall_in_scope": 0.2,
+        "findings_total": 300,
+        "findings_tp": 5,
+        "findings_by_category": {
+          "source": 185,
+          "build": 115,
+          "other": 0
+        },
+        "findings_in_patched_files": 12,
+        "findings_tp_in_patched_files": 5,
+        "precision": 0.0167,
+        "precision_in_patched_files": 0.4167
+      },
+      "out_of_scope": {
+        "new_files": [
+          {
+            "path": "build_qnx/README.md",
+            "category": "other",
+            "added_lines": 60
+          },
+          {
+            "path": "build_qnx/project_hooks.cmake",
+            "category": "build",
+            "added_lines": 15
+          },
+          {
+            "path": "qnx_patches/Fast-DDS.patch",
+            "category": "other",
+            "added_lines": 264
+          }
+        ],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 13,
+        "other_sites": 10,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 18,
+        "compare_files_expected": 18,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "qnx-portcheck",
+        "version": "0.1.0"
+      },
+      "durations": {
+        "fetch": 8.179,
+        "scan": 11.865
+      }
+    },
+    {
+      "name": "OpenBLAS",
+      "upstream": "https://github.com/OpenMathLib/OpenBLAS",
+      "upstream_base_sha": "5ef8b1964658f9cb6a6324a06f6a1a022609b0c5",
+      "qnx_head_sha": "2897e36407339266789b2b4bc720d2f5c27aee0f",
+      "status": "ok",
+      "split": "fresh",
+      "error": null,
+      "error_kind": null,
+      "metrics": {
+        "sites_total": 27,
+        "sites_by_category": {
+          "source": 12,
+          "build": 15,
+          "other": 0
+        },
+        "sites_source_nontest": 12,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 5,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": 0.0,
+        "recall_build": 0.3333,
+        "recall_in_scope": 0.1852,
+        "findings_total": 224,
+        "findings_tp": 5,
+        "findings_by_category": {
+          "source": 181,
+          "build": 43,
+          "other": 0
+        },
+        "findings_in_patched_files": 29,
+        "findings_tp_in_patched_files": 5,
+        "precision": 0.0223,
+        "precision_in_patched_files": 0.1724
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 15,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 9,
+        "compare_files_expected": 9,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "qnx-portcheck",
+        "version": "0.1.0"
+      },
+      "durations": {
+        "fetch": 12.177,
+        "scan": 31.652
+      }
+    },
+    {
+      "name": "SDL",
+      "upstream": "https://github.com/libsdl-org/SDL",
+      "upstream_base_sha": "4cd981609b50ed273d80c635c1ca4c1e5518fb21",
+      "qnx_head_sha": "e93c96c3321e06c9269584f2d7e0bdc5f5a95a42",
+      "status": "ok",
+      "split": "fresh",
+      "error": null,
+      "error_kind": null,
+      "metrics": {
+        "sites_total": 1831,
+        "sites_by_category": {
+          "source": 41,
+          "build": 1790,
+          "other": 0
+        },
+        "sites_source_nontest": 41,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 3,
+        "sites_hit_by_category": {
+          "source": 3,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0732,
+        "recall_source_nontest": 0.0732,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0016,
+        "findings_total": 289,
+        "findings_tp": 7,
+        "findings_by_category": {
+          "source": 158,
+          "build": 131,
+          "other": 0
+        },
+        "findings_in_patched_files": 111,
+        "findings_tp_in_patched_files": 7,
+        "precision": 0.0242,
+        "precision_in_patched_files": 0.0631
+      },
+      "out_of_scope": {
+        "new_files": [
+          {
+            "path": ".gitignore",
+            "category": "other",
+            "added_lines": 128
+          },
+          {
+            "path": "include/SDL_config_qnx.h",
+            "category": "source",
+            "added_lines": 180
+          },
+          {
+            "path": "src/audio/qsa/qsa_struct.h",
+            "category": "source",
+            "added_lines": 187
+          },
+          {
+            "path": "src/audio/qsa/qsa_symbol_list.h",
+            "category": "source",
+            "added_lines": 70
+          },
+          {
+            "path": "src/video/qnx/qnx_joystick.c",
+            "category": "source",
+            "added_lines": 435
+          },
+          {
+            "path": "src/video/qnx/qnx_keyboard.c",
+            "category": "source",
+            "added_lines": 237
+          },
+          {
+            "path": "src/video/qnx/qnx_mouse.c",
+            "category": "source",
+            "added_lines": 171
+          },
+          {
+            "path": "src/video/qnx/qnx_pointer.c",
+            "category": "source",
+            "added_lines": 101
+          },
+          {
+            "path": "src/video/qnx/qnx_video.c",
+            "category": "source",
+            "added_lines": 782
+          },
+          {
+            "path": "src/video/qnx/screen_consts.c",
+            "category": "source",
+            "added_lines": 5
+          },
+          {
+            "path": "src/video/qnx/screen_consts.h",
+            "category": "source",
+            "added_lines": 5
+          }
+        ],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 1790,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 29,
+        "compare_files_expected": 29,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "qnx-portcheck",
+        "version": "0.1.0"
+      },
+      "durations": {
+        "fetch": 5.78,
+        "scan": 5.276
+      }
+    },
+    {
+      "name": "abseil-cpp",
+      "upstream": "https://github.com/abseil/abseil-cpp",
+      "upstream_base_sha": "b014bff59dc6e1202fa9144dbabd50285d01cd7a",
+      "qnx_head_sha": "424eafa49157be4fe2bf3e85ba94765e19d754a2",
+      "status": "ok",
+      "split": "fresh",
+      "error": null,
+      "error_kind": null,
+      "metrics": {
+        "sites_total": 9,
+        "sites_by_category": {
+          "source": 8,
+          "build": 1,
+          "other": 0
+        },
+        "sites_source_nontest": 4,
+        "sites_source_test": 4,
+        "sites_hit_source_nontest": 2,
+        "sites_hit_by_category": {
+          "source": 3,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.375,
+        "recall_source_nontest": 0.5,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.3333,
+        "findings_total": 147,
+        "findings_tp": 3,
+        "findings_by_category": {
+          "source": 144,
+          "build": 3,
+          "other": 0
+        },
+        "findings_in_patched_files": 12,
+        "findings_tp_in_patched_files": 3,
+        "precision": 0.0204,
+        "precision_in_patched_files": 0.25
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 1,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 8,
+        "compare_files_expected": 8,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "qnx-portcheck",
+        "version": "0.1.0"
+      },
+      "durations": {
+        "fetch": 5.558,
+        "scan": 2.96
+      }
+    },
+    {
+      "name": "abuild",
+      "upstream": "https://github.com/alpinelinux/abuild",
+      "upstream_base_sha": "1355cc9b634d953632e62c26832876b9d20c60fb",
+      "qnx_head_sha": "7466fe68b512a08ab55580d2dc12f45b16f50083",
+      "status": "ok",
+      "split": "fresh",
+      "error": null,
+      "error_kind": null,
+      "metrics": {
+        "sites_total": 28,
+        "sites_by_category": {
+          "source": 1,
+          "build": 0,
+          "other": 27
+        },
+        "sites_source_nontest": 1,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": 0.0,
+        "recall_build": null,
+        "recall_in_scope": 0.0,
+        "findings_total": 1,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 1,
+          "build": 0,
+          "other": 0
+        },
+        "findings_in_patched_files": 0,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": null
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 0,
+        "other_sites": 27,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 4,
+        "compare_files_expected": 4,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "qnx-portcheck",
+        "version": "0.1.0"
+      },
+      "durations": {
+        "fetch": 4.875,
+        "scan": 0.058
+      }
+    },
+    {
+      "name": "apk-tools",
+      "upstream": "https://github.com/alpinelinux/apk-tools",
+      "upstream_base_sha": "9331888de6bd5b280d75112e5b2f7b55684db0ec",
+      "qnx_head_sha": "51c838fcb334a57ee65c43d8b162288079151078",
+      "status": "ok",
+      "split": "fresh",
+      "error": null,
+      "error_kind": null,
+      "metrics": {
+        "sites_total": 12,
+        "sites_by_category": {
+          "source": 12,
+          "build": 0,
+          "other": 0
+        },
+        "sites_source_nontest": 12,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 6,
+        "sites_hit_by_category": {
+          "source": 6,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.5,
+        "recall_source_nontest": 0.5,
+        "recall_build": null,
+        "recall_in_scope": 0.5,
+        "findings_total": 23,
+        "findings_tp": 5,
+        "findings_by_category": {
+          "source": 22,
+          "build": 1,
+          "other": 0
+        },
+        "findings_in_patched_files": 7,
+        "findings_tp_in_patched_files": 5,
+        "precision": 0.2174,
+        "precision_in_patched_files": 0.7143
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 0,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 6,
+        "compare_files_expected": 6,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "qnx-portcheck",
+        "version": "0.1.0"
+      },
+      "durations": {
+        "fetch": 5.286,
+        "scan": 0.301
+      }
+    },
+    {
+      "name": "azure-iot-sdk-c",
+      "upstream": "https://github.com/Azure/azure-iot-sdk-c",
+      "upstream_base_sha": "9c70f98b7b659e169ae44389a5142f3a386c5791",
+      "qnx_head_sha": "b0b49874ada3387726ccd9e58534f627e0ad141d",
+      "status": "ok",
+      "split": "fresh",
+      "error": null,
+      "error_kind": null,
+      "metrics": {
+        "sites_total": 4,
+        "sites_by_category": {
+          "source": 2,
+          "build": 2,
+          "other": 0
+        },
+        "sites_source_nontest": 2,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 2,
+        "sites_hit_by_category": {
+          "source": 2,
+          "build": 2,
+          "other": 0
+        },
+        "recall_source": 1.0,
+        "recall_source_nontest": 1.0,
+        "recall_build": 1.0,
+        "recall_in_scope": 1.0,
+        "findings_total": 160,
+        "findings_tp": 4,
+        "findings_by_category": {
+          "source": 41,
+          "build": 119,
+          "other": 0
+        },
+        "findings_in_patched_files": 7,
+        "findings_tp_in_patched_files": 4,
+        "precision": 0.025,
+        "precision_in_patched_files": 0.5714
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 2,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 3,
+        "compare_files_expected": 3,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "qnx-portcheck",
+        "version": "0.1.0"
+      },
+      "durations": {
+        "fetch": 6.968,
+        "scan": 3.014
+      }
+    },
+    {
+      "name": "benchmark",
+      "upstream": "https://github.com/google/benchmark",
+      "upstream_base_sha": "344117638c8ff7e239044fd0fa7085839fc03021",
+      "qnx_head_sha": "85c35154ee9e8272ec5c83ffe251601acbd4371e",
+      "status": "ok",
+      "split": "fresh",
+      "error": null,
+      "error_kind": null,
+      "metrics": {
+        "sites_total": 8,
+        "sites_by_category": {
+          "source": 2,
+          "build": 6,
+          "other": 0
+        },
+        "sites_source_nontest": 1,
+        "sites_source_test": 1,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 0,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": 0.0,
+        "recall_build": 0.0,
+        "recall_in_scope": 0.0,
+        "findings_total": 13,
+        "findings_tp": 0,
+        "findings_by_category": {
+          "source": 9,
+          "build": 4,
+          "other": 0
+        },
+        "findings_in_patched_files": 6,
+        "findings_tp_in_patched_files": 0,
+        "precision": 0.0,
+        "precision_in_patched_files": 0.0
+      },
+      "out_of_scope": {
+        "new_files": [
+          {
+            "path": "qnx/.gitignore",
+            "category": "other",
+            "added_lines": 5
+          },
+          {
+            "path": "qnx/LICENSE.md",
+            "category": "other",
+            "added_lines": 22
+          },
+          {
+            "path": "qnx/README.md",
+            "category": "other",
+            "added_lines": 8
+          },
+          {
+            "path": "qnx/build/Makefile",
+            "category": "build",
+            "added_lines": 8
+          },
+          {
+            "path": "qnx/build/common.mk",
+            "category": "build",
+            "added_lines": 93
+          },
+          {
+            "path": "qnx/build/nto-aarch64-le/Makefile",
+            "category": "build",
+            "added_lines": 1
+          },
+          {
+            "path": "qnx/build/nto-x86_64-o/Makefile",
+            "category": "build",
+            "added_lines": 1
+          },
+          {
+            "path": "qnx/build/qnx.nto.toolchain.cmake",
+            "category": "build",
+            "added_lines": 34
+          },
+          {
+            "path": "qnx/shiplist/shiplist-sdp-benchmark-internal.xml",
+            "category": "other",
+            "added_lines": 23
+          },
+          {
+            "path": "qnx/shiplist/shiplist-sdp-benchmark_tests-internal.xml",
+            "category": "other",
+            "added_lines": 17
+          },
+          {
+            "path": "qnx/test/README.md",
+            "category": "other",
+            "added_lines": 67
+          }
+        ],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 6,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 16,
+        "compare_files_expected": 16,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "qnx-portcheck",
+        "version": "0.1.0"
+      },
+      "durations": {
+        "fetch": 4.276,
+        "scan": 0.247
+      }
+    },
+    {
+      "name": "capnproto",
+      "upstream": "https://github.com/capnproto/capnproto",
+      "upstream_base_sha": "1a0e12c0a3ba1f0dbbad45ddfef555166e0a14fc",
+      "qnx_head_sha": "a60aaee41786d4ad4cf9079364550cf3ba4e18f4",
+      "status": "ok",
+      "split": "fresh",
+      "error": null,
+      "error_kind": null,
+      "metrics": {
+        "sites_total": 31,
+        "sites_by_category": {
+          "source": 22,
+          "build": 9,
+          "other": 0
+        },
+        "sites_source_nontest": 9,
+        "sites_source_test": 13,
+        "sites_hit_source_nontest": 0,
+        "sites_hit_by_category": {
+          "source": 0,
+          "build": 2,
+          "other": 0
+        },
+        "recall_source": 0.0,
+        "recall_source_nontest": 0.0,
+        "recall_build": 0.2222,
+        "recall_in_scope": 0.0645,
+        "findings_total": 29,
+        "findings_tp": 3,
+        "findings_by_category": {
+          "source": 23,
+          "build": 6,
+          "other": 0
+        },
+        "findings_in_patched_files": 4,
+        "findings_tp_in_patched_files": 3,
+        "precision": 0.1034,
+        "precision_in_patched_files": 0.75
+      },
+      "out_of_scope": {
+        "new_files": [],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 9,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 12,
+        "compare_files_expected": 12,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "qnx-portcheck",
+        "version": "0.1.0"
+      },
+      "durations": {
+        "fetch": 4.591,
+        "scan": 0.879
+      }
+    },
+    {
+      "name": "cpuinfo",
+      "upstream": "https://github.com/pytorch/cpuinfo",
+      "upstream_base_sha": "3c8b1533ac03dd6531ab6e7b9245d488f13a82a5",
+      "qnx_head_sha": "0cf43cf0ad54f4f8551d5a0c624fe5c4aee64dcc",
+      "status": "ok",
+      "split": "fresh",
+      "error": null,
+      "error_kind": null,
+      "metrics": {
+        "sites_total": 146,
+        "sites_by_category": {
+          "source": 140,
+          "build": 6,
+          "other": 0
+        },
+        "sites_source_nontest": 140,
+        "sites_source_test": 0,
+        "sites_hit_source_nontest": 3,
+        "sites_hit_by_category": {
+          "source": 3,
+          "build": 3,
+          "other": 0
+        },
+        "recall_source": 0.0214,
+        "recall_source_nontest": 0.0214,
+        "recall_build": 0.5,
+        "recall_in_scope": 0.0411,
+        "findings_total": 196,
+        "findings_tp": 7,
+        "findings_by_category": {
+          "source": 164,
+          "build": 32,
+          "other": 0
+        },
+        "findings_in_patched_files": 49,
+        "findings_tp_in_patched_files": 7,
+        "precision": 0.0357,
+        "precision_in_patched_files": 0.1429
+      },
+      "out_of_scope": {
+        "new_files": [
+          {
+            "path": "src/qnx/api.c",
+            "category": "source",
+            "added_lines": 1876
+          },
+          {
+            "path": "src/qnx/api.h",
+            "category": "source",
+            "added_lines": 36
+          }
+        ],
+        "binary": [],
+        "submodule": [],
+        "mode_only": [],
+        "build_sites": 6,
+        "other_sites": 0,
+        "rename_only": [],
+        "deleted_empty": []
+      },
+      "diff_stats": {
+        "files_changed": 6,
+        "compare_files_expected": 6,
+        "compare_files_match": true
+      },
+      "scanner": {
+        "tool": "qnx-portcheck",
+        "version": "0.1.0"
+      },
+      "durations": {
+        "fetch": 6.207,
+        "scan": 2.255
       }
     }
   ]

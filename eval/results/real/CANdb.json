@@ -1,0 +1,298 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T14:50:10.690919+09:00",
+  "project": {
+    "name": "CANdb",
+    "upstream": "https://github.com/GENIVI/CANdb",
+    "upstream_base_ref": "master",
+    "upstream_base_sha": "150c42a8cdfc0748915f09d2cd0c5a68591263a7",
+    "qnx_repo": "https://github.com/qnx-ports/CANdb",
+    "qnx_branch": "qnx-master",
+    "qnx_head_sha": "eb33c39da049a41837f26fecb54173170a4d9e6e",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "/workspace/company/shared/hackathons/qnx/wt-dev2-fresh/.venv/bin/python -m qnx_portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "5118669",
+  "durations": {
+    "fetch": 4.98318021200248,
+    "scan": 0.09204562299419194
+  },
+  "diff_stats": {
+    "files_changed": 5,
+    "compare_files_expected": 5,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    ".gitignore",
+    "src/dbc_grammar.peg",
+    "tests/CMakeLists.txt",
+    "tests/opendbc_tests.cpp",
+    "tests/opendbc_tests_expected_data.hpp"
+  ],
+  "sites": [
+    {
+      "file": ".gitignore",
+      "category": "other",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 8,
+      "old_count": 0,
+      "new_start": 9,
+      "new_count": 3,
+      "target_lines": [
+        8,
+        9
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/dbc_grammar.peg",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 2,
+      "old_count": 1,
+      "new_start": 2,
+      "new_count": 1,
+      "target_lines": [
+        2
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/dbc_grammar.peg",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 12,
+      "old_count": 1,
+      "new_start": 12,
+      "new_count": 1,
+      "target_lines": [
+        12
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/dbc_grammar.peg",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 38,
+      "old_count": 1,
+      "new_start": 38,
+      "new_count": 1,
+      "target_lines": [
+        38
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/dbc_grammar.peg",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 51,
+      "old_count": 1,
+      "new_start": 51,
+      "new_count": 1,
+      "target_lines": [
+        51
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/CMakeLists.txt",
+      "category": "build",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 1,
+      "old_count": 4,
+      "new_start": 2,
+      "new_count": 13,
+      "target_lines": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/CMakeLists.txt",
+      "category": "build",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 12,
+      "old_count": 0,
+      "new_start": 26,
+      "new_count": 1,
+      "target_lines": [
+        12,
+        13
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/CMakeLists.txt",
+      "category": "build",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 28,
+      "old_count": 1,
+      "new_start": 42,
+      "new_count": 5,
+      "target_lines": [
+        28
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/CMakeLists.txt",
+      "category": "build",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 33,
+      "old_count": 0,
+      "new_start": 52,
+      "new_count": 3,
+      "target_lines": [
+        33,
+        34
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/CMakeLists.txt",
+      "category": "build",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 42,
+      "old_count": 0,
+      "new_start": 64,
+      "new_count": 18,
+      "target_lines": [
+        42,
+        43
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/opendbc_tests.cpp",
+      "category": "source",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 59,
+      "old_count": 1,
+      "new_start": 59,
+      "new_count": 59,
+      "target_lines": [
+        59
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/opendbc_tests_expected_data.hpp",
+      "category": "source",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 24,
+      "old_count": 1,
+      "new_start": 24,
+      "new_count": 1,
+      "target_lines": [
+        24
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 5,
+    "other_sites": 5,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "3rdParty/termcolor/termcolor/termcolor.hpp",
+      "line": 20,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "tools/dbconverter/CMakeLists.txt",
+      "line": 2,
+      "col": 49,
+      "message": "Linux link library 'pthread'",
+      "suggestion": "On QNX 8.0 pthread_create() is documented in libc, which qcc usually links automatically; drop or guard libpthread for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_create.html",
+      "confidence": "high",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 12,
+    "sites_by_category": {
+      "source": 2,
+      "build": 5,
+      "other": 5
+    },
+    "sites_source_nontest": 0,
+    "sites_source_test": 2,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": null,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.0,
+    "findings_total": 2,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 1,
+      "build": 1,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  },
+  "split": "fresh"
+}

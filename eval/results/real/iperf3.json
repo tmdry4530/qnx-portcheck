@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T14:14:36.383467+09:00",
+  "generated_at": "2026-11-15T14:47:19.928254+09:00",
   "project": {
     "name": "iperf3",
     "upstream": "https://github.com/esnet/iperf",
@@ -15,11 +15,11 @@
   },
   "window": 3,
   "merge_gap": 3,
-  "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
+  "scan_cmd": "/workspace/company/shared/hackathons/qnx/wt-dev2-fresh/.venv/bin/python -m qnx_portcheck scan {path} --format json --fail-on never",
   "scanner_source_commit": "5118669",
   "durations": {
-    "fetch": 0.0031549360137432814,
-    "scan": 0.20396807600627653
+    "fetch": 6.001074738014722,
+    "scan": 0.21319044299889356
   },
   "diff_stats": {
     "files_changed": 3,

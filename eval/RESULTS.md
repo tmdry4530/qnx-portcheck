@@ -3,18 +3,19 @@
 Numbers below come from an actual run of qnx-portcheck on the upstream base commits listed in eval/projects.yaml, compared with the qnx-ports patches (see METHOD.md). The tool was not run on a QNX target.
 
 - Label: REAL
-- Date (KST): 2026-11-15T14:15:04.407845+09:00
+- Date (KST): 2026-11-15T14:52:40.447855+09:00
 - Window: ±3 lines
 - Merge gap: 3 lines
-- Scan command: `qnx-portcheck scan {path} --format json --fail-on never`
+- Scan command: `/workspace/company/shared/hackathons/qnx/wt-dev2-fresh/.venv/bin/python -m qnx_portcheck scan {path} --format json --fail-on never`
 - Scanner: qnx-portcheck/0.1.0
 - Harness version: 0.1.0
 - Scanner source commit: 5118669
-- Harness git SHA: 5118669
-- Total runtime: 38.7 s
+- Harness git SHA: 7df6c14
+- Total runtime: 386.5 s
 - Projects: 33
+- Fresh projects: 15
 - Reused projects: 0
-- Scan results generated (KST): 2026-11-15T14:14:25.685985+09:00 to 2026-11-15T14:15:04.013567+09:00
+- Scan results generated (KST): 2026-11-15T14:46:13.993389+09:00 to 2026-11-15T14:52:31.912269+09:00
 
 | project | split | upstream base | src sites (all/non-test) | build sites | other sites | new files | findings | TP | recall src | recall src non-test | recall build | precision | precision (patched files) | status |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
@@ -53,6 +54,28 @@ Numbers below come from an actual run of qnx-portcheck on the upstream base comm
 | re2 | tune | `6dcd83d60f` | 0/0 | 1 | 0 | 0 | 5 | 0 | — | — | 0.000 | 0.000 | 0.000 | ok |
 | **Micro** | — | — | 312/258 | 106 | 32 | — | 1850 | 88 | 0.237 | 0.217 | 0.057 | 0.048 | 0.214 | — |
 | **Macro** | — | — | — | — | — | — | — | — | 0.183 | 0.172 | 0.078 | 0.044 | 0.226 | — |
+
+## Fresh projects
+
+| project | split | upstream base | src sites (all/non-test) | build sites | other sites | new files | findings | TP | recall src | recall src non-test | recall build | precision | precision (patched files) | status |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| AMQP-CPP | fresh | `ca49382bfc` | 1/1 | 3 | 0 | 0 | 16 | 6 | 0.000 | 0.000 | 1.000 | 0.375 | 1.000 | ok |
+| CANdb | fresh | `150c42a8cd` | 2/0 | 5 | 5 | 0 | 2 | 0 | 0.000 | — | 0.000 | 0.000 | — | ok |
+| Catch2 | fresh | `4e8d92bf02` | 4/4 | 3 | 0 | 0 | 12 | 1 | 0.250 | 0.250 | 0.000 | 0.083 | 0.333 | ok |
+| EmulationStation | fresh | `51b6f4162d` | 31/31 | 3 | 0 | 0 | 32 | 2 | 0.032 | 0.032 | 0.333 | 0.062 | 0.400 | ok |
+| Fast-CDR | fresh | `455a4e7e62` | 2/0 | 8 | 1 | 0 | 4 | 0 | 0.000 | — | 0.000 | 0.000 | — | ok |
+| Fast-DDS | fresh | `7606b96087` | 12/2 | 13 | 10 | 3 | 300 | 5 | 0.333 | 0.000 | 0.077 | 0.017 | 0.417 | ok |
+| OpenBLAS | fresh | `5ef8b19646` | 12/12 | 15 | 0 | 0 | 224 | 5 | 0.000 | 0.000 | 0.333 | 0.022 | 0.172 | ok |
+| SDL | fresh | `4cd981609b` | 41/41 | 1790 | 0 | 11 | 289 | 7 | 0.073 | 0.073 | 0.000 | 0.024 | 0.063 | ok |
+| abseil-cpp | fresh | `b014bff59d` | 8/4 | 1 | 0 | 0 | 147 | 3 | 0.375 | 0.500 | 0.000 | 0.020 | 0.250 | ok |
+| abuild | fresh | `1355cc9b63` | 1/1 | 0 | 27 | 0 | 1 | 0 | 0.000 | 0.000 | — | 0.000 | — | ok |
+| apk-tools | fresh | `9331888de6` | 12/12 | 0 | 0 | 0 | 23 | 5 | 0.500 | 0.500 | — | 0.217 | 0.714 | ok |
+| azure-iot-sdk-c | fresh | `9c70f98b7b` | 2/2 | 2 | 0 | 0 | 160 | 4 | 1.000 | 1.000 | 1.000 | 0.025 | 0.571 | ok |
+| benchmark | fresh | `344117638c` | 2/1 | 6 | 0 | 11 | 13 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | ok |
+| capnproto | fresh | `1a0e12c0a3` | 22/9 | 9 | 0 | 0 | 29 | 3 | 0.000 | 0.000 | 0.222 | 0.103 | 0.750 | ok |
+| cpuinfo | fresh | `3c8b1533ac` | 140/140 | 6 | 0 | 2 | 196 | 7 | 0.021 | 0.021 | 0.500 | 0.036 | 0.143 | ok |
+| **Micro** | — | — | 292/260 | 1864 | 43 | — | 1448 | 48 | 0.079 | 0.069 | 0.009 | 0.033 | 0.191 | — |
+| **Macro** | — | — | — | — | — | — | — | — | 0.172 | 0.183 | 0.267 | 0.066 | 0.401 | — |
 The term “src sites” means source-file change sites in upstream base coordinates; “(non-test)” excludes test paths.
 
 ## Overall (micro)
@@ -60,14 +83,16 @@ The term “src sites” means source-file change sites in upstream base coordin
 Overall (micro): source-site recall 0.237 (74/312), non-test source-site recall 0.217 (56/258), build-site recall 0.057 (6/106), precision 0.048 (88/1850), precision in patched files 0.214 (88/411).
 
 Split tune (micro, 17 projects): source-site recall 0.157 (18/115), non-test source-site recall 0.150 (15/100), build-site recall 0.083 (4/48), precision 0.035 (27/761), precision in patched files 0.206 (27/131).
-Split holdout (micro, 16 projects): source-site recall 0.284 (56/197), non-test source-site recall 0.260 (41/158), build-site recall 0.035 (2/58), precision 0.056 (61/1089), precision in patched files 0.218 (61/280).
+Split holdout (seen during tuning) (micro, 16 projects): source-site recall 0.284 (56/197), non-test source-site recall 0.260 (41/158), build-site recall 0.035 (2/58), precision 0.056 (61/1089), precision in patched files 0.218 (61/280).
+Split fresh (micro, 15 projects): source-site recall 0.079 (23/292), non-test source-site recall 0.069 (18/260), build-site recall 0.009 (17/1864), precision 0.033 (48/1448), precision in patched files 0.191 (48/251).
 
 ## Splits
 
-Projects sorted by name using Python's case-sensitive string ordering alternate by index: even to tune, odd to holdout.
+Original projects (entries without split) sorted by name using Python's case-sensitive string ordering alternate by index: even to tune, odd to holdout. Fresh projects are selected later by the committed criteria in METHOD.md and never shift tune/holdout.
 
 - Tune: asio, aws-c-common, c-ares, chrony, fribidi, gnutls, iperf3, libevent, libusb, libwebsockets, libyaml, lua, nghttp2, open-amp, re2, strongswan, unbound
-- Holdout: avahi, aws-c-io, check, dlt-daemon, glog, googletest, jansson, libmetal, libuv, libxml2, lldpd, mosquitto, ntpsec, pistache, s2n-tls, tinyxml2
+- Holdout (seen during tuning): avahi, aws-c-io, check, dlt-daemon, glog, googletest, jansson, libmetal, libuv, libxml2, lldpd, mosquitto, ntpsec, pistache, s2n-tls, tinyxml2
+- Fresh projects: AMQP-CPP, CANdb, Catch2, EmulationStation, Fast-CDR, Fast-DDS, OpenBLAS, SDL, abseil-cpp, abuild, apk-tools, azure-iot-sdk-c, benchmark, capnproto, cpuinfo
 
 ## Hits by rule
 
@@ -98,44 +123,78 @@ Projects sorted by name using Python's case-sensitive string ordering alternate 
 | PORT-SA-RESTART | 12 | 2 | 2 |
 | PORT-TIMEVAL | 40 | 4 | 4 |
 
+## Hits by rule (fresh)
+
+| rule_id | findings | TP findings | sites hit |
+|---|---:|---:|---:|
+| BLD-AUTOCONF-HOST | 45 | 0 | 0 |
+| BLD-CMAKE-PLATFORM | 286 | 9 | 9 |
+| LNX-INOTIFY | 6 | 0 | 0 |
+| LNX-LINK-FLAGS | 145 | 12 | 9 |
+| LNX-LINUX-HEADER | 41 | 0 | 0 |
+| LNX-LINUX-IFDEF | 187 | 4 | 4 |
+| LNX-PIPE2 | 7 | 0 | 0 |
+| LNX-PROCFS | 149 | 4 | 1 |
+| LNX-SPLICE | 16 | 0 | 0 |
+| LNX-SYSCALL | 66 | 0 | 0 |
+| LNX-SYSINFO | 7 | 0 | 0 |
+| PORT-MINMAX-DEFINE | 4 | 0 | 0 |
+| PORT-OS-IFDEF | 468 | 17 | 18 |
+| PORT-QNXNTO | 21 | 2 | 2 |
+
 ## Runtime
 
 | project | fetch seconds | scan seconds |
 |---|---:|---:|
-| asio | 0.003 | 2.454 |
-| avahi | 0.003 | 0.656 |
-| aws-c-io | 0.003 | 0.713 |
-| c-ares | 0.003 | 0.691 |
-| chrony | 0.003 | 0.552 |
-| dlt-daemon | 0.003 | 1.032 |
-| glog | 0.003 | 0.228 |
-| gnutls | 0.003 | 3.281 |
-| googletest | 0.003 | 0.995 |
-| iperf3 | 0.003 | 0.204 |
-| libevent | 0.003 | 0.850 |
-| libmetal | 0.004 | 0.329 |
-| libusb | 0.003 | 0.591 |
-| libuv | 0.003 | 1.030 |
-| libwebsockets | 0.003 | 5.786 |
-| libxml2 | 0.004 | 2.458 |
-| lldpd | 0.004 | 0.543 |
-| lua | 0.004 | 0.349 |
-| mosquitto | 0.003 | 0.739 |
-| nghttp2 | 0.003 | 1.458 |
-| ntpsec | 0.003 | 0.879 |
-| open-amp | 0.003 | 0.144 |
-| pistache | 0.003 | 0.608 |
-| s2n-tls | 0.003 | 2.379 |
-| strongswan | 0.003 | 5.177 |
-| tinyxml2 | 0.003 | 0.126 |
-| unbound | 0.003 | 2.017 |
-| aws-c-common | 0.003 | 0.877 |
-| check | 0.003 | 0.224 |
-| fribidi | 0.003 | 0.191 |
-| jansson | 0.003 | 0.174 |
-| libyaml | 0.003 | 0.211 |
-| re2 | 0.003 | 0.387 |
-Total runtime: 38.7 seconds.
+| asio | 7.416 | 2.453 |
+| avahi | 5.179 | 0.648 |
+| aws-c-io | 6.140 | 0.705 |
+| c-ares | 5.427 | 0.689 |
+| chrony | 5.796 | 0.544 |
+| dlt-daemon | 6.024 | 1.068 |
+| glog | 4.129 | 0.230 |
+| gnutls | 8.630 | 3.306 |
+| googletest | 6.482 | 1.008 |
+| iperf3 | 6.001 | 0.213 |
+| libevent | 5.367 | 0.856 |
+| libmetal | 4.272 | 0.245 |
+| libusb | 5.571 | 0.585 |
+| libuv | 6.626 | 1.037 |
+| libwebsockets | 6.947 | 5.896 |
+| libxml2 | 7.204 | 2.437 |
+| lldpd | 5.948 | 0.529 |
+| lua | 3.696 | 0.344 |
+| mosquitto | 5.274 | 0.706 |
+| nghttp2 | 4.595 | 1.356 |
+| ntpsec | 5.695 | 0.874 |
+| open-amp | 5.009 | 0.144 |
+| pistache | 4.874 | 0.611 |
+| s2n-tls | 7.288 | 2.396 |
+| strongswan | 8.462 | 5.170 |
+| tinyxml2 | 5.926 | 0.129 |
+| unbound | 6.372 | 2.021 |
+| aws-c-common | 5.117 | 0.858 |
+| check | 5.218 | 0.225 |
+| fribidi | 7.177 | 0.195 |
+| jansson | 4.672 | 0.170 |
+| libyaml | 4.622 | 0.199 |
+| re2 | 5.682 | 0.387 |
+| AMQP-CPP (fresh) | 5.009 | 0.348 |
+| CANdb (fresh) | 4.983 | 0.092 |
+| Catch2 (fresh) | 6.544 | 0.821 |
+| EmulationStation (fresh) | 5.213 | 0.428 |
+| Fast-CDR (fresh) | 7.158 | 0.511 |
+| Fast-DDS (fresh) | 8.179 | 11.865 |
+| OpenBLAS (fresh) | 12.177 | 31.652 |
+| SDL (fresh) | 5.780 | 5.276 |
+| abseil-cpp (fresh) | 5.558 | 2.960 |
+| abuild (fresh) | 4.875 | 0.058 |
+| apk-tools (fresh) | 5.286 | 0.301 |
+| azure-iot-sdk-c (fresh) | 6.968 | 3.014 |
+| benchmark (fresh) | 4.276 | 0.247 |
+| capnproto (fresh) | 4.591 | 0.879 |
+| cpuinfo (fresh) | 6.207 | 2.255 |
+Total runtime: 386.5 seconds.
 
 ## Out of scope
 
@@ -172,5 +231,20 @@ Total runtime: 38.7 seconds.
 - **jansson**: new files 0 (); rename-only 0; deleted-empty 0; binary 0; submodule 0; mode-only 0; build-file change sites 2; other-file change sites 0.
 - **libyaml**: new files 0 (); rename-only 0; deleted-empty 0; binary 0; submodule 0; mode-only 0; build-file change sites 4; other-file change sites 0.
 - **re2**: new files 0 (); rename-only 0; deleted-empty 0; binary 0; submodule 0; mode-only 0; build-file change sites 1; other-file change sites 0.
+- **AMQP-CPP (fresh)**: new files 0 (); rename-only 0; deleted-empty 0; binary 0; submodule 0; mode-only 0; build-file change sites 3; other-file change sites 0.
+- **CANdb (fresh)**: new files 0 (); rename-only 0; deleted-empty 0; binary 0; submodule 0; mode-only 0; build-file change sites 5; other-file change sites 5.
+- **Catch2 (fresh)**: new files 0 (); rename-only 0; deleted-empty 0; binary 0; submodule 0; mode-only 0; build-file change sites 3; other-file change sites 0.
+- **EmulationStation (fresh)**: new files 0 (); rename-only 0; deleted-empty 0; binary 0; submodule 0; mode-only 0; build-file change sites 3; other-file change sites 0.
+- **Fast-CDR (fresh)**: new files 0 (); rename-only 0; deleted-empty 0; binary 0; submodule 0; mode-only 0; build-file change sites 8; other-file change sites 1.
+- **Fast-DDS (fresh)**: new files 3 (build_qnx/README.md, build_qnx/project_hooks.cmake, qnx_patches/Fast-DDS.patch); rename-only 0; deleted-empty 0; binary 0; submodule 0; mode-only 0; build-file change sites 13; other-file change sites 10.
+- **OpenBLAS (fresh)**: new files 0 (); rename-only 0; deleted-empty 0; binary 0; submodule 0; mode-only 0; build-file change sites 15; other-file change sites 0.
+- **SDL (fresh)**: new files 11 (.gitignore, include/SDL_config_qnx.h, src/audio/qsa/qsa_struct.h, src/audio/qsa/qsa_symbol_list.h, src/video/qnx/qnx_joystick.c); rename-only 0; deleted-empty 0; binary 0; submodule 0; mode-only 0; build-file change sites 1790; other-file change sites 0.
+- **abseil-cpp (fresh)**: new files 0 (); rename-only 0; deleted-empty 0; binary 0; submodule 0; mode-only 0; build-file change sites 1; other-file change sites 0.
+- **abuild (fresh)**: new files 0 (); rename-only 0; deleted-empty 0; binary 0; submodule 0; mode-only 0; build-file change sites 0; other-file change sites 27.
+- **apk-tools (fresh)**: new files 0 (); rename-only 0; deleted-empty 0; binary 0; submodule 0; mode-only 0; build-file change sites 0; other-file change sites 0.
+- **azure-iot-sdk-c (fresh)**: new files 0 (); rename-only 0; deleted-empty 0; binary 0; submodule 0; mode-only 0; build-file change sites 2; other-file change sites 0.
+- **benchmark (fresh)**: new files 11 (qnx/.gitignore, qnx/LICENSE.md, qnx/README.md, qnx/build/Makefile, qnx/build/common.mk); rename-only 0; deleted-empty 0; binary 0; submodule 0; mode-only 0; build-file change sites 6; other-file change sites 0.
+- **capnproto (fresh)**: new files 0 (); rename-only 0; deleted-empty 0; binary 0; submodule 0; mode-only 0; build-file change sites 9; other-file change sites 0.
+- **cpuinfo (fresh)**: new files 2 (src/qnx/api.c, src/qnx/api.h); rename-only 0; deleted-empty 0; binary 0; submodule 0; mode-only 0; build-file change sites 6; other-file change sites 0.
 
 See [METHOD.md](METHOD.md) for methodology.

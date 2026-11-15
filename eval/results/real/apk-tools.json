@@ -1,0 +1,580 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T14:52:06.324684+09:00",
+  "project": {
+    "name": "apk-tools",
+    "upstream": "https://github.com/alpinelinux/apk-tools",
+    "upstream_base_ref": "v3.0.0_rc5",
+    "upstream_base_sha": "9331888de6bd5b280d75112e5b2f7b55684db0ec",
+    "qnx_repo": "https://github.com/qnx-ports/apk-tools",
+    "qnx_branch": "qnx_3.0.0_rc5",
+    "qnx_head_sha": "51c838fcb334a57ee65c43d8b162288079151078",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "/workspace/company/shared/hackathons/qnx/wt-dev2-fresh/.venv/bin/python -m qnx_portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "5118669",
+  "durations": {
+    "fetch": 5.286020160012413,
+    "scan": 0.30068665702128783
+  },
+  "diff_stats": {
+    "files_changed": 6,
+    "compare_files_expected": 6,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "libfetch/common.c",
+    "portability/sys/random.h",
+    "src/apk_xattr.h",
+    "src/context.c",
+    "src/database.c",
+    "src/io.c"
+  ],
+  "sites": [
+    {
+      "file": "libfetch/common.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 221,
+      "old_count": 4,
+      "new_start": 222,
+      "new_count": 2,
+      "target_lines": [
+        221,
+        222,
+        223,
+        224
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "libfetch/common.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 278,
+      "old_count": 4,
+      "new_start": 281,
+      "new_count": 2,
+      "target_lines": [
+        278,
+        279,
+        280,
+        281
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "portability/sys/random.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 0,
+      "old_count": 2,
+      "new_start": 1,
+      "new_count": 2,
+      "target_lines": [
+        1,
+        2
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/apk_xattr.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 2,
+      "old_count": 3,
+      "new_start": 3,
+      "new_count": 2,
+      "target_lines": [
+        2,
+        3,
+        4
+      ],
+      "hunks": 2,
+      "matched_findings": [
+        11
+      ]
+    },
+    {
+      "file": "src/apk_xattr.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 8,
+      "old_count": 0,
+      "new_start": 11,
+      "new_count": 2,
+      "target_lines": [
+        8,
+        9
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        11
+      ]
+    },
+    {
+      "file": "src/apk_xattr.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 17,
+      "old_count": 0,
+      "new_start": 22,
+      "new_count": 2,
+      "target_lines": [
+        17,
+        18
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        12
+      ]
+    },
+    {
+      "file": "src/apk_xattr.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 26,
+      "old_count": 0,
+      "new_start": 33,
+      "new_count": 2,
+      "target_lines": [
+        26,
+        27
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        13
+      ]
+    },
+    {
+      "file": "src/context.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 80,
+      "old_count": 2,
+      "new_start": 80,
+      "new_count": 2,
+      "target_lines": [
+        80,
+        81
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/database.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1233,
+      "old_count": 1,
+      "new_start": 1233,
+      "new_count": 1,
+      "target_lines": [
+        1233
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/io.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1261,
+      "old_count": 1,
+      "new_start": 1261,
+      "new_count": 1,
+      "target_lines": [
+        1261
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/io.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1287,
+      "old_count": 1,
+      "new_start": 1287,
+      "new_count": 1,
+      "target_lines": [
+        1287
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        17
+      ]
+    },
+    {
+      "file": "src/io.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1320,
+      "old_count": 1,
+      "new_start": 1320,
+      "new_count": 1,
+      "target_lines": [
+        1320
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        18
+      ]
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 0,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "libfetch/http.c",
+      "line": 670,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "portability/endian.h",
+      "line": 11,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PIPE2",
+      "severity": "note",
+      "file": "portability/pipe2.c",
+      "line": 4,
+      "col": 5,
+      "message": "Linux pipe2 API pipe2()",
+      "suggestion": "pipe2() is in QNX 8.0 libc but supports only O_CLOEXEC and O_NONBLOCK flags; check that no other flags (e.g. O_DIRECT) are passed.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pipe2.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "portability/sys/sysmacros.h",
+      "line": 1,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PIPE2",
+      "severity": "note",
+      "file": "portability/unistd.h",
+      "line": 4,
+      "col": 5,
+      "message": "Linux pipe2 API pipe2()",
+      "suggestion": "pipe2() is in QNX 8.0 libc but supports only O_CLOEXEC and O_NONBLOCK flags; check that no other flags (e.g. O_DIRECT) are passed.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pipe2.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "portability/unistd.h",
+      "line": 11,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "src/Makefile",
+      "line": 82,
+      "col": 37,
+      "message": "Linux link library '-ldl'",
+      "suggestion": "On QNX 8.0 dlopen() is documented in libc, which qcc usually links automatically; drop or guard libdl for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/d/dlopen.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX-DEFINE",
+      "severity": "warning",
+      "file": "src/apk_defines.h",
+      "line": 24,
+      "col": 1,
+      "message": "Defines min() which QNX <stdlib.h> already defines as a macro",
+      "suggestion": "QNX 8.0 <stdlib.h> defines min() and max() macros (C only); wrap this definition in #ifndef <name> or rename it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/m/max.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-MINMAX-DEFINE",
+      "severity": "warning",
+      "file": "src/apk_defines.h",
+      "line": 25,
+      "col": 1,
+      "message": "Defines max() which QNX <stdlib.h> already defines as a macro",
+      "suggestion": "QNX 8.0 <stdlib.h> defines min() and max() macros (C only); wrap this definition in #ifndef <name> or rename it.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/m/max.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/apk_nproc.h",
+      "line": 3,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/apk_nproc.h",
+      "line": 9,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/apk_xattr.h",
+      "line": 7,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": [
+        3,
+        4
+      ]
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/apk_xattr.h",
+      "line": 16,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": [
+        5
+      ]
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/apk_xattr.h",
+      "line": 25,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": [
+        6
+      ]
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "src/app_upgrade.c",
+      "line": 87,
+      "col": 68,
+      "message": "Linux /proc path \"/proc/self/exe\"",
+      "suggestion": "Linux /proc/self/exe does not exist on QNX 8.0; procnto exposes /proc/<pid>/exefile (the path of the executable file used to run the process). Note QNX docs say /proc is for debugging, not production monitoring.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/database.c",
+      "line": 23,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/database.c",
+      "line": 1651,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/io.c",
+      "line": 1287,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": [
+        10
+      ]
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/io.c",
+      "line": 1320,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": [
+        11
+      ]
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/package.c",
+      "line": 712,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PIPE2",
+      "severity": "note",
+      "file": "src/process.c",
+      "line": 61,
+      "col": 9,
+      "message": "Linux pipe2 API pipe2()",
+      "suggestion": "pipe2() is in QNX 8.0 libc but supports only O_CLOEXEC and O_NONBLOCK flags; check that no other flags (e.g. O_DIRECT) are passed.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pipe2.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PIPE2",
+      "severity": "note",
+      "file": "src/process.c",
+      "line": 69,
+      "col": 8,
+      "message": "Linux pipe2 API pipe2()",
+      "suggestion": "pipe2() is in QNX 8.0 libc but supports only O_CLOEXEC and O_NONBLOCK flags; check that no other flags (e.g. O_DIRECT) are passed.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pipe2.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PIPE2",
+      "severity": "note",
+      "file": "src/process.c",
+      "line": 75,
+      "col": 8,
+      "message": "Linux pipe2 API pipe2()",
+      "suggestion": "pipe2() is in QNX 8.0 libc but supports only O_CLOEXEC and O_NONBLOCK flags; check that no other flags (e.g. O_DIRECT) are passed.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pipe2.html",
+      "confidence": "high",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 12,
+    "sites_by_category": {
+      "source": 12,
+      "build": 0,
+      "other": 0
+    },
+    "sites_source_nontest": 12,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 6,
+    "sites_hit_by_category": {
+      "source": 6,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.5,
+    "recall_source_nontest": 0.5,
+    "recall_build": null,
+    "recall_in_scope": 0.5,
+    "findings_total": 23,
+    "findings_tp": 5,
+    "findings_by_category": {
+      "source": 22,
+      "build": 1,
+      "other": 0
+    },
+    "findings_in_patched_files": 7,
+    "findings_tp_in_patched_files": 5,
+    "precision": 0.2174,
+    "precision_in_patched_files": 0.7143
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  },
+  "split": "fresh"
+}

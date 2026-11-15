@@ -1,0 +1,344 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T14:50:15.769187+09:00",
+  "project": {
+    "name": "Catch2",
+    "upstream": "https://github.com/catchorg/Catch2",
+    "upstream_base_ref": "v3.6.0",
+    "upstream_base_sha": "4e8d92bf02f7d1c8006a0e7a5ecabd8e62d98502",
+    "qnx_repo": "https://github.com/qnx-ports/Catch2",
+    "qnx_branch": "qnx-v3.6.0",
+    "qnx_head_sha": "5ed4b70e2273eff469d7d1dca5fec089223768de",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "/workspace/company/shared/hackathons/qnx/wt-dev2-fresh/.venv/bin/python -m qnx_portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "5118669",
+  "durations": {
+    "fetch": 6.54398351200507,
+    "scan": 0.8207325259863865
+  },
+  "diff_stats": {
+    "files_changed": 6,
+    "compare_files_expected": 6,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "src/catch2/internal/catch_console_colour.cpp",
+    "src/catch2/internal/catch_debugger.cpp",
+    "src/catch2/internal/catch_debugger.hpp",
+    "src/catch2/internal/catch_platform.hpp",
+    "tests/CMakeLists.txt",
+    "tests/ExtraTests/CMakeLists.txt"
+  ],
+  "sites": [
+    {
+      "file": "src/catch2/internal/catch_console_colour.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 164,
+      "old_count": 1,
+      "new_start": 164,
+      "new_count": 1,
+      "target_lines": [
+        164
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/catch2/internal/catch_debugger.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 72,
+      "old_count": 1,
+      "new_start": 72,
+      "new_count": 1,
+      "target_lines": [
+        72
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/catch2/internal/catch_debugger.hpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 41,
+      "old_count": 1,
+      "new_start": 41,
+      "new_count": 1,
+      "target_lines": [
+        41
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/catch2/internal/catch_platform.hpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 27,
+      "old_count": 0,
+      "new_start": 28,
+      "new_count": 3,
+      "target_lines": [
+        27,
+        28
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        11
+      ]
+    },
+    {
+      "file": "tests/CMakeLists.txt",
+      "category": "build",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 683,
+      "old_count": 0,
+      "new_start": 684,
+      "new_count": 40,
+      "target_lines": [
+        683,
+        684
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/ExtraTests/CMakeLists.txt",
+      "category": "build",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 113,
+      "old_count": 1,
+      "new_start": 113,
+      "new_count": 1,
+      "target_lines": [
+        113
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/ExtraTests/CMakeLists.txt",
+      "category": "build",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 578,
+      "old_count": 0,
+      "new_start": 579,
+      "new_count": 43,
+      "target_lines": [
+        578,
+        579
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 3,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "extras/CatchAddTests.cmake",
+      "line": 45,
+      "col": 1,
+      "message": "CMake platform condition `APPLE` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "extras/catch_amalgamated.cpp",
+      "line": 3776,
+      "col": 31,
+      "message": "Linux /proc path \"/proc/self/status\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "extras/catch_amalgamated.hpp",
+      "line": 89,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "extras/catch_amalgamated.hpp",
+      "line": 101,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "extras/catch_amalgamated.hpp",
+      "line": 275,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "extras/catch_amalgamated.hpp",
+      "line": 496,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "src/CMakeLists.txt",
+      "line": 356,
+      "col": 1,
+      "message": "CMake platform condition `ANDROID` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/catch2/internal/catch_compiler_capabilities.hpp",
+      "line": 187,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/catch2/internal/catch_compiler_capabilities.hpp",
+      "line": 408,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "src/catch2/internal/catch_debugger.cpp",
+      "line": 88,
+      "col": 31,
+      "message": "Linux /proc path \"/proc/self/status\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/catch2/internal/catch_platform.hpp",
+      "line": 13,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/catch2/internal/catch_platform.hpp",
+      "line": 25,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": [
+        3
+      ]
+    }
+  ],
+  "metrics": {
+    "sites_total": 7,
+    "sites_by_category": {
+      "source": 4,
+      "build": 3,
+      "other": 0
+    },
+    "sites_source_nontest": 4,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 1,
+    "sites_hit_by_category": {
+      "source": 1,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.25,
+    "recall_source_nontest": 0.25,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.1429,
+    "findings_total": 12,
+    "findings_tp": 1,
+    "findings_by_category": {
+      "source": 10,
+      "build": 2,
+      "other": 0
+    },
+    "findings_in_patched_files": 3,
+    "findings_tp_in_patched_files": 1,
+    "precision": 0.0833,
+    "precision_in_patched_files": 0.3333
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  },
+  "split": "fresh"
+}

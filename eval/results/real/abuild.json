@@ -1,0 +1,639 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T14:52:01.386503+09:00",
+  "project": {
+    "name": "abuild",
+    "upstream": "https://github.com/alpinelinux/abuild",
+    "upstream_base_ref": "master",
+    "upstream_base_sha": "1355cc9b634d953632e62c26832876b9d20c60fb",
+    "qnx_repo": "https://github.com/qnx-ports/abuild",
+    "qnx_branch": "qnx-3.15.x",
+    "qnx_head_sha": "7466fe68b512a08ab55580d2dc12f45b16f50083",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "/workspace/company/shared/hackathons/qnx/wt-dev2-fresh/.venv/bin/python -m qnx_portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "5118669",
+  "durations": {
+    "fetch": 4.875260369997704,
+    "scan": 0.05844610198982991
+  },
+  "diff_stats": {
+    "files_changed": 4,
+    "compare_files_expected": 4,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "abuild-sudo.c",
+    "abuild.in",
+    "default.conf",
+    "functions.sh.in"
+  ],
+  "sites": [
+    {
+      "file": "abuild-sudo.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 26,
+      "old_count": 5,
+      "new_start": 26,
+      "new_count": 5,
+      "target_lines": [
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1,
+      "old_count": 1,
+      "new_start": 1,
+      "new_count": 1,
+      "target_lines": [
+        1
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 603,
+      "old_count": 1,
+      "new_start": 603,
+      "new_count": 1,
+      "target_lines": [
+        603
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 816,
+      "old_count": 1,
+      "new_start": 816,
+      "new_count": 1,
+      "target_lines": [
+        816
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "delete",
+      "old_start": 828,
+      "old_count": 6,
+      "new_start": 827,
+      "new_count": 0,
+      "target_lines": [
+        828,
+        829,
+        830,
+        831,
+        832,
+        833
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "delete",
+      "old_start": 862,
+      "old_count": 7,
+      "new_start": 855,
+      "new_count": 0,
+      "target_lines": [
+        862,
+        863,
+        864,
+        865,
+        866,
+        867,
+        868
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "delete",
+      "old_start": 901,
+      "old_count": 14,
+      "new_start": 887,
+      "new_count": 0,
+      "target_lines": [
+        901,
+        902,
+        903,
+        904,
+        905,
+        906,
+        907,
+        908,
+        909,
+        910,
+        911,
+        912,
+        913,
+        914
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 1115,
+      "old_count": 0,
+      "new_start": 1089,
+      "new_count": 1,
+      "target_lines": [
+        1115,
+        1116
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1237,
+      "old_count": 1,
+      "new_start": 1211,
+      "new_count": 30,
+      "target_lines": [
+        1237
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1458,
+      "old_count": 1,
+      "new_start": 1461,
+      "new_count": 1,
+      "target_lines": [
+        1458
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1475,
+      "old_count": 2,
+      "new_start": 1478,
+      "new_count": 10,
+      "target_lines": [
+        1475,
+        1476
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1480,
+      "old_count": 1,
+      "new_start": 1491,
+      "new_count": 8,
+      "target_lines": [
+        1480
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1484,
+      "old_count": 2,
+      "new_start": 1502,
+      "new_count": 9,
+      "target_lines": [
+        1484,
+        1485
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1489,
+      "old_count": 2,
+      "new_start": 1514,
+      "new_count": 9,
+      "target_lines": [
+        1489,
+        1490
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1515,
+      "old_count": 5,
+      "new_start": 1547,
+      "new_count": 4,
+      "target_lines": [
+        1515,
+        1516,
+        1517,
+        1518,
+        1519
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1528,
+      "old_count": 2,
+      "new_start": 1559,
+      "new_count": 4,
+      "target_lines": [
+        1528,
+        1529
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 1536,
+      "old_count": 5,
+      "new_start": 1569,
+      "new_count": 2,
+      "target_lines": [
+        1536,
+        1537,
+        1538,
+        1540
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 1565,
+      "old_count": 11,
+      "new_start": 1596,
+      "new_count": 6,
+      "target_lines": [
+        1565,
+        1567,
+        1568,
+        1570,
+        1571,
+        1573,
+        1575
+      ],
+      "hunks": 5,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "delete",
+      "old_start": 1580,
+      "old_count": 5,
+      "new_start": 1609,
+      "new_count": 0,
+      "target_lines": [
+        1580,
+        1581,
+        1582,
+        1583,
+        1584
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "delete",
+      "old_start": 1589,
+      "old_count": 5,
+      "new_start": 1613,
+      "new_count": 0,
+      "target_lines": [
+        1589,
+        1590,
+        1591,
+        1592,
+        1593
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "delete",
+      "old_start": 2213,
+      "old_count": 26,
+      "new_start": 2232,
+      "new_count": 0,
+      "target_lines": [
+        2213,
+        2214,
+        2215,
+        2216,
+        2217,
+        2218,
+        2219,
+        2220,
+        2221,
+        2222,
+        2223,
+        2224,
+        2225,
+        2226,
+        2227,
+        2228,
+        2229,
+        2230,
+        2231,
+        2232,
+        2233,
+        2234,
+        2235,
+        2236,
+        2237,
+        2238
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 2513,
+      "old_count": 1,
+      "new_start": 2507,
+      "new_count": 1,
+      "target_lines": [
+        2513
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 2938,
+      "old_count": 1,
+      "new_start": 2932,
+      "new_count": 1,
+      "target_lines": [
+        2938
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 2948,
+      "old_count": 1,
+      "new_start": 2942,
+      "new_count": 1,
+      "target_lines": [
+        2948
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "abuild.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 3012,
+      "old_count": 1,
+      "new_start": 3006,
+      "new_count": 1,
+      "target_lines": [
+        3012
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "default.conf",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1,
+      "old_count": 3,
+      "new_start": 1,
+      "new_count": 3,
+      "target_lines": [
+        1,
+        2,
+        3
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "functions.sh.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 9,
+      "old_count": 22,
+      "new_start": 9,
+      "new_count": 2,
+      "target_lines": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "functions.sh.in",
+      "category": "other",
+      "is_test": false,
+      "kind": "delete",
+      "old_start": 38,
+      "old_count": 20,
+      "new_start": 17,
+      "new_count": 0,
+      "target_lines": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 0,
+    "other_sites": 27,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "abuild-tar.c",
+      "line": 168,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 28,
+    "sites_by_category": {
+      "source": 1,
+      "build": 0,
+      "other": 27
+    },
+    "sites_source_nontest": 1,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": null,
+    "recall_in_scope": 0.0,
+    "findings_total": 1,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 1,
+      "build": 0,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  },
+  "split": "fresh"
+}
