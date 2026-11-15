@@ -1,0 +1,252 @@
+{
+  "label": "FAKE-SCAN",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T12:29:06.853205+09:00",
+  "project": {
+    "name": "check",
+    "upstream": "https://github.com/libcheck/check",
+    "upstream_base_ref": "0.15.2",
+    "upstream_base_sha": "11970a7e112dfe243a2e68773f014687df2900e8",
+    "qnx_repo": "https://github.com/qnx-ports/check",
+    "qnx_branch": "qnx-0.15.2",
+    "qnx_head_sha": "bdd4d582f388806e01bcd0c4b505a83682e49078",
+    "expected_scope": "build-only",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
+  "durations": {
+    "fetch": 0.003040968003915623,
+    "scan": 0.07555200401111506
+  },
+  "diff_stats": {
+    "files_changed": 1,
+    "compare_files_expected": 1,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "CMakeLists.txt"
+  ],
+  "sites": [
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 300,
+      "old_count": 3,
+      "new_start": 301,
+      "new_count": 4,
+      "target_lines": [
+        300,
+        301,
+        302
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 307,
+      "old_count": 0,
+      "new_start": 312,
+      "new_count": 1,
+      "target_lines": [
+        307,
+        308
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 504,
+      "old_count": 1,
+      "new_start": 509,
+      "new_count": 1,
+      "target_lines": [
+        504
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 526,
+      "old_count": 1,
+      "new_start": 531,
+      "new_count": 1,
+      "target_lines": [
+        526
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 4,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "col": 23,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "CMakeLists.txt",
+      "line": 466,
+      "message": "FAKE scanner token hit: -lrt",
+      "rule_id": "FAKE-LRT",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 7,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "configure.ac",
+      "line": 221,
+      "message": "FAKE scanner token hit: -lrt",
+      "rule_id": "FAKE-LRT",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 15,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/snprintf.c",
+      "line": 187,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 24,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "m4/acx_pthread.m4",
+      "line": 113,
+      "message": "FAKE scanner token hit: -lpthread",
+      "rule_id": "FAKE-LPTHREAD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 41,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "m4/acx_pthread.m4",
+      "line": 126,
+      "message": "FAKE scanner token hit: -lpthread",
+      "rule_id": "FAKE-LPTHREAD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "m4/acx_pthread.m4",
+      "line": 149,
+      "message": "FAKE scanner token hit: -lpthread",
+      "rule_id": "FAKE-LPTHREAD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 45,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "m4/acx_pthread.m4",
+      "line": 152,
+      "message": "FAKE scanner token hit: -lpthread",
+      "rule_id": "FAKE-LPTHREAD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 54,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "m4/acx_pthread.m4",
+      "line": 192,
+      "message": "FAKE scanner token hit: -lpthread",
+      "rule_id": "FAKE-LPTHREAD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 37,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "m4/acx_pthread.m4",
+      "line": 194,
+      "message": "FAKE scanner token hit: -lpthread",
+      "rule_id": "FAKE-LPTHREAD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 4,
+    "sites_by_category": {
+      "source": 0,
+      "build": 4,
+      "other": 0
+    },
+    "sites_source_nontest": 0,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": null,
+    "recall_source_nontest": null,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.0,
+    "findings_total": 9,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 1,
+      "build": 8,
+      "other": 0
+    },
+    "findings_in_patched_files": 1,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": 0.0
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "fake-scan",
+    "version": "0.0.0-fake"
+  }
+}

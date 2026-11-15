@@ -1,0 +1,678 @@
+{
+  "label": "FAKE-SCAN",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T12:29:02.239560+09:00",
+  "project": {
+    "name": "libmetal",
+    "upstream": "https://github.com/OpenAMP/libmetal",
+    "upstream_base_ref": "v2024.10.0",
+    "upstream_base_sha": "f8a0e51aee8e6993b6df243422f705bd7fea6079",
+    "qnx_repo": "https://github.com/qnx-ports/libmetal",
+    "qnx_branch": "qnx-v2024.10.0",
+    "qnx_head_sha": "3e2223af62372ff1d6df96797f2af8bcdb48811c",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
+  "durations": {
+    "fetch": 0.003095649997703731,
+    "scan": 0.088372974016238
+  },
+  "diff_stats": {
+    "files_changed": 33,
+    "compare_files_expected": 33,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "lib/CMakeLists.txt",
+    "test/CMakeLists.txt"
+  ],
+  "sites": [
+    {
+      "file": "lib/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 54,
+      "old_count": 3,
+      "new_start": 54,
+      "new_count": 6,
+      "target_lines": [
+        54,
+        55,
+        56
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "test/CMakeLists.txt",
+      "category": "build",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 42,
+      "old_count": 1,
+      "new_start": 42,
+      "new_count": 5,
+      "target_lines": [
+        42
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [
+      {
+        "path": "lib/system/qnx/CMakeLists.txt",
+        "category": "build",
+        "added_lines": 21
+      },
+      {
+        "path": "lib/system/qnx/alloc.h",
+        "category": "source",
+        "added_lines": 39
+      },
+      {
+        "path": "lib/system/qnx/assert.h",
+        "category": "source",
+        "added_lines": 27
+      },
+      {
+        "path": "lib/system/qnx/cache.h",
+        "category": "source",
+        "added_lines": 45
+      },
+      {
+        "path": "lib/system/qnx/condition.c",
+        "category": "source",
+        "added_lines": 19
+      },
+      {
+        "path": "lib/system/qnx/condition.h",
+        "category": "source",
+        "added_lines": 59
+      },
+      {
+        "path": "lib/system/qnx/device.c",
+        "category": "source",
+        "added_lines": 29
+      },
+      {
+        "path": "lib/system/qnx/init.c",
+        "category": "source",
+        "added_lines": 77
+      },
+      {
+        "path": "lib/system/qnx/io.c",
+        "category": "source",
+        "added_lines": 45
+      },
+      {
+        "path": "lib/system/qnx/io.h",
+        "category": "source",
+        "added_lines": 43
+      },
+      {
+        "path": "lib/system/qnx/irq.c",
+        "category": "source",
+        "added_lines": 256
+      },
+      {
+        "path": "lib/system/qnx/irq.h",
+        "category": "source",
+        "added_lines": 45
+      },
+      {
+        "path": "lib/system/qnx/log.h",
+        "category": "source",
+        "added_lines": 27
+      },
+      {
+        "path": "lib/system/qnx/mutex.h",
+        "category": "source",
+        "added_lines": 74
+      },
+      {
+        "path": "lib/system/qnx/shmem.c",
+        "category": "source",
+        "added_lines": 103
+      },
+      {
+        "path": "lib/system/qnx/sleep.h",
+        "category": "source",
+        "added_lines": 40
+      },
+      {
+        "path": "lib/system/qnx/sys.h",
+        "category": "source",
+        "added_lines": 86
+      },
+      {
+        "path": "lib/system/qnx/time.c",
+        "category": "source",
+        "added_lines": 30
+      },
+      {
+        "path": "lib/system/qnx/utilities.c",
+        "category": "source",
+        "added_lines": 98
+      },
+      {
+        "path": "test/system/qnx/CMakeLists.txt",
+        "category": "build",
+        "added_lines": 13
+      },
+      {
+        "path": "test/system/qnx/alloc.c",
+        "category": "source",
+        "added_lines": 28
+      },
+      {
+        "path": "test/system/qnx/atomic.c",
+        "category": "source",
+        "added_lines": 47
+      },
+      {
+        "path": "test/system/qnx/condition.c",
+        "category": "source",
+        "added_lines": 101
+      },
+      {
+        "path": "test/system/qnx/irq.c",
+        "category": "source",
+        "added_lines": 68
+      },
+      {
+        "path": "test/system/qnx/main.c",
+        "category": "source",
+        "added_lines": 16
+      },
+      {
+        "path": "test/system/qnx/mutex.c",
+        "category": "source",
+        "added_lines": 44
+      },
+      {
+        "path": "test/system/qnx/rpi4/CMakeLists.txt",
+        "category": "build",
+        "added_lines": 1
+      },
+      {
+        "path": "test/system/qnx/rpi4/device.c",
+        "category": "source",
+        "added_lines": 83
+      },
+      {
+        "path": "test/system/qnx/shmem.c",
+        "category": "source",
+        "added_lines": 58
+      },
+      {
+        "path": "test/system/qnx/spinlock.c",
+        "category": "source",
+        "added_lines": 50
+      },
+      {
+        "path": "test/system/qnx/threads.c",
+        "category": "source",
+        "added_lines": 61
+      }
+    ],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 2,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/alloc.h",
+      "line": 8,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 48,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/alloc.h",
+      "line": 13,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 49,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/assert.h",
+      "line": 13,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/cache.h",
+      "line": 8,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 48,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/cache.h",
+      "line": 13,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/condition.h",
+      "line": 8,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 52,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/condition.h",
+      "line": 13,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/condition.h",
+      "line": 21,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/device.c",
+      "line": 8,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/init.c",
+      "line": 8,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 17,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/init.c",
+      "line": 144,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/io.h",
+      "line": 8,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 45,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/io.h",
+      "line": 13,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/irq.c",
+      "line": 8,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 15,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/irq.c",
+      "line": 23,
+      "message": "FAKE scanner token hit: eventfd",
+      "rule_id": "FAKE-EVENTFD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 18,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/irq.c",
+      "line": 222,
+      "message": "FAKE scanner token hit: eventfd",
+      "rule_id": "FAKE-EVENTFD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 24,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/irq.c",
+      "line": 225,
+      "message": "FAKE scanner token hit: eventfd",
+      "rule_id": "FAKE-EVENTFD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/irq.h",
+      "line": 8,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 46,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/irq.h",
+      "line": 13,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/log.h",
+      "line": 33,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 46,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/log.h",
+      "line": 38,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/mutex.h",
+      "line": 8,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 48,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/mutex.h",
+      "line": 13,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/mutex.h",
+      "line": 21,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/shmem.c",
+      "line": 8,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/sleep.h",
+      "line": 8,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 48,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/sleep.h",
+      "line": 13,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/sys.h",
+      "line": 8,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 46,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/sys.h",
+      "line": 13,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/sys.h",
+      "line": 37,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 26,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/sys.h",
+      "line": 93,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/system/linux/time.c",
+      "line": 8,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 15,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "test/system/linux/irq.c",
+      "line": 9,
+      "message": "FAKE scanner token hit: eventfd",
+      "rule_id": "FAKE-EVENTFD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 16,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "test/system/linux/irq.c",
+      "line": 43,
+      "message": "FAKE scanner token hit: eventfd",
+      "rule_id": "FAKE-EVENTFD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 2,
+    "sites_by_category": {
+      "source": 0,
+      "build": 2,
+      "other": 0
+    },
+    "sites_source_nontest": 0,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": null,
+    "recall_source_nontest": null,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.0,
+    "findings_total": 34,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 34,
+      "build": 0,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "fake-scan",
+    "version": "0.0.0-fake"
+  }
+}

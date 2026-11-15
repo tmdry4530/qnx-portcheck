@@ -1,0 +1,513 @@
+# qnx-portcheck evaluation corpus
+# Generated 2026-11-15 KST from public GitHub data (read-only gh api calls as tmdry4530).
+# For each project:
+#   upstream_base_sha = merge_base_commit of GitHub compare  <upstream>:<base_ref>...qnx-ports:<qnx_branch>
+#   qnx_head_sha      = head of qnx-ports/<repo> branch <qnx_branch> (gh api repos/qnx-ports/<repo>/branches/<branch>)
+#   ground truth      = git diff upstream_base_sha..qnx_head_sha (both fetched --depth=1 by run_eval.py)
+#   compare_status/ahead_by/behind_by/compare_files = values returned by the compare API on 2026-11-15 (for self-check).
+# verified: true means both SHAs were returned by the GitHub API on 2026-11-15 and the ahead commits were
+# inspected manually as QNX port commits (no upstream release commits mixed in).
+projects:
+  - name: asio
+    qnx_repo: https://github.com/qnx-ports/asio
+    qnx_branch: qnx-asio-1-29-0
+    qnx_head_sha: c142007f88ef1f9c7b24a1cffe74dd11b17f779f
+    upstream: https://github.com/chriskohlhoff/asio
+    upstream_base_ref: asio-1-29-0
+    upstream_base_sha: 814f67e730e154547aea3f4d99f709cbdf1ea4a0
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 1
+    behind_by: 0
+    compare_files: 5
+    expected_scope: source
+    verified: true
+    note: "QNX commits: add support QNX 7.1/8.0"
+  - name: avahi
+    qnx_repo: https://github.com/qnx-ports/avahi
+    qnx_branch: qnx-0.9.x
+    qnx_head_sha: 7bf7222d4dc6b0a8a23b4a3be52658a8389ff9ff
+    upstream: https://github.com/avahi/avahi
+    upstream_base_ref: master
+    upstream_base_sha: 4294bbff57cbddbbe3cfd2bbde34823277eb8723
+    extraction: git-diff-fork
+    compare_status: diverged
+    ahead_by: 2
+    behind_by: 132
+    compare_files: 5
+    expected_scope: source
+    verified: true
+    note: "QNX commits: Add hostname dependency to avahi-daemon service | qnx suppport. The first commit (db5a8e54, initscript/gentoo only) is not QNX-specific and not in upstream master; it only adds an other-category site."
+  - name: aws-c-io
+    qnx_repo: https://github.com/qnx-ports/aws-c-io
+    qnx_branch: qnx-v0.26.1
+    qnx_head_sha: fd881c1f7d14c3593065c71d4d4bc5f1a22e0cc1
+    upstream: https://github.com/awslabs/aws-c-io
+    upstream_base_ref: v0.26.1
+    upstream_base_sha: bfb0819d3906502483611ce832a5ec6b897c8421
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 1
+    behind_by: 0
+    compare_files: 5
+    expected_scope: source
+    verified: true
+    note: "QNX commits: Add QNX Support"
+  - name: c-ares
+    qnx_repo: https://github.com/qnx-ports/c-ares
+    qnx_branch: qnx_v1.34
+    qnx_head_sha: 341b3c9561d492c30ea4475e2800f08ac52170bf
+    upstream: https://github.com/c-ares/c-ares
+    upstream_base_ref: v1.34
+    upstream_base_sha: 6508d6ad270eeedbbece3f07f0e6d7ee244b8589
+    extraction: git-diff-fork
+    compare_status: diverged
+    ahead_by: 2
+    behind_by: 140
+    compare_files: 13
+    expected_scope: source
+    verified: true
+    note: "QNX commits: pre-test | working v1.34.3"
+  - name: chrony
+    qnx_repo: https://github.com/qnx-ports/chrony
+    qnx_branch: master
+    qnx_head_sha: 7a9445af34dd93baf770e35d35cc9e022069d9e3
+    upstream: https://github.com/mlichvar/chrony
+    upstream_base_ref: master
+    upstream_base_sha: d622b222a9acbda3a4c842beeb593e7075c32bec
+    extraction: git-diff-fork
+    compare_status: diverged
+    ahead_by: 1
+    behind_by: 68
+    compare_files: 12
+    expected_scope: source
+    verified: true
+    note: "QNX commits: Add qnx support"
+  - name: dlt-daemon
+    qnx_repo: https://github.com/qnx-ports/dlt-daemon
+    qnx_branch: qnx-v2.18.10
+    qnx_head_sha: d71e62ee50a42bd578b85db7eaaf56d25471b8c5
+    upstream: https://github.com/COVESA/dlt-daemon
+    upstream_base_ref: v2.18.10
+    upstream_base_sha: 0f2d4cfffada6f8448a2cb27995b38eb4271044f
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 6
+    behind_by: 0
+    compare_files: 7
+    expected_scope: source
+    verified: true
+    note: "QNX commits: switch to CMAKE_INSTALL_SYSCONFDIR | add WITH_DLT_INSTALLED_TESTS CMake Option | fix handling of WITH_DLT_CXX11_EXT CMake option | fix QNX compilation issues | switch googletest to version 1.13 ported for QNX | always build your own Googletest"
+  - name: glog
+    qnx_repo: https://github.com/qnx-ports/glog
+    qnx_branch: qnx-v0.6.0
+    qnx_head_sha: a527632506d63fac2eb835dfd742897cea0a056f
+    upstream: https://github.com/google/glog
+    upstream_base_ref: v0.6.0
+    upstream_base_sha: b33e3bad4c46c8a6345525fd822af355e5ef9446
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 4
+    behind_by: 0
+    compare_files: 11
+    expected_scope: source
+    verified: true
+    note: "QNX commits: Changes for Building | QNX: Working | cmake: add conditional test install for QNX | fix test on QNX"
+  - name: gnutls
+    qnx_repo: https://github.com/qnx-ports/gnutls
+    qnx_branch: qnx-3.6.15
+    qnx_head_sha: b57078e47bee94beb27cb81452c75bec298ed327
+    upstream: https://github.com/gnutls/gnutls
+    upstream_base_ref: 3.6.15
+    upstream_base_sha: 5dd9a55040da54371807471bf3169d7a9a1f527e
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 1
+    behind_by: 0
+    compare_files: 1
+    expected_scope: source
+    verified: true
+    note: "QNX commits: Adding support for QNX"
+  - name: googletest
+    qnx_repo: https://github.com/qnx-ports/googletest
+    qnx_branch: qnx_v1.13.0
+    qnx_head_sha: 989d25b8dbeefe942aef4560575c461ec95bec70
+    upstream: https://github.com/google/googletest
+    upstream_base_ref: v1.13.0
+    upstream_base_sha: b796f7d44681514f58a683a3a71ff17c94edb0c1
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 1
+    behind_by: 0
+    compare_files: 4
+    expected_scope: source
+    verified: true
+    note: "QNX commits: Port for QNX"
+  - name: iperf3
+    qnx_repo: https://github.com/qnx-ports/iperf3
+    qnx_branch: qnx-3.7
+    qnx_head_sha: a5416aebaff3851feca5cc8809b7a53372b8be92
+    upstream: https://github.com/esnet/iperf
+    upstream_base_ref: 3.7
+    upstream_base_sha: dfcea9f6a09ead01089a3c9d20c7032f2c0af2c1
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 3
+    behind_by: 0
+    compare_files: 3
+    expected_scope: source
+    verified: true
+    note: "QNX commits: QNX portability adaptations | do not print 'Increasing socket buffer size' on stdout in JSON mode | Merge pull request #1 from marcin-sochacki/qnx-3.7"
+  - name: libevent
+    qnx_repo: https://github.com/qnx-ports/libevent
+    qnx_branch: qnx-2.1.12-stable
+    qnx_head_sha: 54bf4c64c2879e2f53fe81767772effa25054fc4
+    upstream: https://github.com/libevent/libevent
+    upstream_base_ref: release-2.1.12-stable
+    upstream_base_sha: 5df3037d10556bfcb675bc73e516978b75fc7bc7
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 1
+    behind_by: 0
+    compare_files: 2
+    expected_scope: source
+    verified: true
+    note: "QNX commits: qnx port"
+  - name: libmetal
+    qnx_repo: https://github.com/qnx-ports/libmetal
+    qnx_branch: qnx-v2024.10.0
+    qnx_head_sha: 3e2223af62372ff1d6df96797f2af8bcdb48811c
+    upstream: https://github.com/OpenAMP/libmetal
+    upstream_base_ref: v2024.10.0
+    upstream_base_sha: f8a0e51aee8e6993b6df243422f705bd7fea6079
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 1
+    behind_by: 0
+    compare_files: 33
+    expected_scope: source
+    verified: true
+    note: "QNX commits: Add QNX support"
+  - name: libusb
+    qnx_repo: https://github.com/qnx-ports/libusb
+    qnx_branch: libusb-1.0.23
+    qnx_head_sha: 4a7f548b901470bd9bb602feeee02ace96c4f1b4
+    upstream: https://github.com/libusb/libusb
+    upstream_base_ref: master
+    upstream_base_sha: e782eeb2514266f6738e242cdcb18e3ae1ed06fa
+    extraction: git-diff-fork
+    compare_status: diverged
+    ahead_by: 6
+    behind_by: 800
+    compare_files: 9
+    expected_scope: source
+    verified: true
+    note: "QNX commits: Enable QNX backend support in libusb | cleanup | time headerfile added | time headerfile added | conditionsl compilation for headers added | conditional compilation flag changed"
+  - name: libuv
+    qnx_repo: https://github.com/qnx-ports/libuv
+    qnx_branch: qnx-v1.51.0
+    qnx_head_sha: f0b6e4b5dc26de68c60ff526faf9e8bbd20c79f6
+    upstream: https://github.com/libuv/libuv
+    upstream_base_ref: v1.51.0
+    upstream_base_sha: 5152db2cbfeb5582e9c27c5ea1dba2cd9e10759b
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 4
+    behind_by: 0
+    compare_files: 16
+    expected_scope: source
+    verified: true
+    note: "QNX commits: Add QNX support | Suggested changes + improved formatting | Code cleanup and correct spacing | Correct uv_uptime() return value in failure case"
+  - name: libwebsockets
+    qnx_repo: https://github.com/qnx-ports/libwebsockets
+    qnx_branch: qnx-v4.5.8
+    qnx_head_sha: 7f399a12e06bc16e62a8503190363b4864c1db46
+    upstream: https://github.com/warmcat/libwebsockets
+    upstream_base_ref: v4.5.8
+    upstream_base_sha: fbb0baf6af9c4324f0f1591734c78b0089b599d4
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 3
+    behind_by: 0
+    compare_files: 4
+    expected_scope: source
+    verified: true
+    note: "QNX commits: Adding support for QNX SDP8 | code cleanup | Merge pull request #1 from qnx-ports/nnarayanamurthy-qnx-v4.5.8"
+  - name: libxml2
+    qnx_repo: https://github.com/qnx-ports/libxml2
+    qnx_branch: qnx-2.13.5
+    qnx_head_sha: 235a060dec5c9413f4f7d4f81109a5117dbc27a1
+    upstream: https://github.com/GNOME/libxml2
+    upstream_base_ref: v2.13.5
+    upstream_base_sha: de918d45e1b2276a28a4cd32bcf556bef65284e4
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 1
+    behind_by: 0
+    compare_files: 1
+    expected_scope: source
+    verified: true
+    note: "QNX commits: port to QNX"
+  - name: lldpd
+    qnx_repo: https://github.com/qnx-ports/lldpd
+    qnx_branch: qnx-1.0.22
+    qnx_head_sha: ac20728ae28736e97010bf4964bdc51f444d9099
+    upstream: https://github.com/lldpd/lldpd
+    upstream_base_ref: 1.0.22
+    upstream_base_sha: df8d7298598f4ff4cbb20957ccb4e8e2bde96f06
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 6
+    behind_by: 0
+    compare_files: 8
+    expected_scope: source
+    verified: true
+    note: "QNX commits: recognize QNX, build the BSD-based network backend | open the ioctl socket before the privsep chroot | proxy getifaddrs() through the privileged monitor | open the route socket before the privsep chroot | use the single /dev/bpf clone device | treat ENOENT as a stale-socket signal in the control-soc"
+  - name: lua
+    qnx_repo: https://github.com/qnx-ports/lua
+    qnx_branch: qnx_v5.5
+    qnx_head_sha: 12b3c3b66e473b2ff65309abcce3e5d7574930b4
+    upstream: https://github.com/lua/lua
+    upstream_base_ref: master
+    upstream_base_sha: cb88c1cd5d22fe7c56f4f374ded7c16f7cf14bf3
+    extraction: git-diff-fork
+    compare_status: diverged
+    ahead_by: 3
+    behind_by: 168
+    compare_files: 9
+    expected_scope: source
+    verified: true
+    note: "QNX commits: Lua for QNX - Initial commit | Fixed all errors and compilation. Now works; do note that by default, limits of lua on QNX are turned down significantly for rpi. | Moved makefiles to build-files repo"
+  - name: mosquitto
+    qnx_repo: https://github.com/qnx-ports/mosquitto
+    qnx_branch: qnx_v2.0.15
+    qnx_head_sha: 35aa903edcceedc2c8010c4c47c7a316a89c9725
+    upstream: https://github.com/eclipse-mosquitto/mosquitto
+    upstream_base_ref: v2.0.15
+    upstream_base_sha: b0277869d9806f6fab8e1bc11c4a4987c9a79ded
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 6
+    behind_by: 0
+    compare_files: 19
+    expected_scope: source
+    verified: true
+    note: "QNX commits: QNXOSG-38: Port mosquitto for 8.0 | Fix relative path after relocating Makefile | Fix libraries not being founder under usr/local | Fix mosquitto test build. | Resolved path issues. | Resolved more path issues."
+  - name: nghttp2
+    qnx_repo: https://github.com/qnx-ports/nghttp2
+    qnx_branch: qnx-1.64.0
+    qnx_head_sha: 56d4a4a8d40e5ff5b1259b5ba8effd0d2aba60d2
+    upstream: https://github.com/nghttp2/nghttp2
+    upstream_base_ref: v1.64.0
+    upstream_base_sha: 526ff38e0249acbcc4d0e8958c12cdeae9960cfe
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 2
+    behind_by: 0
+    compare_files: 2
+    expected_scope: source
+    verified: true
+    note: "QNX commits: Add QNX Support | Fix test sources"
+  - name: ntpsec
+    qnx_repo: https://github.com/qnx-ports/ntpsec
+    qnx_branch: master
+    qnx_head_sha: a144accf831d03c5599ea2b45b02f98de89412e2
+    upstream: https://github.com/ntpsec/ntpsec
+    upstream_base_ref: master
+    upstream_base_sha: 39b19ff71b785452e2c49033dad8e18a0e95a1ae
+    extraction: git-diff-fork
+    compare_status: diverged
+    ahead_by: 1
+    behind_by: 120
+    compare_files: 9
+    expected_scope: source
+    verified: true
+    note: "QNX commits: Add qnx-support (#1)"
+  - name: open-amp
+    qnx_repo: https://github.com/qnx-ports/open-amp
+    qnx_branch: qnx-v2025.04.0
+    qnx_head_sha: 742c97bfea28044e24018e4f97a7de7b676c9be6
+    upstream: https://github.com/OpenAMP/open-amp
+    upstream_base_ref: v2025.04.0
+    upstream_base_sha: 604cdf9a4561bda7c2274fee64c0f5c90933b9d4
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 1
+    behind_by: 0
+    compare_files: 3
+    expected_scope: source
+    verified: true
+    note: "QNX commits: Add QNX Support"
+  - name: pistache
+    qnx_repo: https://github.com/qnx-ports/pistache
+    qnx_branch: qnx-v0.4.26
+    qnx_head_sha: 9dc3359fba4f6e82842b9ea80744558321361fc1
+    upstream: https://github.com/pistacheio/pistache
+    upstream_base_ref: v0.4.26
+    upstream_base_sha: ddffda861aa49012dcda28f1362d0339e718cd52
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 2
+    behind_by: 0
+    compare_files: 14
+    expected_scope: source
+    verified: true
+    note: "QNX commits: qnx port | do not search for libcurl when cross-compiling for qnx"
+  - name: s2n-tls
+    qnx_repo: https://github.com/qnx-ports/s2n-tls
+    qnx_branch: qnx-v1.5.25
+    qnx_head_sha: 76466302298aee279692bee38fd61ffd0128799d
+    upstream: https://github.com/aws/s2n-tls
+    upstream_base_ref: v1.5.25
+    upstream_base_sha: a7862238a9d6703e0a3e2d7ea4341de8d57429bd
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 1
+    behind_by: 0
+    compare_files: 32
+    expected_scope: source
+    verified: true
+    note: "QNX commits: Add QNX Support"
+  - name: strongswan
+    qnx_repo: https://github.com/qnx-ports/strongswan
+    qnx_branch: qnx-6.0.6
+    qnx_head_sha: 1b8d7fe7aa628ec293c2c71a850dff085ba0b0ae
+    upstream: https://github.com/strongswan/strongswan
+    upstream_base_ref: 6.0.6
+    upstream_base_sha: 4d709df8b25fcf3cacb55cb4f28ab81014829ab1
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 4
+    behind_by: 0
+    compare_files: 13
+    expected_scope: source
+    verified: true
+    note: "QNX commits: Add qnx support to strongswan | Add QNX PF_KEY extension names |  simplify QNX conditionals and restore alignment | Fix QNX PF_KEY extension enum compatibility between qnx7.1 and qnx8.0"
+  - name: tinyxml2
+    qnx_repo: https://github.com/qnx-ports/tinyxml2
+    qnx_branch: qnx_10.0.0
+    qnx_head_sha: 9dadb75f769c71562278ab5d3c2185041f3d337d
+    upstream: https://github.com/leethomason/tinyxml2
+    upstream_base_ref: 10.0.0
+    upstream_base_sha: 321ea883b7190d4e85cae5512a12e5eaa8f8731f
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 3
+    behind_by: 0
+    compare_files: 2
+    expected_scope: source
+    verified: true
+    note: "QNX commits: Port for QNX | generalize QNX fix for test | Update CMakeLists.txt"
+  - name: unbound
+    qnx_repo: https://github.com/qnx-ports/unbound
+    qnx_branch: qnx-release-1.24.1
+    qnx_head_sha: 5d76fff70001114ecfc01a14840c9dec134375f4
+    upstream: https://github.com/NLnetLabs/unbound
+    upstream_base_ref: release-1.24.1
+    upstream_base_sha: a33f0638e1dacf2633cf2292078a674576bca852
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 1
+    behind_by: 0
+    compare_files: 10
+    expected_scope: source
+    verified: true
+    note: "QNX commits: QNX Porting support for unbound branch-1.24.1"
+  - name: aws-c-common
+    qnx_repo: https://github.com/qnx-ports/aws-c-common
+    qnx_branch: qnx-v0.12.4
+    qnx_head_sha: f8abf334260c020f13979202d92d15731325ee23
+    upstream: https://github.com/awslabs/aws-c-common
+    upstream_base_ref: v0.12.4
+    upstream_base_sha: 2b67a658e461520f1de20d64342b91ddcedc7ebb
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 1
+    behind_by: 0
+    compare_files: 1
+    expected_scope: build-only
+    verified: true
+    note: "QNX commits: Add QNX Support"
+  - name: check
+    qnx_repo: https://github.com/qnx-ports/check
+    qnx_branch: qnx-0.15.2
+    qnx_head_sha: bdd4d582f388806e01bcd0c4b505a83682e49078
+    upstream: https://github.com/libcheck/check
+    upstream_base_ref: 0.15.2
+    upstream_base_sha: 11970a7e112dfe243a2e68773f014687df2900e8
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 2
+    behind_by: 0
+    compare_files: 1
+    expected_scope: build-only
+    verified: true
+    note: "QNX commits: port to QNX | fix itimerspec detection"
+  - name: fribidi
+    qnx_repo: https://github.com/qnx-ports/fribidi
+    qnx_branch: qnx_v1.0.16
+    qnx_head_sha: 3297df003a0d1dc86278a9da2481b8594e543719
+    upstream: https://github.com/fribidi/fribidi
+    upstream_base_ref: v1.0.16
+    upstream_base_sha: 68162babff4f39c4e2dc164a5e825af93bda9983
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 1
+    behind_by: 0
+    compare_files: 1
+    expected_scope: build-only
+    verified: true
+    note: "QNX commits: remove compiler flag \"-ansi\""
+  - name: jansson
+    qnx_repo: https://github.com/qnx-ports/jansson
+    qnx_branch: qnx-v2.14
+    qnx_head_sha: bbf20222758941f7678d36cca53a092ff6420114
+    upstream: https://github.com/akheron/jansson
+    upstream_base_ref: v2.14
+    upstream_base_sha: 684e18c927e89615c2d501737e90018f4930d6c5
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 1
+    behind_by: 0
+    compare_files: 1
+    expected_scope: build-only
+    verified: true
+    note: "QNX commits: Add JANSSON_INSTALL_TESTS CMake Option"
+  - name: libyaml
+    qnx_repo: https://github.com/qnx-ports/libyaml
+    qnx_branch: qnx-0.2.5
+    qnx_head_sha: 66e65e9309a02e90f7e752bc033775aaa3744039
+    upstream: https://github.com/yaml/libyaml
+    upstream_base_ref: 0.2.5
+    upstream_base_sha: 2c891fc7a770e8ba2fec34fc6b545c672beb37e6
+    extraction: git-diff-fork
+    compare_status: ahead
+    ahead_by: 1
+    behind_by: 0
+    compare_files: 2
+    expected_scope: build-only
+    verified: true
+    note: "QNX commits: Fix install directories for QNX"
+  - name: re2
+    qnx_repo: https://github.com/qnx-ports/re2
+    qnx_branch: qnx_main
+    qnx_head_sha: 099c91ad82bca90a503018962c2523ff8a827f11
+    upstream: https://github.com/google/re2
+    upstream_base_ref: main
+    upstream_base_sha: 6dcd83d60f7944926bfd308cc13979fc53dd69ca
+    extraction: git-diff-fork
+    compare_status: diverged
+    ahead_by: 3
+    behind_by: 50
+    compare_files: 1
+    expected_scope: build-only
+    verified: true
+    note: "QNX commits: QNX: added modification to cmakelists to install tests if compiling for qnx | Merge branch 'qnx_8.0_7.1_2023-11-01' into qnx_main | Add test install condition"
+
+# Candidates inspected on 2026-11-15 and EXCLUDED (not in the list above):
+#   bash, cJSON, dnsmasq, lighttpd1.4, rtl-sdr: the qnx-ports branch mixes upstream release commits with the QNX
+#     commits relative to any upstream base we could verify, so base..head would not isolate the QNX patch.
+#   brotli, libutempter, mosh, dhcpcd, sysbench: identical to upstream (no QNX commits on the default branch).
+#   libssh2, libffi, sudo, busybox, fastfetch: fork default branch is behind upstream with 0 ahead commits.
+#   htop, btop: 2 ahead commits but 0 changed files in compare (merge-only).
+#   mimalloc: 889 ahead commits vs upstream default branch (dev branch history), not isolatable.

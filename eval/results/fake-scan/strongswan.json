@@ -1,0 +1,1808 @@
+{
+  "label": "FAKE-SCAN",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T12:29:05.185791+09:00",
+  "project": {
+    "name": "strongswan",
+    "upstream": "https://github.com/strongswan/strongswan",
+    "upstream_base_ref": "6.0.6",
+    "upstream_base_sha": "4d709df8b25fcf3cacb55cb4f28ab81014829ab1",
+    "qnx_repo": "https://github.com/qnx-ports/strongswan",
+    "qnx_branch": "qnx-6.0.6",
+    "qnx_head_sha": "1b8d7fe7aa628ec293c2c71a850dff085ba0b0ae",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
+  "durations": {
+    "fetch": 0.0036859109823126346,
+    "scan": 1.0779424140055198
+  },
+  "diff_stats": {
+    "files_changed": 13,
+    "compare_files_expected": 13,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "configure.ac",
+    "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+    "src/libcharon/plugins/socket_default/socket_default_socket.c",
+    "src/libcharon/plugins/vici/Makefile.am",
+    "src/libcharon/tests/Makefile.am",
+    "src/libipsec/tests/Makefile.am",
+    "src/libstrongswan/networking/tun_device.c",
+    "src/libstrongswan/plugins/sshkey/sshkey_builder.c",
+    "src/libstrongswan/tests/Makefile.am",
+    "src/libstrongswan/tests/suites/test_threading.c",
+    "src/libstrongswan/utils/utils/align.h",
+    "src/libtls/tests/Makefile.am",
+    "src/starter/tests/Makefile.am"
+  ],
+  "sites": [
+    {
+      "file": "configure.ac",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1923,
+      "old_count": 1,
+      "new_start": 1923,
+      "new_count": 1,
+      "target_lines": [
+        1923
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 515,
+      "old_count": 0,
+      "new_start": 516,
+      "new_count": 7,
+      "target_lines": [
+        515,
+        516
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 541,
+      "old_count": 0,
+      "new_start": 549,
+      "new_count": 11,
+      "target_lines": [
+        541,
+        542
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 604,
+      "old_count": 0,
+      "new_start": 623,
+      "new_count": 10,
+      "target_lines": [
+        604,
+        605
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 696,
+      "old_count": 1,
+      "new_start": 724,
+      "new_count": 1,
+      "target_lines": [
+        696
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        63
+      ]
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 716,
+      "old_count": 1,
+      "new_start": 744,
+      "new_count": 1,
+      "target_lines": [
+        716
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        65,
+        66
+      ]
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 752,
+      "old_count": 0,
+      "new_start": 781,
+      "new_count": 18,
+      "target_lines": [
+        752,
+        753
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 931,
+      "old_count": 0,
+      "new_start": 978,
+      "new_count": 7,
+      "target_lines": [
+        931,
+        932
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 943,
+      "old_count": 0,
+      "new_start": 997,
+      "new_count": 5,
+      "target_lines": [
+        943,
+        944
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 960,
+      "old_count": 0,
+      "new_start": 1019,
+      "new_count": 14,
+      "target_lines": [
+        960,
+        961
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 1072,
+      "old_count": 0,
+      "new_start": 1145,
+      "new_count": 18,
+      "target_lines": [
+        1072,
+        1073
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 2230,
+      "old_count": 0,
+      "new_start": 2321,
+      "new_count": 1,
+      "target_lines": [
+        2230,
+        2231
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 2732,
+      "old_count": 0,
+      "new_start": 2824,
+      "new_count": 8,
+      "target_lines": [
+        2732,
+        2733
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 2961,
+      "old_count": 0,
+      "new_start": 3061,
+      "new_count": 8,
+      "target_lines": [
+        2961,
+        2962
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 3131,
+      "old_count": 0,
+      "new_start": 3239,
+      "new_count": 8,
+      "target_lines": [
+        3131,
+        3132
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/socket_default/socket_default_socket.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 47,
+      "old_count": 0,
+      "new_start": 48,
+      "new_count": 9,
+      "target_lines": [
+        47,
+        48
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/socket_default/socket_default_socket.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 465,
+      "old_count": 3,
+      "new_start": 475,
+      "new_count": 5,
+      "target_lines": [
+        465,
+        466,
+        467
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/plugins/vici/Makefile.am",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 49,
+      "old_count": 5,
+      "new_start": 50,
+      "new_count": 4,
+      "target_lines": [
+        49,
+        50,
+        52,
+        53
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libcharon/tests/Makefile.am",
+      "category": "build",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 0,
+      "old_count": 4,
+      "new_start": 1,
+      "new_count": 4,
+      "target_lines": [
+        1,
+        3,
+        4
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libipsec/tests/Makefile.am",
+      "category": "build",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 0,
+      "old_count": 4,
+      "new_start": 1,
+      "new_count": 4,
+      "target_lines": [
+        1,
+        3,
+        4
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libstrongswan/networking/tun_device.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 64,
+      "old_count": 3,
+      "new_start": 65,
+      "new_count": 2,
+      "target_lines": [
+        64,
+        65,
+        66
+      ],
+      "hunks": 2,
+      "matched_findings": [
+        77,
+        78
+      ]
+    },
+    {
+      "file": "src/libstrongswan/plugins/sshkey/sshkey_builder.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 197,
+      "old_count": 0,
+      "new_start": 198,
+      "new_count": 1,
+      "target_lines": [
+        197,
+        198
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libstrongswan/plugins/sshkey/sshkey_builder.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 208,
+      "old_count": 0,
+      "new_start": 210,
+      "new_count": 58,
+      "target_lines": [
+        208,
+        209
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libstrongswan/tests/Makefile.am",
+      "category": "build",
+      "is_test": true,
+      "kind": "mixed",
+      "old_start": 16,
+      "old_count": 5,
+      "new_start": 16,
+      "new_count": 5,
+      "target_lines": [
+        16,
+        19,
+        20
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libstrongswan/tests/suites/test_threading.c",
+      "category": "source",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 55,
+      "old_count": 1,
+      "new_start": 55,
+      "new_count": 6,
+      "target_lines": [
+        55
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libstrongswan/utils/utils/align.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 28,
+      "old_count": 0,
+      "new_start": 29,
+      "new_count": 1,
+      "target_lines": [
+        28,
+        29
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libstrongswan/utils/utils/align.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 33,
+      "old_count": 5,
+      "new_start": 34,
+      "new_count": 2,
+      "target_lines": [
+        33,
+        36,
+        37
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libstrongswan/utils/utils/align.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 41,
+      "old_count": 1,
+      "new_start": 43,
+      "new_count": 1,
+      "target_lines": [
+        41
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/libtls/tests/Makefile.am",
+      "category": "build",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 0,
+      "old_count": 4,
+      "new_start": 1,
+      "new_count": 4,
+      "target_lines": [
+        1,
+        3,
+        4
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/starter/tests/Makefile.am",
+      "category": "build",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 0,
+      "old_count": 4,
+      "new_start": 1,
+      "new_count": 4,
+      "target_lines": [
+        1,
+        3,
+        4
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 7,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "configure.ac",
+      "line": 1247,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 53,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "configure.ac",
+      "line": 1414,
+      "message": "FAKE scanner token hit: -lpthread",
+      "rule_id": "FAKE-LPTHREAD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 40,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "configure.ac",
+      "line": 1415,
+      "message": "FAKE scanner token hit: -lpthread",
+      "rule_id": "FAKE-LPTHREAD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/charon-tkm/src/tkm/tkm_kernel_ipsec.c",
+      "line": 21,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/charon-tkm/src/tkm/tkm_kernel_ipsec.c",
+      "line": 33,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 8,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/conftest/hooks/reset_seq.c",
+      "line": 42,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/conftest/hooks/reset_seq.c",
+      "line": 44,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/conftest/hooks/reset_seq.c",
+      "line": 223,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/include/linux/if_alg.h",
+      "line": 16,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/include/linux/ipsec.h",
+      "line": 6,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/include/linux/netlink.h",
+      "line": 4,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/include/linux/netlink.h",
+      "line": 5,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/include/linux/netlink.h",
+      "line": 6,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/include/linux/pfkeyv2.h",
+      "line": 9,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/include/linux/rtnetlink.h",
+      "line": 5,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/include/linux/rtnetlink.h",
+      "line": 6,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/include/linux/rtnetlink.h",
+      "line": 7,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/include/linux/udp.h",
+      "line": 20,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/include/linux/udp.h",
+      "line": 39,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/include/linux/udp.h",
+      "line": 40,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/include/linux/xfrm.h",
+      "line": 4,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/network/pf_handler.c",
+      "line": 32,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/connmark/connmark_listener.c",
+      "line": 24,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/connmark/connmark_listener.c",
+      "line": 25,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/connmark/connmark_listener.c",
+      "line": 26,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/connmark/connmark_listener.c",
+      "line": 27,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/connmark/connmark_listener.c",
+      "line": 28,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/connmark/connmark_listener.c",
+      "line": 29,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/dhcp/dhcp_socket.c",
+      "line": 29,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/dhcp/dhcp_socket.c",
+      "line": 30,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/farp/farp_spoofer.c",
+      "line": 31,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/forecast/forecast_forwarder.c",
+      "line": 23,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/forecast/forecast_forwarder.c",
+      "line": 25,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/forecast/forecast_forwarder.c",
+      "line": 26,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/forecast/forecast_listener.c",
+      "line": 22,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/forecast/forecast_listener.c",
+      "line": 23,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 8,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_libipsec/kernel_libipsec_esp_handler.c",
+      "line": 22,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_libipsec/kernel_libipsec_esp_handler.c",
+      "line": 344,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_libipsec/kernel_libipsec_esp_handler.c",
+      "line": 351,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_libipsec/kernel_libipsec_ipsec.c",
+      "line": 464,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_ipsec.c",
+      "line": 49,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_ipsec.c",
+      "line": 50,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_ipsec.c",
+      "line": 51,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_ipsec.c",
+      "line": 52,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_ipsec.c",
+      "line": 53,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_ipsec.c",
+      "line": 54,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_ipsec.c",
+      "line": 55,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_ipsec.c",
+      "line": 81,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_ipsec.c",
+      "line": 91,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 22,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_ipsec.c",
+      "line": 2093,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_net.c",
+      "line": 42,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_net.c",
+      "line": 43,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_net.c",
+      "line": 44,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_net.c",
+      "line": 49,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_shared.c",
+      "line": 41,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_shared.c",
+      "line": 42,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_shared.c",
+      "line": 43,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_netlink/kernel_netlink_shared.h",
+      "line": 22,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "line": 50,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "line": 62,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "line": 67,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "line": 121,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "line": 131,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "line": 696,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": [
+        4
+      ]
+    },
+    {
+      "col": 8,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "line": 700,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "line": 715,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": [
+        5
+      ]
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "line": 716,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": [
+        5
+      ]
+    },
+    {
+      "col": 8,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "line": 757,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "line": 773,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 8,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libcharon/plugins/kernel_pfkey/kernel_pfkey_ipsec.c",
+      "line": 1850,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 7,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libimcv/plugins/imc_swima/imc_swima.c",
+      "line": 102,
+      "message": "FAKE scanner token hit: inotify_",
+      "rule_id": "FAKE-INOTIFY",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 7,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libimcv/plugins/imc_swima/imc_swima.c",
+      "line": 110,
+      "message": "FAKE scanner token hit: inotify_",
+      "rule_id": "FAKE-INOTIFY",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 17,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/Android.mk",
+      "line": 146,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/networking/streams/stream_vsock.c",
+      "line": 21,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 16,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/networking/tun_device.c",
+      "line": 30,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 15,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/networking/tun_device.c",
+      "line": 59,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/networking/tun_device.c",
+      "line": 60,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/networking/tun_device.c",
+      "line": 61,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": [
+        20
+      ]
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/networking/tun_device.c",
+      "line": 62,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": [
+        20
+      ]
+    },
+    {
+      "col": 8,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/networking/tun_device.c",
+      "line": 116,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/networking/tun_device.c",
+      "line": 186,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/networking/tun_device.c",
+      "line": 314,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/plugins/af_alg/af_alg_ops.c",
+      "line": 21,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/plugins/af_alg/af_alg_ops.h",
+      "line": 27,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/plugins/blowfish/bf_skey.c",
+      "line": 60,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/plugins/blowfish/bf_skey.c",
+      "line": 61,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/plugins/blowfish/blowfish.h",
+      "line": 97,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/plugins/des/des_crypter.c",
+      "line": 191,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/selectors/sec_label.c",
+      "line": 20,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 16,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/utils/capabilities.c",
+      "line": 31,
+      "message": "FAKE scanner token hit: prctl",
+      "rule_id": "FAKE-PRCTL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 3,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/utils/capabilities.c",
+      "line": 427,
+      "message": "FAKE scanner token hit: prctl",
+      "rule_id": "FAKE-PRCTL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 12,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/utils/capabilities.h",
+      "line": 32,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/utils/utils.c",
+      "line": 30,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 19,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/utils/utils.c",
+      "line": 43,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 19,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/utils/utils.c",
+      "line": 45,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 17,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/utils/utils.c",
+      "line": 51,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/utils/utils.c",
+      "line": 180,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 17,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/utils/utils.c",
+      "line": 187,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 19,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/utils/utils.c",
+      "line": 210,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 19,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libstrongswan/utils/utils.c",
+      "line": 245,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 17,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/libtnccs/Android.mk",
+      "line": 19,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 30,
+    "sites_by_category": {
+      "source": 23,
+      "build": 7,
+      "other": 0
+    },
+    "sites_source_nontest": 22,
+    "sites_source_test": 1,
+    "sites_hit_source_nontest": 3,
+    "sites_hit_by_category": {
+      "source": 3,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.1304,
+    "recall_source_nontest": 0.1364,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.1,
+    "findings_total": 101,
+    "findings_tp": 5,
+    "findings_by_category": {
+      "source": 96,
+      "build": 5,
+      "other": 0
+    },
+    "findings_in_patched_files": 23,
+    "findings_tp_in_patched_files": 5,
+    "precision": 0.0495,
+    "precision_in_patched_files": 0.2174
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "fake-scan",
+    "version": "0.0.0-fake"
+  }
+}

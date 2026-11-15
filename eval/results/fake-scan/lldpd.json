@@ -1,0 +1,1271 @@
+{
+  "label": "FAKE-SCAN",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T12:29:03.595976+09:00",
+  "project": {
+    "name": "lldpd",
+    "upstream": "https://github.com/lldpd/lldpd",
+    "upstream_base_ref": "1.0.22",
+    "upstream_base_sha": "df8d7298598f4ff4cbb20957ccb4e8e2bde96f06",
+    "qnx_repo": "https://github.com/qnx-ports/lldpd",
+    "qnx_branch": "qnx-1.0.22",
+    "qnx_head_sha": "ac20728ae28736e97010bf4964bdc51f444d9099",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
+  "durations": {
+    "fetch": 0.003334854991408065,
+    "scan": 0.1049657039984595
+  },
+  "diff_stats": {
+    "files_changed": 8,
+    "compare_files_expected": 8,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "configure.ac",
+    "m4/os.m4",
+    "src/daemon/Makefile.am",
+    "src/daemon/interfaces-bsd.c",
+    "src/daemon/lldpd.c",
+    "src/daemon/lldpd.h",
+    "src/daemon/priv-bsd.c",
+    "src/daemon/priv.c"
+  ],
+  "sites": [
+    {
+      "file": "configure.ac",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 166,
+      "old_count": 0,
+      "new_start": 167,
+      "new_count": 11,
+      "target_lines": [
+        166,
+        167
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "m4/os.m4",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 25,
+      "old_count": 0,
+      "new_start": 26,
+      "new_count": 1,
+      "target_lines": [
+        25,
+        26
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/Makefile.am",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 94,
+      "old_count": 0,
+      "new_start": 95,
+      "new_count": 8,
+      "target_lines": [
+        94,
+        95
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/interfaces-bsd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 31,
+      "old_count": 1,
+      "new_start": 31,
+      "new_count": 1,
+      "target_lines": [
+        31
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/interfaces-bsd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 92,
+      "old_count": 1,
+      "new_start": 92,
+      "new_count": 1,
+      "target_lines": [
+        92
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/interfaces-bsd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 144,
+      "old_count": 1,
+      "new_start": 144,
+      "new_count": 1,
+      "target_lines": [
+        144
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/interfaces-bsd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 363,
+      "old_count": 4,
+      "new_start": 363,
+      "new_count": 2,
+      "target_lines": [
+        363,
+        366
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/interfaces-bsd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 588,
+      "old_count": 3,
+      "new_start": 589,
+      "new_count": 4,
+      "target_lines": [
+        588,
+        589,
+        590
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/interfaces-bsd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 622,
+      "old_count": 0,
+      "new_start": 627,
+      "new_count": 11,
+      "target_lines": [
+        622,
+        623
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/interfaces-bsd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 627,
+      "old_count": 0,
+      "new_start": 643,
+      "new_count": 1,
+      "target_lines": [
+        627,
+        628
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/interfaces-bsd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 643,
+      "old_count": 3,
+      "new_start": 660,
+      "new_count": 4,
+      "target_lines": [
+        643,
+        644,
+        645
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/lldpd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1824,
+      "old_count": 1,
+      "new_start": 1824,
+      "new_count": 15,
+      "target_lines": [
+        1824
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/lldpd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 1914,
+      "old_count": 0,
+      "new_start": 1929,
+      "new_count": 27,
+      "target_lines": [
+        1914,
+        1915
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/lldpd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1950,
+      "old_count": 4,
+      "new_start": 1991,
+      "new_count": 5,
+      "target_lines": [
+        1950,
+        1951,
+        1952,
+        1953
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/lldpd.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 216,
+      "old_count": 0,
+      "new_start": 217,
+      "new_count": 5,
+      "target_lines": [
+        216,
+        217
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/lldpd.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 228,
+      "old_count": 0,
+      "new_start": 234,
+      "new_count": 3,
+      "target_lines": [
+        228,
+        229
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/lldpd.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 393,
+      "old_count": 0,
+      "new_start": 402,
+      "new_count": 4,
+      "target_lines": [
+        393,
+        394
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/priv-bsd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 105,
+      "old_count": 1,
+      "new_start": 105,
+      "new_count": 1,
+      "target_lines": [
+        105
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/priv-bsd.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 112,
+      "old_count": 0,
+      "new_start": 113,
+      "new_count": 8,
+      "target_lines": [
+        112,
+        113
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/priv.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 39,
+      "old_count": 0,
+      "new_start": 40,
+      "new_count": 1,
+      "target_lines": [
+        39,
+        40
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        61
+      ]
+    },
+    {
+      "file": "src/daemon/priv.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 46,
+      "old_count": 1,
+      "new_start": 47,
+      "new_count": 1,
+      "target_lines": [
+        46
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        61
+      ]
+    },
+    {
+      "file": "src/daemon/priv.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 190,
+      "old_count": 0,
+      "new_start": 192,
+      "new_count": 105,
+      "target_lines": [
+        190,
+        191
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/priv.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 265,
+      "old_count": 1,
+      "new_start": 371,
+      "new_count": 1,
+      "target_lines": [
+        265
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/priv.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 326,
+      "old_count": 0,
+      "new_start": 433,
+      "new_count": 53,
+      "target_lines": [
+        326,
+        327
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/daemon/priv.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 394,
+      "old_count": 1,
+      "new_start": 553,
+      "new_count": 5,
+      "target_lines": [
+        394
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 3,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/ethtool.h",
+      "line": 17,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/ethtool.h",
+      "line": 18,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/ethtool.h",
+      "line": 19,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 36,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/ethtool.h",
+      "line": 131,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 36,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/ethtool.h",
+      "line": 138,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/filter.h",
+      "line": 10,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/filter.h",
+      "line": 11,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/if.h",
+      "line": 23,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/if.h",
+      "line": 24,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/if.h",
+      "line": 25,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/if.h",
+      "line": 34,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/if_addr.h",
+      "line": 5,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/if_addr.h",
+      "line": 6,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/if_bonding.h",
+      "line": 47,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/if_bonding.h",
+      "line": 48,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/if_bonding.h",
+      "line": 49,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/if_bridge.h",
+      "line": 17,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/if_bridge.h",
+      "line": 18,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/if_ether.h",
+      "line": 25,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/if_link.h",
+      "line": 5,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/if_link.h",
+      "line": 6,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/if_packet.h",
+      "line": 5,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/kernel.h",
+      "line": 5,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 24,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/libc-compat.h",
+      "line": 21,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/neighbour.h",
+      "line": 5,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/neighbour.h",
+      "line": 6,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/netlink.h",
+      "line": 5,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/netlink.h",
+      "line": 6,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/netlink.h",
+      "line": 7,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/rtnetlink.h",
+      "line": 5,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/rtnetlink.h",
+      "line": 6,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/rtnetlink.h",
+      "line": 7,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/rtnetlink.h",
+      "line": 8,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/rtnetlink.h",
+      "line": 9,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 42,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/sockios.h",
+      "line": 131,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/types.h",
+      "line": 9,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 39,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/types.h",
+      "line": 14,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 14,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/wireless.h",
+      "line": 41,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 14,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/wireless.h",
+      "line": 42,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/wireless.h",
+      "line": 73,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/wireless.h",
+      "line": 74,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "include/linux/wireless.h",
+      "line": 75,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/daemon/interfaces-linux.c",
+      "line": 30,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/daemon/interfaces-linux.c",
+      "line": 31,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/daemon/interfaces-linux.c",
+      "line": 32,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/daemon/interfaces-linux.c",
+      "line": 33,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/daemon/interfaces-linux.c",
+      "line": 34,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/daemon/interfaces-linux.c",
+      "line": 35,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/daemon/interfaces-linux.c",
+      "line": 36,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 39,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/daemon/interfaces-linux.c",
+      "line": 315,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 41,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/daemon/lldpd.c",
+      "line": 1484,
+      "message": "FAKE scanner token hit: SOCK_CLOEXEC",
+      "rule_id": "FAKE-SOCK-CLOEXEC",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/daemon/netlink.c",
+      "line": 26,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/daemon/netlink.c",
+      "line": 27,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/daemon/netlink.c",
+      "line": 28,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/daemon/priv-linux.c",
+      "line": 33,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/daemon/priv-linux.c",
+      "line": 34,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/daemon/priv-linux.c",
+      "line": 35,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/daemon/priv-linux.c",
+      "line": 36,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/daemon/priv-linux.c",
+      "line": 37,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 15,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/daemon/priv-linux.c",
+      "line": 42,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 8,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/daemon/priv-linux.c",
+      "line": 112,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 17,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/daemon/priv.c",
+      "line": 43,
+      "message": "FAKE scanner token hit: prctl",
+      "rule_id": "FAKE-PRCTL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": [
+        19,
+        20
+      ]
+    },
+    {
+      "col": 6,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/daemon/priv.c",
+      "line": 674,
+      "message": "FAKE scanner token hit: prctl",
+      "rule_id": "FAKE-PRCTL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 21,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/lldpd-structs.h",
+      "line": 29,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/lldpd-structs.h",
+      "line": 32,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 25,
+    "sites_by_category": {
+      "source": 22,
+      "build": 3,
+      "other": 0
+    },
+    "sites_source_nontest": 22,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 2,
+    "sites_hit_by_category": {
+      "source": 2,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0909,
+    "recall_source_nontest": 0.0909,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.08,
+    "findings_total": 65,
+    "findings_tp": 1,
+    "findings_by_category": {
+      "source": 65,
+      "build": 0,
+      "other": 0
+    },
+    "findings_in_patched_files": 3,
+    "findings_tp_in_patched_files": 1,
+    "precision": 0.0154,
+    "precision_in_patched_files": 0.3333
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "fake-scan",
+    "version": "0.0.0-fake"
+  }
+}

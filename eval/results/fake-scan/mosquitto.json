@@ -1,0 +1,1215 @@
+{
+  "label": "FAKE-SCAN",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T12:29:03.798851+09:00",
+  "project": {
+    "name": "mosquitto",
+    "upstream": "https://github.com/eclipse-mosquitto/mosquitto",
+    "upstream_base_ref": "v2.0.15",
+    "upstream_base_sha": "b0277869d9806f6fab8e1bc11c4a4987c9a79ded",
+    "qnx_repo": "https://github.com/qnx-ports/mosquitto",
+    "qnx_branch": "qnx_v2.0.15",
+    "qnx_head_sha": "35aa903edcceedc2c8010c4c47c7a316a89c9725",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
+  "durations": {
+    "fetch": 0.0027241730131208897,
+    "scan": 0.15778423298615962
+  },
+  "diff_stats": {
+    "files_changed": 19,
+    "compare_files_expected": 19,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "client/CMakeLists.txt",
+    "src/CMakeLists.txt",
+    "test/broker/02-subpub-qos2-receive-maximum-1.py",
+    "test/broker/02-subpub-qos2-receive-maximum-2.py",
+    "test/broker/06-bridge-clean-session-csF-lcsF.py",
+    "test/broker/06-bridge-clean-session-csF-lcsN.py",
+    "test/broker/06-bridge-clean-session-csF-lcsT.py",
+    "test/broker/06-bridge-clean-session-csT-lcsF.py",
+    "test/broker/06-bridge-clean-session-csT-lcsN.py",
+    "test/broker/06-bridge-clean-session-csT-lcsT.py",
+    "test/broker/08-ssl-bridge.py",
+    "test/ptest.py"
+  ],
+  "sites": [
+    {
+      "file": "client/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 50,
+      "old_count": 0,
+      "new_start": 51,
+      "new_count": 6,
+      "target_lines": [
+        50,
+        51
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 81,
+      "old_count": 1,
+      "new_start": 81,
+      "new_count": 1,
+      "target_lines": [
+        81
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/02-subpub-qos2-receive-maximum-1.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 5,
+      "old_count": 0,
+      "new_start": 6,
+      "new_count": 1,
+      "target_lines": [
+        5,
+        6
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/02-subpub-qos2-receive-maximum-1.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 46,
+      "old_count": 1,
+      "new_start": 47,
+      "new_count": 4,
+      "target_lines": [
+        46
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/02-subpub-qos2-receive-maximum-2.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 5,
+      "old_count": 0,
+      "new_start": 6,
+      "new_count": 1,
+      "target_lines": [
+        5,
+        6
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/02-subpub-qos2-receive-maximum-2.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 49,
+      "old_count": 1,
+      "new_start": 50,
+      "new_count": 4,
+      "target_lines": [
+        49
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csF-lcsF.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 3,
+      "old_count": 0,
+      "new_start": 4,
+      "new_count": 1,
+      "target_lines": [
+        3,
+        4
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csF-lcsF.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 8,
+      "old_count": 1,
+      "new_start": 9,
+      "new_count": 4,
+      "target_lines": [
+        8
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csF-lcsN.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 3,
+      "old_count": 0,
+      "new_start": 4,
+      "new_count": 1,
+      "target_lines": [
+        3,
+        4
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csF-lcsN.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 8,
+      "old_count": 1,
+      "new_start": 9,
+      "new_count": 4,
+      "target_lines": [
+        8
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csF-lcsT.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 3,
+      "old_count": 0,
+      "new_start": 4,
+      "new_count": 1,
+      "target_lines": [
+        3,
+        4
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csF-lcsT.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 8,
+      "old_count": 1,
+      "new_start": 9,
+      "new_count": 4,
+      "target_lines": [
+        8
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csT-lcsF.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 3,
+      "old_count": 0,
+      "new_start": 4,
+      "new_count": 1,
+      "target_lines": [
+        3,
+        4
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csT-lcsF.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 8,
+      "old_count": 1,
+      "new_start": 9,
+      "new_count": 4,
+      "target_lines": [
+        8
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csT-lcsN.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 3,
+      "old_count": 0,
+      "new_start": 4,
+      "new_count": 1,
+      "target_lines": [
+        3,
+        4
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csT-lcsN.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 8,
+      "old_count": 1,
+      "new_start": 9,
+      "new_count": 4,
+      "target_lines": [
+        8
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csT-lcsT.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 3,
+      "old_count": 0,
+      "new_start": 4,
+      "new_count": 1,
+      "target_lines": [
+        3,
+        4
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/06-bridge-clean-session-csT-lcsT.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 8,
+      "old_count": 1,
+      "new_start": 9,
+      "new_count": 4,
+      "target_lines": [
+        8
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/08-ssl-bridge.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 2,
+      "old_count": 0,
+      "new_start": 3,
+      "new_count": 1,
+      "target_lines": [
+        2,
+        3
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/broker/08-ssl-bridge.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 56,
+      "old_count": 1,
+      "new_start": 57,
+      "new_count": 4,
+      "target_lines": [
+        56
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/ptest.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 6,
+      "old_count": 0,
+      "new_start": 7,
+      "new_count": 2,
+      "target_lines": [
+        6,
+        7
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/ptest.py",
+      "category": "other",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 65,
+      "old_count": 6,
+      "new_start": 67,
+      "new_count": 3,
+      "target_lines": [
+        65,
+        67,
+        70
+      ],
+      "hunks": 3,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [
+      {
+        "path": "cmake/FindOpenSSL.cmake",
+        "category": "build",
+        "added_lines": 4
+      },
+      {
+        "path": "test/broker/c/Makefile.qnx",
+        "category": "other",
+        "added_lines": 47
+      },
+      {
+        "path": "test/broker/test_qnx.py",
+        "category": "other",
+        "added_lines": 201
+      },
+      {
+        "path": "test/client/test_qnx.sh",
+        "category": "other",
+        "added_lines": 46
+      },
+      {
+        "path": "test/lib/c/Makefile.qnx",
+        "category": "other",
+        "added_lines": 78
+      },
+      {
+        "path": "test/lib/cpp/Makefile.qnx",
+        "category": "other",
+        "added_lines": 96
+      },
+      {
+        "path": "test/lib/test_qnx.py",
+        "category": "other",
+        "added_lines": 93
+      }
+    ],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 2,
+    "other_sites": 20,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "col": 35,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "apps/mosquitto_ctrl/Makefile",
+      "line": 9,
+      "message": "FAKE scanner token hit: -lpthread",
+      "rule_id": "FAKE-LPTHREAD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 100,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "apps/mosquitto_ctrl/Makefile",
+      "line": 45,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 32,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "config.mk",
+      "line": 188,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 32,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "config.mk",
+      "line": 193,
+      "message": "FAKE scanner token hit: -lrt",
+      "rule_id": "FAKE-LRT",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 28,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "config.mk",
+      "line": 195,
+      "message": "FAKE scanner token hit: -lrt",
+      "rule_id": "FAKE-LRT",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/mosquitto_internal.h",
+      "line": 62,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/net_mosq.c",
+      "line": 39,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/net_mosq.c",
+      "line": 40,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 38,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/net_mosq.c",
+      "line": 1020,
+      "message": "FAKE scanner token hit: MSG_NOSIGNAL",
+      "rule_id": "FAKE-MSG-NOSIGNAL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/net_mosq.h",
+      "line": 55,
+      "message": "FAKE scanner token hit: MSG_NOSIGNAL",
+      "rule_id": "FAKE-MSG-NOSIGNAL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/net_mosq.h",
+      "line": 56,
+      "message": "FAKE scanner token hit: MSG_NOSIGNAL",
+      "rule_id": "FAKE-MSG-NOSIGNAL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/thread_mosq.c",
+      "line": 26,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/thread_mosq.c",
+      "line": 46,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 3,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/thread_mosq.c",
+      "line": 47,
+      "message": "FAKE scanner token hit: pthread_setname_np",
+      "rule_id": "FAKE-PTHREAD-SETNAME-NP",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 3,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/thread_mosq.c",
+      "line": 49,
+      "message": "FAKE scanner token hit: pthread_setname_np",
+      "rule_id": "FAKE-PTHREAD-SETNAME-NP",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 35,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "lib/util_mosq.c",
+      "line": 34,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux.c",
+      "line": 25,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux.c",
+      "line": 34,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux.c",
+      "line": 44,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux.c",
+      "line": 54,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux.c",
+      "line": 64,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux.c",
+      "line": 76,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux.c",
+      "line": 86,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux.h",
+      "line": 24,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux.h",
+      "line": 25,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux.h",
+      "line": 26,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux.h",
+      "line": 27,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux.h",
+      "line": 28,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux.h",
+      "line": 29,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux.h",
+      "line": 30,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 31,
+      "message": "FAKE scanner token hit: sys/epoll.h",
+      "rule_id": "FAKE-SYS-EPOLL-H",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 15,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 71,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 73,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 75,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 38,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 87,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 20,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 90,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 31,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 94,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 7,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 98,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 109,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 111,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 32,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 114,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 6,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 117,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 27,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 118,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 128,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 130,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 32,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 133,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 6,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 136,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 27,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 137,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 147,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 149,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 31,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 151,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 6,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 154,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 164,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 166,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 31,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 168,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 6,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 170,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 178,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 181,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 31,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 187,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 16,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 189,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/mux_epoll.c",
+      "line": 229,
+      "message": "FAKE scanner token hit: epoll_",
+      "rule_id": "FAKE-EPOLL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/net.c",
+      "line": 769,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 22,
+    "sites_by_category": {
+      "source": 0,
+      "build": 2,
+      "other": 20
+    },
+    "sites_source_nontest": 0,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": null,
+    "recall_source_nontest": null,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.0,
+    "findings_total": 62,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 57,
+      "build": 5,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "fake-scan",
+    "version": "0.0.0-fake"
+  }
+}

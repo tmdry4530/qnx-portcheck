@@ -1,0 +1,147 @@
+{
+  "label": "FAKE-SCAN",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T12:29:03.199516+09:00",
+  "project": {
+    "name": "libxml2",
+    "upstream": "https://github.com/GNOME/libxml2",
+    "upstream_base_ref": "v2.13.5",
+    "upstream_base_sha": "de918d45e1b2276a28a4cd32bcf556bef65284e4",
+    "qnx_repo": "https://github.com/qnx-ports/libxml2",
+    "qnx_branch": "qnx-2.13.5",
+    "qnx_head_sha": "235a060dec5c9413f4f7d4f81109a5117dbc27a1",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
+  "durations": {
+    "fetch": 0.0033569920051377267,
+    "scan": 0.39007974800188094
+  },
+  "diff_stats": {
+    "files_changed": 1,
+    "compare_files_expected": 1,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "SAX2.c"
+  ],
+  "sites": [
+    {
+      "file": "SAX2.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 431,
+      "old_count": 4,
+      "new_start": 432,
+      "new_count": 5,
+      "target_lines": [
+        431,
+        432,
+        433,
+        434
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 0,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "col": 35,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "CMakeLists.txt",
+      "line": 342,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 35,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "CMakeLists.txt",
+      "line": 347,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 57,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "Makefile.am",
+      "line": 398,
+      "message": "FAKE scanner token hit: -lpthread",
+      "rule_id": "FAKE-LPTHREAD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 65,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "nanohttp.c",
+      "line": 1065,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 1,
+    "sites_by_category": {
+      "source": 1,
+      "build": 0,
+      "other": 0
+    },
+    "sites_source_nontest": 1,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": null,
+    "recall_in_scope": 0.0,
+    "findings_total": 4,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 1,
+      "build": 3,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "fake-scan",
+    "version": "0.0.0-fake"
+  }
+}

@@ -1,0 +1,331 @@
+{
+  "label": "FAKE-SCAN",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T12:29:03.968393+09:00",
+  "project": {
+    "name": "nghttp2",
+    "upstream": "https://github.com/nghttp2/nghttp2",
+    "upstream_base_ref": "v1.64.0",
+    "upstream_base_sha": "526ff38e0249acbcc4d0e8958c12cdeae9960cfe",
+    "qnx_repo": "https://github.com/qnx-ports/nghttp2",
+    "qnx_branch": "qnx-1.64.0",
+    "qnx_head_sha": "56d4a4a8d40e5ff5b1259b5ba8effd0d2aba60d2",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
+  "durations": {
+    "fetch": 0.0031279939867090434,
+    "scan": 0.2138132370018866
+  },
+  "diff_stats": {
+    "files_changed": 2,
+    "compare_files_expected": 2,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "src/util.h",
+    "tests/CMakeLists.txt"
+  ],
+  "sites": [
+    {
+      "file": "src/util.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 59,
+      "old_count": 0,
+      "new_start": 60,
+      "new_count": 3,
+      "target_lines": [
+        59,
+        60
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/CMakeLists.txt",
+      "category": "build",
+      "is_test": true,
+      "kind": "mixed",
+      "old_start": 27,
+      "old_count": 9,
+      "new_start": 28,
+      "new_count": 10,
+      "target_lines": [
+        27,
+        28,
+        30,
+        31,
+        34,
+        35
+      ],
+      "hunks": 3,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/CMakeLists.txt",
+      "category": "build",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 44,
+      "old_count": 3,
+      "new_start": 52,
+      "new_count": 9,
+      "target_lines": [
+        44,
+        45,
+        46
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/CMakeLists.txt",
+      "category": "build",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 50,
+      "old_count": 2,
+      "new_start": 64,
+      "new_count": 4,
+      "target_lines": [
+        50,
+        51
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 3,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "col": 6,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "CMakeLists.txt",
+      "line": 267,
+      "message": "FAKE scanner token hit: CMAKE_SYSTEM_NAME STREQUAL \"Linux\"",
+      "rule_id": "FAKE-CMAKE-SYSTEM-NAME-STREQUAL-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "bpf/reuseport_kern.c",
+      "line": 25,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "bpf/reuseport_kern.c",
+      "line": 26,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 49,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "configure.ac",
+      "line": 384,
+      "message": "FAKE scanner token hit: -ldl",
+      "rule_id": "FAKE-LDL",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 45,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/shrpx.h",
+      "line": 54,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 65,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/shrpx_accept_handler.cc",
+      "line": 67,
+      "message": "FAKE scanner token hit: SOCK_CLOEXEC",
+      "rule_id": "FAKE-SOCK-CLOEXEC",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 21,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/shrpx_log.cc",
+      "line": 971,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 21,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/shrpx_log.cc",
+      "line": 976,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 52,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/shrpx_log.h",
+      "line": 299,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 66,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/shrpx_worker.cc",
+      "line": 894,
+      "message": "FAKE scanner token hit: SOCK_CLOEXEC",
+      "rule_id": "FAKE-SOCK-CLOEXEC",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 58,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/util.cc",
+      "line": 1047,
+      "message": "FAKE scanner token hit: SOCK_CLOEXEC",
+      "rule_id": "FAKE-SOCK-CLOEXEC",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 57,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/util.cc",
+      "line": 1072,
+      "message": "FAKE scanner token hit: SOCK_CLOEXEC",
+      "rule_id": "FAKE-SOCK-CLOEXEC",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 8,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/util_test.cc",
+      "line": 458,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 12,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/util_test.cc",
+      "line": 460,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 12,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "src/util_test.cc",
+      "line": 462,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 4,
+    "sites_by_category": {
+      "source": 1,
+      "build": 3,
+      "other": 0
+    },
+    "sites_source_nontest": 1,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.0,
+    "findings_total": 15,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 13,
+      "build": 2,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "fake-scan",
+    "version": "0.0.0-fake"
+  }
+}

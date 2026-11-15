@@ -1,0 +1,112 @@
+{
+  "label": "FAKE-SCAN",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T12:29:07.000873+09:00",
+  "project": {
+    "name": "jansson",
+    "upstream": "https://github.com/akheron/jansson",
+    "upstream_base_ref": "v2.14",
+    "upstream_base_sha": "684e18c927e89615c2d501737e90018f4930d6c5",
+    "qnx_repo": "https://github.com/qnx-ports/jansson",
+    "qnx_branch": "qnx-v2.14",
+    "qnx_head_sha": "bbf20222758941f7678d36cca53a092ff6420114",
+    "expected_scope": "build-only",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
+  "durations": {
+    "fetch": 0.005796633020509034,
+    "scan": 0.06742395702167414
+  },
+  "diff_stats": {
+    "files_changed": 1,
+    "compare_files_expected": 1,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "CMakeLists.txt"
+  ],
+  "sites": [
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 632,
+      "old_count": 0,
+      "new_start": 633,
+      "new_count": 1,
+      "target_lines": [
+        632,
+        633
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 658,
+      "old_count": 0,
+      "new_start": 660,
+      "new_count": 15,
+      "target_lines": [
+        658,
+        659
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 2,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [],
+  "metrics": {
+    "sites_total": 2,
+    "sites_by_category": {
+      "source": 0,
+      "build": 2,
+      "other": 0
+    },
+    "sites_source_nontest": 0,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": null,
+    "recall_source_nontest": null,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.0,
+    "findings_total": 0,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": null,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "fake-scan",
+    "version": "0.0.0-fake"
+  }
+}

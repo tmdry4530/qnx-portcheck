@@ -1,0 +1,630 @@
+{
+  "label": "FAKE-SCAN",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T12:29:02.336017+09:00",
+  "project": {
+    "name": "libusb",
+    "upstream": "https://github.com/libusb/libusb",
+    "upstream_base_ref": "master",
+    "upstream_base_sha": "e782eeb2514266f6738e242cdcb18e3ae1ed06fa",
+    "qnx_repo": "https://github.com/qnx-ports/libusb",
+    "qnx_branch": "libusb-1.0.23",
+    "qnx_head_sha": "4a7f548b901470bd9bb602feeee02ace96c4f1b4",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
+  "durations": {
+    "fetch": 0.0028621779929380864,
+    "scan": 0.0897516520053614
+  },
+  "diff_stats": {
+    "files_changed": 9,
+    "compare_files_expected": 9,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "Makefile.am",
+    "configure.ac",
+    "examples/dpfp_threaded.c",
+    "examples/sam3u_benchmark.c",
+    "libusb/Makefile.am",
+    "libusb/core.c",
+    "libusb/libusbi.h"
+  ],
+  "sites": [
+    {
+      "file": "Makefile.am",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 16,
+      "old_count": 0,
+      "new_start": 17,
+      "new_count": 4,
+      "target_lines": [
+        16,
+        17
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "configure.ac",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 91,
+      "old_count": 0,
+      "new_start": 92,
+      "new_count": 6,
+      "target_lines": [
+        91,
+        92
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "configure.ac",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 172,
+      "old_count": 0,
+      "new_start": 179,
+      "new_count": 6,
+      "target_lines": [
+        172,
+        173
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "configure.ac",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 198,
+      "old_count": 0,
+      "new_start": 211,
+      "new_count": 1,
+      "target_lines": [
+        198,
+        199
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "examples/dpfp_threaded.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 33,
+      "old_count": 1,
+      "new_start": 33,
+      "new_count": 3,
+      "target_lines": [
+        33
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "examples/sam3u_benchmark.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 32,
+      "old_count": 1,
+      "new_start": 32,
+      "new_count": 3,
+      "target_lines": [
+        32
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "libusb/Makefile.am",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 24,
+      "old_count": 0,
+      "new_start": 25,
+      "new_count": 1,
+      "target_lines": [
+        24,
+        25
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "libusb/Makefile.am",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 31,
+      "old_count": 0,
+      "new_start": 33,
+      "new_count": 1,
+      "target_lines": [
+        31,
+        32
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "libusb/Makefile.am",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 87,
+      "old_count": 0,
+      "new_start": 90,
+      "new_count": 4,
+      "target_lines": [
+        87,
+        88
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "libusb/core.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 24,
+      "old_count": 1,
+      "new_start": 24,
+      "new_count": 1,
+      "target_lines": [
+        24
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "libusb/libusbi.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 578,
+      "old_count": 1,
+      "new_start": 578,
+      "new_count": 1,
+      "target_lines": [
+        578
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [
+      {
+        "path": "libusb/os/nto_qnx_usbfs.c",
+        "category": "source",
+        "added_lines": 2499
+      },
+      {
+        "path": "libusb/os/nto_qnx_usbfs.h",
+        "category": "source",
+        "added_lines": 98
+      }
+    ],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 7,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "col": 33,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "android/config.h",
+      "line": 65,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 33,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "android/config.h",
+      "line": 68,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 25,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/io.c",
+      "line": 1139,
+      "message": "FAKE scanner token hit: eventfd",
+      "rule_id": "FAKE-EVENTFD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 17,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/io.c",
+      "line": 1151,
+      "message": "FAKE scanner token hit: timerfd_",
+      "rule_id": "FAKE-TIMERFD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 6,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/io.c",
+      "line": 1334,
+      "message": "FAKE scanner token hit: timerfd_",
+      "rule_id": "FAKE-TIMERFD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 16,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/io.c",
+      "line": 1346,
+      "message": "FAKE scanner token hit: timerfd_",
+      "rule_id": "FAKE-TIMERFD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 8,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/io.c",
+      "line": 1364,
+      "message": "FAKE scanner token hit: timerfd_",
+      "rule_id": "FAKE-TIMERFD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 16,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/io.c",
+      "line": 1375,
+      "message": "FAKE scanner token hit: timerfd_",
+      "rule_id": "FAKE-TIMERFD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 7,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/io.c",
+      "line": 1436,
+      "message": "FAKE scanner token hit: timerfd_",
+      "rule_id": "FAKE-TIMERFD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/io.c",
+      "line": 1467,
+      "message": "FAKE scanner token hit: timerfd_",
+      "rule_id": "FAKE-TIMERFD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 19,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/io.c",
+      "line": 2074,
+      "message": "FAKE scanner token hit: timerfd_",
+      "rule_id": "FAKE-TIMERFD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 10,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/io.c",
+      "line": 2086,
+      "message": "FAKE scanner token hit: timerfd_",
+      "rule_id": "FAKE-TIMERFD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 16,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/io.c",
+      "line": 2287,
+      "message": "FAKE scanner token hit: timerfd_",
+      "rule_id": "FAKE-TIMERFD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/libusb.h",
+      "line": 57,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 18,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/libusbi.h",
+      "line": 1176,
+      "message": "FAKE scanner token hit: timerfd_",
+      "rule_id": "FAKE-TIMERFD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 3,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/os/darwin_usb.c",
+      "line": 464,
+      "message": "FAKE scanner token hit: pthread_setname_np",
+      "rule_id": "FAKE-PTHREAD-SETNAME-NP",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 7,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/os/haiku_usb_raw.cpp",
+      "line": 260,
+      "message": "FAKE scanner token hit: timerfd_",
+      "rule_id": "FAKE-TIMERFD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/os/linux_netlink.c",
+      "line": 41,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/os/linux_netlink.c",
+      "line": 48,
+      "message": "FAKE scanner token hit: SOCK_CLOEXEC",
+      "rule_id": "FAKE-SOCK-CLOEXEC",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 9,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/os/linux_netlink.c",
+      "line": 49,
+      "message": "FAKE scanner token hit: SOCK_CLOEXEC",
+      "rule_id": "FAKE-SOCK-CLOEXEC",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 19,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/os/linux_netlink.c",
+      "line": 68,
+      "message": "FAKE scanner token hit: SOCK_CLOEXEC",
+      "rule_id": "FAKE-SOCK-CLOEXEC",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 44,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/os/linux_netlink.c",
+      "line": 102,
+      "message": "FAKE scanner token hit: SOCK_CLOEXEC",
+      "rule_id": "FAKE-SOCK-CLOEXEC",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 35,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/os/linux_usbfs.c",
+      "line": 709,
+      "message": "FAKE scanner token hit: /proc/self",
+      "rule_id": "FAKE-PROC-SELF",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 25,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/os/linux_usbfs.c",
+      "line": 2838,
+      "message": "FAKE scanner token hit: timerfd_",
+      "rule_id": "FAKE-TIMERFD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 7,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/os/linux_usbfs.c",
+      "line": 2890,
+      "message": "FAKE scanner token hit: timerfd_",
+      "rule_id": "FAKE-TIMERFD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 11,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/os/linux_usbfs.h",
+      "line": 24,
+      "message": "FAKE scanner token hit: linux/",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 25,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/os/sunos_usb.c",
+      "line": 1651,
+      "message": "FAKE scanner token hit: timerfd_",
+      "rule_id": "FAKE-TIMERFD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 14,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/os/sunos_usb.c",
+      "line": 1690,
+      "message": "FAKE scanner token hit: timerfd_",
+      "rule_id": "FAKE-TIMERFD",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 13,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/os/threads_posix.c",
+      "line": 25,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    },
+    {
+      "col": 15,
+      "confidence": "manual-review",
+      "doc_url": null,
+      "file": "libusb/os/threads_posix.c",
+      "line": 65,
+      "message": "FAKE scanner token hit: __linux__",
+      "rule_id": "FAKE-LINUX",
+      "severity": "warning",
+      "suggestion": "manual review",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 11,
+    "sites_by_category": {
+      "source": 4,
+      "build": 7,
+      "other": 0
+    },
+    "sites_source_nontest": 4,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.0,
+    "findings_total": 30,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 30,
+      "build": 0,
+      "other": 0
+    },
+    "findings_in_patched_files": 1,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": 0.0
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "fake-scan",
+    "version": "0.0.0-fake"
+  }
+}

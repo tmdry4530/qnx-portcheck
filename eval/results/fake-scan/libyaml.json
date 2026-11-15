@@ -1,0 +1,144 @@
+{
+  "label": "FAKE-SCAN",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T12:29:07.076405+09:00",
+  "project": {
+    "name": "libyaml",
+    "upstream": "https://github.com/yaml/libyaml",
+    "upstream_base_ref": "0.2.5",
+    "upstream_base_sha": "2c891fc7a770e8ba2fec34fc6b545c672beb37e6",
+    "qnx_repo": "https://github.com/qnx-ports/libyaml",
+    "qnx_branch": "qnx-0.2.5",
+    "qnx_head_sha": "66e65e9309a02e90f7e752bc033775aaa3744039",
+    "expected_scope": "build-only",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "python3 eval/fake_scan.py scan {path} --format json",
+  "durations": {
+    "fetch": 0.002438392984913662,
+    "scan": 0.0639478959783446
+  },
+  "diff_stats": {
+    "files_changed": 2,
+    "compare_files_expected": 2,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "CMakeLists.txt",
+    "tests/CMakeLists.txt"
+  ],
+  "sites": [
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 83,
+      "old_count": 0,
+      "new_start": 84,
+      "new_count": 7,
+      "target_lines": [
+        83,
+        84
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 88,
+      "old_count": 0,
+      "new_start": 96,
+      "new_count": 1,
+      "target_lines": [
+        88,
+        89
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/CMakeLists.txt",
+      "category": "build",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 4,
+      "old_count": 0,
+      "new_start": 5,
+      "new_count": 5,
+      "target_lines": [
+        4,
+        5
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "tests/CMakeLists.txt",
+      "category": "build",
+      "is_test": true,
+      "kind": "delete",
+      "old_start": 27,
+      "old_count": 1,
+      "new_start": 31,
+      "new_count": 0,
+      "target_lines": [
+        27
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 4,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [],
+  "metrics": {
+    "sites_total": 4,
+    "sites_by_category": {
+      "source": 0,
+      "build": 4,
+      "other": 0
+    },
+    "sites_source_nontest": 0,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": null,
+    "recall_source_nontest": null,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.0,
+    "findings_total": 0,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "findings_in_patched_files": 0,
+    "findings_tp_in_patched_files": 0,
+    "precision": null,
+    "precision_in_patched_files": null
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "fake-scan",
+    "version": "0.0.0-fake"
+  }
+}
