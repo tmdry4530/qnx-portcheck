@@ -4,9 +4,14 @@ Python >=3.10, stdlib-first, package `qnx_portcheck` under src/, CLI entry `qnx-
 License Apache-2.0. Host tool only; never claims to run on a QNX target.
 
 ## CLI
-- `qnx-portcheck scan <path> [--format text|json|sarif] [--out FILE]`  (owner: 개발팀1)
+- `qnx-portcheck scan <path> [--format text|json|sarif] [--out FILE] [--fail-on error|warning|never]` (owner: 개발팀1)
 - `qnx-portcheck scaffold <path> [--name N] [--out DIR]`             (owner: 개발팀3)
 - `qnx-portcheck lint-buildfile <file>` (optional)                     (owner: 개발팀3)
+
+### scan exit codes
+- 0 = no findings at/above `--fail-on` (default: `error`).
+- 1 = findings at/above the selected threshold.
+- 2 = usage error (bad arguments or path not found).
 
 ## scan JSON schema (eval depends on this; do not change without telling Engineering Lead)
 {"tool":"qnx-portcheck","version":"x.y.z","root":"<abs path>",

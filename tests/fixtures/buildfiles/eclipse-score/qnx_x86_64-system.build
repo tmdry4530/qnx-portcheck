@@ -1,0 +1,27 @@
+# *******************************************************************************
+# Copyright (c) 2025 Contributors to the Eclipse Foundation
+#
+# See the NOTICE file(s) distributed with this work for additional
+# information regarding copyright ownership.
+#
+# This program and the accompanying materials are made available under the
+# terms of the Apache License Version 2.0 which is available at
+# https://www.apache.org/licenses/LICENSE-2.0
+#
+# SPDX-License-Identifier: Apache-2.0
+# *******************************************************************************
+
+# x86_64-specific QNX system build fragment. The architecture-independent
+# system partition contents live in //images/qnx_common/build:common_system.build
+# (included first via qnx_ifs extra_build_files); this file only adds the
+# drivers that are specific to the x86_64 QEMU target.
+
+#############################################
+### PCI COMPONENTS (x86_64-specific) ###
+#############################################
+pci/pci_hw-Intel_x86.so                  # Intel x86 PCI hardware support
+
+#############################################
+### STORAGE (x86_64-specific) ###
+#############################################
+devb-eide                                # Block device driver for IDE/SATA disks (QNX6 rootfs mounts)
