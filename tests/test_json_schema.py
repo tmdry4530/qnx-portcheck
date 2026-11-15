@@ -8,7 +8,8 @@ from qnx_portcheck.rules import ALL_RULES
 def test_json_schema(tmp_path: Path) -> None:
     output_path = tmp_path / "out.json"
     fixtures = Path(__file__).parent / "fixtures"
-    arguments = ["scan", str(fixtures), "--format", "json", "--out", str(output_path)]
+    arguments = ["scan", str(fixtures), "--format", "json", "--out", str(output_path),
+                 "--fail-on", "never"]
     assert main(arguments) == 0
     data = json.loads(output_path.read_text())
     assert list(data) == ["tool", "version", "root", "findings"]

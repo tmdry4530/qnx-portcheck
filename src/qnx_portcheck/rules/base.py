@@ -3,6 +3,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from typing import Callable, Iterable, Literal
+from qnx_portcheck.lexer import position
 import re
 
 
@@ -24,6 +25,7 @@ class SourceContext:
     comments: str
     code: str
     strings: list[tuple[int, int, str]]
+    lines: list[str]
 
 
 @dataclass(frozen=True)
@@ -38,36 +40,25 @@ class Rule:
     detector: Callable[[SourceContext], Iterable[Hit]]
 
 
-def include_and_calls(headers: tuple[str, ...], calls: tuple[str, ...], label: str,
-                      suggestion: str, doc_url: str | None,
-                      severity: str = "warning", confidence: str = "high") -> Callable:
-    """Create detector for listed includes and unqualified function calls."""
+def include_and_calls(
+    headers: tuple[str, ...],
+    calls: tuple[str, ...],
+    label: str,
+    refine: Callable[[str, str], dict[str, str]] | None = None,
+) -> Callable[[SourceContext], Iterable[Hit]]:
+    """Create a detector for listed include headers and function calls."""
     def detect(context: SourceContext) -> Iterable[Hit]:
         for header in headers:
-            pattern = re.compile(r'^\s*#\s*include\s*[<"]' + re.escape(header) + r'[>"]', re.M)
+            pattern = re.compile(
+                r'^\s*#\s*include\s*[<"]' + re.escape(header) + r'[>"]', re.M
+            )
             for match in pattern.finditer(context.comments):
-                line, col = _position(context.comments, match.start())
+                line, col = position(context.comments, match.start())
                 yield Hit(line, col, f"Linux {label} header <{header}>")
         for name in calls:
-            pattern = re.compile(r'(?<![\w.>])(?:::)?' + re.escape(name) + r'\s*\(')
+            pattern = re.compile(r'(?<![\w.>:])(?:::)?' + re.escape(name) + r'\s*\(')
             for match in pattern.finditer(context.code):
-                line, col = _position(context.code, match.start())
-                original_line = context.raw.splitlines()[line - 1] if line <= len(context.raw.splitlines()) else ""
-                if name == "prctl":
-                    yield Hit(line, col, f"Linux prctl API ({name})",
-                              confidence="high" if "PR_SET_NAME" in original_line else "medium")
-                elif name == "pipe2" and ("O_DIRECT" in original_line or "O_NOTIFICATION_PIPE" in original_line):
-                    yield Hit(line, col, f"Linux {label} API {name}()", severity="warning")
-                else:
-                    yield Hit(line, col, f"Linux {label} API {name}()")
-        if label == "syscall":
-            for line_no, line in enumerate(context.code.splitlines(), 1):
-                for match in re.finditer(r'\b(?:SYS_[a-z_0-9]+|__NR_[a-z_0-9]+)\b', line):
-                    token = match.group()
-                    yield Hit(line_no, match.start() + 1, f"Linux syscall number {token}")
+                line, col = position(context.code, match.start())
+                overrides = refine(name, context.lines[line - 1]) if refine else {}
+                yield Hit(line, col, f"Linux {label} API {name}()", **overrides)
     return detect
-
-
-def _position(text: str, offset: int) -> tuple[int, int]:
-    line = text.count("\n", 0, offset) + 1
-    return line, offset - text.rfind("\n", 0, offset)

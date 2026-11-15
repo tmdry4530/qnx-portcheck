@@ -62,7 +62,7 @@ def scan(path: str | Path) -> ScanResult:
             code, strings, comments, kind = raw, [], raw, "build"
         else:
             continue
-        context = SourceContext(relative, raw, comments, code, strings)
+        context = SourceContext(relative, raw, comments, code, strings, raw.splitlines())
         seen = set()
         for rule in ALL_RULES:
             if rule.kind != kind:
@@ -72,9 +72,12 @@ def scan(path: str | Path) -> ScanResult:
                 if identity in seen:
                     continue
                 seen.add(identity)
-                findings.append(Finding(rule.id, hit.severity or rule.severity, relative,
-                    hit.line, hit.col, hit.message, hit.suggestion if hit.suggestion is not None else rule.suggestion,
+                findings.append(Finding(
+                    rule.id, hit.severity or rule.severity, relative,
+                    hit.line, hit.col, hit.message,
+                    hit.suggestion if hit.suggestion is not None else rule.suggestion,
                     hit.doc_url if hit.doc_url is not None else rule.doc_url,
-                    hit.confidence or rule.confidence))
+                    hit.confidence or rule.confidence,
+                ))
     findings.sort(key=lambda item: (item.file, item.line, item.col, item.rule_id))
     return ScanResult(root, findings, len(files))

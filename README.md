@@ -4,7 +4,7 @@ Host-side tool for Linux to QNX 8.0 porting. It is a host tool and never runs on
 
 ## scan
 
-Run `qnx-portcheck scan <path>` to inspect C/C++ sources and build files. Choose `--format text`, `json`, or `sarif`; use `--out FILE` to write a report and `--fail-on error|warning|note|never` to set the exit threshold.
+Run `qnx-portcheck scan <path>` to inspect C/C++ sources and build files. Choose `--format text`, `json`, or `sarif`; use `--out FILE` to write a report and `--fail-on error|warning|never` (default: `error`) to set the exit threshold.
 
 | Rule | Default severity | QNX documentation |
 |---|---|---|
@@ -25,3 +25,6 @@ Run `qnx-portcheck scan <path>` to inspect C/C++ sources and build files. Choose
 | LNX-LINUX-IFDEF | warning | yes |
 | LNX-LINK-FLAGS | warning | yes |
 | LNX-LINK-FLAGS-OTHER | warning | no |
+
+Scan exits with status 0 when no finding reaches the selected `--fail-on` threshold,
+1 when at least one finding reaches it, and 2 for invalid arguments or a missing path.
