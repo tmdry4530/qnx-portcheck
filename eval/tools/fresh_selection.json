@@ -1,0 +1,969 @@
+{
+  "generated_at": "2026-11-15T14:41:23+09:00",
+  "criteria_commit": "d19382b",
+  "repo_list_length": 239,
+  "selected": [
+    {
+      "name": "AMQP-CPP",
+      "qnx_repo": "https://github.com/qnx-ports/AMQP-CPP",
+      "qnx_branch": "qnx-v4.3.27",
+      "qnx_head_sha": "7a1ae88b3296345e8134047470e32b424ed607d7",
+      "upstream": "https://github.com/CopernicaMarketingSoftware/AMQP-CPP",
+      "upstream_base_ref": "v4.3.27",
+      "upstream_base_sha": "ca49382bfc5bc165dfb7988b891bb010a939a786",
+      "compare_status": "ahead",
+      "ahead_by": 2,
+      "behind_by": 0,
+      "compare_files": 2,
+      "ahead_commits": [
+        {
+          "sha": "72531185b6b7df6e4ccf5ac0c24d39b8e5744416",
+          "subject": "QNX Porting support for AMQP-CPP v4.3.27",
+          "author": "nnarayanamurthy"
+        },
+        {
+          "sha": "7a1ae88b3296345e8134047470e32b424ed607d7",
+          "subject": "Adding conditional compilation for QNX",
+          "author": "nnarayanamurthy"
+        }
+      ],
+      "scorable_source_files": [
+        "src/linux_tcp/addressinfo.h"
+      ]
+    },
+    {
+      "name": "CANdb",
+      "qnx_repo": "https://github.com/qnx-ports/CANdb",
+      "qnx_branch": "qnx-master",
+      "qnx_head_sha": "eb33c39da049a41837f26fecb54173170a4d9e6e",
+      "upstream": "https://github.com/GENIVI/CANdb",
+      "upstream_base_ref": "master",
+      "upstream_base_sha": "150c42a8cdfc0748915f09d2cd0c5a68591263a7",
+      "compare_status": "ahead",
+      "ahead_by": 1,
+      "behind_by": 0,
+      "compare_files": 5,
+      "ahead_commits": [
+        {
+          "sha": "eb33c39da049a41837f26fecb54173170a4d9e6e",
+          "subject": "add support for QNX 7.1/8.0",
+          "author": "pkleymonov-qnx"
+        }
+      ],
+      "scorable_source_files": [
+        "tests/opendbc_tests.cpp",
+        "tests/opendbc_tests_expected_data.hpp"
+      ]
+    },
+    {
+      "name": "Catch2",
+      "qnx_repo": "https://github.com/qnx-ports/Catch2",
+      "qnx_branch": "qnx-v3.6.0",
+      "qnx_head_sha": "5ed4b70e2273eff469d7d1dca5fec089223768de",
+      "upstream": "https://github.com/catchorg/Catch2",
+      "upstream_base_ref": "v3.6.0",
+      "upstream_base_sha": "4e8d92bf02f7d1c8006a0e7a5ecabd8e62d98502",
+      "compare_status": "ahead",
+      "ahead_by": 3,
+      "behind_by": 0,
+      "compare_files": 6,
+      "ahead_commits": [
+        {
+          "sha": "2b491cce5df657c7e20b8628f656c35678888234",
+          "subject": "add support for QNX 7.1/8.0",
+          "author": "pkleymonov-qnx"
+        },
+        {
+          "sha": "3c64d685bd1fb913f1c2da42a9d8f26d6dfbfd79",
+          "subject": "rename catch2_tests -> Catch2_tests",
+          "author": "pkleymonov-qnx"
+        },
+        {
+          "sha": "5ed4b70e2273eff469d7d1dca5fec089223768de",
+          "subject": "reverted modification of amalgamated distribution files",
+          "author": "pkleymonov-qnx"
+        }
+      ],
+      "scorable_source_files": [
+        "src/catch2/internal/catch_console_colour.cpp",
+        "src/catch2/internal/catch_debugger.cpp",
+        "src/catch2/internal/catch_debugger.hpp",
+        "src/catch2/internal/catch_platform.hpp"
+      ]
+    },
+    {
+      "name": "EmulationStation",
+      "qnx_repo": "https://github.com/qnx-ports/EmulationStation",
+      "qnx_branch": "qnx_master",
+      "qnx_head_sha": "68675d5dc0a1026cc71bd8403fc8a636e3d2cffc",
+      "upstream": "https://github.com/RetroPie/EmulationStation",
+      "upstream_base_ref": "master",
+      "upstream_base_sha": "51b6f4162d8e89be2ef7a2c9d7c232ac5b31022b",
+      "compare_status": "diverged",
+      "ahead_by": 6,
+      "behind_by": 44,
+      "compare_files": 13,
+      "ahead_commits": [
+        {
+          "sha": "66b6806a9ae2bcc0439018dc3cab13adf5cb47bb",
+          "subject": "QNX related changes to commandline and filesystem utils",
+          "author": "JaiXJM-BB"
+        },
+        {
+          "sha": "c1f7ae3cd84ae7f703b07a8fcc21d3a544e4d0f4",
+          "subject": "CMake QNX Update - pushed for testing",
+          "author": "JaiXJM-BB"
+        },
+        {
+          "sha": "9ba7efb64a6ea8cdddf1b5c9d55cd2b94aa83ef4",
+          "subject": "Push for testing - temporary fixes combined with other work.",
+          "author": "JaiXJM-BB"
+        },
+        {
+          "sha": "a44b69d8d7ba0dd151db3a7f9384ea9a49f21c37",
+          "subject": "Working",
+          "author": "JaiXJM-BB"
+        },
+        {
+          "sha": "4f4962a91e94ba4a81f413e124ef6bd569c20f96",
+          "subject": "color fixed on theme side; now can use default convertColor",
+          "author": "JaiXJM-BB"
+        },
+        {
+          "sha": "68675d5dc0a1026cc71bd8403fc8a636e3d2cffc",
+          "subject": "Removing console spamming debugs",
+          "author": "JaiXJM-BB"
+        }
+      ],
+      "scorable_source_files": [
+        "es-app/src/ScraperCmdLine.cpp",
+        "es-app/src/views/SystemView.cpp",
+        "es-app/src/views/ViewController.cpp",
+        "es-core/src/Settings.cpp",
+        "es-core/src/Window.cpp",
+        "es-core/src/guis/GuiMsgBox.cpp",
+        "es-core/src/renderers/Renderer.cpp",
+        "es-core/src/renderers/Renderer_GL14.cpp",
+        "es-core/src/renderers/Renderer_GL21.cpp",
+        "es-core/src/renderers/Renderer_GLES10.cpp",
+        "es-core/src/renderers/Renderer_GLES20.cpp",
+        "es-core/src/utils/FileSystemUtil.cpp"
+      ]
+    },
+    {
+      "name": "Fast-CDR",
+      "qnx_repo": "https://github.com/qnx-ports/Fast-CDR",
+      "qnx_branch": "qnx_v2.2.3",
+      "qnx_head_sha": "80e4f7dbb7a79a8ccd9a79bc629bea8998fa2001",
+      "upstream": "https://github.com/eProsima/Fast-CDR",
+      "upstream_base_ref": "v2.2.3",
+      "upstream_base_sha": "455a4e7e6267631bc1313203ebed489b72c48009",
+      "compare_status": "ahead",
+      "ahead_by": 3,
+      "behind_by": 0,
+      "compare_files": 9,
+      "ahead_commits": [
+        {
+          "sha": "00c29fdcd44683ffedc314d8f89c91396a19dbc8",
+          "subject": "Add INSTALL_TESTS CMake Option",
+          "author": "dchordia"
+        },
+        {
+          "sha": "d588605b309e2563ccc83b7dd95e9cc51e844ba2",
+          "subject": "Add googletest to .gitmodules",
+          "author": "dchordia"
+        },
+        {
+          "sha": "80e4f7dbb7a79a8ccd9a79bc629bea8998fa2001",
+          "subject": "Add QNX support",
+          "author": "dchordia"
+        }
+      ],
+      "scorable_source_files": [
+        "test/cdr/ResizeTest.cpp",
+        "test/cdr/SimpleTest.cpp"
+      ]
+    },
+    {
+      "name": "Fast-DDS",
+      "qnx_repo": "https://github.com/qnx-ports/Fast-DDS",
+      "qnx_branch": "qnx_2.10.1",
+      "qnx_head_sha": "b0cbb105a6182416d44f56a324fbe4fb3b219417",
+      "upstream": "https://github.com/eProsima/Fast-DDS",
+      "upstream_base_ref": "2.10.1",
+      "upstream_base_sha": "7606b96087a8bcfa7d8fe4434cd5d2d253607dfc",
+      "compare_status": "ahead",
+      "ahead_by": 10,
+      "behind_by": 0,
+      "compare_files": 18,
+      "ahead_commits": [
+        {
+          "sha": "632aad15a1e5e2fc840f47e49815405f97521eb7",
+          "subject": "Add build instruction and link with fsnotify",
+          "author": "chachoi"
+        },
+        {
+          "sha": "d5537d62b024a27473721b0fdd906d98e89effc9",
+          "subject": "Add patch",
+          "author": "chachoi"
+        },
+        {
+          "sha": "af9a3840425825f31f9c7e948b5faf1099e80eb5",
+          "subject": "Add patch",
+          "author": "chachoi"
+        },
+        {
+          "sha": "9c6a1fe1001313ad8ec0da1a660ecf37c269a087",
+          "subject": "Link against muslflt to pass DDSQLFilterValueTests.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "ae375b517149f14cc44dee023b5858f8bfe7df39",
+          "subject": "Strict realtime and bypass tests.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "da62f49fbe170d9e881de247a56e1d0aa6889028",
+          "subject": "Made STRICT_REALTIME an optional parameter that is enabled by default.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "9b840c43c01eb7a516bdd8b45cfd3ed5560d9a43",
+          "subject": "Skipped tests that hang on LLVM.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "84b236abaedc2f5b74756fad544f7da597d85e8f",
+          "subject": "Fix for DynamicTypesTests.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "86da6a822b90227bf73722551fea4a3d839fa1dd",
+          "subject": "Fix TopicTests, debug build, and parallel build.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "b0cbb105a6182416d44f56a324fbe4fb3b219417",
+          "subject": "Don't link fsnotify for QNX SDP 7.1",
+          "author": "chachoi"
+        }
+      ],
+      "scorable_source_files": [
+        "include/fastrtps/xmlparser/XMLProfileManager.h",
+        "src/cpp/rtps/reader/WriterProxy.cpp",
+        "test/unittest/dds/topic/TopicTests.cpp",
+        "test/unittest/transport/UDPv4Tests.cpp",
+        "test/unittest/transport/UDPv6Tests.cpp"
+      ]
+    },
+    {
+      "name": "OpenBLAS",
+      "qnx_repo": "https://github.com/qnx-ports/OpenBLAS",
+      "qnx_branch": "qnx-0.3.28",
+      "qnx_head_sha": "2897e36407339266789b2b4bc720d2f5c27aee0f",
+      "upstream": "https://github.com/OpenMathLib/OpenBLAS",
+      "upstream_base_ref": "v0.3.28",
+      "upstream_base_sha": "5ef8b1964658f9cb6a6324a06f6a1a022609b0c5",
+      "compare_status": "ahead",
+      "ahead_by": 6,
+      "behind_by": 0,
+      "compare_files": 9,
+      "ahead_commits": [
+        {
+          "sha": "b56a74992ebe78a22eabb9878cd117d93a405a52",
+          "subject": "Synchronize libm linkage",
+          "author": "dchordia"
+        },
+        {
+          "sha": "faf0dd8bb91448e8a2e7d48a31646c139e43cdf9",
+          "subject": "Add OPENBLAS_INSTALL_TESTS CMake Option",
+          "author": "dchordia"
+        },
+        {
+          "sha": "44215092aa071bc4a76883c09bcbc90e5d0ef0de",
+          "subject": "Do not include stdatomic.h for C++ before 23",
+          "author": "dchordia"
+        },
+        {
+          "sha": "a6e2f639bddcab884445abeb38c03990a905e594",
+          "subject": "Add QNX Support",
+          "author": "dchordia"
+        },
+        {
+          "sha": "8962076f12b160b606d0d2ca0fdf1505946e0804",
+          "subject": "Get number of CPUs on an SMP system.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "2897e36407339266789b2b4bc720d2f5c27aee0f",
+          "subject": "Add get_num_procs to the other compile path.",
+          "author": "eleir9268"
+        }
+      ],
+      "scorable_source_files": [
+        "common.h",
+        "ctest/c_cblat3c_3m.c",
+        "ctest/c_zblat3c_3m.c",
+        "driver/others/memory.c"
+      ]
+    },
+    {
+      "name": "SDL",
+      "qnx_repo": "https://github.com/qnx-ports/SDL",
+      "qnx_branch": "qnx-release-2.0.14",
+      "qnx_head_sha": "e93c96c3321e06c9269584f2d7e0bdc5f5a95a42",
+      "upstream": "https://github.com/libsdl-org/SDL",
+      "upstream_base_ref": "release-2.0.14",
+      "upstream_base_sha": "4cd981609b50ed273d80c635c1ca4c1e5518fb21",
+      "compare_status": "ahead",
+      "ahead_by": 35,
+      "behind_by": 0,
+      "compare_files": 29,
+      "ahead_commits": [
+        {
+          "sha": "edd1b7f56393f8439e71903da2c0fe6fd69c576d",
+          "subject": "QNX driver changes for 8",
+          "author": "JaiXJM-BB"
+        },
+        {
+          "sha": "899dfccc60942f5f397d4d4e36d4db08ce481603",
+          "subject": "added gitignore",
+          "author": "JaiXJM-BB"
+        },
+        {
+          "sha": "d2a08b09bdbdaaddbb4d13b9f7d30ad612ab3086",
+          "subject": "Update for 8.0/7.1",
+          "author": "JaiXJM-BB"
+        },
+        {
+          "sha": "d5a88d7fecd47428cafdbc0f6e8136263aadbc02",
+          "subject": "update for RetroArch",
+          "author": "JaiXJM-BB"
+        },
+        {
+          "sha": "9d506ba98c3cd4d9ac4d6a4e4138f470ea9701d8",
+          "subject": "Removed console spamming debugs",
+          "author": "JaiXJM-BB"
+        },
+        {
+          "sha": "b5ffbf2ac03648d3efc4c9ac9734ffe832aeb37d",
+          "subject": "Joystick (inprogress)",
+          "author": "JaiXJM-BB"
+        },
+        {
+          "sha": "15743fe51ceea6f6947bbb65f8dbc119df8d0d4d",
+          "subject": "Joystick axis support",
+          "author": "JaiXJM-BB"
+        },
+        {
+          "sha": "a21482b32fe593dbcc96402b89937fc2e75148cb",
+          "subject": "SDL Update: framebuffers no longer smash the stack (YAY) and pointer support",
+          "author": "JaiXJM-BB"
+        },
+        {
+          "sha": "858143767715f2fdebe9abf9e12b0baa74da0249",
+          "subject": "Commit for up-to-date",
+          "author": "JaiXJM-BB"
+        },
+        {
+          "sha": "aa4fb22581919d43ffb5f1451137e635c143a259",
+          "subject": "SDL: Removing print statements",
+          "author": "JaiXJM-BB"
+        },
+        {
+          "sha": "f50834a7685edc6c0940d1d4f3f2277e42128946",
+          "subject": "Migrate SDL 2.0.5 port.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "4610c822b8d07c7497ec82ac24758c946fc1e095",
+          "subject": "Add audio support for 8.0",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "4f6267b9215cf0ba7cf9142ec9b7710ee367a9eb",
+          "subject": "Don't try to free memory created by alloca.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "f2eb9ebddfcd32b93ffed4d0dbc5309afc86af01",
+          "subject": "QNX: support SDL_GetWindowWMInfo",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "a5db3b88c93a41ca820ee676b5261b8e97280015",
+          "subject": "Add QNX config file, remove workarounds.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "7afb6d66fd26cfe7a38c09218b2181ac988e682d",
+          "subject": "Add QNX unix filesystem support.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "ef6be38e9d9d515c5726a95e52061895b29770c2",
+          "subject": "Fix WMInfo, add better error messages.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "5e0ece6fa56acc3b0fc83b76e2c0483897722f27",
+          "subject": "Add debug prints. Fix joystick bugs.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "f9bd8a7a93243b7aa14dafc227f7ef697bdabc0f",
+          "subject": "Fix focus issues, add text event.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "38fae6d858c8245d25a008c7d8d37c56e2759f5a",
+          "subject": "Enable alpha channel by default.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "50b4052b7174cccaf5a17587df45a49decb6f5ea",
+          "subject": "Revert \"Enable alpha channel by default.\"",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "c39d1b0d56ee2852256d3fce92b78e32ede8f70d",
+          "subject": "Reapply \"Enable alpha channel by default.\"",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "ee7c6270278e1cbaa38f5cbcd621a0a59c8ba356",
+          "subject": "Fix colour imbalances.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "7a6cf1913103acda3e272727c38e45b216794b72",
+          "subject": "Remove fullscreen mode.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "4f95817b39c38b265bb7bccec585f9092ebbbcbd",
+          "subject": "Use ALSA sound impl on 8.0.0.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "80f2c2fb257929d468381aa9d3cc011666734246",
+          "subject": "Add better keycode support.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "7a90252f7eb895ad8b1e1f8b6aec7c78fa786e68",
+          "subject": "Header fix.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "a69fa989fb49cbe8528a01f8798b1b58038d6042",
+          "subject": "Add remaining missing keycodes.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "2fa23435e6add4071841b0587d8900b3fa123b35",
+          "subject": "Fix more warnings.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "d4ec2381db89edd9ea1d036869cb3d039e3b67eb",
+          "subject": "More warning fixes.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "440884baf3a133132b8abc9ba38d9a24a77123e0",
+          "subject": "Better mouse support. Removed key duplicates.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "f4c760a42ed3a33b59567f10207d3e5bb87068ab",
+          "subject": "QNX cursor driver.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "2e20f8298f1c3ee2dd5e3cfade9e3a897a4ba4e6",
+          "subject": "QNX deinit code.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "36ee83d24421bbfa0797324ed240e39495485352",
+          "subject": "QNX Fix relative window positioning.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "e93c96c3321e06c9269584f2d7e0bdc5f5a95a42",
+          "subject": "Update copyrights.",
+          "author": "eleir9268"
+        }
+      ],
+      "scorable_source_files": [
+        "include/SDL_config.h",
+        "include/SDL_syswm.h",
+        "src/audio/qsa/SDL_qsa_audio.c",
+        "src/audio/qsa/SDL_qsa_audio.h",
+        "src/dynapi/SDL_dynapi.h",
+        "src/events/SDL_keyboard.c",
+        "src/filesystem/unix/SDL_sysfilesystem.c",
+        "src/joystick/SDL_joystick.c",
+        "src/joystick/SDL_sysjoystick.h",
+        "src/thread/pthread/SDL_systhread.c",
+        "src/video/qnx/keyboard.c",
+        "src/video/qnx/qnx_gl.c",
+        "src/video/qnx/sdl_qnx.h",
+        "src/video/qnx/video.c"
+      ]
+    },
+    {
+      "name": "abseil-cpp",
+      "qnx_repo": "https://github.com/qnx-ports/abseil-cpp",
+      "qnx_branch": "qnx_master",
+      "qnx_head_sha": "424eafa49157be4fe2bf3e85ba94765e19d754a2",
+      "upstream": "https://github.com/abseil/abseil-cpp",
+      "upstream_base_ref": "master",
+      "upstream_base_sha": "b014bff59dc6e1202fa9144dbabd50285d01cd7a",
+      "compare_status": "diverged",
+      "ahead_by": 10,
+      "behind_by": 1671,
+      "compare_files": 8,
+      "ahead_commits": [
+        {
+          "sha": "cabb5efdabb4e728d7db7a3d1f3158332241591b",
+          "subject": "QNXOSG-166: Port abseil-cpp for QNX 8.0",
+          "author": "avchenbb"
+        },
+        {
+          "sha": "587dcff3c71524dd924745acabf3d218c732b7a2",
+          "subject": "QNXOSG-324: Enable dependency discovery config files",
+          "author": "xicaibb"
+        },
+        {
+          "sha": "18489b0443e1f53e13cf82537fe3921fae24461d",
+          "subject": "Disable GetSignalHandlerStackConsumption for qnx < 800",
+          "author": "jianyan-li-qnx"
+        },
+        {
+          "sha": "21adc8da0d59b27ec13c5cbb38aed526d7b5a8b1",
+          "subject": "Only install tests if they were built",
+          "author": "jianyan-li-qnx"
+        },
+        {
+          "sha": "0e9f0a78babaff73ae65671a5cc8a31b1b2c20a7",
+          "subject": "Fixed issue with deathtests that explicitly write to stderr.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "63e201c30be018dda1e19b22983ba2d1422d866b",
+          "subject": "Remove qnx folder",
+          "author": "chachoi"
+        },
+        {
+          "sha": "e4372e5a0a1e2786671014d6efec8af5ce82cda3",
+          "subject": "workaround for atomic usage of MaskedPointer clasS",
+          "author": "Cosmo Zhao"
+        },
+        {
+          "sha": "7fa3fa759ed85cd35c2afa5906170afc35c825d6",
+          "subject": "Fix tests.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "ba6a1b522a52e57ed33ec98c874ba6df86c7dace",
+          "subject": "Fix test install path",
+          "author": "dchordia"
+        },
+        {
+          "sha": "424eafa49157be4fe2bf3e85ba94765e19d754a2",
+          "subject": "Add test install subdir for clarity",
+          "author": "dchordia"
+        }
+      ],
+      "scorable_source_files": [
+        "absl/base/internal/raw_logging.cc",
+        "absl/debugging/internal/demangle_test.cc",
+        "absl/debugging/internal/stack_consumption.h",
+        "absl/flags/internal/flag.h",
+        "absl/log/log_format_test.cc",
+        "absl/random/internal/platform.h",
+        "absl/time/clock_test.cc"
+      ]
+    },
+    {
+      "name": "abuild",
+      "qnx_repo": "https://github.com/qnx-ports/abuild",
+      "qnx_branch": "qnx-3.15.x",
+      "qnx_head_sha": "7466fe68b512a08ab55580d2dc12f45b16f50083",
+      "upstream": "https://github.com/alpinelinux/abuild",
+      "upstream_base_ref": "master",
+      "upstream_base_sha": "1355cc9b634d953632e62c26832876b9d20c60fb",
+      "compare_status": "diverged",
+      "ahead_by": 4,
+      "behind_by": 308,
+      "compare_files": 4,
+      "ahead_commits": [
+        {
+          "sha": "570a508f4fb20bc7894cb88429857083161ba5f1",
+          "subject": "qnx: remove features not used by QNX",
+          "author": "szclsya"
+        },
+        {
+          "sha": "702fe32ee8bd2c0b772688cc851c09570407d67e",
+          "subject": "qnx: add BUILDINFO",
+          "author": "szclsya"
+        },
+        {
+          "sha": "73f85973bbac2b520403525fec560e94bf945823",
+          "subject": "use libc new hardinging mode values",
+          "author": "arbassett"
+        },
+        {
+          "sha": "7466fe68b512a08ab55580d2dc12f45b16f50083",
+          "subject": "add -Qunused-aruguments to default.conf",
+          "author": "arbassett"
+        }
+      ],
+      "scorable_source_files": [
+        "abuild-sudo.c"
+      ]
+    },
+    {
+      "name": "apk-tools",
+      "qnx_repo": "https://github.com/qnx-ports/apk-tools",
+      "qnx_branch": "qnx_3.0.0_rc5",
+      "qnx_head_sha": "51c838fcb334a57ee65c43d8b162288079151078",
+      "upstream": "https://github.com/alpinelinux/apk-tools",
+      "upstream_base_ref": "v3.0.0_rc5",
+      "upstream_base_sha": "9331888de6bd5b280d75112e5b2f7b55684db0ec",
+      "compare_status": "ahead",
+      "ahead_by": 1,
+      "behind_by": 0,
+      "compare_files": 6,
+      "ahead_commits": [
+        {
+          "sha": "51c838fcb334a57ee65c43d8b162288079151078",
+          "subject": "add QNX support",
+          "author": "fxing-qnx"
+        }
+      ],
+      "scorable_source_files": [
+        "libfetch/common.c",
+        "portability/sys/random.h",
+        "src/apk_xattr.h",
+        "src/context.c",
+        "src/database.c",
+        "src/io.c"
+      ]
+    },
+    {
+      "name": "azure-iot-sdk-c",
+      "qnx_repo": "https://github.com/qnx-ports/azure-iot-sdk-c",
+      "qnx_branch": "qnx-LTS_08_2024",
+      "qnx_head_sha": "b0b49874ada3387726ccd9e58534f627e0ad141d",
+      "upstream": "https://github.com/Azure/azure-iot-sdk-c",
+      "upstream_base_ref": "LTS_08_2024",
+      "upstream_base_sha": "9c70f98b7b659e169ae44389a5142f3a386c5791",
+      "compare_status": "ahead",
+      "ahead_by": 1,
+      "behind_by": 0,
+      "compare_files": 3,
+      "ahead_commits": [
+        {
+          "sha": "b0b49874ada3387726ccd9e58534f627e0ad141d",
+          "subject": "Add QNX support",
+          "author": "dchordia"
+        }
+      ],
+      "scorable_source_files": [
+        "testtools/iothub_test/src/iothub_account.c"
+      ]
+    },
+    {
+      "name": "benchmark",
+      "qnx_repo": "https://github.com/qnx-ports/benchmark",
+      "qnx_branch": "qnx_v1.8.3",
+      "qnx_head_sha": "85c35154ee9e8272ec5c83ffe251601acbd4371e",
+      "upstream": "https://github.com/google/benchmark",
+      "upstream_base_ref": "v1.8.3",
+      "upstream_base_sha": "344117638c8ff7e239044fd0fa7085839fc03021",
+      "compare_status": "ahead",
+      "ahead_by": 3,
+      "behind_by": 0,
+      "compare_files": 16,
+      "ahead_commits": [
+        {
+          "sha": "636e24eaec7b41c499fcaedddd44bea9971805ab",
+          "subject": "Port benchmark to qnx 8",
+          "author": "avchenbb"
+        },
+        {
+          "sha": "cdfcfad0c65327f8cfd8c4921777364910099bf5",
+          "subject": "QNXOSG-324: Enable dependency discovery config files",
+          "author": "xicaibb"
+        },
+        {
+          "sha": "85c35154ee9e8272ec5c83ffe251601acbd4371e",
+          "subject": "Use c++ static cast instead of c style cast to avoid 'use of old-style cast' warning",
+          "author": "jianyan-li-qnx"
+        }
+      ],
+      "scorable_source_files": [
+        "src/sysinfo.cc",
+        "test/reporter_output_test.cc"
+      ]
+    },
+    {
+      "name": "capnproto",
+      "qnx_repo": "https://github.com/qnx-ports/capnproto",
+      "qnx_branch": "qnx-1.0.2",
+      "qnx_head_sha": "a60aaee41786d4ad4cf9079364550cf3ba4e18f4",
+      "upstream": "https://github.com/capnproto/capnproto",
+      "upstream_base_ref": "v1.0.2",
+      "upstream_base_sha": "1a0e12c0a3ba1f0dbbad45ddfef555166e0a14fc",
+      "compare_status": "ahead",
+      "ahead_by": 3,
+      "behind_by": 0,
+      "compare_files": 12,
+      "ahead_commits": [
+        {
+          "sha": "5e2c761a5f63bcde7d6aedb143e1d29844f49fea",
+          "subject": "Add INSTALL_TESTS option",
+          "author": "dchordia"
+        },
+        {
+          "sha": "01040dab805494b644b82c3a5a1ccf07adc77259",
+          "subject": "Port for QNX",
+          "author": "dchordia"
+        },
+        {
+          "sha": "a60aaee41786d4ad4cf9079364550cf3ba4e18f4",
+          "subject": "Rectify syntax error",
+          "author": "dchordia"
+        }
+      ],
+      "scorable_source_files": [
+        "c++/src/kj/async-io-test.c++",
+        "c++/src/kj/async-io-unix.c++",
+        "c++/src/kj/async-unix-test.c++",
+        "c++/src/kj/exception.c++",
+        "c++/src/kj/filesystem-disk-test.c++",
+        "c++/src/kj/filesystem-disk-unix.c++",
+        "c++/src/kj/miniposix.h",
+        "c++/src/kj/test-helpers.c++"
+      ]
+    },
+    {
+      "name": "cpuinfo",
+      "qnx_repo": "https://github.com/qnx-ports/cpuinfo",
+      "qnx_branch": "qnx",
+      "qnx_head_sha": "0cf43cf0ad54f4f8551d5a0c624fe5c4aee64dcc",
+      "upstream": "https://github.com/pytorch/cpuinfo",
+      "upstream_base_ref": "main",
+      "upstream_base_sha": "3c8b1533ac03dd6531ab6e7b9245d488f13a82a5",
+      "compare_status": "diverged",
+      "ahead_by": 4,
+      "behind_by": 156,
+      "compare_files": 6,
+      "ahead_commits": [
+        {
+          "sha": "e24489bdfc03ecb422550d28d4382f3dafaaa4f2",
+          "subject": "Import QNX port",
+          "author": "jianyan-li-qnx"
+        },
+        {
+          "sha": "3efc80a294220c7b0812b820cb665102577eb829",
+          "subject": "fix invalid cmakefile evaluation",
+          "author": "Cosmo Zhao"
+        },
+        {
+          "sha": "059f8989e0eedf76a45f84ef297aa36686b5e88d",
+          "subject": "Fixed a ptr comparison.",
+          "author": "eleir9268"
+        },
+        {
+          "sha": "0cf43cf0ad54f4f8551d5a0c624fe5c4aee64dcc",
+          "subject": "Added x86_64 support (with gcc package).",
+          "author": "eleir9268"
+        }
+      ],
+      "scorable_source_files": [
+        "include/cpuinfo.h",
+        "src/api.c",
+        "src/init.c"
+      ]
+    }
+  ],
+  "skipped": [
+    {
+      "name": ".github",
+      "reason": "not a fork"
+    },
+    {
+      "name": "7zip",
+      "reason": "not a fork"
+    },
+    {
+      "name": "ComputeLibrary",
+      "reason": "upstream larger than 500000 KB (size 882993)"
+    },
+    {
+      "name": "FreeImage",
+      "reason": "not a fork"
+    },
+    {
+      "name": "HIPCC",
+      "reason": "no qualifying base ref (status behind, base ref main)"
+    },
+    {
+      "name": "METIS",
+      "reason": "no scorable source change (compare files 4)"
+    },
+    {
+      "name": "MNN",
+      "reason": "no qualifying base ref (status behind, base ref master)"
+    },
+    {
+      "name": "MPItrampoline",
+      "reason": "no qualifying base ref (status identical, base ref main)"
+    },
+    {
+      "name": "OpenSceneGraph",
+      "reason": "no qualifying base ref (status behind, base ref master)"
+    },
+    {
+      "name": "OpenTTD",
+      "reason": "upstream larger than 500000 KB (size 738222)"
+    },
+    {
+      "name": "ROCm-Device-Libs",
+      "reason": "no qualifying base ref (status identical, base ref amd-stg-open)"
+    },
+    {
+      "name": "RetroArch",
+      "reason": "upstream larger than 500000 KB (size 613747)"
+    },
+    {
+      "name": "SDL_ttf",
+      "reason": "no scorable source change (compare files 1)"
+    },
+    {
+      "name": "SuiteSparse",
+      "reason": "ahead commit d558c830 is contained in upstream"
+    },
+    {
+      "name": "XNNPACK",
+      "reason": "no scorable source change (compare files 1)"
+    },
+    {
+      "name": "ZeroTierOne",
+      "reason": "no qualifying base ref (status behind, base ref dev)"
+    },
+    {
+      "name": "aports",
+      "reason": "not a fork"
+    },
+    {
+      "name": "asio",
+      "reason": "original project"
+    },
+    {
+      "name": "assimp",
+      "reason": "not a fork"
+    },
+    {
+      "name": "avahi",
+      "reason": "original project"
+    },
+    {
+      "name": "aws-c-common",
+      "reason": "original project"
+    },
+    {
+      "name": "aws-c-io",
+      "reason": "original project"
+    },
+    {
+      "name": "aws-crt-cpp",
+      "reason": "no scorable source change (compare files 4)"
+    },
+    {
+      "name": "bash",
+      "reason": "more than 50 ahead commits (ahead_by 70)"
+    },
+    {
+      "name": "bazel",
+      "reason": "upstream larger than 500000 KB (size 1035516)"
+    },
+    {
+      "name": "boost",
+      "reason": "no scorable source change (compare files 1)"
+    },
+    {
+      "name": "boringssl",
+      "reason": "no qualifying base ref (status behind, base ref main)"
+    },
+    {
+      "name": "brotli",
+      "reason": "no qualifying base ref (status behind, base ref master)"
+    },
+    {
+      "name": "btop",
+      "reason": "fails verifiable merge-base criterion (ahead_by 2)"
+    },
+    {
+      "name": "build-files",
+      "reason": "not a fork"
+    },
+    {
+      "name": "busybox",
+      "reason": "no qualifying base ref (status behind, base ref master)"
+    },
+    {
+      "name": "c-ares",
+      "reason": "original project"
+    },
+    {
+      "name": "c-blosc",
+      "reason": "no qualifying base ref (status behind, base ref main)"
+    },
+    {
+      "name": "cJSON",
+      "reason": "manual rejection: criterion 3 - 18 of 20 ahead commits are upstream cJSON history (upstream maintainer FSMaxB commits and upstream PR #358 'Added cJSON_ParseWithLength'), not QNX commits"
+    },
+    {
+      "name": "cairo",
+      "reason": "not a fork"
+    },
+    {
+      "name": "cairo-test-result",
+      "reason": "not a fork"
+    },
+    {
+      "name": "cargo",
+      "reason": "no qualifying base ref (status behind, base ref master)"
+    },
+    {
+      "name": "cc-rs",
+      "reason": "no qualifying base ref (status behind, base ref main)"
+    },
+    {
+      "name": "check",
+      "reason": "original project"
+    },
+    {
+      "name": "check-tools",
+      "reason": "not a fork"
+    },
+    {
+      "name": "chipStar",
+      "reason": "no qualifying base ref (status behind, base ref main)"
+    },
+    {
+      "name": "chrony",
+      "reason": "original project"
+    },
+    {
+      "name": "clapack",
+      "reason": "no scorable source change (compare files 5)"
+    }
+  ],
+  "not_examined_after_stop": 181
+}

@@ -511,3 +511,246 @@ projects:
 #   libssh2, libffi, sudo, busybox, fastfetch: fork default branch is behind upstream with 0 ahead commits.
 #   htop, btop: 2 ahead commits but 0 changed files in compare (merge-only).
 #   mimalloc: 889 ahead commits vs upstream default branch (dev branch history), not isolatable.
+
+# Fresh split (selected 2026-11-15 KST by eval/tools/select_fresh.py under the rules committed in d19382b;
+# raw selection log incl. every skip reason: eval/tools/fresh_selection.json). Selected before any scan.
+  - name: "AMQP-CPP"
+    qnx_repo: "https://github.com/qnx-ports/AMQP-CPP"
+    qnx_branch: "qnx-v4.3.27"
+    qnx_head_sha: "7a1ae88b3296345e8134047470e32b424ed607d7"
+    upstream: "https://github.com/CopernicaMarketingSoftware/AMQP-CPP"
+    upstream_base_ref: "v4.3.27"
+    upstream_base_sha: "ca49382bfc5bc165dfb7988b891bb010a939a786"
+    extraction: "git-diff-fork"
+    compare_status: "ahead"
+    ahead_by: 2
+    behind_by: 0
+    compare_files: 2
+    expected_scope: "source"
+    verified: true
+    note: "QNX commits: QNX Porting support for AMQP-CPP v4.3.27 | Adding conditional compilation for QNX"
+    split: fresh
+  - name: "CANdb"
+    qnx_repo: "https://github.com/qnx-ports/CANdb"
+    qnx_branch: "qnx-master"
+    qnx_head_sha: "eb33c39da049a41837f26fecb54173170a4d9e6e"
+    upstream: "https://github.com/GENIVI/CANdb"
+    upstream_base_ref: "master"
+    upstream_base_sha: "150c42a8cdfc0748915f09d2cd0c5a68591263a7"
+    extraction: "git-diff-fork"
+    compare_status: "ahead"
+    ahead_by: 1
+    behind_by: 0
+    compare_files: 5
+    expected_scope: "source"
+    verified: true
+    note: "QNX commits: add support for QNX 7.1/8.0"
+    split: fresh
+  - name: "Catch2"
+    qnx_repo: "https://github.com/qnx-ports/Catch2"
+    qnx_branch: "qnx-v3.6.0"
+    qnx_head_sha: "5ed4b70e2273eff469d7d1dca5fec089223768de"
+    upstream: "https://github.com/catchorg/Catch2"
+    upstream_base_ref: "v3.6.0"
+    upstream_base_sha: "4e8d92bf02f7d1c8006a0e7a5ecabd8e62d98502"
+    extraction: "git-diff-fork"
+    compare_status: "ahead"
+    ahead_by: 3
+    behind_by: 0
+    compare_files: 6
+    expected_scope: "source"
+    verified: true
+    note: "QNX commits: add support for QNX 7.1/8.0 | rename catch2_tests -> Catch2_tests | reverted modification of amalgamated distribution files"
+    split: fresh
+  - name: "EmulationStation"
+    qnx_repo: "https://github.com/qnx-ports/EmulationStation"
+    qnx_branch: "qnx_master"
+    qnx_head_sha: "68675d5dc0a1026cc71bd8403fc8a636e3d2cffc"
+    upstream: "https://github.com/RetroPie/EmulationStation"
+    upstream_base_ref: "master"
+    upstream_base_sha: "51b6f4162d8e89be2ef7a2c9d7c232ac5b31022b"
+    extraction: "git-diff-fork"
+    compare_status: "diverged"
+    ahead_by: 6
+    behind_by: 44
+    compare_files: 13
+    expected_scope: "source"
+    verified: true
+    note: "QNX commits: QNX related changes to commandline and filesystem utils | CMake QNX Update - pushed for testing | Push for testing - temporary fixes combined with other work. | Working | color fixed on theme side; now can use default convertColor | Removing console spamming debugs"
+    split: fresh
+  - name: "Fast-CDR"
+    qnx_repo: "https://github.com/qnx-ports/Fast-CDR"
+    qnx_branch: "qnx_v2.2.3"
+    qnx_head_sha: "80e4f7dbb7a79a8ccd9a79bc629bea8998fa2001"
+    upstream: "https://github.com/eProsima/Fast-CDR"
+    upstream_base_ref: "v2.2.3"
+    upstream_base_sha: "455a4e7e6267631bc1313203ebed489b72c48009"
+    extraction: "git-diff-fork"
+    compare_status: "ahead"
+    ahead_by: 3
+    behind_by: 0
+    compare_files: 9
+    expected_scope: "source"
+    verified: true
+    note: "QNX commits: Add INSTALL_TESTS CMake Option | Add googletest to .gitmodules | Add QNX support"
+    split: fresh
+  - name: "Fast-DDS"
+    qnx_repo: "https://github.com/qnx-ports/Fast-DDS"
+    qnx_branch: "qnx_2.10.1"
+    qnx_head_sha: "b0cbb105a6182416d44f56a324fbe4fb3b219417"
+    upstream: "https://github.com/eProsima/Fast-DDS"
+    upstream_base_ref: "2.10.1"
+    upstream_base_sha: "7606b96087a8bcfa7d8fe4434cd5d2d253607dfc"
+    extraction: "git-diff-fork"
+    compare_status: "ahead"
+    ahead_by: 10
+    behind_by: 0
+    compare_files: 18
+    expected_scope: "source"
+    verified: true
+    note: "QNX commits: Add build instruction and link with fsnotify | Add patch | Add patch | Link against muslflt to pass DDSQLFilterValueTests. | Strict realtime and bypass tests. | Made STRICT_REALTIME an optional parameter that is enabled by default. | Skipped tests that hang on LLVM. | Fix for DynamicTyp"
+    split: fresh
+  - name: "OpenBLAS"
+    qnx_repo: "https://github.com/qnx-ports/OpenBLAS"
+    qnx_branch: "qnx-0.3.28"
+    qnx_head_sha: "2897e36407339266789b2b4bc720d2f5c27aee0f"
+    upstream: "https://github.com/OpenMathLib/OpenBLAS"
+    upstream_base_ref: "v0.3.28"
+    upstream_base_sha: "5ef8b1964658f9cb6a6324a06f6a1a022609b0c5"
+    extraction: "git-diff-fork"
+    compare_status: "ahead"
+    ahead_by: 6
+    behind_by: 0
+    compare_files: 9
+    expected_scope: "source"
+    verified: true
+    note: "QNX commits: Synchronize libm linkage | Add OPENBLAS_INSTALL_TESTS CMake Option | Do not include stdatomic.h for C++ before 23 | Add QNX Support | Get number of CPUs on an SMP system. | Add get_num_procs to the other compile path."
+    split: fresh
+  - name: "SDL"
+    qnx_repo: "https://github.com/qnx-ports/SDL"
+    qnx_branch: "qnx-release-2.0.14"
+    qnx_head_sha: "e93c96c3321e06c9269584f2d7e0bdc5f5a95a42"
+    upstream: "https://github.com/libsdl-org/SDL"
+    upstream_base_ref: "release-2.0.14"
+    upstream_base_sha: "4cd981609b50ed273d80c635c1ca4c1e5518fb21"
+    extraction: "git-diff-fork"
+    compare_status: "ahead"
+    ahead_by: 35
+    behind_by: 0
+    compare_files: 29
+    expected_scope: "source"
+    verified: true
+    note: "QNX commits: QNX driver changes for 8 | added gitignore | Update for 8.0/7.1 | update for RetroArch | Removed console spamming debugs | Joystick (inprogress) | Joystick axis support | SDL Update: framebuffers no longer smash the stack (YAY) and pointer support | Commit for up-to-date | SDL: Removing"
+    split: fresh
+  - name: "abseil-cpp"
+    qnx_repo: "https://github.com/qnx-ports/abseil-cpp"
+    qnx_branch: "qnx_master"
+    qnx_head_sha: "424eafa49157be4fe2bf3e85ba94765e19d754a2"
+    upstream: "https://github.com/abseil/abseil-cpp"
+    upstream_base_ref: "master"
+    upstream_base_sha: "b014bff59dc6e1202fa9144dbabd50285d01cd7a"
+    extraction: "git-diff-fork"
+    compare_status: "diverged"
+    ahead_by: 10
+    behind_by: 1671
+    compare_files: 8
+    expected_scope: "source"
+    verified: true
+    note: "QNX commits: QNXOSG-166: Port abseil-cpp for QNX 8.0 | QNXOSG-324: Enable dependency discovery config files | Disable GetSignalHandlerStackConsumption for qnx < 800 | Only install tests if they were built | Fixed issue with deathtests that explicitly write to stderr. | Remove qnx folder | workaround"
+    split: fresh
+  - name: "abuild"
+    qnx_repo: "https://github.com/qnx-ports/abuild"
+    qnx_branch: "qnx-3.15.x"
+    qnx_head_sha: "7466fe68b512a08ab55580d2dc12f45b16f50083"
+    upstream: "https://github.com/alpinelinux/abuild"
+    upstream_base_ref: "master"
+    upstream_base_sha: "1355cc9b634d953632e62c26832876b9d20c60fb"
+    extraction: "git-diff-fork"
+    compare_status: "diverged"
+    ahead_by: 4
+    behind_by: 308
+    compare_files: 4
+    expected_scope: "source"
+    verified: true
+    note: "QNX commits: qnx: remove features not used by QNX | qnx: add BUILDINFO | use libc new hardinging mode values | add -Qunused-aruguments to default.conf"
+    split: fresh
+  - name: "apk-tools"
+    qnx_repo: "https://github.com/qnx-ports/apk-tools"
+    qnx_branch: "qnx_3.0.0_rc5"
+    qnx_head_sha: "51c838fcb334a57ee65c43d8b162288079151078"
+    upstream: "https://github.com/alpinelinux/apk-tools"
+    upstream_base_ref: "v3.0.0_rc5"
+    upstream_base_sha: "9331888de6bd5b280d75112e5b2f7b55684db0ec"
+    extraction: "git-diff-fork"
+    compare_status: "ahead"
+    ahead_by: 1
+    behind_by: 0
+    compare_files: 6
+    expected_scope: "source"
+    verified: true
+    note: "QNX commits: add QNX support"
+    split: fresh
+  - name: "azure-iot-sdk-c"
+    qnx_repo: "https://github.com/qnx-ports/azure-iot-sdk-c"
+    qnx_branch: "qnx-LTS_08_2024"
+    qnx_head_sha: "b0b49874ada3387726ccd9e58534f627e0ad141d"
+    upstream: "https://github.com/Azure/azure-iot-sdk-c"
+    upstream_base_ref: "LTS_08_2024"
+    upstream_base_sha: "9c70f98b7b659e169ae44389a5142f3a386c5791"
+    extraction: "git-diff-fork"
+    compare_status: "ahead"
+    ahead_by: 1
+    behind_by: 0
+    compare_files: 3
+    expected_scope: "source"
+    verified: true
+    note: "QNX commits: Add QNX support"
+    split: fresh
+  - name: "benchmark"
+    qnx_repo: "https://github.com/qnx-ports/benchmark"
+    qnx_branch: "qnx_v1.8.3"
+    qnx_head_sha: "85c35154ee9e8272ec5c83ffe251601acbd4371e"
+    upstream: "https://github.com/google/benchmark"
+    upstream_base_ref: "v1.8.3"
+    upstream_base_sha: "344117638c8ff7e239044fd0fa7085839fc03021"
+    extraction: "git-diff-fork"
+    compare_status: "ahead"
+    ahead_by: 3
+    behind_by: 0
+    compare_files: 16
+    expected_scope: "source"
+    verified: true
+    note: "QNX commits: Port benchmark to qnx 8 | QNXOSG-324: Enable dependency discovery config files | Use c++ static cast instead of c style cast to avoid 'use of old-style cast' warning"
+    split: fresh
+  - name: "capnproto"
+    qnx_repo: "https://github.com/qnx-ports/capnproto"
+    qnx_branch: "qnx-1.0.2"
+    qnx_head_sha: "a60aaee41786d4ad4cf9079364550cf3ba4e18f4"
+    upstream: "https://github.com/capnproto/capnproto"
+    upstream_base_ref: "v1.0.2"
+    upstream_base_sha: "1a0e12c0a3ba1f0dbbad45ddfef555166e0a14fc"
+    extraction: "git-diff-fork"
+    compare_status: "ahead"
+    ahead_by: 3
+    behind_by: 0
+    compare_files: 12
+    expected_scope: "source"
+    verified: true
+    note: "QNX commits: Add INSTALL_TESTS option | Port for QNX | Rectify syntax error"
+    split: fresh
+  - name: "cpuinfo"
+    qnx_repo: "https://github.com/qnx-ports/cpuinfo"
+    qnx_branch: "qnx"
+    qnx_head_sha: "0cf43cf0ad54f4f8551d5a0c624fe5c4aee64dcc"
+    upstream: "https://github.com/pytorch/cpuinfo"
+    upstream_base_ref: "main"
+    upstream_base_sha: "3c8b1533ac03dd6531ab6e7b9245d488f13a82a5"
+    extraction: "git-diff-fork"
+    compare_status: "diverged"
+    ahead_by: 4
+    behind_by: 156
+    compare_files: 6
+    expected_scope: "source"
+    verified: true
+    note: "QNX commits: Import QNX port | fix invalid cmakefile evaluation | Fixed a ptr comparison. | Added x86_64 support (with gcc package)."
+    split: fresh
