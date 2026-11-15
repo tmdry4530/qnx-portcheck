@@ -47,7 +47,17 @@ qnx-portcheck scan <path> [--format text|json|sarif] [--out FILE] [--fail-on err
 
 - `<path>`: a directory (scanned recursively, hidden directories skipped) or a single file.
 - Files scanned: C/C++ `.c .cc .cpp .cxx .h .hh .hpp .hxx`; build files `CMakeLists.txt`, `*.cmake`,
-  `Makefile`/`makefile`/`GNUmakefile`, `*.mk`, `meson.build`.
+  `Makefile`/`makefile`/`GNUmakefile`, `*.mk`, `meson.build`; autoconf inputs `configure.ac`, `configure.in` and the
+  project's own `*.m4` files. Generated or third-party macro files are skipped: `aclocal.m4`, `libtool.m4`, `pkg.m4`
+  and names starting with `lt`, `ax_`, `acx_`, `pkg`, `lib-`, `gl_`, `gettext`, `iconv`, `nls`, `po.m4`, `progtest`,
+  `intl`. Generated `configure` scripts are not scanned.
+- Guard awareness: findings of the Linux API rules (epoll, eventfd, timerfd, signalfd, inotify, prctl, sysinfo,
+  sendfile, splice, syscall, accept4, pipe2, `<linux/*.h>`, `/proc`) are not reported inside a branch that only
+  compiles when `__linux__`/`__linux`/`linux`/`__gnu_linux__` is defined, because qcc does not define them; the
+  `LNX-LINUX-IFDEF` finding on the guard line itself is kept. epoll/eventfd/timerfd/signalfd/inotify findings are
+  also not reported inside a branch whose condition requires a build-probe macro naming that facility
+  (for example `HAVE_SYS_EPOLL_H`, `EVENT__HAVE_EPOLL`, `USBI_TIMERFD_AVAILABLE`), since that code is compiled only
+  when the project's configure/CMake check succeeds.
 - Comments are ignored, and string literal contents are ignored by every rule except the `/proc` path rule,
   which looks only at string literals. Member and namespace-qualified calls (`obj.splice()`, `std::list::splice`)
   don't match.
@@ -75,6 +85,10 @@ src/filewatchd.c:6:1: warning [LNX-EPOLL] Linux epoll header <sys/epoll.h>
 ...
 11 finding(s): 0 error, 5 warning, 6 note in 3 file(s) scanned
 ```
+
+Performance: scanning all 33 evaluation projects takes 28 s in total (was 1124 s), and a single scan of
+libwebsockets takes 4.2 s (was 724 s), with byte-for-byte identical findings. Measurements, raw outputs and the
+comparison script are in [eval/perf/](eval/perf/README.md).
 
 JSON finding fields: `rule_id`, `severity` (`error|warning|note`), `file` (relative to `root`, POSIX), `line`, `col`,
 `message`, `suggestion`, `doc_url` (QNX 8.0 doc URL or `null`), `confidence` (`high|medium|manual-review`).
@@ -127,8 +141,9 @@ for fork pull requests (no write token: set `upload: "false"`). Pin the action t
 
 ## Scan rules
 
-"Verified" means the suggestion and `doc_url` come from a QNX 8.0 documentation page fetched on 2026-11-15
-(URL, fetch time and quote in [docs/rule-sources.md](docs/rule-sources.md)). "Manual review" means no QNX 8.0
+"Verified" means the suggestion and `doc_url` come from a QNX documentation page under
+`https://www.qnx.com/developers/docs/` (the QNX 8.0 references, or the QNX porting guide for QNX 8.0) fetched on
+2026-11-15 (URL, fetch time and quote in [docs/rule-sources.md](docs/rule-sources.md)). "Manual review" means no QNX 8.0
 page confirmed a replacement, so the suggestion is `manual review` and `doc_url` is `null`.
 
 | Rule | Severity | Detects | QNX 8.0 doc basis | Status |

@@ -52,6 +52,40 @@ The scan subcommand was developed in parallel and was not run for this tutorial.
 {"tool":"qnx-portcheck","version":"x.y.z","root":"<abs path>","findings":[{"rule_id":"LNX-EPOLL","severity":"error|warning|note","file":"<path relative to root, posix>","line":123,"col":5,"message":"...","suggestion":"...","doc_url":"https://www.qnx.com/developers/docs/8.0/... or null","confidence":"high|medium|manual-review"}]}
 ```
 
+### Rule IDs beyond epoll and inotify
+
+The sample daemon mostly triggers the `LNX-*` API rules, but a real project can also show the rule IDs below.
+Descriptions follow `src/qnx_portcheck/rules/` and the evidence in [rule-sources.md](rule-sources.md).
+"Manual review" in the last column is the rule's `confidence`: the finding needs a human decision. For
+`PORT-MINMAX` and `PORT-TIMEVAL` no QNX documentation page confirms a replacement, so their suggestion is just
+`manual review` and `doc_url` is `null`; the other manual-review rules link the QNX page their suggestion is based on.
+
+| Rule ID | Severity | What it reports | Basis | Confidence |
+|---|---|---|---|---|
+| `PORT-OS-IFDEF` | note | an `#if`/`#ifdef`/`#elif` that tests BSD, macOS, Solaris, AIX, HP-UX, Haiku or Cygwin macros (`__APPLE__`, `__FreeBSD__`, `__OpenBSD__`, `__sun`, `__hpux`, ...) and never `__QNX__`/`__QNXNTO__` | qcc defines `__QNX__` | manual review |
+| `PORT-QNXNTO` | note | a conditional that tests `__QNXNTO__` but not `__QNX__` | QNX 8.0 manifests list `__QNXNTO__` as deprecated | high |
+| `PORT-MINMAX` | warning | a file that includes `<sys/param.h>` and uses `MIN()`/`MAX()` without defining them; reported at the last `#include` before the first use | `<sys/param.h>` is not a POSIX header | manual review (no doc_url) |
+| `PORT-MINMAX-DEFINE` | warning | `#define min(` or `#define max(` that is not inside `#ifndef min`/`#ifndef max` | QNX 8.0 `<stdlib.h>` already defines `min()`/`max()` macros (C only) | high |
+| `PORT-SA-RESTART` | warning | uses of `SA_RESTART` in a file that never tests or defines it | the QNX 8.0 `struct sigaction` flags do not include `SA_RESTART` | high |
+| `PORT-TIMEVAL` | note | a header file that uses `struct timeval` but includes neither `<sys/time.h>` nor `<sys/select.h>` | POSIX defines `struct timeval` in `<sys/time.h>` | manual review (no doc_url) |
+| `BLD-CMAKE-PLATFORM` | warning | a CMake `if()`/`elseif()` that tests `APPLE`, `LINUX`, `BSD`, `CYGWIN`, `ANDROID`, `IOS` or `CMAKE_SYSTEM_NAME`/`CMAKE_HOST_SYSTEM_NAME`, in an if/elseif chain that never names QNX | the QNX porting guide says CMake conditionals on `CMAKE_SYSTEM_NAME` need to be extended for QNX | manual review |
+| `BLD-AUTOCONF-HOST` | warning | each OS label (`*-linux*`, `darwin*`, `*-netbsd*`, ...) of a `case $host...` or `AS_CASE([$host_os], ...)` dispatch that has no `qnx`/`nto` label | QNX configure hooks select `nto*` targets | manual review |
+
+Scan scope and guards:
+
+- Besides C/C++ sources, CMake, Make and Meson files, the scan reads `configure.ac`, `configure.in` and the
+  project's own `*.m4` files. It skips generated or third-party macro files (`aclocal.m4`, `libtool.m4`, `pkg.m4`,
+  and names starting with `lt`, `ax_`, `acx_`, `pkg`, `lib-`, `gl_`, `gettext`, `iconv`, `nls`, `po.m4`,
+  `progtest`, `intl`). `dnl` comments are ignored. Generated `configure` scripts are not scanned.
+- Linux API findings (epoll, eventfd, timerfd, signalfd, inotify, prctl, sysinfo, sendfile, splice, syscall,
+  accept4, pipe2, `<linux/*.h>`, `/proc`) are not reported inside a branch that only compiles when `__linux__`,
+  `__linux`, `linux` or `__gnu_linux__` is defined, because qcc does not define them. The guard line itself is
+  still reported as `LNX-LINUX-IFDEF`.
+- epoll, eventfd, timerfd, signalfd and inotify findings are not reported inside a branch whose condition requires
+  a build-probe macro naming that facility, such as `#ifdef HAVE_SYS_EPOLL_H` or `#if defined(EVENT__HAVE_EPOLL)`.
+  That code compiles only when the project's configure or CMake check finds the facility, so the place to look is
+  the build configuration.
+
 ## Step 3: understand the QNX alternatives
 
 The QNX 8.0 C Library Reference documents `poll()` and `ppoll()` for multiplexing descriptors, with the header `<sys/poll.h>`. It also has a `select()` reference. QNX documents `ionotify()` as the resource-manager notification API: “This function corresponds to the Linux epoll() function and BSD's kqueue().” The docs explain that QNX `ionotify()`, `select()`, and `poll()` implementations use the same IO_NOTIFY message, and that a server supporting one will generally support the others. `ionotify()` can combine descriptor input with QNX messaging, provided the application registers the event with `MsgRegisterEvent()` for the descriptor passed to `ionotify()`; `poll()` suits multiple descriptors such as sockets, pipes, and serial ports. See the [ionotify reference](https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html), [poll reference](https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/poll.html), and [select reference](https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/s/select.html).

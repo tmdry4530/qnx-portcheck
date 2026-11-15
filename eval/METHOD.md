@@ -95,6 +95,12 @@ Because membership is computed from the full list, `--only` never moves a projec
 33 projects this gives 17 tune and 16 holdout projects; both lists are written to `summary.json` (`splits`) and to
 `RESULTS.md` (`## Splits`). Rules should be tuned by looking at tune projects only; holdout numbers are the check.
 
+> **Status (2026-11-15):** the 16 projects in this split's `holdout` half were read during rule tuning on
+> dev1/tune (see [TUNING.md](TUNING.md)), so they are now treated as **seen during tuning**, not as a holdout.
+> The split name `holdout` is kept in the harness output (`--split holdout`, `Split holdout (micro, ...)`) for
+> compatibility only. A fresh holdout set of projects not seen during tuning is being measured separately; its
+> numbers are not in this directory yet.
+
 `--split tune|holdout|all` (default `all`) evaluates only that split. Each result records its `split`, and
 `summary.json` has `aggregate.by_split`. `RESULTS.md` prints `Split tune (micro, N projects): ...` and
 `Split holdout (micro, N projects): ...` right after the `Overall (micro): ...` line, in the same wording.

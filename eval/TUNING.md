@@ -1,5 +1,9 @@
 # Rule tuning on dev1/tune (2026-11-15 KST)
 
+> **Status:** the 16 projects labelled `holdout` by the harness split below were read during tuning and are now
+> classified as **seen during tuning**. They are not a holdout. A fresh holdout of unseen projects is being measured
+> separately; its results are not here yet. Where this file says "holdout" it means the harness's split name.
+
 Scanner commits: `85a5ca9` (perf, findings unchanged, evidence in `perf/`), `5118669` (rules).
 Measurement: `PATH=/tmp/qpc-venv/bin:$PATH python eval/run_eval.py --work-dir <checkouts>` (window ±3, merge gap 3),
 same 33 pinned projects and patches as the 0.1.0 baseline. Tune-only iterations used `--split tune`.
@@ -28,7 +32,7 @@ mosquitto/pistache/libuv/dlt-daemon/aws-c-io epoll/timerfd placement). After the
 - did not open holdout patches or holdout result JSON again; holdout per-rule numbers below come from
   `summary.json` `aggregate.by_split`.
 
-Holdout numbers are therefore **not a clean generalisation check**, especially PORT-MINMAX (designed after seeing
+These 16 projects are therefore **not a generalisation check** (now classified as seen during tuning), especially PORT-MINMAX (designed after seeing
 s2n-tls; the tune split has no MIN/MAX site at all) and PORT-OS-IFDEF.
 
 ## Rules added or changed
@@ -74,18 +78,18 @@ Baseline: `0b9b4a1` RESULTS.md (scanner 0.1.0, source 511aa2e). After: this bran
 | tune | build-site recall | 0.000 (0/48) | 0.083 (4/48) |
 | tune | precision | 0.026 (10/384) | 0.035 (27/761) |
 | tune | precision in patched files | 0.286 (10/35) | 0.206 (27/131) |
-| holdout (16, contaminated, see above) | source-site recall | 0.051 (10/197) | 0.284 (56/197) |
-| holdout | non-test source recall | 0.057 (9/158) | 0.260 (41/158) |
-| holdout | build-site recall | 0.000 (0/58) | 0.035 (2/58) |
-| holdout | precision | 0.017 (10/591) | 0.056 (61/1089) |
-| holdout | precision in patched files | 0.102 (10/98) | 0.218 (61/280) |
+| seen during tuning (16; harness split `holdout`) | source-site recall | 0.051 (10/197) | 0.284 (56/197) |
+| seen during tuning | non-test source recall | 0.057 (9/158) | 0.260 (41/158) |
+| seen during tuning | build-site recall | 0.000 (0/58) | 0.035 (2/58) |
+| seen during tuning | precision | 0.017 (10/591) | 0.056 (61/1089) |
+| seen during tuning | precision in patched files | 0.102 (10/98) | 0.218 (61/280) |
 | all (33) | source-site recall | 0.051 (16/312) | 0.237 (74/312) |
 | all | non-test source recall | 0.058 (15/258) | 0.217 (56/258) |
 | all | build-site recall | 0.000 (0/106) | 0.057 (6/106) |
 | all | precision | 0.021 (20/975) | 0.048 (88/1850) |
 | all | precision in patched files | 0.150 (20/133) | 0.214 (88/411) |
 
-Holdout gains by rule (from `summary.json` by_split): PORT-MINMAX 23 sites (s2n-tls), PORT-OS-IFDEF 23 sites,
+Gains on the 16 seen-during-tuning projects by rule (from `summary.json` by_split, split `holdout`): PORT-MINMAX 23 sites (s2n-tls), PORT-OS-IFDEF 23 sites,
 LNX-LINUX-IFDEF 7, BLD-CMAKE-PLATFORM 2. Sites can be hit by more than one rule, so these overlap.
 
 ## Limits

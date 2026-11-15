@@ -20,10 +20,14 @@ We wanted a tool that does it in seconds and links every suggestion to the QNX d
 qnx-portcheck is a host-side command-line tool (Python 3.10+, standard library only) for porting Linux C/C++
 projects to QNX OS 8.0:
 
-- **`qnx-portcheck scan <path>`** finds Linux-only constructs in C/C++ sources and in CMake, Make and Meson files,
-  using 17 rules: epoll, inotify, eventfd, timerfd, signalfd, prctl, `sys/sysinfo.h`, sendfile, splice, accept4,
-  pipe2, raw `syscall()`/`SYS_*`, `<linux/*.h>` headers, `/proc` paths, `__linux__`-only `#if` branches,
-  `-lpthread`/`-ldl`/`-lrt`, and other Linux-only libraries. Each finding has a severity, a confidence level, a
+- **`qnx-portcheck scan <path>`** finds Linux-only constructs in C/C++ sources and in CMake, Make, Meson and
+  autoconf (`configure.ac`, project `.m4`) files, using 25 rules: epoll, inotify, eventfd, timerfd, signalfd, prctl,
+  `sys/sysinfo.h`, sendfile, splice, accept4, pipe2, raw `syscall()`/`SYS_*`, `<linux/*.h>` headers, `/proc` paths,
+  `__linux__`-only `#if` branches, `-lpthread`/`-ldl`/`-lrt`, other Linux-only libraries, BSD/macOS-only `#if`
+  branches without `__QNX__`, deprecated `__QNXNTO__` tests, `MIN()`/`MAX()` from `<sys/param.h>`, `min()`/`max()`
+  macros that clash with QNX `<stdlib.h>`, `SA_RESTART`, `struct timeval` without `<sys/time.h>`, and CMake/autoconf
+  platform dispatch that never names QNX. Code inside `__linux__`-only branches or behind build-probe macros
+  (such as `HAVE_SYS_EPOLL_H`) is not reported again, because qcc does not compile it. Each finding has a severity, a confidence level, a
   suggestion and a link to the QNX 8.0 documentation page supporting it. When no QNX 8.0 page supports a
   replacement, the tool says `manual review` and gives no link, instead of guessing. Output is text, JSON
   or SARIF 2.1.0, and `--fail-on error|warning|never` makes it usable as a CI gate (exit codes 0/1/2).
@@ -72,8 +76,11 @@ by real qnx-ports patches.** We also did not build the generated scaffolds with 
 - Documentation-first rules: we fetched each QNX 8.0 documentation page with curl and recorded the evidence
   before writing a suggestion. Pages that returned 404 (for example per-function pages for epoll, eventfd,
   sendfile and prctl) were recorded too.
-- pytest suite (52 tests): a positive and a negative fixture for every rule, with an expected marker on every line
+- pytest suite (90 tests, plus 41 for the evaluation harness): a positive and a negative fixture for every rule, with an expected marker on every line
   that should produce a finding; lexer edge cases; JSON and SARIF structure; CLI exit codes; scaffold, lint and action tests.
+- Performance: the first lexer copied the rest of the file at every character. After the fix, scanning all 33
+  evaluation projects takes 28 s instead of 1124 s, and libwebsockets alone 4.2 s instead of 724 s, with
+  byte-for-byte identical findings (evidence in `eval/perf/`).
 - The code was written with OpenAI Codex CLI from written specifications, then reviewed and tested by the team.
 
 ## Challenges we ran into
@@ -90,9 +97,10 @@ by real qnx-ports patches.** We also did not build the generated scaffolds with 
 
 ## Accomplishments that we're proud of
 
-- 17 scan rules, each tied either to a fetched QNX 8.0 documentation page or to an explicit `manual review`, with no invented APIs.
+- 25 scan rules, each tied either to a fetched QNX 8.0 documentation page or to an explicit `manual review`, with no invented APIs.
 - Three commands (scan, scaffold, lint-buildfile) plus a GitHub Action with SARIF upload, all in one installable package with no runtime dependencies.
 - An evaluation against real qnx-ports patches: [EVAL_NUMBERS]
+- A full scan of 33 real projects in 28 s (was 1124 s); libwebsockets in 4.2 s (was 724 s), with identical findings (`eval/perf/`).
 - A step-by-step tutorial that ports an epoll + inotify daemon and labels every step that couldn't be verified on a target.
 
 ## What we learned
