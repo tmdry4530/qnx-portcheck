@@ -1,0 +1,60 @@
+name: qnx-portcheck
+description: Scan a project for Linux-to-QNX porting findings and optionally upload SARIF.
+inputs:
+  path:
+    description: Project path to scan.
+    required: false
+    default: "."
+  sarif-file:
+    description: SARIF output file.
+    required: false
+    default: qnx-portcheck.sarif
+  python-version:
+    description: Python version used to install and run qnx-portcheck.
+    required: false
+    default: "3.12"
+  upload:
+    description: Upload SARIF to GitHub code scanning.
+    required: false
+    default: "true"
+  category:
+    description: SARIF category used by code scanning.
+    required: false
+    default: qnx-portcheck
+outputs:
+  sarif-file:
+    description: Path to the generated SARIF file.
+    value: ${{ steps.scan.outputs.sarif-file }}
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v6
+      with:
+        python-version: ${{ inputs.python-version }}
+    - name: Install qnx-portcheck from this action checkout
+      shell: bash
+      run: python -m pip install "$GITHUB_ACTION_PATH/.."
+    - name: Scan and write SARIF
+      id: scan
+      shell: bash
+      env:
+        INPUT_PATH: ${{ inputs.path }}
+        SARIF_FILE: ${{ inputs.sarif-file }}
+      run: |
+        set +e
+        qnx-portcheck scan "$INPUT_PATH" --format sarif --out "$SARIF_FILE"
+        status=$?
+        set -e
+        if [[ -s "$SARIF_FILE" ]]; then
+          echo "sarif-file=$SARIF_FILE" >> "$GITHUB_OUTPUT"
+          echo "qnx-portcheck produced SARIF (scan exit status: $status)."
+        else
+          echo "qnx-portcheck did not produce a non-empty SARIF file (exit status: $status)." >&2
+          if [[ "$status" -eq 0 ]]; then exit 1; else exit "$status"; fi
+        fi
+    - name: Upload SARIF
+      if: inputs.upload == 'true'
+      uses: github/codeql-action/upload-sarif@v4
+      with:
+        sarif_file: ${{ steps.scan.outputs.sarif-file }}
+        category: ${{ inputs.category }}
