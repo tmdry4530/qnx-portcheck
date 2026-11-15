@@ -60,8 +60,9 @@ qnx-portcheck is a host tool whose output is specifically meant for building sof
 - `src/qnx_portcheck/lint_buildfile.py` (`lint_text`): mkifs buildfile checks; rules in `docs/buildfile-lint-rules.md`.
 - `examples/linux-daemon/`: a Linux epoll + inotify daemon and its `poll()` port, used in the tutorial.
 
-**qnx-portcheck was not run on a QNX target. It was validated by comparing its findings against the changes made
-by real qnx-ports patches.** We also did not build the generated scaffolds with the QNX SDP.
+**qnx-portcheck was not run on a QNX target.** We measured it by comparing its findings with the changes made by
+real qnx-ports patches (numbers under Accomplishments), and we did not build the generated scaffolds with the QNX
+SDP. It is a triage aid, not an oracle.
 
 ## How we built it
 
@@ -99,7 +100,13 @@ by real qnx-ports patches.** We also did not build the generated scaffolds with 
 
 - 25 scan rules, each tied either to a fetched QNX 8.0 documentation page or to an explicit `manual review`, with no invented APIs.
 - Three commands (scan, scaffold, lint-buildfile) plus a GitHub Action with SARIF upload, all in one installable package with no runtime dependencies.
-- An evaluation against real qnx-ports patches: [EVAL_NUMBERS]
+- An evaluation against real qnx-ports patches, on a fresh set of 15 projects selected before any of them was
+  scanned and not used for tuning: source-site recall 0.079 (23/292), precision 0.033 (48/1448), precision in
+  patched files 0.191 (48/251), build-site recall 0.009 (17/1864). The build number is dominated by SDL's
+  regenerated `configure` (1788 of its 1790 build sites), which the tool does not scan; without SDL it is 0.230
+  (17/74), a post-hoc reference value. For comparison, source-site recall is 0.157 (18/115) on the 17 tuning
+  projects and 0.284 (56/197) on 16 projects that were seen during tuning, so 0.284 is not a generalization
+  metric. Nothing was run on a QNX target. The numbers say qnx-portcheck is a triage aid, not an oracle.
 - A full scan of 33 real projects in 28 s (was 1124 s); libwebsockets in 4.2 s (was 724 s), with identical findings (`eval/perf/`).
 - A step-by-step tutorial that ports an epoll + inotify daemon and labels every step that couldn't be verified on a target.
 
