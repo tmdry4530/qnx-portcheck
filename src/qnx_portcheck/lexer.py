@@ -1,8 +1,14 @@
 """C/C++ lexical views with comments and literal contents blanked in place."""
 from __future__ import annotations
 
+from bisect import bisect_right
 from dataclasses import dataclass
 import re
+
+RAW_PREFIX = re.compile(r'(?:u8|u|U|L)?R"([^ ()\\\t\r\n]{0,16})\(')
+NORMAL_PREFIX = re.compile(r"(?:u8|u|U|L)?([\"'])")
+_LITERAL_START = frozenset("uULR\"'")
+_line_cache: tuple[str, list[int]] | None = None
 
 
 @dataclass(frozen=True)
@@ -14,10 +20,27 @@ class StringLiteral:
     text: str
 
 
+def line_starts(text: str) -> list[int]:
+    """Return the offset of the first character of every line."""
+    global _line_cache
+    cached = _line_cache
+    if cached is not None and cached[0] is text:
+        return cached[1]
+    starts = [0]
+    find = text.find
+    newline = find("\n")
+    while newline >= 0:
+        starts.append(newline + 1)
+        newline = find("\n", newline + 1)
+    _line_cache = (text, starts)
+    return starts
+
+
 def position(text: str, offset: int) -> tuple[int, int]:
     """Convert an offset to a 1-based line and column."""
-    line = text.count("\n", 0, offset) + 1
-    return line, offset - text.rfind("\n", 0, offset)
+    starts = line_starts(text)
+    line = bisect_right(starts, offset)
+    return line, offset - starts[line - 1] + 1
 
 
 def lex(text: str) -> tuple[str, list[tuple[int, int, str]], str]:
@@ -42,13 +65,16 @@ def lex(text: str) -> tuple[str, list[tuple[int, int, str]], str]:
 
     while index < size:
         if state == "code":
-            raw = re.match(r'(?:u8|u|U|L)?R"([^ ()\\\t\r\n]{0,16})\(', text[index:])
-            normal = re.match(r"(?:u8|u|U|L)?([\"'])", text[index:])
+            if text[index] in _LITERAL_START:
+                raw = RAW_PREFIX.match(text, index)
+                normal = NORMAL_PREFIX.match(text, index)
+            else:
+                raw = normal = None
             if raw and (index == 0 or not (text[index - 1].isalnum() or text[index - 1] == "_")):
                 literal_start = index
-                content_start = index + raw.end()
+                content_start = raw.end()
                 raw_end = ")" + raw.group(1) + '"'
-                raw_quote_offset = index + raw.end() - len(raw.group(1)) - 2
+                raw_quote_offset = raw.end() - len(raw.group(1)) - 2
                 quote = '"'
                 state = "raw_string"
                 index = content_start
@@ -56,7 +82,7 @@ def lex(text: str) -> tuple[str, list[tuple[int, int, str]], str]:
             if normal and (index == 0 or not (text[index - 1].isalnum() or text[index - 1] == "_")):
                 literal_start = index
                 quote = normal.group(1)
-                content_start = index + normal.end()
+                content_start = normal.end()
                 state = "string" if quote == '"' else "char"
                 escaped = False
                 index = content_start

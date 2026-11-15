@@ -47,16 +47,25 @@ def include_and_calls(
     refine: Callable[[str, str], dict[str, str]] | None = None,
 ) -> Callable[[SourceContext], Iterable[Hit]]:
     """Create a detector for listed include headers and function calls."""
+    header_patterns = [
+        (header, re.compile(r'^\s*#\s*include\s*[<"]' + re.escape(header) + r'[>"]', re.M))
+        for header in headers
+    ]
+    call_patterns = [
+        (name, re.compile(r'(?<![\w.>:])(?:::)?' + re.escape(name) + r'\s*\('))
+        for name in calls
+    ]
+
     def detect(context: SourceContext) -> Iterable[Hit]:
-        for header in headers:
-            pattern = re.compile(
-                r'^\s*#\s*include\s*[<"]' + re.escape(header) + r'[>"]', re.M
-            )
+        for header, pattern in header_patterns:
+            if header not in context.comments:
+                continue
             for match in pattern.finditer(context.comments):
                 line, col = position(context.comments, match.start())
                 yield Hit(line, col, f"Linux {label} header <{header}>")
-        for name in calls:
-            pattern = re.compile(r'(?<![\w.>:])(?:::)?' + re.escape(name) + r'\s*\(')
+        for name, pattern in call_patterns:
+            if name not in context.code:
+                continue
             for match in pattern.finditer(context.code):
                 line, col = position(context.code, match.start())
                 overrides = refine(name, context.lines[line - 1]) if refine else {}
