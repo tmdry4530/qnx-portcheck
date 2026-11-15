@@ -36,6 +36,9 @@ def test_scene_output_paths_are_temporary():
 def test_script_is_current_and_honest():
     script = (ROOT / "demo/script.md").read_text(encoding="utf-8")
     assert build_assets.HONESTY in script
+    assert "compared its findings against qnx-ports patches" in script
+    assert "triage aid, not an oracle" in script
+    assert "we validated it against qnx-ports patches" not in script
     assert "[EVAL_NUMBERS]" in script
     assert script == build_assets.render_script()
 

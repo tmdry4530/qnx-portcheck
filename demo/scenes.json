@@ -93,14 +93,14 @@
     "id": "05",
     "slug": "evaluation",
     "title": "Evaluation",
-    "duration": 31,
+    "duration": 33,
     "kind": "card",
     "requires": [],
     "commands": [],
-    "card_text": "[EVAL_NUMBERS]\nWe did not run this on a QNX target; we validated it against qnx-ports patches.",
+    "card_text": "[EVAL_NUMBERS]\nWe did not run this on a QNX target; compared its findings against qnx-ports patches; triage aid, not an oracle.",
     "narration": [
       "[EVAL_NUMBERS] Recall and precision against qnx-ports patches across at least fifteen projects belong here, filled from eval/RESULTS.md.",
-      "We did not run this on a QNX target; we validated it against qnx-ports patches.",
+      "We did not run this on a QNX target; compared its findings against qnx-ports patches; triage aid, not an oracle.",
       "This is a host tool; no QNX SDP was used. Suggestions follow QNX 8.0 documentation, and generated build files are drafts."
     ],
     "eval_narration": [
@@ -119,7 +119,7 @@
     "kind": "card",
     "requires": [],
     "commands": [],
-    "card_text": "Repository: qnx-portcheck\nTutorial: docs/tutorial-port-linux-daemon-to-qnx8.md\nNot run on a QNX target\nWe did not run this on a QNX target; we validated it against qnx-ports patches.",
+    "card_text": "Repository: qnx-portcheck\nTutorial: docs/tutorial-port-linux-daemon-to-qnx8.md\nNot run on a QNX target\nWe did not run this on a QNX target; compared its findings against qnx-ports patches; triage aid, not an oracle.",
     "narration": [
       "Read the repository tutorial for sources, caveats, and next steps."
     ]

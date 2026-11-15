@@ -1,9 +1,9 @@
 # qnx-portcheck demo narration
 
-Total duration: 159 seconds
-Narration: 200 words; estimated read time at 150 wpm: 80.0 seconds
+Total duration: 161 seconds
+Narration: 205 words; estimated read time at 150 wpm: 82.0 seconds
 
-Honesty statement: We did not run this on a QNX target; we validated it against qnx-ports patches.
+Honesty statement: We did not run this on a QNX target; compared its findings against qnx-ports patches; triage aid, not an oracle.
 
 ## 00 — qnx-portcheck
 
@@ -88,7 +88,7 @@ The clean example passes the host-side buildfile check. The intentionally bad fi
 
 ## 05 — Evaluation
 
-Duration: 31 seconds
+Duration: 33 seconds
 
 On-screen commands:
 
@@ -98,7 +98,7 @@ On-screen commands:
 
 Narration:
 
-[EVAL_NUMBERS] Recall and precision against qnx-ports patches across at least fifteen projects belong here, filled from eval/RESULTS.md. We did not run this on a QNX target; we validated it against qnx-ports patches. This is a host tool; no QNX SDP was used. Suggestions follow QNX 8.0 documentation, and generated build files are drafts.
+[EVAL_NUMBERS] Recall and precision against qnx-ports patches across at least fifteen projects belong here, filled from eval/RESULTS.md. We did not run this on a QNX target; compared its findings against qnx-ports patches; triage aid, not an oracle. This is a host tool; no QNX SDP was used. Suggestions follow QNX 8.0 documentation, and generated build files are drafts.
 
 At render time, [EVAL_NUMBERS] is replaced from eval/RESULTS.md (see demo/README.md); if missing or not a real qnx-portcheck run, the placeholder stays.
 

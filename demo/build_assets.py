@@ -11,7 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SCENES = ROOT / "demo" / "scenes.json"
 SCRIPT = ROOT / "demo" / "script.md"
-HONESTY = "We did not run this on a QNX target; we validated it against qnx-ports patches."
+HONESTY = "We did not run this on a QNX target; compared its findings against qnx-ports patches; triage aid, not an oracle."
 
 
 def load_scenes():

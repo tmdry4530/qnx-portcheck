@@ -8,7 +8,7 @@ Terminal footage is scaled into a 1280×590 area at the top of each 1280×720 fr
 
 Until `qnx_portcheck.cli` is merged, scan scenes 01 and 02 render explicit placeholders listing the intended commands. `[EVAL_NUMBERS]` remains a placeholder until actual evaluation results are recorded in `eval/RESULTS.md`.
 
-This is a host-side tool. No QNX SDP was used and no QNX target was run. Suggestions are grounded in QNX 8.0 documentation; generated build files are drafts that need review. We did not run this on a QNX target; we validated it against qnx-ports patches.
+This is a host-side tool. No QNX SDP was used and no QNX target was run. Suggestions are grounded in QNX 8.0 documentation; generated build files are drafts that need review. We did not run this on a QNX target; compared its findings against qnx-ports patches; triage aid, not an oracle.
 
 ## Evaluation numbers contract
 
