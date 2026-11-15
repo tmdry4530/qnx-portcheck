@@ -1,0 +1,1 @@
+This small Linux example watches a directory with inotify and dispatches both filesystem events and shutdown signals through a wait loop. See [the porting tutorial](../../docs/tutorial-port-linux-daemon-to-qnx8.md) for the QNX 8.0 alternatives, caveats, and build steps.

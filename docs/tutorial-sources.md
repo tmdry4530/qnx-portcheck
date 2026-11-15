@@ -1,0 +1,16 @@
+# Tutorial source evidence
+
+Fetched 2026-11-15. HTTP statuses below are those observed on that date.
+
+| URL | Status | Exact claim used in tutorial |
+|---|---:|---|
+| https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/ionotify.html | 200 | QNX OS classification; quotes: “This function corresponds to the Linux epoll() function and BSD's kqueue().” and “The QNX OS implementations of ionotify(), select(), and poll() are built on sending and handling the same IO_NOTIFY message, so a server that supports one of them will generally support all of them.” ionotify can combine fd input with QNX messaging; poll is for multiple descriptors such as sockets, pipes, and serial ports; the application must register the event with MsgRegisterEvent() for the fd passed to ionotify(). |
+| https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/poll.html | 200 | poll()/ppoll() multiplex input/output over a set of file descriptors; synopsis includes `<sys/poll.h>`. |
+| https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/s/select.html | 200 | The select() page exists in the QNX 8.0 C Library Reference. |
+| https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/e/epoll_create.html | 404 | The epoll_create page returned 404; epoll was not found in the QNX 8.0 C Library Reference. |
+| https://github.com/qnx-ports/epoll | 200 | Separate qnx-ports epoll library port; HEAD aea458535243e44627b85b915ccbb658a396e4fb; repository describes it as a QNX API for monitoring multiple file descriptors. It is an option to evaluate, not built or tested here. |
+| https://github.com/qnx-ports/build-files/tree/79d94bd6f1d66e524b17c1f26379ac0ef9bd24c5/ports/epoll | 200 | Build files for the separate epoll port are available at this pinned path. |
+| https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/inotify_init.html | 200 | inotify_init()/inotify_init1() use `<sys/inotify.h>` and libfsnotify (`-l fsnotify` for qcc); open `/dev/fsnotify`, created and owned by fsevmgr; fail with ENOSYS if fsevmgr is not running or if read permission is absent. The page says io-blk.so-based and devf-ram-based filesystems currently support inotify, warns implementations differ from Linux, and identifies IN_NONBLOCK and IN_CLOEXEC flags. |
+| https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/i/inotify_add_watch.html | 200 | fsevmgr must run; watches are non-recursive (one per file/directory); event bits include IN_CREATE, IN_DELETE, IN_MODIFY, IN_MOVED_FROM, IN_MOVED_TO, IN_CLOSE_WRITE, and IN_ATTRIB. This page says only io-blk.so-based filesystems currently support inotify, which differs from the inotify_init page's list. |
+| https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.utilities/topic/f/fsevmgr.html | 200 | fsevmgr is the filesystem event manager and must start before filesystem resource managers expected to provide notifications; it registers `/dev/fsnotify`; options -c (up to/default 256 clients), -s (max/default 32KB queue per client), and -w (max/default 4096 watches); libfsnotify.so must be on LD_LIBRARY_PATH. |
+| https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.utilities/topic/m/mkifs.html | 200 | mkifs buildfiles use `[attributes] file_specification`, `target_path=host_path`, and `perms=`. |
