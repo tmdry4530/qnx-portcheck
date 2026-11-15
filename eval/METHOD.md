@@ -103,6 +103,58 @@ Because membership is computed from the full list, `--only` never moves a projec
 scanner source commit all match. `--require-reuse` goes further: a project that cannot be reused is marked
 `error` (`error_kind: not-reused`) without fetching or scanning, so results can be re-scored without re-scanning.
 
+## Fresh split (written and committed before any fresh project was selected)
+
+The 16 holdout projects were seen while the rules were tuned (see TUNING.md), so they no longer measure
+generalization. The **fresh** split is a new set of projects, chosen by the rules below **before** any scan of them.
+Nobody who tunes rules looks at these patches before the measurement is committed.
+
+### Criteria (the same criteria used for the original 33)
+
+A candidate qualifies only if all of these hold:
+
+1. **Upstream port**: a public repository in github.com/qnx-ports that is a GitHub fork of an upstream project
+   (`gh api repos/qnx-ports/<repo>` returns a `parent`).
+2. **Verifiable merge-base**: the GitHub compare API returns a `merge_base_commit` for
+   `<parent>:<base_ref>...qnx-ports:<qnx_branch>` (`qnx_branch` = the fork's default branch), with at least one
+   ahead commit and at least one changed file.
+3. **QNX-only commits**: none of the ahead commits is an upstream commit. A commit counts as upstream if the
+   compare API reports it as contained in the upstream default branch (`<parent>:<default>...<sha>` has status
+   `behind` or `identical`), or if its subject is an upstream release/merge of upstream history (e.g. "Bash-4.4
+   patch 1", "merge tag 'x' into ..."). Subjects are read by hand and quoted in the `note` field.
+4. **Scorable source change**: at least one C/C++ file (extensions as in "Change sites") that exists in the base
+   is modified, renamed with changes, or removed. Files only added by the patch do not count.
+
+### Base ref rule (same as for the 33)
+
+From the fork's default branch name, strip a leading `qnx-` or `qnx_`; if something was stripped, try these base
+refs in order: `<rest>`, `v<rest>`, `<rest without leading v>`, `release-<rest>`, `<repo>-<rest>`; finally try the
+upstream default branch. The first ref whose compare status is `ahead` (behind 0) is used; if none is `ahead`,
+the compare against the upstream default branch is used if its status is `diverged`. `upstream_base_sha` is
+always the `merge_base_commit` of the chosen compare; `qnx_head_sha` is the head of the fork branch from
+`gh api repos/qnx-ports/<repo>/branches/<branch>`.
+
+### Deterministic enumeration and selection
+
+1. List all repositories with `gh api --paginate orgs/qnx-ports/repos` and sort the names with Python `sorted()`
+   (case-sensitive, code-point order).
+2. Walk the sorted list from the start. Skip a repository, recording the reason, if it is one of the original 33,
+   is not a fork, has an upstream (`parent`) repository larger than 500,000 KB by the GitHub `size` field
+   (too large to fetch and scan reliably in this harness; decided before selection), has more than 50 ahead
+   commits (not reviewable by hand), or fails any criterion above.
+3. Take every repository that qualifies, in that order, until 15 are selected (target 12–15, minimum 10).
+   Repositories after the 15th are not examined. If fewer than 10 qualify, all qualifying ones are taken and
+   the shortfall is reported.
+4. Selected projects are added to `projects.yaml` with `split: fresh` and committed before any scan of them.
+   After that commit no fresh project is removed or replaced, whatever its results; a project that fails
+   technically (fetch, scan, timeout) stays in the list and is reported as failed.
+
+### Split assignment with fresh projects
+
+The tune/holdout even/odd rule is computed over the original 33 projects only (entries without a `split`
+field). Projects with `split: fresh` are assigned only by that field and never shift tune/holdout membership.
+`Overall (micro)` in RESULTS.md stays computed over the original 33; fresh has its own line.
+
 ## Running
 
 ```bash
