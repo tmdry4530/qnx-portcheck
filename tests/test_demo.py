@@ -24,6 +24,15 @@ def test_scenes_and_budgets():
     assert build_assets.word_count(" ".join(sentence for s in scenes for sentence in s["narration"])) / 150 * 60 < 180
 
 
+def test_scene_output_paths_are_temporary():
+    for scene in build_assets.load_scenes():
+        for command in scene["commands"]:
+            words = command.split()
+            for index, word in enumerate(words[:-1]):
+                if word == "--out":
+                    assert words[index + 1].startswith("/tmp/qnx-demo/")
+
+
 def test_script_is_current_and_honest():
     script = (ROOT / "demo/script.md").read_text(encoding="utf-8")
     assert build_assets.HONESTY in script

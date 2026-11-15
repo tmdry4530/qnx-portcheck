@@ -8,12 +8,15 @@ export LINES=28
 repo_src="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)/src"
 export PYTHONPATH="$repo_src${PYTHONPATH:+:$PYTHONPATH}"
 export PYTHONDONTWRITEBYTECODE=1
+show_cmd_count=0
 
 show_cmd() {
     local command_text="$1"
     local success_note="${2:-}"
     local delay="${DEMO_TYPE_DELAY:-0.02}"
     local char_index
+    if ((show_cmd_count > 0)); then printf '\n'; fi
+    show_cmd_count=$((show_cmd_count + 1))
     printf '$ '
     for ((char_index = 0; char_index < ${#command_text}; char_index++)); do
         printf '%s' "${command_text:char_index:1}"

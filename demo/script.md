@@ -43,7 +43,8 @@ On-screen commands:
 
 ```sh
 qnx-portcheck scan examples/linux-daemon --format json
-qnx-portcheck scan examples/linux-daemon --format sarif --out demo.sarif
+qnx-portcheck scan examples/linux-daemon --format sarif --out /tmp/qnx-demo/demo.sarif
+python3 -m json.tool /tmp/qnx-demo/demo.sarif | head -20
 ```
 
 Narration:
