@@ -15,7 +15,7 @@
   },
   "window": 3,
   "merge_gap": 3,
-  "scan_cmd": "/workspace/company/shared/hackathons/qnx/wt-dev2-fresh/.venv/bin/python -m qnx_portcheck scan {path} --format json --fail-on never",
+  "scan_cmd": "python -m qnx_portcheck scan {path} --format json --fail-on never",
   "scanner_source_commit": "5118669",
   "durations": {
     "fetch": 5.218385854008375,

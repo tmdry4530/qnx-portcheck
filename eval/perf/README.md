@@ -1,7 +1,7 @@
 # Scanner performance fix: evidence
 
 Commit `85a5ca9` (perf(scan)) on branch dev1/tune, parent `7bbc52a`. Measured on the box on 2026-11-15 KST,
-8 CPUs, Python from `/tmp/qpc-venv`, one scan at a time per measurement.
+8 CPUs, Python from a local venv (`<venv>`), one scan at a time per measurement.
 
 ## libwebsockets single scan (byte-for-byte JSON comparison)
 

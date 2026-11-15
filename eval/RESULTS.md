@@ -3,18 +3,18 @@
 Numbers below come from an actual run of qnx-portcheck on the upstream base commits listed in eval/projects.yaml, compared with the qnx-ports patches (see METHOD.md). The tool was not run on a QNX target.
 
 - Label: REAL
-- Date (KST): 2026-11-15T14:52:40.447855+09:00
+- Date (KST): 2026-11-15T15:09:25.651404+09:00
 - Window: ±3 lines
 - Merge gap: 3 lines
-- Scan command: `/workspace/company/shared/hackathons/qnx/wt-dev2-fresh/.venv/bin/python -m qnx_portcheck scan {path} --format json --fail-on never`
+- Scan command: `python -m qnx_portcheck scan {path} --format json --fail-on never`
 - Scanner: qnx-portcheck/0.1.0
 - Harness version: 0.1.0
 - Scanner source commit: 5118669
-- Harness git SHA: 7df6c14
-- Total runtime: 386.5 s
+- Harness git SHA: 8ce088a
+- Total runtime: 0.0 s
 - Projects: 33
 - Fresh projects: 15
-- Reused projects: 0
+- Reused projects: 48
 - Scan results generated (KST): 2026-11-15T14:46:13.993389+09:00 to 2026-11-15T14:52:31.912269+09:00
 
 | project | split | upstream base | src sites (all/non-test) | build sites | other sites | new files | findings | TP | recall src | recall src non-test | recall build | precision | precision (patched files) | status |
@@ -194,7 +194,7 @@ Original projects (entries without split) sorted by name using Python's case-sen
 | benchmark (fresh) | 4.276 | 0.247 |
 | capnproto (fresh) | 4.591 | 0.879 |
 | cpuinfo (fresh) | 6.207 | 2.255 |
-Total runtime: 386.5 seconds.
+Total runtime: 0.0 seconds.
 
 ## Out of scope
 

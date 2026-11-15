@@ -5,7 +5,7 @@
 > separately; its results are not here yet. Where this file says "holdout" it means the harness's split name.
 
 Scanner commits: `85a5ca9` (perf, findings unchanged, evidence in `perf/`), `5118669` (rules).
-Measurement: `PATH=/tmp/qpc-venv/bin:$PATH python eval/run_eval.py --work-dir <checkouts>` (window ±3, merge gap 3),
+Measurement: `PATH=<venv>/bin:$PATH python eval/run_eval.py --work-dir <checkouts>` (window ±3, merge gap 3),
 same 33 pinned projects and patches as the 0.1.0 baseline. Tune-only iterations used `--split tune`.
 
 ## Split and what was looked at (read this first)
