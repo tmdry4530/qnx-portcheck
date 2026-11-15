@@ -41,6 +41,15 @@ while IFS=$'\t' read -r scene_id slug kind duration requires <&3; do
     if [[ "$mode" != recorded ]]; then
         if [[ "$mode" == card ]]; then
             python3 demo/build_assets.py card-text --scene "$scene_id" --out "$card_path"
+            if [[ "$scene_id" != 05 ]]; then
+                python3 - "$card_path" <<'PY'
+import sys, textwrap
+from pathlib import Path
+path = Path(sys.argv[1])
+text = path.read_text(encoding='utf-8')
+path.write_text('\n'.join(textwrap.fill(line, width=60) for line in text.split('\n')), encoding='utf-8')
+PY
+            fi
         else
         python3 - "$scene_id" "$mode" "$card_path" <<'PY'
 import json, sys, textwrap
