@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:11:23.477370+09:00",
+  "generated_at": "2026-11-15T13:47:28.939688+09:00",
   "project": {
     "name": "fribidi",
     "upstream": "https://github.com/fribidi/fribidi",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "af18fa6",
+  "scanner_source_commit": "511aa2e",
   "durations": {
-    "fetch": 0.002943530009360984,
-    "scan": 0.6212101779819932
+    "fetch": 0.014933316997485235,
+    "scan": 0.6775057639752049
   },
   "diff_stats": {
     "files_changed": 1,

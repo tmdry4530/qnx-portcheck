@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:10:30.389582+09:00",
+  "generated_at": "2026-11-15T13:40:59.748843+09:00",
   "project": {
     "name": "strongswan",
     "upstream": "https://github.com/strongswan/strongswan",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "af18fa6",
+  "scanner_source_commit": "511aa2e",
   "durations": {
-    "fetch": 0.003337600006489083,
-    "scan": 31.314991396997357
+    "fetch": 0.015359498996986076,
+    "scan": 44.28291126000113
   },
   "diff_stats": {
     "files_changed": 13,

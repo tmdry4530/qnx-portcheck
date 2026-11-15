@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:09:33.815567+09:00",
+  "generated_at": "2026-11-15T13:39:58.489471+09:00",
   "project": {
     "name": "lua",
     "upstream": "https://github.com/lua/lua",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "af18fa6",
+  "scanner_source_commit": "511aa2e",
   "durations": {
-    "fetch": 0.0032924439874477684,
-    "scan": 1.7205249159887899
+    "fetch": 0.011067242012359202,
+    "scan": 1.754858679982135
   },
   "diff_stats": {
     "files_changed": 9,

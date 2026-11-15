@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T12:55:19.043939+09:00",
+  "generated_at": "2026-11-15T13:21:48.179776+09:00",
   "project": {
     "name": "libuv",
     "upstream": "https://github.com/libuv/libuv",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "af18fa6",
+  "scanner_source_commit": "511aa2e",
   "durations": {
-    "fetch": 0.0035158639948349446,
-    "scan": 5.983640758990077
+    "fetch": 0.002958579978439957,
+    "scan": 6.166530311020324
   },
   "diff_stats": {
     "files_changed": 16,

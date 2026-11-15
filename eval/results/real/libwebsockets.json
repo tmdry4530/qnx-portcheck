@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T12:55:25.071039+09:00",
+  "generated_at": "2026-11-15T13:21:54.379808+09:00",
   "project": {
     "name": "libwebsockets",
     "upstream": "https://github.com/warmcat/libwebsockets",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "af18fa6",
+  "scanner_source_commit": "511aa2e",
   "durations": {
-    "fetch": 0.0034021300089079887,
-    "scan": 750.7221414280066
+    "fetch": 0.0034074779832735658,
+    "scan": 788.2196640500042
   },
   "diff_stats": {
     "files_changed": 4,

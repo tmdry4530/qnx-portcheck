@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T12:53:41.819842+09:00",
+  "generated_at": "2026-11-15T13:20:09.919449+09:00",
   "project": {
     "name": "asio",
     "upstream": "https://github.com/chriskohlhoff/asio",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "af18fa6",
+  "scanner_source_commit": "511aa2e",
   "durations": {
-    "fetch": 0.0028282550047151744,
-    "scan": 14.562350307998713
+    "fetch": 0.0027867619937751442,
+    "scan": 14.833685152989347
   },
   "diff_stats": {
     "files_changed": 5,

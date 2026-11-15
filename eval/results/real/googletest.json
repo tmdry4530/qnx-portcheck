@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T12:54:57.559167+09:00",
+  "generated_at": "2026-11-15T13:21:26.500101+09:00",
   "project": {
     "name": "googletest",
     "upstream": "https://github.com/google/googletest",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "af18fa6",
+  "scanner_source_commit": "511aa2e",
   "durations": {
-    "fetch": 0.003991687000961974,
-    "scan": 8.57476790700457
+    "fetch": 0.004016385006252676,
+    "scan": 8.601630020013545
   },
   "diff_stats": {
     "files_changed": 4,

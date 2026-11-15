@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:10:00.814347+09:00",
+  "generated_at": "2026-11-15T13:40:29.549890+09:00",
   "project": {
     "name": "open-amp",
     "upstream": "https://github.com/OpenAMP/open-amp",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "af18fa6",
+  "scanner_source_commit": "511aa2e",
   "durations": {
-    "fetch": 0.0033381760003976524,
-    "scan": 0.43367194500751793
+    "fetch": 0.010218058014288545,
+    "scan": 0.4693056920077652
   },
   "diff_stats": {
     "files_changed": 3,

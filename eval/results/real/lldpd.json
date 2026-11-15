@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:09:31.278248+09:00",
+  "generated_at": "2026-11-15T13:39:55.932588+09:00",
   "project": {
     "name": "lldpd",
     "upstream": "https://github.com/lldpd/lldpd",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "af18fa6",
+  "scanner_source_commit": "511aa2e",
   "durations": {
-    "fetch": 0.00429644001997076,
-    "scan": 2.5232468670001253
+    "fetch": 0.013832775002811104,
+    "scan": 2.5269003239809535
   },
   "diff_stats": {
     "files_changed": 8,

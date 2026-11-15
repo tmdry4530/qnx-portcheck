@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:09:35.544374+09:00",
+  "generated_at": "2026-11-15T13:40:00.273930+09:00",
   "project": {
     "name": "mosquitto",
     "upstream": "https://github.com/eclipse-mosquitto/mosquitto",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "af18fa6",
+  "scanner_source_commit": "511aa2e",
   "durations": {
-    "fetch": 0.0031392349919769913,
-    "scan": 4.120424640015699
+    "fetch": 0.015914889983832836,
+    "scan": 4.244381394004449
   },
   "diff_stats": {
     "files_changed": 19,

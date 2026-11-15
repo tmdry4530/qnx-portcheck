@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:11:24.746894+09:00",
+  "generated_at": "2026-11-15T13:47:30.255921+09:00",
   "project": {
     "name": "libyaml",
     "upstream": "https://github.com/yaml/libyaml",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "af18fa6",
+  "scanner_source_commit": "511aa2e",
   "durations": {
-    "fetch": 0.00353918201290071,
-    "scan": 1.1962403960060328
+    "fetch": 0.008354802004760131,
+    "scan": 1.199701607984025
   },
   "diff_stats": {
     "files_changed": 2,

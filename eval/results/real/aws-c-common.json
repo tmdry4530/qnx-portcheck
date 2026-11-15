@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:11:17.839586+09:00",
+  "generated_at": "2026-11-15T13:47:22.519738+09:00",
   "project": {
     "name": "aws-c-common",
     "upstream": "https://github.com/awslabs/aws-c-common",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "af18fa6",
+  "scanner_source_commit": "511aa2e",
   "durations": {
-    "fetch": 0.0035951100289821625,
-    "scan": 4.763577454985352
+    "fetch": 0.05594594799913466,
+    "scan": 5.31503125699237
   },
   "diff_stats": {
     "files_changed": 1,

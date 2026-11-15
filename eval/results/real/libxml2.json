@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:07:55.803884+09:00",
+  "generated_at": "2026-11-15T13:38:21.848905+09:00",
   "project": {
     "name": "libxml2",
     "upstream": "https://github.com/GNOME/libxml2",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "af18fa6",
+  "scanner_source_commit": "511aa2e",
   "durations": {
-    "fetch": 0.004719693009974435,
-    "scan": 95.46455579501344
+    "fetch": 0.016796520998468623,
+    "scan": 94.05290720501216
   },
   "diff_stats": {
     "files_changed": 1,

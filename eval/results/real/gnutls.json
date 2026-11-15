@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T12:54:38.122096+09:00",
+  "generated_at": "2026-11-15T13:21:06.860359+09:00",
   "project": {
     "name": "gnutls",
     "upstream": "https://github.com/gnutls/gnutls",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "af18fa6",
+  "scanner_source_commit": "511aa2e",
   "durations": {
-    "fetch": 0.0038074739859439433,
-    "scan": 19.429850949993124
+    "fetch": 0.003118366003036499,
+    "scan": 19.633288054988952
   },
   "diff_stats": {
     "files_changed": 1,

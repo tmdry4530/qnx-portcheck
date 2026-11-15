@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:11:25.949248+09:00",
+  "generated_at": "2026-11-15T13:47:31.477107+09:00",
   "project": {
     "name": "re2",
     "upstream": "https://github.com/google/re2",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "af18fa6",
+  "scanner_source_commit": "511aa2e",
   "durations": {
-    "fetch": 0.003027573984581977,
-    "scan": 2.543104990007123
+    "fetch": 0.013795954000670463,
+    "scan": 2.691447536024498
   },
   "diff_stats": {
     "files_changed": 1,

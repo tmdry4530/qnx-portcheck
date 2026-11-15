@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T12:53:56.389289+09:00",
+  "generated_at": "2026-11-15T13:20:24.761181+09:00",
   "project": {
     "name": "avahi",
     "upstream": "https://github.com/avahi/avahi",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "af18fa6",
+  "scanner_source_commit": "511aa2e",
   "durations": {
-    "fetch": 0.0036229219986125827,
-    "scan": 3.178385040984722
+    "fetch": 0.0033145209890790284,
+    "scan": 3.196412281016819
   },
   "diff_stats": {
     "files_changed": 5,

@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:11:22.609734+09:00",
+  "generated_at": "2026-11-15T13:47:27.905756+09:00",
   "project": {
     "name": "check",
     "upstream": "https://github.com/libcheck/check",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "af18fa6",
+  "scanner_source_commit": "511aa2e",
   "durations": {
-    "fetch": 0.0031531340209767222,
-    "scan": 0.8616719270066824
+    "fetch": 0.01574694100418128,
+    "scan": 1.009510649018921
   },
   "diff_stats": {
     "files_changed": 1,

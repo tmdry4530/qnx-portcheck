@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:09:55.221475+09:00",
+  "generated_at": "2026-11-15T13:40:20.221658+09:00",
   "project": {
     "name": "ntpsec",
     "upstream": "https://github.com/ntpsec/ntpsec",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "af18fa6",
+  "scanner_source_commit": "511aa2e",
   "durations": {
-    "fetch": 0.0041669849888421595,
-    "scan": 5.578901496017352
+    "fetch": 0.012550472019938752,
+    "scan": 9.289630109997233
   },
   "diff_stats": {
     "files_changed": 9,

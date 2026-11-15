@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T12:55:12.337716+09:00",
+  "generated_at": "2026-11-15T13:21:41.359720+09:00",
   "project": {
     "name": "libmetal",
     "upstream": "https://github.com/OpenAMP/libmetal",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "af18fa6",
+  "scanner_source_commit": "511aa2e",
   "durations": {
-    "fetch": 0.003901716001564637,
-    "scan": 0.7009361899981741
+    "fetch": 0.0036721029900945723,
+    "scan": 0.712235993007198
   },
   "diff_stats": {
     "files_changed": 33,

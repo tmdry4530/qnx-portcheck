@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:11:02.416435+09:00",
+  "generated_at": "2026-11-15T13:47:05.409202+09:00",
   "project": {
     "name": "unbound",
     "upstream": "https://github.com/NLnetLabs/unbound",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "af18fa6",
+  "scanner_source_commit": "511aa2e",
   "durations": {
-    "fetch": 0.0032630719942972064,
-    "scan": 15.412687275005737
+    "fetch": 0.013075697992462665,
+    "scan": 17.061318155989284
   },
   "diff_stats": {
     "files_changed": 10,

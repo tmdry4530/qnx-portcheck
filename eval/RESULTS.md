@@ -3,15 +3,15 @@
 Numbers below come from an actual run of qnx-portcheck on the upstream base commits listed in eval/projects.yaml, compared with the qnx-ports patches (see METHOD.md). The tool was not run on a QNX target.
 
 - Label: REAL
-- Date (KST): 2026-11-15T13:11:28.500362+09:00
+- Date (KST): 2026-11-15T13:47:34.205391+09:00
 - Window: ±3 lines
 - Merge gap: 3 lines
 - Scan command: `qnx-portcheck scan {path} --format json --fail-on never`
 - Scanner: qnx-portcheck/0.1.0
 - Harness version: 0.1.0
-- Scanner source commit: af18fa6
-- Harness git SHA: 5acf9d0
-- Total runtime: 1066.7 s
+- Scanner source commit: 511aa2e
+- Harness git SHA: 0020611
+- Total runtime: 1124.5 s
 - Projects: 33
 - Reused projects: 0
 
@@ -83,40 +83,40 @@ Overall (micro): source-site recall 0.051 (16/312), non-test source-site recall 
 
 | project | fetch seconds | scan seconds |
 |---|---:|---:|
-| asio | 0.003 | 14.562 |
-| avahi | 0.004 | 3.178 |
-| aws-c-io | 0.003 | 6.912 |
-| c-ares | 0.003 | 3.933 |
-| chrony | 0.003 | 3.017 |
-| dlt-daemon | 0.003 | 23.639 |
-| glog | 0.004 | 0.990 |
-| gnutls | 0.004 | 19.430 |
-| googletest | 0.004 | 8.575 |
-| iperf3 | 0.005 | 1.142 |
+| asio | 0.003 | 14.834 |
+| avahi | 0.003 | 3.196 |
+| aws-c-io | 0.003 | 6.886 |
+| c-ares | 0.004 | 3.910 |
+| chrony | 0.004 | 3.143 |
+| dlt-daemon | 0.004 | 23.960 |
+| glog | 0.003 | 0.939 |
+| gnutls | 0.003 | 19.633 |
+| googletest | 0.004 | 8.602 |
+| iperf3 | 0.003 | 1.197 |
 | libevent | 0.003 | 5.038 |
-| libmetal | 0.004 | 0.701 |
-| libusb | 0.003 | 5.985 |
-| libuv | 0.004 | 5.984 |
-| libwebsockets | 0.003 | 750.722 |
-| libxml2 | 0.005 | 95.465 |
-| lldpd | 0.004 | 2.523 |
-| lua | 0.003 | 1.721 |
-| mosquitto | 0.003 | 4.120 |
-| nghttp2 | 0.004 | 15.541 |
-| ntpsec | 0.004 | 5.579 |
-| open-amp | 0.003 | 0.434 |
-| pistache | 0.003 | 14.170 |
-| s2n-tls | 0.003 | 14.939 |
-| strongswan | 0.003 | 31.315 |
-| tinyxml2 | 0.003 | 0.683 |
-| unbound | 0.003 | 15.413 |
-| aws-c-common | 0.004 | 4.764 |
-| check | 0.003 | 0.862 |
-| fribidi | 0.003 | 0.621 |
-| jansson | 0.003 | 0.637 |
-| libyaml | 0.004 | 1.196 |
-| re2 | 0.003 | 2.543 |
-Total runtime: 1066.7 seconds.
+| libmetal | 0.004 | 0.712 |
+| libusb | 0.003 | 6.088 |
+| libuv | 0.003 | 6.167 |
+| libwebsockets | 0.003 | 788.220 |
+| libxml2 | 0.017 | 94.053 |
+| lldpd | 0.014 | 2.527 |
+| lua | 0.011 | 1.755 |
+| mosquitto | 0.016 | 4.244 |
+| nghttp2 | 0.022 | 15.639 |
+| ntpsec | 0.013 | 9.290 |
+| open-amp | 0.010 | 0.469 |
+| pistache | 0.011 | 14.490 |
+| s2n-tls | 0.009 | 15.139 |
+| strongswan | 0.015 | 44.283 |
+| tinyxml2 | 0.016 | 0.715 |
+| unbound | 0.013 | 17.061 |
+| aws-c-common | 0.056 | 5.315 |
+| check | 0.016 | 1.010 |
+| fribidi | 0.015 | 0.678 |
+| jansson | 0.011 | 0.593 |
+| libyaml | 0.008 | 1.200 |
+| re2 | 0.014 | 2.691 |
+Total runtime: 1124.5 seconds.
 
 ## Out of scope
 

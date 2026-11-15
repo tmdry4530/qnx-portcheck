@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:10:15.437554+09:00",
+  "generated_at": "2026-11-15T13:40:44.559801+09:00",
   "project": {
     "name": "s2n-tls",
     "upstream": "https://github.com/aws/s2n-tls",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "af18fa6",
+  "scanner_source_commit": "511aa2e",
   "durations": {
-    "fetch": 0.0031615780026186258,
-    "scan": 14.938987330999225
+    "fetch": 0.009228456008713692,
+    "scan": 15.138973020017147
   },
   "diff_stats": {
     "files_changed": 32,

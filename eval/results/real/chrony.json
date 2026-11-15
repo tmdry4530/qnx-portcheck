@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T12:54:10.441420+09:00",
+  "generated_at": "2026-11-15T13:20:38.783196+09:00",
   "project": {
     "name": "chrony",
     "upstream": "https://github.com/mlichvar/chrony",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "af18fa6",
+  "scanner_source_commit": "511aa2e",
   "durations": {
-    "fetch": 0.003441458015004173,
-    "scan": 3.01707704301225
+    "fetch": 0.0035729600058402866,
+    "scan": 3.142893478012411
   },
   "diff_stats": {
     "files_changed": 12,

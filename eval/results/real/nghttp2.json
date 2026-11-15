@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T13:09:39.673989+09:00",
+  "generated_at": "2026-11-15T13:40:04.548865+09:00",
   "project": {
     "name": "nghttp2",
     "upstream": "https://github.com/nghttp2/nghttp2",
@@ -16,10 +16,10 @@
   "window": 3,
   "merge_gap": 3,
   "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
-  "scanner_source_commit": "af18fa6",
+  "scanner_source_commit": "511aa2e",
   "durations": {
-    "fetch": 0.003665066004032269,
-    "scan": 15.540843888011295
+    "fetch": 0.021585640002740547,
+    "scan": 15.638935943017714
   },
   "diff_stats": {
     "files_changed": 2,
