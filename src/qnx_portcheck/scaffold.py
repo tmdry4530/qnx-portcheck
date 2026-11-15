@@ -7,6 +7,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Sequence
 from qnx_portcheck import __version__
+from qnx_portcheck.output import emit
 
 UPSTREAM_REPO = "https://github.com/qnx-ports/build-files"
 UPSTREAM_SHA = "79d94bd6f1d66e524b17c1f26379ac0ef9bd24c5"
@@ -229,9 +230,10 @@ def write_scaffold(planned: Sequence[PlannedFile], force: bool = False, dry_run:
 def run(args: argparse.Namespace) -> int:
     try:
         planned = plan_scaffold(Path(args.path), args.name, Path(args.out) if args.out else None, args.build_system)
-        for result in write_scaffold(planned, args.force, args.dry_run):
-            print(f"{result.status}: {result.path}")
-        print('Hint: QNX_PROJECT_ROOT="$(pwd)" make -C qnx/build install (requires a QNX SDP environment; not executed by this tool).')
+        lines = [f"{result.status}: {result.path}"
+                 for result in write_scaffold(planned, args.force, args.dry_run)]
+        lines.append('Hint: QNX_PROJECT_ROOT="$(pwd)" make -C qnx/build install (requires a QNX SDP environment; not executed by this tool).')
+        emit("\n".join(lines))
         return 0
     except ScaffoldError as exc:
         print(str(exc), file=sys.stderr)

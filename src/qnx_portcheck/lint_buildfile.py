@@ -6,6 +6,7 @@ import re
 import sys
 from dataclasses import asdict, dataclass
 from pathlib import Path
+from qnx_portcheck.output import emit
 
 MKIFS = "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.utilities/topic/m/mkifs.html"
 BOOL = set("autolink big_pages bigendian compress dupignore followlink include keeplinked optional page_align raw script".split())
@@ -196,10 +197,13 @@ def run(args):
         print(f"{filename}: {exc}", file=sys.stderr)
         return 2
     if args.format == "json":
-        print(json.dumps([{"file": f, **asdict(d)} for f, d in all_diags], indent=2))
+        output = json.dumps([{"file": f, **asdict(d)} for f, d in all_diags], indent=2)
     else:
-        for f, d in all_diags:
-            print(f"{f}:{d.line}:{d.col}: {d.severity}: {d.rule_id}: {d.message} ({d.doc_url})")
+        output = "\n".join(
+            f"{f}:{d.line}:{d.col}: {d.severity}: {d.rule_id}: {d.message} ({d.doc_url})"
+            for f, d in all_diags
+        )
+    emit(output)
     return 1 if any(d.severity == "error" for _, d in all_diags) else 0
 
 

@@ -5,6 +5,7 @@ import argparse
 import json
 from pathlib import Path
 import sys
+from qnx_portcheck.output import emit
 from qnx_portcheck.report import to_json, to_sarif, to_text
 from qnx_portcheck.scanner import scan
 
@@ -29,11 +30,7 @@ def run(args: argparse.Namespace) -> int:
     reports = {"text": to_text(result.findings, result.files_scanned),
                "json": json.dumps(to_json(result.findings, result.root), indent=2),
                "sarif": json.dumps(to_sarif(result.findings, result.root), indent=2)}
-    output = reports[args.format]
-    if args.out:
-        Path(args.out).write_text(output, encoding="utf-8")
-    else:
-        sys.stdout.write(output)
+    emit(reports[args.format], args.out)
     rank = {"error": 2, "warning": 1, "note": 0, "never": -1}
     return int(args.fail_on != "never" and any(
         rank[item.severity] >= rank[args.fail_on] for item in result.findings
