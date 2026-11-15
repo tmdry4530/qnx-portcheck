@@ -19,7 +19,12 @@ def load_scenes():
 
 
 METRICS = ("recall_source", "recall_source_nontest", "recall_build", "precision", "precision_in_patched_files")
-OVERALL_RE = re.compile(r"^Overall \(micro\): source-site recall ([0-9]+\.[0-9]{3}) \(([0-9]+)/([0-9]+)\), non-test source-site recall ([0-9]+\.[0-9]{3}) \(([0-9]+)/([0-9]+)\), build-site recall ([0-9]+\.[0-9]{3}) \(([0-9]+)/([0-9]+)\), precision ([0-9]+\.[0-9]{3}) \(([0-9]+)/([0-9]+)\), precision in patched files ([0-9]+\.[0-9]{3}) \(([0-9]+)/([0-9]+)\)\.$", re.M)
+METRIC_CLAUSE = r"source-site recall ([0-9]+\.[0-9]{3}) \(([0-9]+)/([0-9]+)\), non-test source-site recall ([0-9]+\.[0-9]{3}) \(([0-9]+)/([0-9]+)\), build-site recall ([0-9]+\.[0-9]{3}) \(([0-9]+)/([0-9]+)\), precision ([0-9]+\.[0-9]{3}) \(([0-9]+)/([0-9]+)\), precision in patched files ([0-9]+\.[0-9]{3}) \(([0-9]+)/([0-9]+)\)\."
+SPLIT_RES = {
+    "tune": re.compile(r"^Split tune \(micro, ([0-9]+) projects\): " + METRIC_CLAUSE + r"$", re.M),
+    "holdout": re.compile(r"^Split holdout \(seen during tuning\) \(micro, ([0-9]+) projects\): " + METRIC_CLAUSE + r"$", re.M),
+    "fresh": re.compile(r"^Split fresh \(micro, ([0-9]+) projects\): " + METRIC_CLAUSE + r"$", re.M),
+}
 
 
 def load_eval(path) -> tuple[dict | None, str]:
@@ -41,12 +46,15 @@ def load_eval(path) -> tuple[dict | None, str]:
     if re.search(r"^> \*\*FAKE", content, re.M) or any("fake" in fields[k].lower() for k in ("label", "scanner")):
         return None, "FAKE run rejected"
     if not fields["scanner"].startswith("qnx-portcheck"): return None, "scanner is not qnx-portcheck"
-    match = OVERALL_RE.search(content)
-    if not match: return None, "missing or malformed Overall (micro) line"
     result = dict(fields)
-    for i, key in enumerate(METRICS):
-        value, numerator, denominator = match.group(i * 3 + 1, i * 3 + 2, i * 3 + 3)
-        result[key], result[f"{key}_num"], result[f"{key}_den"] = value, int(numerator), int(denominator)
+    for split in ("fresh", "tune", "holdout"):
+        match = SPLIT_RES[split].search(content)
+        if not match: return None, f"missing or malformed Split {split if split != 'holdout' else 'holdout (seen during tuning)'} line"
+        prefix = "" if split == "fresh" else split + "_"
+        result[prefix + "projects"] = int(match.group(1))
+        for i, key in enumerate(METRICS):
+            value, numerator, denominator = match.group(i * 3 + 2, i * 3 + 3, i * 3 + 4)
+            result[prefix + key], result[prefix + f"{key}_num"], result[prefix + f"{key}_den"] = value, int(numerator), int(denominator)
     return result, ""
 
 
@@ -56,7 +64,9 @@ def apply_eval(scene, ev) -> dict:
     if ev is None: return result
     values = dict(ev, scanner_commit_short=ev["scanner_commit"][:7], date_short=ev["date"][:10])
     result["narration"] = [sentence for text in result["narration"] for sentence in ([t.format(**values) for t in result.get("eval_narration", [])] if "[EVAL_NUMBERS]" in text else [text])]
-    result["card_text"] = "\n".join(line for text in result["card_text"].splitlines() for line in (result["eval_card_text"].format(**values).splitlines() if "[EVAL_NUMBERS]" in text else [text]))
+    headline = result["eval_card_text"].format(**values)
+    secondary = result["eval_card_secondary"].format(**values)
+    result["card_text"] = headline + "\n" + secondary + "\n" + "\n".join(line for line in result["card_text"].splitlines() if "[EVAL_NUMBERS]" not in line)
     return result
 
 
@@ -166,7 +176,19 @@ def card_text(scene_id, out_file, eval_path=None):
         ev, reason = load_eval(eval_path)
         scene = apply_eval(scene, ev)
     Path(out_file).parent.mkdir(parents=True, exist_ok=True)
-    Path(out_file).write_text(scene["card_text"], encoding="utf-8")
+    output = Path(out_file)
+    output.write_text(scene["card_text"], encoding="utf-8")
+    if scene_id == "05":
+        if ev is not None:
+            values = dict(ev, scanner_commit_short=ev["scanner_commit"][:7], date_short=ev["date"][:10])
+            headline = scene["eval_card_text"].format(**values)
+            remaining = "\n".join(line for line in next(s for s in load_scenes() if s["id"] == "05")["card_text"].splitlines() if "[EVAL_NUMBERS]" not in line)
+            secondary = scene["eval_card_secondary"].format(**values) + "\n" + remaining
+        else:
+            headline, secondary = scene["card_text"], ""
+            secondary = "\n".join(line for line in scene["card_text"].splitlines() if "[EVAL_NUMBERS]" not in line)
+        output.with_name(output.stem + "-headline" + output.suffix).write_text(headline, encoding="utf-8")
+        output.with_name(output.stem + "-secondary" + output.suffix).write_text(secondary, encoding="utf-8")
     if scene_id == "05" and ev is None: print(f"WARNING: eval numbers not filled ({reason}); keeping [EVAL_NUMBERS] placeholder", file=sys.stderr)
 
 
@@ -180,7 +202,7 @@ def check():
         words = word_count(" ".join(s["narration"]))
         if words / 150 * 60 > s["duration"] - 1: errors.append(f"scene {s['id']} narration exceeds duration budget")
     scene05 = next(s for s in scenes if s["id"] == "05")
-    worst = {"label":"x", "projects":999, "scanner":"qnx-portcheck", "scanner_commit":"abcdef0", "date":"2026-12-31", **{item: value for key in METRICS for item, value in ((key,"0.000"),(key+"_num",999),(key+"_den",999))}}
+    worst = {"label":"x", "projects":999, "tune_projects":999, "holdout_projects":999, "scanner":"qnx-portcheck", "scanner_commit":"abcdef0", "date":"2026-12-31", **{item: value for prefix in ("", "tune_", "holdout_") for key in METRICS for item, value in ((prefix+key,"0.000"),(prefix+key+"_num",999),(prefix+key+"_den",999))}}
     if word_count(" ".join(apply_eval(scene05, worst)["narration"])) / 150 * 60 > scene05["duration"] - 1: errors.append("scene 05 rendered eval narration exceeds duration budget")
     words = word_count(" ".join(x for s in scenes for x in s["narration"]))
     if words / 150 * 60 >= 180: errors.append("total narration estimate must be under 3 minutes")

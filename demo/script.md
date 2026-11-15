@@ -1,6 +1,6 @@
 # qnx-portcheck demo narration
 
-Total duration: 152 seconds
+Total duration: 159 seconds
 Narration: 200 words; estimated read time at 150 wpm: 80.0 seconds
 
 Honesty statement: We did not run this on a QNX target; we validated it against qnx-ports patches.
@@ -88,7 +88,7 @@ The clean example passes the host-side buildfile check. The intentionally bad fi
 
 ## 05 — Evaluation
 
-Duration: 24 seconds
+Duration: 31 seconds
 
 On-screen commands:
 
@@ -104,8 +104,9 @@ At render time, [EVAL_NUMBERS] is replaced from eval/RESULTS.md (see demo/README
 
 Evaluation narration templates:
 
-- Across {projects} qnx-ports projects, source-site recall was {recall_source} and precision was {precision}.
-- Scanner commit {scanner_commit_short}, measured {date_short}.
+- Fresh split: source-site recall {recall_source} and precision {precision} across {projects} qnx-ports projects.
+- The holdout was seen during tuning: source-site recall {holdout_recall_source} ({holdout_projects} projects); tune source-site recall {tune_recall_source} ({tune_projects}).
+- Scanner {scanner_commit_short}, measured {date_short}.
 
 ## 06 — Learn more
 

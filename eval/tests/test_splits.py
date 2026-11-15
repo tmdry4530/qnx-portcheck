@@ -193,7 +193,7 @@ def test_split_markdown_lines_match_aggregates_and_demo_contract(tmp_path):
     import build_assets
 
     projects = []
-    for name, split, line in (("alpha", "tune", 10), ("beta", "holdout", 20)):
+    for name, split, line in (("alpha", "tune", 10), ("beta", "holdout", 20), ("gamma", "fresh", 30)):
         sites = [
             ev.Site(f"{name}.c", "source", False, "modify", line, 1, line, 1, [line]),
             ev.Site(f"{name}.cmake", "build", False, "modify", line + 1, 1, line + 1, 1, [line + 1]),
@@ -214,10 +214,10 @@ def test_split_markdown_lines_match_aggregates_and_demo_contract(tmp_path):
             "date_kst": "2026-11-15",
             "scanner": "qnx-portcheck/1",
             "scanner_source_commit": "abc1234",
-            "projects_count": 2,
+            "projects_count": 3,
             "generated_at_range": "x to y",
         },
-        "splits": {"rule": ev.SPLIT_RULE, "tune": ["alpha"], "holdout": ["beta"], "fresh": []},
+        "splits": {"rule": ev.SPLIT_RULE, "tune": ["alpha"], "holdout": ["beta"], "fresh": ["gamma"]},
         "projects": projects,
         "aggregate": aggregate,
     }
@@ -239,7 +239,7 @@ def test_split_markdown_lines_match_aggregates_and_demo_contract(tmp_path):
     path = tmp_path / "RESULTS.md"
     path.write_text(rendered)
     parsed, reason = build_assets.load_eval(path)
-    assert reason == "" and parsed["recall_source"] == f"{aggregate['micro']['recall_source']:.3f}"
+    assert reason == "" and parsed["recall_source"] == f"{aggregate['by_split']['fresh']['micro']['recall_source']:.3f}"
 
 
 def test_fresh_only_and_overall_excludes_fresh_end_to_end(tmp_path):
