@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T14:14:36.595645+09:00",
+  "generated_at": "2026-11-15T14:47:26.146531+09:00",
   "project": {
     "name": "libevent",
     "upstream": "https://github.com/libevent/libevent",
@@ -15,11 +15,11 @@
   },
   "window": 3,
   "merge_gap": 3,
-  "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
+  "scan_cmd": "/workspace/company/shared/hackathons/qnx/wt-dev2-fresh/.venv/bin/python -m qnx_portcheck scan {path} --format json --fail-on never",
   "scanner_source_commit": "5118669",
   "durations": {
-    "fetch": 0.00291934100096114,
-    "scan": 0.8495352700119838
+    "fetch": 5.367443520022789,
+    "scan": 0.8562526229943614
   },
   "diff_stats": {
     "files_changed": 2,

@@ -1,0 +1,949 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T14:52:26.432652+09:00",
+  "project": {
+    "name": "capnproto",
+    "upstream": "https://github.com/capnproto/capnproto",
+    "upstream_base_ref": "v1.0.2",
+    "upstream_base_sha": "1a0e12c0a3ba1f0dbbad45ddfef555166e0a14fc",
+    "qnx_repo": "https://github.com/qnx-ports/capnproto",
+    "qnx_branch": "qnx-1.0.2",
+    "qnx_head_sha": "a60aaee41786d4ad4cf9079364550cf3ba4e18f4",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "/workspace/company/shared/hackathons/qnx/wt-dev2-fresh/.venv/bin/python -m qnx_portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "5118669",
+  "durations": {
+    "fetch": 4.591237849002937,
+    "scan": 0.8792586209892761
+  },
+  "diff_stats": {
+    "files_changed": 12,
+    "compare_files_expected": 12,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "c++/CMakeLists.txt",
+    "c++/src/CMakeLists.txt",
+    "c++/src/capnp/CMakeLists.txt",
+    "c++/src/kj/CMakeLists.txt",
+    "c++/src/kj/async-io-test.c++",
+    "c++/src/kj/async-io-unix.c++",
+    "c++/src/kj/async-unix-test.c++",
+    "c++/src/kj/exception.c++",
+    "c++/src/kj/filesystem-disk-test.c++",
+    "c++/src/kj/filesystem-disk-unix.c++",
+    "c++/src/kj/miniposix.h",
+    "c++/src/kj/test-helpers.c++"
+  ],
+  "sites": [
+    {
+      "file": "c++/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 30,
+      "old_count": 0,
+      "new_start": 31,
+      "new_count": 1,
+      "target_lines": [
+        30,
+        31
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 161,
+      "old_count": 1,
+      "new_start": 162,
+      "new_count": 1,
+      "target_lines": [
+        161
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        1
+      ]
+    },
+    {
+      "file": "c++/src/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 8,
+      "old_count": 2,
+      "new_start": 8,
+      "new_count": 4,
+      "target_lines": [
+        8,
+        9
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/capnp/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 279,
+      "old_count": 0,
+      "new_start": 280,
+      "new_count": 3,
+      "target_lines": [
+        279,
+        280
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/capnp/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 318,
+      "old_count": 0,
+      "new_start": 322,
+      "new_count": 3,
+      "target_lines": [
+        318,
+        319
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 84,
+      "old_count": 4,
+      "new_start": 84,
+      "new_count": 4,
+      "target_lines": [
+        84,
+        86,
+        87
+      ],
+      "hunks": 2,
+      "matched_findings": [
+        5,
+        6
+      ]
+    },
+    {
+      "file": "c++/src/kj/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 153,
+      "old_count": 1,
+      "new_start": 156,
+      "new_count": 1,
+      "target_lines": [
+        153
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 263,
+      "old_count": 0,
+      "new_start": 267,
+      "new_count": 4,
+      "target_lines": [
+        263,
+        264
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 312,
+      "old_count": 0,
+      "new_start": 320,
+      "new_count": 3,
+      "target_lines": [
+        312,
+        313
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/async-io-test.c++",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 380,
+      "old_count": 3,
+      "new_start": 381,
+      "new_count": 2,
+      "target_lines": [
+        380,
+        381,
+        382
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/async-io-test.c++",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 2919,
+      "old_count": 0,
+      "new_start": 2922,
+      "new_count": 1,
+      "target_lines": [
+        2919,
+        2920
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/async-io-test.c++",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 2958,
+      "old_count": 0,
+      "new_start": 2962,
+      "new_count": 1,
+      "target_lines": [
+        2958,
+        2959
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/async-io-unix.c++",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1242,
+      "old_count": 1,
+      "new_start": 1242,
+      "new_count": 2,
+      "target_lines": [
+        1242
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/async-io-unix.c++",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1360,
+      "old_count": 2,
+      "new_start": 1361,
+      "new_count": 2,
+      "target_lines": [
+        1360,
+        1361
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/async-unix-test.c++",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 575,
+      "old_count": 0,
+      "new_start": 576,
+      "new_count": 11,
+      "target_lines": [
+        575,
+        576
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/async-unix-test.c++",
+      "category": "source",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 602,
+      "old_count": 1,
+      "new_start": 613,
+      "new_count": 1,
+      "target_lines": [
+        602
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/async-unix-test.c++",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 980,
+      "old_count": 0,
+      "new_start": 992,
+      "new_count": 1,
+      "target_lines": [
+        980,
+        981
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/async-unix-test.c++",
+      "category": "source",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 1007,
+      "old_count": 1,
+      "new_start": 1019,
+      "new_count": 1,
+      "target_lines": [
+        1007
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/exception.c++",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 51,
+      "old_count": 0,
+      "new_start": 52,
+      "new_count": 3,
+      "target_lines": [
+        51,
+        52
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/exception.c++",
+      "category": "source",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 583,
+      "old_count": 3,
+      "new_start": 586,
+      "new_count": 2,
+      "target_lines": [
+        583,
+        584,
+        585
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/exception.c++",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1239,
+      "old_count": 1,
+      "new_start": 1243,
+      "new_count": 1,
+      "target_lines": [
+        1239
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/filesystem-disk-test.c++",
+      "category": "source",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 238,
+      "old_count": 1,
+      "new_start": 238,
+      "new_count": 1,
+      "target_lines": [
+        238
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/filesystem-disk-test.c++",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 348,
+      "old_count": 0,
+      "new_start": 349,
+      "new_count": 1,
+      "target_lines": [
+        348,
+        349
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/filesystem-disk-test.c++",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 355,
+      "old_count": 0,
+      "new_start": 357,
+      "new_count": 1,
+      "target_lines": [
+        355,
+        356
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/filesystem-disk-test.c++",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 372,
+      "old_count": 5,
+      "new_start": 375,
+      "new_count": 8,
+      "target_lines": [
+        372,
+        373,
+        374,
+        375,
+        376
+      ],
+      "hunks": 4,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/filesystem-disk-test.c++",
+      "category": "source",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 767,
+      "old_count": 3,
+      "new_start": 778,
+      "new_count": 2,
+      "target_lines": [
+        767,
+        768,
+        769
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/filesystem-disk-test.c++",
+      "category": "source",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 988,
+      "old_count": 1,
+      "new_start": 1000,
+      "new_count": 1,
+      "target_lines": [
+        988
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/filesystem-disk-unix.c++",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 419,
+      "old_count": 2,
+      "new_start": 419,
+      "new_count": 2,
+      "target_lines": [
+        419,
+        420
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/filesystem-disk-unix.c++",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 674,
+      "old_count": 4,
+      "new_start": 675,
+      "new_count": 2,
+      "target_lines": [
+        674,
+        675,
+        676,
+        677
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/miniposix.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 134,
+      "old_count": 0,
+      "new_start": 135,
+      "new_count": 4,
+      "target_lines": [
+        134,
+        135
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "c++/src/kj/test-helpers.c++",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 48,
+      "old_count": 1,
+      "new_start": 48,
+      "new_count": 1,
+      "target_lines": [
+        48
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 9,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "c++/CMakeLists.txt",
+      "line": 99,
+      "col": 1,
+      "message": "CMake platform condition `WIN32 OR CYGWIN` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "c++/CMakeLists.txt",
+      "line": 161,
+      "col": 1,
+      "message": "CMake platform condition `NOT ANDROID` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": [
+        1
+      ]
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "c++/configure.ac",
+      "line": 70,
+      "col": 1,
+      "message": "Host OS case `# We don't use pthreads on MinGW.\n    PT` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-AUTOCONF-HOST",
+      "severity": "warning",
+      "file": "c++/configure.ac",
+      "line": 222,
+      "col": 1,
+      "message": "Host OS case `cygwin* | mingw*` in a dispatch with no nto-qnx* case",
+      "suggestion": "GNU configure names QNX targets *-nto-qnx* (e.g. aarch64-unknown-nto-qnx8.0.0); add a *-nto-qnx* case next to these or confirm the default branch is right for QNX.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/make_convent_hook_preconfigure.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "c++/src/capnp/message.h",
+      "line": 130,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "c++/src/kj/CMakeLists.txt",
+      "line": 84,
+      "col": 1,
+      "message": "CMake platform condition `UNIX AND NOT ANDROID` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": [
+        5
+      ]
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "c++/src/kj/CMakeLists.txt",
+      "line": 85,
+      "col": 35,
+      "message": "Linux link library 'pthread'",
+      "suggestion": "On QNX 8.0 pthread_create() is documented in libc, which qcc usually links automatically; drop or guard libpthread for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_create.html",
+      "confidence": "high",
+      "matched_sites": [
+        5
+      ]
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "c++/src/kj/async-unix.h",
+      "line": 37,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "c++/src/kj/async-unix.h",
+      "line": 40,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "c++/src/kj/async-unix.h",
+      "line": 50,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "c++/src/kj/async.h",
+      "line": 31,
+      "col": 1,
+      "message": "Platform branch for __FreeBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "c++/src/kj/common.h",
+      "line": 112,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "c++/src/kj/debug.h",
+      "line": 170,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "c++/src/kj/debug.h",
+      "line": 250,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "c++/src/kj/debug.h",
+      "line": 336,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "c++/src/kj/debug.h",
+      "line": 394,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "c++/src/kj/debug.h",
+      "line": 423,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "c++/src/kj/debug.h",
+      "line": 437,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "c++/src/kj/debug.h",
+      "line": 456,
+      "col": 24,
+      "message": "Linux syscall API syscall()",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "c++/src/kj/debug.h",
+      "line": 460,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "c++/src/kj/debug.h",
+      "line": 556,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "c++/src/kj/mutex.h",
+      "line": 33,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "c++/src/kj/mutex.h",
+      "line": 37,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "c++/src/kj/mutex.h",
+      "line": 197,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "c++/src/kj/mutex.h",
+      "line": 236,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "c++/src/kj/mutex.h",
+      "line": 255,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "c++/src/kj/mutex.h",
+      "line": 280,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "c++/src/kj/mutex.h",
+      "line": 310,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "c++/src/kj/windows-sanity.h",
+      "line": 39,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 31,
+    "sites_by_category": {
+      "source": 22,
+      "build": 9,
+      "other": 0
+    },
+    "sites_source_nontest": 9,
+    "sites_source_test": 13,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 2,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": 0.2222,
+    "recall_in_scope": 0.0645,
+    "findings_total": 29,
+    "findings_tp": 3,
+    "findings_by_category": {
+      "source": 23,
+      "build": 6,
+      "other": 0
+    },
+    "findings_in_patched_files": 4,
+    "findings_tp_in_patched_files": 3,
+    "precision": 0.1034,
+    "precision_in_patched_files": 0.75
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  },
+  "split": "fresh"
+}

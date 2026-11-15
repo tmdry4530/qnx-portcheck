@@ -1,0 +1,364 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T14:50:05.330686+09:00",
+  "project": {
+    "name": "AMQP-CPP",
+    "upstream": "https://github.com/CopernicaMarketingSoftware/AMQP-CPP",
+    "upstream_base_ref": "v4.3.27",
+    "upstream_base_sha": "ca49382bfc5bc165dfb7988b891bb010a939a786",
+    "qnx_repo": "https://github.com/qnx-ports/AMQP-CPP",
+    "qnx_branch": "qnx-v4.3.27",
+    "qnx_head_sha": "7a1ae88b3296345e8134047470e32b424ed607d7",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "/workspace/company/shared/hackathons/qnx/wt-dev2-fresh/.venv/bin/python -m qnx_portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "5118669",
+  "durations": {
+    "fetch": 5.009395308996318,
+    "scan": 0.34825875199749134
+  },
+  "diff_stats": {
+    "files_changed": 2,
+    "compare_files_expected": 2,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "examples/CMakeLists.txt",
+    "src/linux_tcp/addressinfo.h"
+  ],
+  "sites": [
+    {
+      "file": "examples/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 7,
+      "old_count": 7,
+      "new_start": 7,
+      "new_count": 7,
+      "target_lines": [
+        7,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "hunks": 3,
+      "matched_findings": [
+        1,
+        2
+      ]
+    },
+    {
+      "file": "examples/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 21,
+      "old_count": 3,
+      "new_start": 24,
+      "new_count": 5,
+      "target_lines": [
+        21,
+        22,
+        23
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        3,
+        4
+      ]
+    },
+    {
+      "file": "examples/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 32,
+      "old_count": 1,
+      "new_start": 37,
+      "new_count": 6,
+      "target_lines": [
+        32
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        5,
+        6
+      ]
+    },
+    {
+      "file": "src/linux_tcp/addressinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 15,
+      "old_count": 1,
+      "new_start": 15,
+      "new_count": 3,
+      "target_lines": [
+        15
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 3,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 135,
+      "col": 43,
+      "message": "Linux link library 'dl'",
+      "suggestion": "On QNX 8.0 dlopen() is documented in libc, which qcc usually links automatically; drop or guard libdl for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/d/dlopen.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "examples/CMakeLists.txt",
+      "line": 11,
+      "col": 66,
+      "message": "Linux link library 'pthread'",
+      "suggestion": "On QNX 8.0 pthread_create() is documented in libc, which qcc usually links automatically; drop or guard libpthread for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_create.html",
+      "confidence": "high",
+      "matched_sites": [
+        0
+      ]
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "examples/CMakeLists.txt",
+      "line": 11,
+      "col": 74,
+      "message": "Linux link library 'dl'",
+      "suggestion": "On QNX 8.0 dlopen() is documented in libc, which qcc usually links automatically; drop or guard libdl for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/d/dlopen.html",
+      "confidence": "high",
+      "matched_sites": [
+        0
+      ]
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "examples/CMakeLists.txt",
+      "line": 21,
+      "col": 56,
+      "message": "Linux link library 'pthread'",
+      "suggestion": "On QNX 8.0 pthread_create() is documented in libc, which qcc usually links automatically; drop or guard libpthread for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_create.html",
+      "confidence": "high",
+      "matched_sites": [
+        1
+      ]
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "examples/CMakeLists.txt",
+      "line": 21,
+      "col": 64,
+      "message": "Linux link library 'dl'",
+      "suggestion": "On QNX 8.0 dlopen() is documented in libc, which qcc usually links automatically; drop or guard libdl for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/d/dlopen.html",
+      "confidence": "high",
+      "matched_sites": [
+        1
+      ]
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "examples/CMakeLists.txt",
+      "line": 32,
+      "col": 56,
+      "message": "Linux link library 'pthread'",
+      "suggestion": "On QNX 8.0 pthread_create() is documented in libc, which qcc usually links automatically; drop or guard libpthread for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pthread_create.html",
+      "confidence": "high",
+      "matched_sites": [
+        2
+      ]
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "examples/CMakeLists.txt",
+      "line": 32,
+      "col": 64,
+      "message": "Linux link library 'dl'",
+      "suggestion": "On QNX 8.0 dlopen() is documented in libc, which qcc usually links automatically; drop or guard libdl for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/d/dlopen.html",
+      "confidence": "high",
+      "matched_sites": [
+        2
+      ]
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "include/amqpcpp.h",
+      "line": 33,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "include/amqpcpp/endian.h",
+      "line": 30,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "include/amqpcpp/endian.h",
+      "line": 57,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "include/amqpcpp/endian.h",
+      "line": 112,
+      "col": 1,
+      "message": "Platform branch for __OpenBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "include/amqpcpp/endian.h",
+      "line": 119,
+      "col": 1,
+      "message": "Platform branch for __NetBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "include/amqpcpp/endian.h",
+      "line": 132,
+      "col": 1,
+      "message": "Platform branch for __FreeBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-QNXNTO",
+      "severity": "note",
+      "file": "include/amqpcpp/endian.h",
+      "line": 139,
+      "col": 1,
+      "message": "__QNXNTO__ tested without __QNX__",
+      "suggestion": "QNX 8.0 lists __QNXNTO__ as deprecated; qcc defines __QNX__ (800 for QNX 8.0). Test __QNX__ (optionally keep __QNXNTO__ for older releases).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/manifests.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PIPE2",
+      "severity": "note",
+      "file": "src/linux_tcp/pipe.h",
+      "line": 46,
+      "col": 13,
+      "message": "Linux pipe2 API pipe2()",
+      "suggestion": "pipe2() is in QNX 8.0 libc but supports only O_CLOEXEC and O_NONBLOCK flags; check that no other flags (e.g. O_DIRECT) are passed.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/p/pipe2.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "src/programname.h",
+      "line": 66,
+      "col": 31,
+      "message": "Linux /proc path \"/proc/self/exe\"",
+      "suggestion": "Linux /proc/self/exe does not exist on QNX 8.0; procnto exposes /proc/<pid>/exefile (the path of the executable file used to run the process). Note QNX docs say /proc is for debugging, not production monitoring.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "high",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 4,
+    "sites_by_category": {
+      "source": 1,
+      "build": 3,
+      "other": 0
+    },
+    "sites_source_nontest": 1,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 3,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": 1.0,
+    "recall_in_scope": 0.75,
+    "findings_total": 16,
+    "findings_tp": 6,
+    "findings_by_category": {
+      "source": 9,
+      "build": 7,
+      "other": 0
+    },
+    "findings_in_patched_files": 6,
+    "findings_tp_in_patched_files": 6,
+    "precision": 0.375,
+    "precision_in_patched_files": 1.0
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  },
+  "split": "fresh"
+}

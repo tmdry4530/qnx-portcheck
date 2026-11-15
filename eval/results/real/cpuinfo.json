@@ -1,0 +1,4745 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T14:52:31.912269+09:00",
+  "project": {
+    "name": "cpuinfo",
+    "upstream": "https://github.com/pytorch/cpuinfo",
+    "upstream_base_ref": "main",
+    "upstream_base_sha": "3c8b1533ac03dd6531ab6e7b9245d488f13a82a5",
+    "qnx_repo": "https://github.com/qnx-ports/cpuinfo",
+    "qnx_branch": "qnx",
+    "qnx_head_sha": "0cf43cf0ad54f4f8551d5a0c624fe5c4aee64dcc",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "/workspace/company/shared/hackathons/qnx/wt-dev2-fresh/.venv/bin/python -m qnx_portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "5118669",
+  "durations": {
+    "fetch": 6.207156118995044,
+    "scan": 2.254816917993594
+  },
+  "diff_stats": {
+    "files_changed": 6,
+    "compare_files_expected": 6,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "CMakeLists.txt",
+    "include/cpuinfo.h",
+    "src/api.c",
+    "src/init.c"
+  ],
+  "sites": [
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 108,
+      "old_count": 1,
+      "new_start": 108,
+      "new_count": 1,
+      "target_lines": [
+        108
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        4
+      ]
+    },
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 160,
+      "old_count": 1,
+      "new_start": 160,
+      "new_count": 21,
+      "target_lines": [
+        160
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        5
+      ]
+    },
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 245,
+      "old_count": 0,
+      "new_start": 266,
+      "new_count": 3,
+      "target_lines": [
+        245,
+        246
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 793,
+      "old_count": 0,
+      "new_start": 817,
+      "new_count": 1,
+      "target_lines": [
+        793,
+        794
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 844,
+      "old_count": 0,
+      "new_start": 869,
+      "new_count": 1,
+      "target_lines": [
+        844,
+        845
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 866,
+      "old_count": 1,
+      "new_start": 891,
+      "new_count": 1,
+      "target_lines": [
+        866
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        28
+      ]
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 17,
+      "old_count": 1,
+      "new_start": 17,
+      "new_count": 1,
+      "target_lines": [
+        17
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 25,
+      "old_count": 1,
+      "new_start": 25,
+      "new_count": 1,
+      "target_lines": [
+        25
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 861,
+      "old_count": 0,
+      "new_start": 862,
+      "new_count": 8,
+      "target_lines": [
+        861,
+        862
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 877,
+      "old_count": 3,
+      "new_start": 886,
+      "new_count": 4,
+      "target_lines": [
+        877,
+        878,
+        879
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 885,
+      "old_count": 1,
+      "new_start": 897,
+      "new_count": 1,
+      "target_lines": [
+        885
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 893,
+      "old_count": 1,
+      "new_start": 905,
+      "new_count": 1,
+      "target_lines": [
+        893
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 901,
+      "old_count": 1,
+      "new_start": 913,
+      "new_count": 1,
+      "target_lines": [
+        901
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 909,
+      "old_count": 1,
+      "new_start": 921,
+      "new_count": 1,
+      "target_lines": [
+        909
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 917,
+      "old_count": 3,
+      "new_start": 930,
+      "new_count": 4,
+      "target_lines": [
+        917,
+        918,
+        919
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 925,
+      "old_count": 3,
+      "new_start": 942,
+      "new_count": 4,
+      "target_lines": [
+        925,
+        926,
+        927
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 975,
+      "old_count": 1,
+      "new_start": 995,
+      "new_count": 1,
+      "target_lines": [
+        975
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 983,
+      "old_count": 1,
+      "new_start": 1003,
+      "new_count": 1,
+      "target_lines": [
+        983
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1005,
+      "old_count": 1,
+      "new_start": 1025,
+      "new_count": 1,
+      "target_lines": [
+        1005
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1013,
+      "old_count": 1,
+      "new_start": 1033,
+      "new_count": 1,
+      "target_lines": [
+        1013
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1021,
+      "old_count": 1,
+      "new_start": 1041,
+      "new_count": 1,
+      "target_lines": [
+        1021
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1071,
+      "old_count": 1,
+      "new_start": 1091,
+      "new_count": 1,
+      "target_lines": [
+        1071
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1083,
+      "old_count": 1,
+      "new_start": 1103,
+      "new_count": 1,
+      "target_lines": [
+        1083
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1095,
+      "old_count": 1,
+      "new_start": 1115,
+      "new_count": 1,
+      "target_lines": [
+        1095
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1109,
+      "old_count": 1,
+      "new_start": 1129,
+      "new_count": 1,
+      "target_lines": [
+        1109
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1123,
+      "old_count": 1,
+      "new_start": 1143,
+      "new_count": 1,
+      "target_lines": [
+        1123
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1131,
+      "old_count": 1,
+      "new_start": 1151,
+      "new_count": 1,
+      "target_lines": [
+        1131
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 1139,
+      "old_count": 3,
+      "new_start": 1160,
+      "new_count": 4,
+      "target_lines": [
+        1139,
+        1140,
+        1141
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1147,
+      "old_count": 1,
+      "new_start": 1171,
+      "new_count": 1,
+      "target_lines": [
+        1147
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 1155,
+      "old_count": 3,
+      "new_start": 1179,
+      "new_count": 3,
+      "target_lines": [
+        1155,
+        1156,
+        1157
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1163,
+      "old_count": 1,
+      "new_start": 1189,
+      "new_count": 1,
+      "target_lines": [
+        1163
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1171,
+      "old_count": 1,
+      "new_start": 1197,
+      "new_count": 1,
+      "target_lines": [
+        1171
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1179,
+      "old_count": 1,
+      "new_start": 1205,
+      "new_count": 1,
+      "target_lines": [
+        1179
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 1187,
+      "old_count": 3,
+      "new_start": 1213,
+      "new_count": 3,
+      "target_lines": [
+        1187,
+        1188,
+        1189
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1195,
+      "old_count": 1,
+      "new_start": 1223,
+      "new_count": 1,
+      "target_lines": [
+        1195
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1203,
+      "old_count": 1,
+      "new_start": 1231,
+      "new_count": 1,
+      "target_lines": [
+        1203
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1211,
+      "old_count": 1,
+      "new_start": 1239,
+      "new_count": 1,
+      "target_lines": [
+        1211
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1219,
+      "old_count": 1,
+      "new_start": 1247,
+      "new_count": 1,
+      "target_lines": [
+        1219
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1227,
+      "old_count": 1,
+      "new_start": 1255,
+      "new_count": 1,
+      "target_lines": [
+        1227
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1235,
+      "old_count": 1,
+      "new_start": 1263,
+      "new_count": 1,
+      "target_lines": [
+        1235
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1243,
+      "old_count": 1,
+      "new_start": 1271,
+      "new_count": 1,
+      "target_lines": [
+        1243
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1251,
+      "old_count": 1,
+      "new_start": 1279,
+      "new_count": 1,
+      "target_lines": [
+        1251
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1259,
+      "old_count": 1,
+      "new_start": 1287,
+      "new_count": 1,
+      "target_lines": [
+        1259
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1267,
+      "old_count": 1,
+      "new_start": 1295,
+      "new_count": 1,
+      "target_lines": [
+        1267
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1275,
+      "old_count": 1,
+      "new_start": 1303,
+      "new_count": 1,
+      "target_lines": [
+        1275
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1283,
+      "old_count": 1,
+      "new_start": 1311,
+      "new_count": 1,
+      "target_lines": [
+        1283
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1291,
+      "old_count": 1,
+      "new_start": 1319,
+      "new_count": 1,
+      "target_lines": [
+        1291
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1299,
+      "old_count": 1,
+      "new_start": 1327,
+      "new_count": 1,
+      "target_lines": [
+        1299
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1307,
+      "old_count": 1,
+      "new_start": 1335,
+      "new_count": 1,
+      "target_lines": [
+        1307
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1315,
+      "old_count": 1,
+      "new_start": 1343,
+      "new_count": 1,
+      "target_lines": [
+        1315
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1323,
+      "old_count": 1,
+      "new_start": 1351,
+      "new_count": 1,
+      "target_lines": [
+        1323
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1331,
+      "old_count": 1,
+      "new_start": 1359,
+      "new_count": 1,
+      "target_lines": [
+        1331
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1359,
+      "old_count": 1,
+      "new_start": 1387,
+      "new_count": 1,
+      "target_lines": [
+        1359
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1367,
+      "old_count": 1,
+      "new_start": 1395,
+      "new_count": 1,
+      "target_lines": [
+        1367
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1375,
+      "old_count": 1,
+      "new_start": 1403,
+      "new_count": 1,
+      "target_lines": [
+        1375
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1383,
+      "old_count": 1,
+      "new_start": 1411,
+      "new_count": 1,
+      "target_lines": [
+        1383
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1395,
+      "old_count": 1,
+      "new_start": 1423,
+      "new_count": 1,
+      "target_lines": [
+        1395
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1407,
+      "old_count": 1,
+      "new_start": 1435,
+      "new_count": 1,
+      "target_lines": [
+        1407
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1423,
+      "old_count": 1,
+      "new_start": 1451,
+      "new_count": 1,
+      "target_lines": [
+        1423
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1431,
+      "old_count": 1,
+      "new_start": 1459,
+      "new_count": 1,
+      "target_lines": [
+        1431
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1439,
+      "old_count": 1,
+      "new_start": 1467,
+      "new_count": 1,
+      "target_lines": [
+        1439
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1447,
+      "old_count": 1,
+      "new_start": 1475,
+      "new_count": 1,
+      "target_lines": [
+        1447
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1455,
+      "old_count": 1,
+      "new_start": 1483,
+      "new_count": 1,
+      "target_lines": [
+        1455
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1483,
+      "old_count": 1,
+      "new_start": 1511,
+      "new_count": 1,
+      "target_lines": [
+        1483
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1491,
+      "old_count": 1,
+      "new_start": 1519,
+      "new_count": 1,
+      "target_lines": [
+        1491
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1499,
+      "old_count": 1,
+      "new_start": 1527,
+      "new_count": 1,
+      "target_lines": [
+        1499
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1509,
+      "old_count": 1,
+      "new_start": 1537,
+      "new_count": 1,
+      "target_lines": [
+        1509
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1517,
+      "old_count": 1,
+      "new_start": 1545,
+      "new_count": 1,
+      "target_lines": [
+        1517
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1525,
+      "old_count": 1,
+      "new_start": 1553,
+      "new_count": 1,
+      "target_lines": [
+        1525
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1539,
+      "old_count": 1,
+      "new_start": 1567,
+      "new_count": 1,
+      "target_lines": [
+        1539
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1547,
+      "old_count": 1,
+      "new_start": 1575,
+      "new_count": 1,
+      "target_lines": [
+        1547
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1555,
+      "old_count": 1,
+      "new_start": 1583,
+      "new_count": 1,
+      "target_lines": [
+        1555
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1563,
+      "old_count": 1,
+      "new_start": 1591,
+      "new_count": 1,
+      "target_lines": [
+        1563
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1571,
+      "old_count": 1,
+      "new_start": 1599,
+      "new_count": 1,
+      "target_lines": [
+        1571
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1579,
+      "old_count": 1,
+      "new_start": 1607,
+      "new_count": 1,
+      "target_lines": [
+        1579
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1587,
+      "old_count": 1,
+      "new_start": 1615,
+      "new_count": 1,
+      "target_lines": [
+        1587
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1595,
+      "old_count": 1,
+      "new_start": 1623,
+      "new_count": 1,
+      "target_lines": [
+        1595
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1603,
+      "old_count": 1,
+      "new_start": 1631,
+      "new_count": 1,
+      "target_lines": [
+        1603
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1611,
+      "old_count": 1,
+      "new_start": 1639,
+      "new_count": 1,
+      "target_lines": [
+        1611
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1619,
+      "old_count": 1,
+      "new_start": 1647,
+      "new_count": 1,
+      "target_lines": [
+        1619
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1627,
+      "old_count": 1,
+      "new_start": 1655,
+      "new_count": 1,
+      "target_lines": [
+        1627
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 1686,
+      "old_count": 3,
+      "new_start": 1714,
+      "new_count": 3,
+      "target_lines": [
+        1686,
+        1687,
+        1688
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 1694,
+      "old_count": 3,
+      "new_start": 1724,
+      "new_count": 3,
+      "target_lines": [
+        1694,
+        1695,
+        1696
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1710,
+      "old_count": 1,
+      "new_start": 1742,
+      "new_count": 1,
+      "target_lines": [
+        1710
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1718,
+      "old_count": 1,
+      "new_start": 1750,
+      "new_count": 1,
+      "target_lines": [
+        1718
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 1726,
+      "old_count": 3,
+      "new_start": 1759,
+      "new_count": 4,
+      "target_lines": [
+        1726,
+        1727,
+        1728
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 1734,
+      "old_count": 3,
+      "new_start": 1771,
+      "new_count": 4,
+      "target_lines": [
+        1734,
+        1735,
+        1736
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1744,
+      "old_count": 1,
+      "new_start": 1784,
+      "new_count": 1,
+      "target_lines": [
+        1744
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1754,
+      "old_count": 1,
+      "new_start": 1794,
+      "new_count": 1,
+      "target_lines": [
+        1754
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1762,
+      "old_count": 1,
+      "new_start": 1802,
+      "new_count": 1,
+      "target_lines": [
+        1762
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1772,
+      "old_count": 1,
+      "new_start": 1812,
+      "new_count": 1,
+      "target_lines": [
+        1772
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1782,
+      "old_count": 1,
+      "new_start": 1822,
+      "new_count": 1,
+      "target_lines": [
+        1782
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1792,
+      "old_count": 1,
+      "new_start": 1832,
+      "new_count": 1,
+      "target_lines": [
+        1792
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1802,
+      "old_count": 1,
+      "new_start": 1842,
+      "new_count": 1,
+      "target_lines": [
+        1802
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1812,
+      "old_count": 1,
+      "new_start": 1852,
+      "new_count": 1,
+      "target_lines": [
+        1812
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1822,
+      "old_count": 1,
+      "new_start": 1862,
+      "new_count": 1,
+      "target_lines": [
+        1822
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1830,
+      "old_count": 1,
+      "new_start": 1870,
+      "new_count": 1,
+      "target_lines": [
+        1830
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1838,
+      "old_count": 1,
+      "new_start": 1878,
+      "new_count": 1,
+      "target_lines": [
+        1838
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1846,
+      "old_count": 1,
+      "new_start": 1886,
+      "new_count": 1,
+      "target_lines": [
+        1846
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1864,
+      "old_count": 1,
+      "new_start": 1904,
+      "new_count": 1,
+      "target_lines": [
+        1864
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1874,
+      "old_count": 1,
+      "new_start": 1914,
+      "new_count": 1,
+      "target_lines": [
+        1874
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1884,
+      "old_count": 1,
+      "new_start": 1924,
+      "new_count": 1,
+      "target_lines": [
+        1884
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1894,
+      "old_count": 1,
+      "new_start": 1934,
+      "new_count": 1,
+      "target_lines": [
+        1894
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1910,
+      "old_count": 1,
+      "new_start": 1950,
+      "new_count": 1,
+      "target_lines": [
+        1910
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1918,
+      "old_count": 3,
+      "new_start": 1958,
+      "new_count": 2,
+      "target_lines": [
+        1918,
+        1920
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1928,
+      "old_count": 1,
+      "new_start": 1968,
+      "new_count": 1,
+      "target_lines": [
+        1928
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1936,
+      "old_count": 1,
+      "new_start": 1976,
+      "new_count": 1,
+      "target_lines": [
+        1936
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1944,
+      "old_count": 1,
+      "new_start": 1984,
+      "new_count": 1,
+      "target_lines": [
+        1944
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1952,
+      "old_count": 1,
+      "new_start": 1992,
+      "new_count": 1,
+      "target_lines": [
+        1952
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1960,
+      "old_count": 1,
+      "new_start": 2000,
+      "new_count": 1,
+      "target_lines": [
+        1960
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1968,
+      "old_count": 1,
+      "new_start": 2008,
+      "new_count": 1,
+      "target_lines": [
+        1968
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1976,
+      "old_count": 1,
+      "new_start": 2016,
+      "new_count": 1,
+      "target_lines": [
+        1976
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1984,
+      "old_count": 1,
+      "new_start": 2024,
+      "new_count": 1,
+      "target_lines": [
+        1984
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 1992,
+      "old_count": 1,
+      "new_start": 2032,
+      "new_count": 1,
+      "target_lines": [
+        1992
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 2008,
+      "old_count": 1,
+      "new_start": 2048,
+      "new_count": 1,
+      "target_lines": [
+        2008
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 2016,
+      "old_count": 1,
+      "new_start": 2056,
+      "new_count": 1,
+      "target_lines": [
+        2016
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 2024,
+      "old_count": 1,
+      "new_start": 2064,
+      "new_count": 1,
+      "target_lines": [
+        2024
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "include/cpuinfo.h",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 2032,
+      "old_count": 1,
+      "new_start": 2072,
+      "new_count": 1,
+      "target_lines": [
+        2032
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 17,
+      "old_count": 0,
+      "new_start": 18,
+      "new_count": 4,
+      "target_lines": [
+        17,
+        18
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 52,
+      "old_count": 3,
+      "new_start": 57,
+      "new_count": 4,
+      "target_lines": [
+        52,
+        53,
+        54
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 59,
+      "old_count": 3,
+      "new_start": 68,
+      "new_count": 4,
+      "target_lines": [
+        59,
+        60,
+        61
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 66,
+      "old_count": 3,
+      "new_start": 79,
+      "new_count": 4,
+      "target_lines": [
+        66,
+        67,
+        68
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 73,
+      "old_count": 3,
+      "new_start": 90,
+      "new_count": 4,
+      "target_lines": [
+        73,
+        74,
+        75
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 94,
+      "old_count": 3,
+      "new_start": 115,
+      "new_count": 4,
+      "target_lines": [
+        94,
+        95,
+        96
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 104,
+      "old_count": 3,
+      "new_start": 129,
+      "new_count": 4,
+      "target_lines": [
+        104,
+        105,
+        106
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 114,
+      "old_count": 3,
+      "new_start": 143,
+      "new_count": 4,
+      "target_lines": [
+        114,
+        115,
+        116
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 124,
+      "old_count": 3,
+      "new_start": 157,
+      "new_count": 4,
+      "target_lines": [
+        124,
+        125,
+        126
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 148,
+      "old_count": 3,
+      "new_start": 185,
+      "new_count": 4,
+      "target_lines": [
+        148,
+        149,
+        150
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 155,
+      "old_count": 3,
+      "new_start": 196,
+      "new_count": 4,
+      "target_lines": [
+        155,
+        156,
+        157
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 162,
+      "old_count": 3,
+      "new_start": 207,
+      "new_count": 4,
+      "target_lines": [
+        162,
+        163,
+        164
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 169,
+      "old_count": 3,
+      "new_start": 218,
+      "new_count": 4,
+      "target_lines": [
+        169,
+        170,
+        171
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 177,
+      "old_count": 3,
+      "new_start": 230,
+      "new_count": 4,
+      "target_lines": [
+        177,
+        178,
+        179
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 187,
+      "old_count": 3,
+      "new_start": 244,
+      "new_count": 4,
+      "target_lines": [
+        187,
+        188,
+        189
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 194,
+      "old_count": 3,
+      "new_start": 255,
+      "new_count": 4,
+      "target_lines": [
+        194,
+        195,
+        196
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 201,
+      "old_count": 3,
+      "new_start": 266,
+      "new_count": 4,
+      "target_lines": [
+        201,
+        202,
+        203
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 208,
+      "old_count": 3,
+      "new_start": 277,
+      "new_count": 4,
+      "target_lines": [
+        208,
+        209,
+        210
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 215,
+      "old_count": 3,
+      "new_start": 288,
+      "new_count": 4,
+      "target_lines": [
+        215,
+        216,
+        217
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 222,
+      "old_count": 6,
+      "new_start": 299,
+      "new_count": 4,
+      "target_lines": [
+        222,
+        223,
+        226,
+        227
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 232,
+      "old_count": 6,
+      "new_start": 313,
+      "new_count": 4,
+      "target_lines": [
+        232,
+        233,
+        236,
+        237
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 242,
+      "old_count": 6,
+      "new_start": 327,
+      "new_count": 4,
+      "target_lines": [
+        242,
+        243,
+        246,
+        247
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 252,
+      "old_count": 6,
+      "new_start": 341,
+      "new_count": 4,
+      "target_lines": [
+        252,
+        253,
+        256,
+        257
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/api.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 263,
+      "old_count": 5,
+      "new_start": 355,
+      "new_count": 5,
+      "target_lines": [
+        263,
+        266,
+        267
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "src/init.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 10,
+      "old_count": 0,
+      "new_start": 11,
+      "new_count": 4,
+      "target_lines": [
+        10,
+        11
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        59
+      ]
+    },
+    {
+      "file": "src/init.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 30,
+      "old_count": 0,
+      "new_start": 35,
+      "new_count": 2,
+      "target_lines": [
+        30,
+        31
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        62,
+        63
+      ]
+    },
+    {
+      "file": "src/init.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 40,
+      "old_count": 0,
+      "new_start": 47,
+      "new_count": 2,
+      "target_lines": [
+        40,
+        41
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        65
+      ]
+    },
+    {
+      "file": "src/init.c",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 65,
+      "old_count": 1,
+      "new_start": 73,
+      "new_count": 5,
+      "target_lines": [
+        65
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [
+      {
+        "path": "src/qnx/api.c",
+        "category": "source",
+        "added_lines": 1876
+      },
+      {
+        "path": "src/qnx/api.h",
+        "category": "source",
+        "added_lines": 36
+      }
+    ],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 6,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 16,
+      "col": 1,
+      "message": "CMake platform condition `ANDROID` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 62,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME MATCHES \"^(Darwin|iOS|tvOS|watchOS)$\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 89,
+      "col": 1,
+      "message": "CMake platform condition `NOT IOS` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 103,
+      "col": 1,
+      "message": "CMake platform condition `NOT CMAKE_SYSTEM_NAME` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 108,
+      "col": 1,
+      "message": "CMake platform condition `NOT CMAKE_SYSTEM_NAME MATCHES \"^(Windows|WindowsStore|CYG...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": [
+        0
+      ]
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 161,
+      "col": 1,
+      "message": "CMake platform condition `NOT CMAKE_SYSTEM_NAME STREQUAL \"Emscripten\" AND (CPUINFO_...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": [
+        1
+      ]
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 173,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"Linux\" OR CMAKE_SYSTEM_NAME S...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 179,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME MATCHES \"^(Windows|WindowsStore|CYGWIN|...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 182,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME MATCHES \"^Windows\" AND CPUINFO_TARGET_P...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 190,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"Linux\" OR CMAKE_SYSTEM_NAME S...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 200,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"Android\" AND ANDROID_ABI STRE...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 209,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"Android\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 216,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"Linux\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 224,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"Emscripten\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 229,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"Linux\" OR CMAKE_SYSTEM_NAME S...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 239,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"Linux\" OR CMAKE_SYSTEM_NAME S...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 259,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME MATCHES \"^(Windows|WindowsStore|CYGWIN|...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 264,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"WindowsStore\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 268,
+      "col": 1,
+      "message": "CMake platform condition `ANDROID AND NOT CPUINFO_LOG_TO_STDIO` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 299,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"Linux\" OR CMAKE_SYSTEM_NAME S...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 340,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME MATCHES \"^(Linux|Android)$\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 369,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"Linux\" OR CMAKE_SYSTEM_NAME S...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 382,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"Linux\" OR CMAKE_SYSTEM_NAME S...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 387,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"Android\" AND CMAKE_SYSTEM_PRO...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 569,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"Android\" AND CMAKE_SYSTEM_PRO...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 761,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"Android\" AND CMAKE_SYSTEM_PRO...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 802,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"Linux\" OR CMAKE_SYSTEM_NAME S...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 818,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME STREQUAL \"Android\" AND CMAKE_SYSTEM_PRO...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 866,
+      "col": 1,
+      "message": "CMake platform condition `CMAKE_SYSTEM_NAME MATCHES \"^(Android|Linux)$\" AND CMAKE_S...` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": [
+        5
+      ]
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 870,
+      "col": 45,
+      "message": "Linux link library 'dl'",
+      "suggestion": "On QNX 8.0 dlopen() is documented in libc, which qcc usually links automatically; drop or guard libdl for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/d/dlopen.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "deps/clog/CMakeLists.txt",
+      "line": 11,
+      "col": 1,
+      "message": "CMake platform condition `ANDROID` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "deps/clog/CMakeLists.txt",
+      "line": 70,
+      "col": 1,
+      "message": "CMake platform condition `ANDROID AND NOT CLOG_LOG_TO_STDIO` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "deps/clog/include/clog.h",
+      "line": 17,
+      "col": 1,
+      "message": "Platform branch for __MACH__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "include/cpuinfo-mock.h",
+      "line": 9,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "include/cpuinfo-mock.h",
+      "line": 53,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "include/cpuinfo.h",
+      "line": 9,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "include/cpuinfo.h",
+      "line": 607,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "include/cpuinfo.h",
+      "line": 616,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/api.c",
+      "line": 8,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "src/api.c",
+      "line": 13,
+      "col": 14,
+      "message": "Linux syscall number __NR_getcpu",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/api.c",
+      "line": 40,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/api.c",
+      "line": 315,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/api.c",
+      "line": 334,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/api.c",
+      "line": 354,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/api.c",
+      "line": 389,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/arm/android/properties.c",
+      "line": 12,
+      "col": 1,
+      "message": "Linux kernel header <linux/api.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/arm/linux/api.h",
+      "line": 10,
+      "col": 1,
+      "message": "Linux kernel header <linux/api.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/arm/linux/clusters.c",
+      "line": 15,
+      "col": 1,
+      "message": "Linux kernel header <linux/api.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/arm/linux/cpuinfo.c",
+      "line": 10,
+      "col": 1,
+      "message": "Linux kernel header <linux/api.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "src/arm/linux/cpuinfo.c",
+      "line": 1022,
+      "col": 4,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "src/arm/linux/hwcap.c",
+      "line": 96,
+      "col": 15,
+      "message": "Linux /proc path \"/proc/self/auxv\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/arm/linux/init.c",
+      "line": 15,
+      "col": 1,
+      "message": "Linux kernel header <linux/api.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/arm/linux/midr.c",
+      "line": 16,
+      "col": 1,
+      "message": "Linux kernel header <linux/api.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/cpuinfo/common.h",
+      "line": 24,
+      "col": 1,
+      "message": "Platform branch for __MACH__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/cpuinfo/common.h",
+      "line": 34,
+      "col": 1,
+      "message": "Platform branch for __MACH__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/cpuinfo/internal-api.h",
+      "line": 6,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/cpuinfo/internal-api.h",
+      "line": 44,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/cpuinfo/internal-api.h",
+      "line": 52,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/init.c",
+      "line": 1,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/init.c",
+      "line": 11,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": [
+        142
+      ]
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/init.c",
+      "line": 15,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/init.c",
+      "line": 25,
+      "col": 1,
+      "message": "Platform branch for __MACH__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/init.c",
+      "line": 27,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": [
+        143
+      ]
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/init.c",
+      "line": 29,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": [
+        143
+      ]
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/init.c",
+      "line": 35,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/init.c",
+      "line": 37,
+      "col": 1,
+      "message": "Platform branch for __MACH__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": [
+        144
+      ]
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/init.c",
+      "line": 45,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/linux/cpulist.c",
+      "line": 17,
+      "col": 1,
+      "message": "Linux kernel header <linux/api.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/linux/multiline.c",
+      "line": 17,
+      "col": 1,
+      "message": "Linux kernel header <linux/api.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/linux/processors.c",
+      "line": 16,
+      "col": 1,
+      "message": "Linux kernel header <linux/api.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/linux/smallfile.c",
+      "line": 17,
+      "col": 1,
+      "message": "Linux kernel header <linux/api.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/riscv/linux/init.c",
+      "line": 5,
+      "col": 1,
+      "message": "Linux kernel header <linux/api.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "src/riscv/linux/riscv-hw.c",
+      "line": 25,
+      "col": 1,
+      "message": "Linux syscall header <sys/syscall.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-SYSCALL",
+      "severity": "error",
+      "file": "src/riscv/linux/riscv-hw.c",
+      "line": 115,
+      "col": 12,
+      "message": "Linux syscall API syscall()",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/x86/api.h",
+      "line": 60,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/x86/linux/api.h",
+      "line": 8,
+      "col": 1,
+      "message": "Linux kernel header <linux/api.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/x86/linux/cpuinfo.c",
+      "line": 8,
+      "col": 1,
+      "message": "Linux kernel header <linux/api.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "src/x86/linux/cpuinfo.c",
+      "line": 218,
+      "col": 4,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-HEADER",
+      "severity": "error",
+      "file": "src/x86/linux/init.c",
+      "line": 9,
+      "col": 1,
+      "message": "Linux kernel header <linux/api.h>",
+      "suggestion": "manual review",
+      "doc_url": null,
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/alcatel-revvl.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/alcatel-revvl.h",
+      "line": 33,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/alldocube-iwork8.h",
+      "line": 179,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/atm7029b-tablet.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/blu-r1-hd.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-a3-2016-eu.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-a8-2016-duos.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-a8-2018.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-a8-2018.h",
+      "line": 81,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-c9-pro.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-c9-pro.h",
+      "line": 28,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-grand-prime-value-edition.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-grand-prime-value-edition.h",
+      "line": 1628,
+      "col": 13,
+      "message": "Linux /proc path \"/proc/cpw/\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-j1-2016.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-j1-2016.h",
+      "line": 1714,
+      "col": 13,
+      "message": "Linux /proc path \"/proc/cpw/\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-j5.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-j7-prime.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-j7-tmobile.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-j7-uae.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-s3-us.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-s4-us.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-s5-global.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-s5-us.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-s6.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-s6.h",
+      "line": 26,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-s7-global.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-s7-global.h",
+      "line": 57,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-s7-us.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-s7-us.h",
+      "line": 47,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-s8-global.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-s8-global.h",
+      "line": 81,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-s8-us.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-s8-us.h",
+      "line": 83,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-s9-global.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-s9-global.h",
+      "line": 81,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-s9-us.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-s9-us.h",
+      "line": 83,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-tab-3-7.0.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-tab-3-lite.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/galaxy-win-duos.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/huawei-ascend-p7.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/huawei-honor-6.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/huawei-mate-10.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/huawei-mate-10.h",
+      "line": 81,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/huawei-mate-20.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/huawei-mate-20.h",
+      "line": 81,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/huawei-mate-8.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/huawei-mate-8.h",
+      "line": 82,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/huawei-mate-9.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/huawei-mate-9.h",
+      "line": 82,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/huawei-p20-pro.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/huawei-p20-pro.h",
+      "line": 81,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/huawei-p8-lite.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/huawei-p8-lite.h",
+      "line": 26,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/huawei-p9-lite.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/huawei-p9-lite.h",
+      "line": 26,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/iconia-one-10.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/iconia-one-10.h",
+      "line": 43,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/leagoo-t5c.h",
+      "line": 282,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/leagoo-t5c.h",
+      "line": 2972,
+      "col": 13,
+      "message": "Linux /proc path \"/proc/cptl/\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/lenovo-a6600-plus.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/lenovo-vibe-x2.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/lg-k10-eu.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/lg-optimus-g-pro.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/meizu-pro-6.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/meizu-pro-6s.h",
+      "line": 5,
+      "col": 14,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/meizu-pro-7-plus.h",
+      "line": 7,
+      "col": 16,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/memo-pad-7.h",
+      "line": 179,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/moto-e-gen1.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/moto-g-gen1.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/moto-g-gen2.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/moto-g-gen3.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/moto-g-gen4.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/moto-g-gen5.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/nexus-s.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/nexus10.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/nexus4.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/nexus5x.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/nexus5x.h",
+      "line": 58,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/nexus6.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/nexus6p.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/nexus6p.h",
+      "line": 26,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/nexus9.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/oneplus-3t.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/oneplus-3t.h",
+      "line": 46,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/oneplus-5.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/oneplus-5.h",
+      "line": 83,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/oneplus-5t.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/oneplus-5t.h",
+      "line": 83,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/oppo-a37.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/oppo-a37.h",
+      "line": 22,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/oppo-r15.h",
+      "line": 8,
+      "col": 16,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/oppo-r15.h",
+      "line": 87,
+      "col": 16,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/oppo-r9.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/oppo-r9.h",
+      "line": 28,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/padcod-10.1.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/pixel-2-xl.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/pixel-c.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/pixel-xl.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/pixel.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/scaleway.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/xiaomi-mi-5c.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/xiaomi-mi-5c.h",
+      "line": 63,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/xiaomi-redmi-2a.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/xiaomi-redmi-note-3.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/xiaomi-redmi-note-3.h",
+      "line": 24,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/xiaomi-redmi-note-4.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/xiaomi-redmi-note-4.h",
+      "line": 83,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/xperia-c4-dual.h",
+      "line": 4,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/xperia-c4-dual.h",
+      "line": 20,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/xperia-sl.h",
+      "line": 3,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/zenfone-2.h",
+      "line": 182,
+      "col": 15,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/zenfone-2e.h",
+      "line": 163,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "test/mock/zenfone-c.h",
+      "line": 163,
+      "col": 12,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "tools/cpu-info.c",
+      "line": 340,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "tools/cpu-info.c",
+      "line": 348,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "tools/cpuinfo-dump.c",
+      "line": 12,
+      "col": 23,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 146,
+    "sites_by_category": {
+      "source": 140,
+      "build": 6,
+      "other": 0
+    },
+    "sites_source_nontest": 140,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 3,
+    "sites_hit_by_category": {
+      "source": 3,
+      "build": 3,
+      "other": 0
+    },
+    "recall_source": 0.0214,
+    "recall_source_nontest": 0.0214,
+    "recall_build": 0.5,
+    "recall_in_scope": 0.0411,
+    "findings_total": 196,
+    "findings_tp": 7,
+    "findings_by_category": {
+      "source": 164,
+      "build": 32,
+      "other": 0
+    },
+    "findings_in_patched_files": 49,
+    "findings_tp_in_patched_files": 7,
+    "precision": 0.0357,
+    "precision_in_patched_files": 0.1429
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  },
+  "split": "fresh"
+}

@@ -1,7 +1,7 @@
 {
   "label": "REAL",
   "harness_version": "0.1.0",
-  "generated_at": "2026-11-15T14:15:03.616592+09:00",
+  "generated_at": "2026-11-15T14:49:49.591624+09:00",
   "project": {
     "name": "jansson",
     "upstream": "https://github.com/akheron/jansson",
@@ -15,11 +15,11 @@
   },
   "window": 3,
   "merge_gap": 3,
-  "scan_cmd": "qnx-portcheck scan {path} --format json --fail-on never",
+  "scan_cmd": "/workspace/company/shared/hackathons/qnx/wt-dev2-fresh/.venv/bin/python -m qnx_portcheck scan {path} --format json --fail-on never",
   "scanner_source_commit": "5118669",
   "durations": {
-    "fetch": 0.003162446984788403,
-    "scan": 0.1737626809917856
+    "fetch": 4.671930547978263,
+    "scan": 0.17008673900272697
   },
   "diff_stats": {
     "files_changed": 1,

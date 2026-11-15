@@ -1,0 +1,1038 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T14:50:23.137856+09:00",
+  "project": {
+    "name": "EmulationStation",
+    "upstream": "https://github.com/RetroPie/EmulationStation",
+    "upstream_base_ref": "master",
+    "upstream_base_sha": "51b6f4162d8e89be2ef7a2c9d7c232ac5b31022b",
+    "qnx_repo": "https://github.com/qnx-ports/EmulationStation",
+    "qnx_branch": "qnx_master",
+    "qnx_head_sha": "68675d5dc0a1026cc71bd8403fc8a636e3d2cffc",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "/workspace/company/shared/hackathons/qnx/wt-dev2-fresh/.venv/bin/python -m qnx_portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "5118669",
+  "durations": {
+    "fetch": 5.2127606340218335,
+    "scan": 0.42825326599995606
+  },
+  "diff_stats": {
+    "files_changed": 13,
+    "compare_files_expected": 13,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "CMakeLists.txt",
+    "es-app/src/ScraperCmdLine.cpp",
+    "es-app/src/views/SystemView.cpp",
+    "es-app/src/views/ViewController.cpp",
+    "es-core/src/Settings.cpp",
+    "es-core/src/Window.cpp",
+    "es-core/src/guis/GuiMsgBox.cpp",
+    "es-core/src/renderers/Renderer.cpp",
+    "es-core/src/renderers/Renderer_GL14.cpp",
+    "es-core/src/renderers/Renderer_GL21.cpp",
+    "es-core/src/renderers/Renderer_GLES10.cpp",
+    "es-core/src/renderers/Renderer_GLES20.cpp",
+    "es-core/src/utils/FileSystemUtil.cpp"
+  ],
+  "sites": [
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 98,
+      "old_count": 0,
+      "new_start": 99,
+      "new_count": 8,
+      "target_lines": [
+        98,
+        99
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 110,
+      "old_count": 0,
+      "new_start": 119,
+      "new_count": 1,
+      "target_lines": [
+        110,
+        111
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        8
+      ]
+    },
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 158,
+      "old_count": 3,
+      "new_start": 167,
+      "new_count": 5,
+      "target_lines": [
+        158,
+        159,
+        160
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-app/src/ScraperCmdLine.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 8,
+      "old_count": 1,
+      "new_start": 8,
+      "new_count": 1,
+      "target_lines": [
+        8
+      ],
+      "hunks": 1,
+      "matched_findings": [
+        11
+      ]
+    },
+    {
+      "file": "es-app/src/views/SystemView.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 347,
+      "old_count": 4,
+      "new_start": 347,
+      "new_count": 3,
+      "target_lines": [
+        347,
+        348,
+        349,
+        350
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "es-app/src/views/ViewController.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 480,
+      "old_count": 0,
+      "new_start": 481,
+      "new_count": 1,
+      "target_lines": [
+        480,
+        481
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-app/src/views/ViewController.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 489,
+      "old_count": 0,
+      "new_start": 491,
+      "new_count": 1,
+      "target_lines": [
+        489,
+        490
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/Settings.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 175,
+      "old_count": 4,
+      "new_start": 175,
+      "new_count": 4,
+      "target_lines": [
+        175,
+        176,
+        177,
+        178
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/Window.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 40,
+      "old_count": 4,
+      "new_start": 41,
+      "new_count": 4,
+      "target_lines": [
+        40,
+        41,
+        42,
+        43
+      ],
+      "hunks": 3,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/guis/GuiMsgBox.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 63,
+      "old_count": 0,
+      "new_start": 64,
+      "new_count": 2,
+      "target_lines": [
+        63,
+        64
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/guis/GuiMsgBox.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 98,
+      "old_count": 0,
+      "new_start": 101,
+      "new_count": 1,
+      "target_lines": [
+        98,
+        99
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/renderers/Renderer.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "mixed",
+      "old_start": 263,
+      "old_count": 3,
+      "new_start": 263,
+      "new_count": 2,
+      "target_lines": [
+        263,
+        264,
+        265
+      ],
+      "hunks": 2,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/renderers/Renderer_GL14.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 217,
+      "old_count": 0,
+      "new_start": 218,
+      "new_count": 1,
+      "target_lines": [
+        217,
+        218
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/renderers/Renderer_GL21.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 217,
+      "old_count": 0,
+      "new_start": 218,
+      "new_count": 1,
+      "target_lines": [
+        217,
+        218
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/renderers/Renderer_GLES10.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 217,
+      "old_count": 0,
+      "new_start": 218,
+      "new_count": 1,
+      "target_lines": [
+        217,
+        218
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/renderers/Renderer_GLES20.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 15,
+      "old_count": 2,
+      "new_start": 15,
+      "new_count": 2,
+      "target_lines": [
+        15,
+        16
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/renderers/Renderer_GLES20.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 26,
+      "old_count": 3,
+      "new_start": 26,
+      "new_count": 4,
+      "target_lines": [
+        26,
+        27,
+        28
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/renderers/Renderer_GLES20.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 46,
+      "old_count": 0,
+      "new_start": 48,
+      "new_count": 1,
+      "target_lines": [
+        46,
+        47
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/renderers/Renderer_GLES20.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 192,
+      "old_count": 0,
+      "new_start": 195,
+      "new_count": 1,
+      "target_lines": [
+        192,
+        193
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/renderers/Renderer_GLES20.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 201,
+      "old_count": 0,
+      "new_start": 205,
+      "new_count": 1,
+      "target_lines": [
+        201,
+        202
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/renderers/Renderer_GLES20.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 222,
+      "old_count": 0,
+      "new_start": 227,
+      "new_count": 1,
+      "target_lines": [
+        222,
+        223
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/renderers/Renderer_GLES20.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "delete",
+      "old_start": 236,
+      "old_count": 1,
+      "new_start": 240,
+      "new_count": 0,
+      "target_lines": [
+        236
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/renderers/Renderer_GLES20.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 315,
+      "old_count": 0,
+      "new_start": 320,
+      "new_count": 1,
+      "target_lines": [
+        315,
+        316
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/renderers/Renderer_GLES20.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 356,
+      "old_count": 0,
+      "new_start": 362,
+      "new_count": 1,
+      "target_lines": [
+        356,
+        357
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/renderers/Renderer_GLES20.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 364,
+      "old_count": 0,
+      "new_start": 371,
+      "new_count": 1,
+      "target_lines": [
+        364,
+        365
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/renderers/Renderer_GLES20.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 397,
+      "old_count": 0,
+      "new_start": 405,
+      "new_count": 1,
+      "target_lines": [
+        397,
+        398
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/renderers/Renderer_GLES20.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 406,
+      "old_count": 0,
+      "new_start": 415,
+      "new_count": 1,
+      "target_lines": [
+        406,
+        407
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/renderers/Renderer_GLES20.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 421,
+      "old_count": 0,
+      "new_start": 431,
+      "new_count": 1,
+      "target_lines": [
+        421,
+        422
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/renderers/Renderer_GLES20.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 436,
+      "old_count": 0,
+      "new_start": 447,
+      "new_count": 1,
+      "target_lines": [
+        436,
+        437
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/renderers/Renderer_GLES20.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 447,
+      "old_count": 0,
+      "new_start": 459,
+      "new_count": 1,
+      "target_lines": [
+        447,
+        448
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/renderers/Renderer_GLES20.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 459,
+      "old_count": 0,
+      "new_start": 472,
+      "new_count": 1,
+      "target_lines": [
+        459,
+        460
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/renderers/Renderer_GLES20.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 468,
+      "old_count": 0,
+      "new_start": 482,
+      "new_count": 1,
+      "target_lines": [
+        468,
+        469
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/renderers/Renderer_GLES20.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 485,
+      "old_count": 0,
+      "new_start": 500,
+      "new_count": 1,
+      "target_lines": [
+        485,
+        486
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "es-core/src/utils/FileSystemUtil.cpp",
+      "category": "source",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 25,
+      "old_count": 0,
+      "new_start": 26,
+      "new_count": 9,
+      "target_lines": [
+        25,
+        26
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 3,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMake/Packages/FindOpenGLES.cmake",
+      "line": 13,
+      "col": 1,
+      "message": "CMake platform condition `CYGWIN` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMake/Packages/FindOpenGLES.cmake",
+      "line": 23,
+      "col": 1,
+      "message": "CMake platform condition `APPLE` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMake/Packages/FindSDL2.cmake",
+      "line": 238,
+      "col": 1,
+      "message": "CMake platform condition `NOT APPLE` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMake/Packages/FindSDL2.cmake",
+      "line": 276,
+      "col": 1,
+      "message": "CMake platform condition `APPLE` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMake/Packages/FindSDL2.cmake",
+      "line": 283,
+      "col": 1,
+      "message": "CMake platform condition `NOT APPLE` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMake/Packages/FindSDL2.cmake",
+      "line": 343,
+      "col": 1,
+      "message": "CMake platform condition `APPLE` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMake/Utils/FindPkgMacros.cmake",
+      "line": 48,
+      "col": 1,
+      "message": "CMake platform condition `ANDROID` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMake/Utils/FindPkgMacros.cmake",
+      "line": 134,
+      "col": 1,
+      "message": "CMake platform condition `APPLE` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 112,
+      "col": 1,
+      "message": "CMake platform condition `${CMAKE_SYSTEM_NAME} MATCHES \"Linux\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": [
+        1
+      ]
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 209,
+      "col": 1,
+      "message": "CMake platform condition `${CMAKE_SYSTEM_NAME} MATCHES \"Linux\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 242,
+      "col": 1,
+      "message": "CMake platform condition `${CMAKE_SYSTEM_NAME} MATCHES \"Linux\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "es-app/src/ScraperCmdLine.cpp",
+      "line": 8,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": [
+        3
+      ]
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "es-app/src/VolumeControl.cpp",
+      "line": 10,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "es-app/src/VolumeControl.cpp",
+      "line": 24,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "es-app/src/VolumeControl.cpp",
+      "line": 26,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "es-app/src/VolumeControl.cpp",
+      "line": 40,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "es-app/src/VolumeControl.cpp",
+      "line": 42,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "es-app/src/VolumeControl.cpp",
+      "line": 83,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "es-app/src/VolumeControl.cpp",
+      "line": 85,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "es-app/src/VolumeControl.cpp",
+      "line": 231,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "es-app/src/VolumeControl.cpp",
+      "line": 233,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "es-app/src/VolumeControl.cpp",
+      "line": 258,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "es-app/src/VolumeControl.cpp",
+      "line": 260,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "es-app/src/VolumeControl.cpp",
+      "line": 352,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "es-app/src/VolumeControl.cpp",
+      "line": 354,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "es-app/src/VolumeControl.h",
+      "line": 7,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "es-app/src/VolumeControl.h",
+      "line": 9,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "es-app/src/VolumeControl.h",
+      "line": 24,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "es-app/src/VolumeControl.h",
+      "line": 26,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "es-app/src/guis/GuiMenu.cpp",
+      "line": 98,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "es-core/src/guis/GuiInputConfig.cpp",
+      "line": 342,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "es-core/src/utils/FileSystemUtil.cpp",
+      "line": 226,
+      "col": 17,
+      "message": "Linux /proc path \"/proc/self/exe\"",
+      "suggestion": "Linux /proc/self/exe does not exist on QNX 8.0; procnto exposes /proc/<pid>/exefile (the path of the executable file used to run the process). Note QNX docs say /proc is for debugging, not production monitoring.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "high",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 34,
+    "sites_by_category": {
+      "source": 31,
+      "build": 3,
+      "other": 0
+    },
+    "sites_source_nontest": 31,
+    "sites_source_test": 0,
+    "sites_hit_source_nontest": 1,
+    "sites_hit_by_category": {
+      "source": 1,
+      "build": 1,
+      "other": 0
+    },
+    "recall_source": 0.0323,
+    "recall_source_nontest": 0.0323,
+    "recall_build": 0.3333,
+    "recall_in_scope": 0.0588,
+    "findings_total": 32,
+    "findings_tp": 2,
+    "findings_by_category": {
+      "source": 21,
+      "build": 11,
+      "other": 0
+    },
+    "findings_in_patched_files": 5,
+    "findings_tp_in_patched_files": 2,
+    "precision": 0.0625,
+    "precision_in_patched_files": 0.4
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  },
+  "split": "fresh"
+}

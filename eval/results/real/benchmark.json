@@ -1,0 +1,446 @@
+{
+  "label": "REAL",
+  "harness_version": "0.1.0",
+  "generated_at": "2026-11-15T14:52:21.905515+09:00",
+  "project": {
+    "name": "benchmark",
+    "upstream": "https://github.com/google/benchmark",
+    "upstream_base_ref": "v1.8.3",
+    "upstream_base_sha": "344117638c8ff7e239044fd0fa7085839fc03021",
+    "qnx_repo": "https://github.com/qnx-ports/benchmark",
+    "qnx_branch": "qnx_v1.8.3",
+    "qnx_head_sha": "85c35154ee9e8272ec5c83ffe251601acbd4371e",
+    "expected_scope": "source",
+    "verified": true
+  },
+  "window": 3,
+  "merge_gap": 3,
+  "scan_cmd": "/workspace/company/shared/hackathons/qnx/wt-dev2-fresh/.venv/bin/python -m qnx_portcheck scan {path} --format json --fail-on never",
+  "scanner_source_commit": "5118669",
+  "durations": {
+    "fetch": 4.276002297992818,
+    "scan": 0.24686103602289222
+  },
+  "diff_stats": {
+    "files_changed": 16,
+    "compare_files_expected": 16,
+    "compare_files_match": true
+  },
+  "patched_files": [
+    "CMakeLists.txt",
+    "src/CMakeLists.txt",
+    "src/sysinfo.cc",
+    "test/CMakeLists.txt",
+    "test/reporter_output_test.cc"
+  ],
+  "sites": [
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 116,
+      "old_count": 2,
+      "new_start": 116,
+      "new_count": 7,
+      "target_lines": [
+        116,
+        117
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "insert",
+      "old_start": 340,
+      "old_count": 0,
+      "new_start": 346,
+      "new_count": 48,
+      "target_lines": [
+        340,
+        341
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 38,
+      "old_count": 1,
+      "new_start": 38,
+      "new_count": 1,
+      "target_lines": [
+        38
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/CMakeLists.txt",
+      "category": "build",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 43,
+      "old_count": 1,
+      "new_start": 43,
+      "new_count": 3,
+      "target_lines": [
+        43
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "src/sysinfo.cc",
+      "category": "source",
+      "is_test": false,
+      "kind": "modify",
+      "old_start": 774,
+      "old_count": 2,
+      "new_start": 774,
+      "new_count": 2,
+      "target_lines": [
+        774,
+        775
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/CMakeLists.txt",
+      "category": "build",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 186,
+      "old_count": 1,
+      "new_start": 186,
+      "new_count": 1,
+      "target_lines": [
+        186
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    },
+    {
+      "file": "test/CMakeLists.txt",
+      "category": "build",
+      "is_test": true,
+      "kind": "insert",
+      "old_start": 236,
+      "old_count": 10,
+      "new_start": 237,
+      "new_count": 27,
+      "target_lines": [
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245
+      ],
+      "hunks": 9,
+      "matched_findings": []
+    },
+    {
+      "file": "test/reporter_output_test.cc",
+      "category": "source",
+      "is_test": true,
+      "kind": "modify",
+      "old_start": 17,
+      "old_count": 16,
+      "new_start": 17,
+      "new_count": 36,
+      "target_lines": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "hunks": 1,
+      "matched_findings": []
+    }
+  ],
+  "out_of_scope": {
+    "new_files": [
+      {
+        "path": "qnx/.gitignore",
+        "category": "other",
+        "added_lines": 5
+      },
+      {
+        "path": "qnx/LICENSE.md",
+        "category": "other",
+        "added_lines": 22
+      },
+      {
+        "path": "qnx/README.md",
+        "category": "other",
+        "added_lines": 8
+      },
+      {
+        "path": "qnx/build/Makefile",
+        "category": "build",
+        "added_lines": 8
+      },
+      {
+        "path": "qnx/build/common.mk",
+        "category": "build",
+        "added_lines": 93
+      },
+      {
+        "path": "qnx/build/nto-aarch64-le/Makefile",
+        "category": "build",
+        "added_lines": 1
+      },
+      {
+        "path": "qnx/build/nto-x86_64-o/Makefile",
+        "category": "build",
+        "added_lines": 1
+      },
+      {
+        "path": "qnx/build/qnx.nto.toolchain.cmake",
+        "category": "build",
+        "added_lines": 34
+      },
+      {
+        "path": "qnx/shiplist/shiplist-sdp-benchmark-internal.xml",
+        "category": "other",
+        "added_lines": 23
+      },
+      {
+        "path": "qnx/shiplist/shiplist-sdp-benchmark_tests-internal.xml",
+        "category": "other",
+        "added_lines": 17
+      },
+      {
+        "path": "qnx/test/README.md",
+        "category": "other",
+        "added_lines": 67
+      }
+    ],
+    "binary": [],
+    "submodule": [],
+    "mode_only": [],
+    "build_sites": 6,
+    "other_sites": 0,
+    "rename_only": [],
+    "deleted_empty": []
+  },
+  "findings": [
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "CMakeLists.txt",
+      "line": 225,
+      "col": 1,
+      "message": "CMake platform condition `CYGWIN` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINK-FLAGS",
+      "severity": "warning",
+      "file": "src/CMakeLists.txt",
+      "line": 48,
+      "col": 43,
+      "message": "Linux link library 'rt'",
+      "suggestion": "On QNX 8.0 clock_gettime() is documented in libc, which qcc usually links automatically; drop or guard librt for QNX builds.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.lib_ref/topic/c/clock_gettime.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "src/CMakeLists.txt",
+      "line": 53,
+      "col": 1,
+      "message": "CMake platform condition `${CMAKE_SYSTEM_NAME} MATCHES \"Windows\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "BLD-CMAKE-PLATFORM",
+      "severity": "warning",
+      "file": "src/CMakeLists.txt",
+      "line": 58,
+      "col": 1,
+      "message": "CMake platform condition `${CMAKE_SYSTEM_NAME} MATCHES \"SunOS\"` has no QNX case",
+      "suggestion": "This branch selects sources, flags or libraries per platform but never names QNX. QNX toolchain files set CMAKE_SYSTEM_NAME to QNX (and often QNX TRUE), and QNX notes that CMake conditionals checking CMAKE_SYSTEM_NAME need to be extended for QNX; decide whether QNX belongs in this condition (e.g. add `AND NOT CMAKE_SYSTEM_NAME STREQUAL \"QNX\"` or an elseif branch).",
+      "doc_url": "https://www.qnx.com/developers/docs/qnxeverywhere/com.qnx.doc.qpg/topic/port_CMake.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/internal_macros.h",
+      "line": 41,
+      "col": 1,
+      "message": "Platform branch for __CYGWIN__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/internal_macros.h",
+      "line": 61,
+      "col": 1,
+      "message": "Platform branch for __APPLE__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/internal_macros.h",
+      "line": 70,
+      "col": 1,
+      "message": "Platform branch for __FreeBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/internal_macros.h",
+      "line": 72,
+      "col": 1,
+      "message": "Platform branch for __NetBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/internal_macros.h",
+      "line": 74,
+      "col": 1,
+      "message": "Platform branch for __OpenBSD__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "PORT-OS-IFDEF",
+      "severity": "note",
+      "file": "src/internal_macros.h",
+      "line": 76,
+      "col": 1,
+      "message": "Platform branch for __DragonFly__ has no __QNX__ case",
+      "suggestion": "This conditional selects code for other Unix-like systems (BSD/macOS/Solaris/AIX/HP-UX) but never for QNX. qcc defines __QNX__ (800 for QNX 8.0); check whether QNX should take this branch (add `|| defined(__QNX__)`) or the other one (add `&& !defined(__QNX__)`).",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "manual-review",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-LINUX-IFDEF",
+      "severity": "warning",
+      "file": "src/internal_macros.h",
+      "line": 78,
+      "col": 1,
+      "message": "Linux-only preprocessor condition",
+      "suggestion": "This branch is Linux-only. qcc defines __QNX__ (value 800 for QNX 8.0; e.g. #if defined(__QNX__) && __QNX__ >= 800); add a QNX branch. __QNXNTO__ is deprecated.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/devel_Neutrino_specific.html",
+      "confidence": "high",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "src/sysinfo.cc",
+      "line": 505,
+      "col": 20,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    },
+    {
+      "rule_id": "LNX-PROCFS",
+      "severity": "warning",
+      "file": "src/sysinfo.cc",
+      "line": 660,
+      "col": 20,
+      "message": "Linux /proc path \"/proc/cpuinfo\"",
+      "suggestion": "QNX 8.0 procnto implements /proc with a different layout (/proc/<pid>/ entries such as as, cmdline, ctl, exefile; /proc/self/ is the caller's address space). Linux files under /proc do not map 1:1; QNX docs say not to use /proc in production to control or monitor processes. Review this path manually.",
+      "doc_url": "https://www.qnx.com/developers/docs/8.0/com.qnx.doc.neutrino.prog/topic/process_proc_filesystem.html",
+      "confidence": "medium",
+      "matched_sites": []
+    }
+  ],
+  "metrics": {
+    "sites_total": 8,
+    "sites_by_category": {
+      "source": 2,
+      "build": 6,
+      "other": 0
+    },
+    "sites_source_nontest": 1,
+    "sites_source_test": 1,
+    "sites_hit_source_nontest": 0,
+    "sites_hit_by_category": {
+      "source": 0,
+      "build": 0,
+      "other": 0
+    },
+    "recall_source": 0.0,
+    "recall_source_nontest": 0.0,
+    "recall_build": 0.0,
+    "recall_in_scope": 0.0,
+    "findings_total": 13,
+    "findings_tp": 0,
+    "findings_by_category": {
+      "source": 9,
+      "build": 4,
+      "other": 0
+    },
+    "findings_in_patched_files": 6,
+    "findings_tp_in_patched_files": 0,
+    "precision": 0.0,
+    "precision_in_patched_files": 0.0
+  },
+  "status": "ok",
+  "scanner": {
+    "tool": "qnx-portcheck",
+    "version": "0.1.0"
+  },
+  "split": "fresh"
+}
