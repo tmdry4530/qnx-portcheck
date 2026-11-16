@@ -2,7 +2,7 @@
 
 Category: **Developer Tooling & Host Tools**
 Bonus: **Best Codelab / Tutorial** ([docs/tutorial-port-linux-daemon-to-qnx8.md](../docs/tutorial-port-linux-daemon-to-qnx8.md))
-Repository: https://github.com/tmdry4530/qnx-portcheck (must be public before submission)
+Repository: https://github.com/Heal-chamdom/qnx-portcheck (must be public before submission)
 Video: [VIDEO_URL] (YouTube, public, under 3 minutes)
 
 ---
@@ -102,11 +102,10 @@ SDP. It is a triage aid, not an oracle.
 - Three commands (scan, scaffold, lint-buildfile) plus a GitHub Action with SARIF upload, all in one installable package with no runtime dependencies.
 - An evaluation against real qnx-ports patches, on a fresh set of 15 projects selected before any of them was
   scanned and not used for tuning: source-site recall 0.079 (23/292), precision 0.033 (48/1448), precision in
-  patched files 0.191 (48/251), build-site recall 0.009 (17/1864). The build number is dominated by SDL's
-  regenerated `configure` (1788 of its 1790 build sites), which the tool does not scan; without SDL it is 0.230
-  (17/74), a post-hoc reference value. For comparison, source-site recall is 0.157 (18/115) on the 17 tuning
-  projects and 0.284 (56/197) on 16 projects that were seen during tuning, so 0.284 is not a generalization
-  metric. Nothing was run on a QNX target. The numbers say qnx-portcheck is a triage aid, not an oracle.
+  patched files 0.191 (48/251), build-site recall 0.009 (17/1864). SDL accounts for 1790 of the 1864 fresh
+  build sites. For comparison, source-site recall is 0.157 (18/115) on the 17 tuning projects and 0.284
+  (56/197) on 16 projects that were seen during tuning, so 0.284 is not a generalization metric.
+  qnx-portcheck was not run on a QNX target. The numbers say qnx-portcheck is a triage aid, not an oracle.
 - A full scan of 33 real projects in 28 s (was 1124 s); libwebsockets in 4.2 s (was 724 s), with identical findings (`eval/perf/`).
 - A step-by-step tutorial that ports an epoll + inotify daemon and labels every step that couldn't be verified on a target.
 
