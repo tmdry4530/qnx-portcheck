@@ -4,7 +4,7 @@ Use this composite action to scan a checkout and optionally upload its SARIF fin
 
 ```yaml
 - uses: actions/checkout@v5
-- uses: tmdry4530/qnx-portcheck/action@main
+- uses: Heal-chamdom/qnx-portcheck/action@main
   with:
     path: "."
 ```

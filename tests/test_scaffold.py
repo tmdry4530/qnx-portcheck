@@ -1,4 +1,5 @@
 import argparse
+import os
 from pathlib import Path
 
 import pytest
@@ -45,9 +46,10 @@ def test_generated_sets_and_provenance(tmp_path, system, extra):
         assert f"path: {f.source_path}" in f.content
         if f.path.name == "Makefile" and f.path.parent.name.startswith("nto-"):
             assert f.content.endswith("include ../common.mk\n")
-        ref = Path("/workspace/qnxref/build-files") / f.source_path
-        if Path("/workspace/qnxref/build-files").is_dir():
-            assert ref.is_file()
+    if "QNX_BUILD_FILES" not in os.environ:
+        pytest.skip("QNX_BUILD_FILES is unset; skipping upstream source-file comparison")
+    for f in files:
+        assert (Path(os.environ["QNX_BUILD_FILES"]) / f.source_path).is_file()
 
 def test_name_and_out(tmp_path):
     root = tmp_path / "a project!"

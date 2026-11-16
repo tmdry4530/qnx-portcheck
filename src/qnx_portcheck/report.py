@@ -94,7 +94,7 @@ def to_sarif(findings: list[Finding], root: Path) -> dict:
             "tool": {"driver": {
                 "name": "qnx-portcheck",
                 "version": __version__,
-                "informationUri": "https://github.com/tmdry4530/qnx-portcheck",
+                "informationUri": "https://github.com/Heal-chamdom/qnx-portcheck",
                 "rules": rules,
             }},
             "originalUriBaseIds": {"SRCROOT": root.as_uri() + "/"},
