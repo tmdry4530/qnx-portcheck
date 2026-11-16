@@ -4,8 +4,7 @@ Sources (fetched with curl, HTTP 200, 2026-11-15 12:29 KST):
 - Official rules: https://qnx.devpost.com/rules
 - Overview ("What to Submit"): https://qnx.devpost.com/
 
-Repo visibility check: `https://github.com/tmdry4530/qnx-portcheck` returned HTTP 404 to an anonymous request
-at 2026-11-15 12:31 KST, so the repository is still **private**.
+Submission repository: Heal-chamdom/qnx-portcheck. It was created private on 2026-11-16. It is switched to public only after code freeze, QA, and then a secret scan. Visibility is not re-checked over the network (no curl, no gh).
 
 Nothing has been joined, submitted or uploaded. All Devpost, YouTube and visibility steps are left for the user.
 
@@ -35,7 +34,7 @@ Status values: done / placeholder / missing / needs user.
 | 7 | Open-source license file, detectable in the repo's About section | Submission Requirements | placeholder | `LICENSE` (Apache-2.0 text) is in the repo root. GitHub's About detection can only be checked once the repo is public. |
 | 8 | Repo must show the project "genuinely builds for or runs on QNX 8.0, not merely that QNX 8.0 is named in the README" | Submission Requirements | placeholder (risk) | Host tool: the evidence is QNX 8.0-specific output (doc-cited suggestions, qnx-ports-style `qnx/build/`, mkifs lint). Nothing has been built with the QNX SDP or run on a target. Judges may weigh this. |
 | 9 | Build and run instructions stating QNX version, target (hardware or QEMU) and toolchain | Submission Requirements | done (with caveat) | README: QNX 8.0; host tool on Python >= 3.10; scaffolds target `nto-aarch64-le` / `nto-x86_64-o` and need QNX SDP 8.0 `qcc`, which was not used; no QNX target or QEMU run. |
-| 10 | Text description of features and functionality | Submission Requirements | placeholder | Draft in `submission/devpost-en.md`; evaluation numbers filled on dev1/numbers from `eval/RESULTS.md`; the `[VIDEO_URL]` placeholder still needs filling. |
+| 10 | Text description of features and functionality | Submission Requirements | placeholder — `[VIDEO_URL]` still needs filling | Draft in `submission/devpost-en.md`. Evaluation numbers are taken only from `eval/RESULTS.md`, with the fresh split (15 projects) as the headline. |
 | 11 | Evidence of QNX use: identify relevant files, functions and output | Evidence of QNX use | done | Section "How QNX is used" in `submission/devpost-en.md` lists files and functions. |
 | 12 | Demo video: under 3 minutes; shows the project working on the device it was built for; **public on YouTube**; link on the form; no third-party trademarks or copyrighted music without permission | Submission Requirements | approved per Grok Bot, pending upload | Draft at demo/out/demo.mp4 (captions, no face or voice of the user). Grok Bot reported on 2026-11-15 that the user approved a **public** upload to the @gomang211 YouTube channel at 13:45 KST; Grok Bot uploads after code freeze (2026-12-11 18:00 KST) and QA. For a host tool, the "device" is the Linux host; footage cannot show a QNX target. Avoid logos and third-party music. |
 | 13 | English materials (or English translations) | Language Requirements | done | README, tutorial and devpost copy are in English. |
