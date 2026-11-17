@@ -20,10 +20,10 @@ def _fixture(rule_id: str, state: str) -> Path:
     if rule_id.startswith("BLD-"):
         slug = rule_id.lower().removeprefix("bld-").replace("-", "_")
         filename = "CMakeLists.txt" if rule_id == "BLD-CMAKE-PLATFORM" else "configure.ac"
-        return BASE / "build" / slug / state / filename
+        return BASE / "buildsys" / slug / state / filename
     if rule_id.startswith("LNX-LINK"):
         filename = "CMakeLists.txt" if rule_id == "LNX-LINK-FLAGS" else "Makefile"
-        return BASE / "build" / slug / state / filename
+        return BASE / "buildsys" / slug / state / filename
     return BASE / "c" / f"{slug}_{state}.c"
 
 

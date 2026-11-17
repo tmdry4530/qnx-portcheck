@@ -7,7 +7,7 @@ cd "$REPO_ROOT"
 OUT="${DEMO_OUT:-demo/render}"
 if [[ "$OUT" != /* ]]; then OUT="${REPO_ROOT%/}/$OUT"; fi
 ASCIINEMA_BIN="${ASCIINEMA:-$(command -v asciinema || true)}"
-if [[ -z "$ASCIINEMA_BIN" ]]; then ASCIINEMA_BIN=/tmp/qpc-venv/bin/asciinema; fi
+if [[ -z "$ASCIINEMA_BIN" ]]; then ASCIINEMA_BIN=/workspace/qnxref/pyenv/bin/asciinema; fi
 AGG_BIN="${AGG:-$(command -v agg || true)}"
 if [[ -z "$AGG_BIN" ]]; then AGG_BIN=/home/box/bin/agg; fi
 
