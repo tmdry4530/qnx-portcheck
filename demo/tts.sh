@@ -3,7 +3,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 cd "$REPO_ROOT"
-OUT="${DEMO_OUT:-demo/out}"
+OUT="${DEMO_OUT:-demo/render}"
 ENGINE="${TTS_ENGINE:-auto}"
 if [[ "${1:-}" == --synthesize ]]; then
     adapter="$2"; text="$3"; output="$4"
