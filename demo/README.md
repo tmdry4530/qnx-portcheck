@@ -1,6 +1,6 @@
 # Reproducible demo video
 
-Run `bash demo/record.sh` from any directory to create the terminal/card clips, burned subtitles, and `demo/out/demo.mp4`. Run `bash demo/tts.sh` separately to add narration when a supported local engine is available.
+Run `bash demo/record.sh` from any directory to create the terminal/card clips, burned subtitles, and `demo/render/demo.mp4`. Run `bash demo/tts.sh` separately to add narration when a supported local engine is available. The `demo/render/` directory is used because workspace hydrate skips directories named `out/`.
 
 Requirements are Python 3 (stdlib only for demo scripts), asciinema 2.4.0, agg 1.9.0, ffmpeg/ffprobe 7.1 with libass, and the DejaVu fonts named in the project brief. Shellcheck is used for the requested script check. The pipeline never installs software or accesses the network.
 

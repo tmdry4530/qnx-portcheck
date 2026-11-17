@@ -85,7 +85,7 @@ def test_demo_visual_layout_and_exit_statuses():
 
 
 def test_gitignore_has_output():
-    assert "demo/out/" in (ROOT / ".gitignore").read_text(encoding="utf-8").splitlines()
+    assert "demo/render/" in (ROOT / ".gitignore").read_text(encoding="utf-8").splitlines()
 
 
 def test_scaffold_wrapper(tmp_path):
