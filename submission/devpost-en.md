@@ -2,7 +2,7 @@
 
 Category: **Developer Tooling & Host Tools**
 Bonus: **Best Codelab / Tutorial** ([docs/tutorial-port-linux-daemon-to-qnx8.md](../docs/tutorial-port-linux-daemon-to-qnx8.md))
-Repository: https://github.com/Heal-chamdom/qnx-portcheck (must be public before submission)
+Repository: https://github.com/tmdry4530/qnx-portcheck (must be public before submission)
 Video: [VIDEO_URL] (YouTube, public, under 3 minutes)
 
 ---

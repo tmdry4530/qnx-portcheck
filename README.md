@@ -29,7 +29,7 @@ It has been tested on Linux only. It has three commands:
 ## Install
 
 ```bash
-git clone https://github.com/Heal-chamdom/qnx-portcheck.git
+git clone https://github.com/tmdry4530/qnx-portcheck.git
 cd qnx-portcheck
 python3 -m venv .venv && . .venv/bin/activate
 pip install -e '.[test]'
@@ -129,7 +129,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - uses: Heal-chamdom/qnx-portcheck/action@main
+      - uses: tmdry4530/qnx-portcheck/action@main
         with:
           path: "."
 ```

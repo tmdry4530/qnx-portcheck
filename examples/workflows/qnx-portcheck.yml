@@ -1,7 +1,7 @@
 # Copy this file to .github/workflows/. Uploading SARIF needs security-events: write.
 # Fork pull requests do not receive write tokens, so upload may be skipped or fail;
 # set upload: "false" and use actions/upload-artifact there if needed.
-# Heal-chamdom/qnx-portcheck is the planned public repo; pinning to a commit SHA is recommended.
+# tmdry4530/qnx-portcheck is the planned public repo; pinning to a commit SHA is recommended.
 name: qnx-portcheck
 on:
   pull_request:
@@ -15,6 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - uses: Heal-chamdom/qnx-portcheck/action@main
+      - uses: tmdry4530/qnx-portcheck/action@main
         with:
           path: "."

@@ -12,7 +12,7 @@ def test_sarif() -> None:
     driver = run["tool"]["driver"]
     rule_ids = [rule["id"] for rule in driver["rules"]]
     assert driver["name"] == "qnx-portcheck"
-    assert driver["informationUri"] == "https://github.com/Heal-chamdom/qnx-portcheck"
+    assert driver["informationUri"] == "https://github.com/tmdry4530/qnx-portcheck"
     for item in run["results"]:
         assert item["ruleId"] in rule_ids
         assert rule_ids[item["ruleIndex"]] == item["ruleId"]
