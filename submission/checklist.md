@@ -4,7 +4,7 @@ Sources (fetched with curl, HTTP 200, 2026-11-15 12:29 KST):
 - Official rules: https://qnx.devpost.com/rules
 - Overview ("What to Submit"): https://qnx.devpost.com/
 
-Submission repository: tmdry4530/qnx-portcheck. It has been private since 2026-11-15 (an anonymous request returned HTTP 404 at 2026-11-15 12:31 KST). It is switched to public only after code freeze, QA, and then a secret scan. Visibility is not re-checked over the network (no curl, no gh).
+Submission repository: tmdry4530/qnx-portcheck. It was switched to public on 2026-11-21. A gitleaks secret scan was run before the switch (0 leaks). Unauthenticated `git ls-remote` confirmed public access on 2026-11-22.
 
 Nothing has been joined, submitted or uploaded. All Devpost, YouTube and visibility steps are left for the user.
 
