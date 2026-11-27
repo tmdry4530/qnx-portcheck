@@ -21,7 +21,7 @@ No voice, face, or music is included by default. Local text-to-speech is optiona
 
 ## Final submission build
 
-`bash demo/build_final.sh` runs a full `demo/record.sh` (it refuses when `SCENES` is set) and writes the silent submission files to `FINAL_DIR` (default `/workspace/company/shared/hackathons/qnx-submission`; `DEMO_OUT` selects the render directory as in `record.sh`):
+`bash demo/build_final.sh` runs a full `demo/record.sh` (it refuses when `SCENES` is set) and writes the silent submission files to `FINAL_DIR` (default `demo/out/final`, repo-relative and ignored by git; override with an absolute path such as `FINAL_DIR=/path/to/submission`, while a relative `FINAL_DIR` resolves against the repository root, not the current directory; `DEMO_OUT` selects the render directory as in `record.sh`):
 
 - `qnx-portcheck-demo.mp4`: the burned-in video stream copied from `demo-burned.mp4`, no audio stream, `+faststart`.
 - `qnx-portcheck-demo.srt`: byte-identical copy of `subs/demo.srt`.

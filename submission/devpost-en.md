@@ -3,7 +3,7 @@
 Category: **Developer Tooling & Host Tools**
 Bonus: **Best Codelab / Tutorial** ([docs/tutorial-port-linux-daemon-to-qnx8.md](../docs/tutorial-port-linux-daemon-to-qnx8.md))
 Repository: https://github.com/tmdry4530/qnx-portcheck
-Video: TODO [VIDEO_URL] (YouTube, public, under 3 minutes). Local silent 1920×1080 file is 161 seconds at `qnx-submission/qnx-portcheck-demo.mp4`.
+Video: [VIDEO_URL] (YouTube, public, under 3 minutes)
 
 ---
 

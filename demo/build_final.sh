@@ -5,7 +5,9 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 cd "$REPO_ROOT"
-FINAL_DIR="${FINAL_DIR:-/workspace/company/shared/hackathons/qnx-submission}"
+# FINAL_DIR and DEMO_OUT may be absolute; relative values (env or default) resolve against REPO_ROOT, not the cwd.
+FINAL_DIR="${FINAL_DIR:-demo/out/final}"
+if [[ "$FINAL_DIR" != /* ]]; then FINAL_DIR="${REPO_ROOT%/}/$FINAL_DIR"; fi
 OUT="${DEMO_OUT:-demo/render}"
 if [[ "$OUT" != /* ]]; then OUT="${REPO_ROOT%/}/$OUT"; fi
 FINAL_MP4="$FINAL_DIR/qnx-portcheck-demo.mp4"

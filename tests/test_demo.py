@@ -91,6 +91,18 @@ def test_gitignore_has_output():
     assert "demo/render/" in (ROOT / ".gitignore").read_text(encoding="utf-8").splitlines()
 
 
+def test_gitignore_ignores_demo_out():
+    assert "demo/out/" in (ROOT / ".gitignore").read_text(encoding="utf-8").splitlines()
+
+
+def test_build_final_default_is_repo_relative():
+    script = (ROOT / "demo/build_final.sh").read_text(encoding="utf-8")
+    assert "/workspace" not in script
+    assert "/home" not in script
+    assert 'FINAL_DIR="${FINAL_DIR:-demo/out/final}"' in script
+    assert 'if [[ "$FINAL_DIR" != /* ]]; then FINAL_DIR="${REPO_ROOT%/}/$FINAL_DIR"; fi' in script
+
+
 def test_scaffold_wrapper(tmp_path):
     project = tmp_path / "sample"
     project.mkdir()
