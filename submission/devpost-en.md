@@ -3,7 +3,7 @@
 Category: **Developer Tooling & Host Tools**
 Bonus: **Best Codelab / Tutorial** ([docs/tutorial-port-linux-daemon-to-qnx8.md](../docs/tutorial-port-linux-daemon-to-qnx8.md))
 Repository: https://github.com/tmdry4530/qnx-portcheck
-Video: [VIDEO_URL] (YouTube, public, under 3 minutes)
+Video: TODO [VIDEO_URL] (YouTube, public, under 3 minutes). Local silent 1920×1080 file is 161 seconds at `qnx-submission/qnx-portcheck-demo.mp4`.
 
 ---
 
@@ -77,7 +77,7 @@ SDP. It is a triage aid, not an oracle.
 - Documentation-first rules: we fetched each QNX 8.0 documentation page with curl and recorded the evidence
   before writing a suggestion. Pages that returned 404 (for example per-function pages for epoll, eventfd,
   sendfile and prctl) were recorded too.
-- pytest suite (90 tests, plus 41 for the evaluation harness): a positive and a negative fixture for every rule, with an expected marker on every line
+- pytest suite (132 tests, plus 56 for the evaluation harness): a positive and a negative fixture for every rule, with an expected marker on every line
   that should produce a finding; lexer edge cases; JSON and SARIF structure; CLI exit codes; scaffold, lint and action tests.
 - Performance: the first lexer copied the rest of the file at every character. After the fix, scanning all 33
   evaluation projects takes 28 s instead of 1124 s, and libwebsockets alone 4.2 s instead of 724 s, with
