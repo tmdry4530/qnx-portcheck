@@ -16,8 +16,8 @@ qnx-portcheck = "qnx_portcheck.cli:main"
 where = ["src"]
 
 [project.optional-dependencies]
-test = ["pytest>=7"]
+test = ["pytest>=7", "PyYAML>=6"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+testpaths = ["tests", "eval"]
 pythonpath = ["src"]
