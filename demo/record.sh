@@ -19,7 +19,7 @@ for tool in "$ASCIINEMA_BIN" "$AGG_BIN" ffmpeg ffprobe python3; do
 done
 "$ASCIINEMA_BIN" --version
 "$AGG_BIN" --version
-ffmpeg -version | head -n 1
+nice -n 10 ffmpeg -version | head -n 1
 ffprobe -version | head -n 1
 python3 --version
 
@@ -74,18 +74,18 @@ PY
         if [[ "$scene_id" == 05 ]]; then
             headline_file="$OUT/cards/$scene_id-headline.txt"
             secondary_file="$OUT/cards/$scene_id-secondary.txt"
-            body_filter="drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:textfile='$headline_file':fontcolor=white:fontsize=28:line_spacing=9:x=80:y=175:y_align=0:fix_bounds=1,drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:textfile='$secondary_file':fontcolor=white:fontsize=18:line_spacing=7:x=80:y=430:y_align=0:fix_bounds=1"
+            body_filter="drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:textfile='$headline_file':fontcolor=white:fontsize=42:line_spacing=14:x=120:y=262:y_align=0:fix_bounds=1,drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:textfile='$secondary_file':fontcolor=white:fontsize=27:line_spacing=11:x=120:y=645:y_align=0:fix_bounds=1"
         else
-            body_filter="drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:textfile='$card_path':fontcolor=white:fontsize=25:line_spacing=12:x=80:y=220:y_align=0:fix_bounds=1"
+            body_filter="drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:textfile='$card_path':fontcolor=white:fontsize=38:line_spacing=18:x=120:y=330:y_align=0:fix_bounds=1"
         fi
-        ffmpeg -nostdin -y -v error -f lavfi -i "color=c=0x1e1e1e:s=1280x720:r=30:d=$duration" \
-            -vf "drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:textfile='$title_file':fontcolor=white:fontsize=38:x=80:y=100,$body_filter" \
+        nice -n 10 ffmpeg -nostdin -y -v error -f lavfi -i "color=c=0x1e1e1e:s=1920x1080:r=30:d=$duration" \
+            -vf "drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:textfile='$title_file':fontcolor=white:fontsize=57:x=120:y=150,$body_filter" \
             -an -c:v libx264 -pix_fmt yuv420p "$OUT/raw/$scene_id.mp4"
     else
         export TERM=xterm-256color
         "$ASCIINEMA_BIN" rec --overwrite -q -i 2 --cols 100 --rows 28 -c "bash demo/scenes/$scene_id-$slug.sh" "$OUT/casts/$scene_id.cast"
-        "$AGG_BIN" --font-family "DejaVu Sans Mono" --font-size 20 --theme monokai --idle-time-limit 2 "$OUT/casts/$scene_id.cast" "$OUT/gifs/$scene_id.gif"
-        ffmpeg -nostdin -y -v error -i "$OUT/gifs/$scene_id.gif" -vf "scale=1280:590:force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:4:color=0x1e1e1e,fps=30" -an -c:v libx264 -pix_fmt yuv420p "$OUT/raw/$scene_id.mp4"
+        "$AGG_BIN" --font-family "DejaVu Sans Mono" --font-size 30 --theme monokai --idle-time-limit 2 "$OUT/casts/$scene_id.cast" "$OUT/gifs/$scene_id.gif"
+        nice -n 10 ffmpeg -nostdin -y -v error -i "$OUT/gifs/$scene_id.gif" -vf "scale=1920:885:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:6:color=0x1e1e1e,fps=30" -an -c:v libx264 -pix_fmt yuv420p "$OUT/raw/$scene_id.mp4"
     fi
     raw_duration="$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$OUT/raw/$scene_id.mp4")"
     if python3 - "$raw_duration" "$duration" <<'PY'
@@ -99,7 +99,7 @@ PY
     else
         fit_filter="tpad=stop_mode=clone:stop_duration=$duration,trim=duration=$duration,setpts=PTS-STARTPTS"
     fi
-    ffmpeg -nostdin -y -v error -i "$OUT/raw/$scene_id.mp4" -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=48000 \
+    nice -n 10 ffmpeg -nostdin -y -v error -i "$OUT/raw/$scene_id.mp4" -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=48000 \
         -vf "$fit_filter,subtitles='$OUT/subs/$scene_id.srt':force_style='FontName=DejaVu Sans,FontSize=16,Outline=1,MarginV=8'" \
         -t "$duration" -map 0:v:0 -map 1:a:0 -c:v libx264 -pix_fmt yuv420p -c:a aac -ar 48000 -ac 2 -shortest "$OUT/clips/$scene_id.mp4"
     printf '%s\t%s\t%s\n' "$scene_id" "$mode" "$duration" >> "$OUT/manifest.txt"
@@ -108,13 +108,28 @@ done 3< "$OUT/subs/scenes.tsv"
 if [[ -n "${SCENES:-}" ]]; then
     printf 'SCENES subset requested; concatenating only selected clips.\n'
 fi
+# Concat filter, not the concat demuxer: each clip holds exactly duration*30 frames, but its
+# mp4 stream duration reads one frame short, so the demuxer overlaps clips and drops a frame
+# per boundary, drifting demo.srt away from the burned-in subtitles. concat.txt is kept as a record.
 concat_file="$OUT/concat.txt"
 : > "$concat_file"
+concat_inputs=()
+concat_pads=""
+concat_count=0
 while IFS=$'\t' read -r scene_id slug kind duration requires; do
     [[ "$scene_id" == id ]] && continue
     if [[ -n "${SCENES:-}" && ! " $SCENES " =~  $scene_id  ]]; then continue; fi
     printf "file '%s'\n" "$OUT/clips/$scene_id.mp4" >> "$concat_file"
+    concat_inputs+=(-i "$OUT/clips/$scene_id.mp4")
+    concat_pads+="[$concat_count:v:0][$concat_count:a:0]"
+    concat_count=$((concat_count + 1))
 done < "$OUT/subs/scenes.tsv"
-ffmpeg -nostdin -y -v error -f concat -safe 0 -i "$concat_file" -c:v libx264 -pix_fmt yuv420p -c:a aac -ar 48000 -ac 2 "$OUT/demo-burned.mp4"
-ffmpeg -nostdin -y -v error -i "$OUT/demo-burned.mp4" -i "$OUT/subs/demo.srt" -map 0:v:0 -map 0:a:0 -map 1:0 -c:v copy -c:a copy -c:s mov_text -metadata:s:s:0 language=eng "$OUT/demo.mp4"
+if ((concat_count == 0)); then
+    printf 'No scenes selected; nothing to concatenate.\n' >&2
+    exit 1
+fi
+nice -n 10 ffmpeg -nostdin -y -v error "${concat_inputs[@]}" \
+    -filter_complex "${concat_pads}concat=n=$concat_count:v=1:a=1[v][a]" \
+    -map '[v]' -map '[a]' -c:v libx264 -pix_fmt yuv420p -c:a aac -ar 48000 -ac 2 "$OUT/demo-burned.mp4"
+nice -n 10 ffmpeg -nostdin -y -v error -i "$OUT/demo-burned.mp4" -i "$OUT/subs/demo.srt" -map 0:v:0 -map 0:a:0 -map 1:0 -c:v copy -c:a copy -c:s mov_text -metadata:s:s:0 language=eng "$OUT/demo.mp4"
 ffprobe -v error -show_entries format=duration -show_entries stream=codec_type,codec_name,width,height -of json "$OUT/demo.mp4"

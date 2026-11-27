@@ -1,4 +1,5 @@
 from __future__ import annotations
+import re
 import json
 import shutil
 import subprocess
@@ -70,10 +71,12 @@ def test_shell_syntax_and_shellcheck():
 def test_demo_visual_layout_and_exit_statuses():
     record = (ROOT / "demo/record.sh").read_text(encoding="utf-8")
     assert "$REPO_ROOT/$OUT" not in record
-    assert "scale=1280:590:force_original_aspect_ratio=decrease" in record
-    assert "pad=1280:720:(ow-iw)/2:4:color=0x1e1e1e" in record
+    assert "scale=1920:885:force_original_aspect_ratio=decrease" in record
+    assert "pad=1920:1080:(ow-iw)/2:6:color=0x1e1e1e" in record
+    assert "s=1920x1080" in record and "1280" not in record
     assert "FontName=DejaVu Sans,FontSize=16,Outline=1,MarginV=8" in record
-    assert "y=220" in record and "y=560" not in record
+    assert "y=330" in record and "y=840" not in record
+    assert all(line.lstrip().startswith("nice -n 10 ffmpeg") for line in record.splitlines() if re.match(r"\s*ffmpeg\b", line) or " ffmpeg -" in line)
     scene = (ROOT / "demo/scenes/04-lint.sh").read_text(encoding="utf-8")
     assert "export DEMO_SHOW_EXIT=1" in scene
     assert "'no diagnostics'" in scene

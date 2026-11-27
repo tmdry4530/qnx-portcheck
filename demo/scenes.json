@@ -119,7 +119,7 @@
     "kind": "card",
     "requires": [],
     "commands": [],
-    "card_text": "Repository: qnx-portcheck\nTutorial: docs/tutorial-port-linux-daemon-to-qnx8.md\nNot run on a QNX target\nWe did not run this on a QNX target; compared its findings against qnx-ports patches; triage aid, not an oracle.",
+    "card_text": "Repository: qnx-portcheck\nTutorial: docs/tutorial-port-linux-daemon-to-qnx8.md\nHost-only: no QNX SDP used; no QNX target run\nWe did not run this on a QNX target; compared its findings against qnx-ports patches; triage aid, not an oracle.",
     "narration": [
       "Read the repository tutorial for sources, caveats, and next steps."
     ]

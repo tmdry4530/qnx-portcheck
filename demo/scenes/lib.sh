@@ -42,7 +42,7 @@ show_cmd() {
 
 qnx-portcheck() {
     if python3 -c 'import qnx_portcheck.cli' >/dev/null 2>&1; then
-        python3 -c 'import sys; from qnx_portcheck.cli import main; sys.exit(main())' "$@"
+        python3 -m qnx_portcheck.cli "$@"
         return $?
     fi
     case "${1:-}" in
